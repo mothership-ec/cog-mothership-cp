@@ -12,13 +12,13 @@ class Authentication extends \Message\Cog\Controller\Controller
 			"thingy" => "yo",
 		);
 */
-		
-		return $this->render('Message:Mothership:ControlPanel:View:login');
+
+		return $this->render('::login');
 	}
-	
+
 	public function logout()
 	{
-		
+
 	}
 
 }
