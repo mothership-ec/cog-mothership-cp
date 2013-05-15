@@ -9,5 +9,6 @@ class Routes implements RoutesInterface
 	public function registerRoutes($router)
 	{
 		$router->add('ms.cp.login', '/login', '::Controller:Authentication#login');
+		$router->add('ms.cp.login.action', '/login/action', '::Controller:Authentication#loginAction');
 	}
 }
