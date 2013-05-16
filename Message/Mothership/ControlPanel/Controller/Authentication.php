@@ -2,8 +2,6 @@
 
 namespace Message\Mothership\ControlPanel\Controller;
 
-use Symfony\Component\HttpFoundation\Cookie;
-
 class Authentication extends \Message\Cog\Controller\Controller
 {	
 	public function login()
@@ -36,7 +34,7 @@ class Authentication extends \Message\Cog\Controller\Controller
 
 			if ($post['remember']) {
 				
-				$cookie = new Cookie('user_id',69);
+				$cookie = new \Message\Cog\HTTP\Cookie('user_id',69);
 				var_dump($this->_services['request']->cookies); exit;
 			}
 
