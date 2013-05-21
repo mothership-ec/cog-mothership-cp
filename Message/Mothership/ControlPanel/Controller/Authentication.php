@@ -2,10 +2,22 @@
 
 namespace Message\Mothership\ControlPanel\Controller;
 
+use Message\Mothership\CMS\Page\Page;
+use Message\Mothership\CMS\Page\Authorisation;
+
 class Authentication extends \Message\Cog\Controller\Controller
 {	
 	public function login()
 	{
+		$page = new Page;
+		$page->id = 1;
+		$page->password = 'hello';
+		
+		$user = array();
+
+		$authorisation = new Authorisation($page,$user);
+	
+	
 		$session = $this->_services['http.session'];
 		$user = $session->get('user');
 		$return = array(
