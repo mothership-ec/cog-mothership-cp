@@ -32,10 +32,11 @@ class Authentication extends \Message\Cog\Controller\Controller
 				'email'		=> 'danny@message.co.uk',
 			);
 
-			if ($post['remember']) {
+			if (isset($post['remember']) && $post['remember']) {
 				
-				$cookie = new \Message\Cog\HTTP\Cookie('user_id',69);
-				var_dump($this->_services['request']->cookies); exit;
+				$cookie = new \Message\Cog\HTTP\Cookie('user_id',69);				
+				$this->_services['http.cookies']->add($cookie);
+
 			}
 
 			$user->load($data);
