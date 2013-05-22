@@ -4,6 +4,7 @@ namespace Message\Mothership\ControlPanel\Controller;
 
 use Message\Mothership\CMS\Page\Page;
 use Message\Mothership\CMS\Page\Authorisation;
+use Message\Cog\ValueObject\DateRange;
 
 class Authentication extends \Message\Cog\Controller\Controller
 {	
@@ -12,10 +13,19 @@ class Authentication extends \Message\Cog\Controller\Controller
 		$page = new Page;
 		$page->id = 1;
 		$page->password = 'hello';
+		$page->publishState = 1;
+		$from = new \DateTime('+1 week');
+		$to = new \DateTime('+1 week');
+		$page->publishDateRange = new DateRange($from, $to);
 		
 		$user = array();
 
 		$authorisation = new Authorisation($page,$user);
+		$password = 'hello';
+		
+		$authorisation->validatePassword($password);
+		var_dump($authorisation->isPublished()); exit;
+		var_dump($authorisation); exit;
 	
 	
 		$session = $this->_services['http.session'];
