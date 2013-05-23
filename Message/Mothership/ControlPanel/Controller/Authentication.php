@@ -32,13 +32,14 @@ class Authentication extends \Message\Cog\Controller\Controller
 			$user->surname  = 'Hannah';
 			$user->email    = 'danny@message.co.uk';
 
+			$this->_services['http.session']->set('user', $user);
+
+			// Set cookie if the user wants to be remembered
 			if (isset($post['remember']) && $post['remember']) {
 				$this->_services['http.cookies']->add(
 					new \Message\Cog\HTTP\Cookie('user_id', $user->id)
 				);
 			}
-
-			$this->_services['http.session']->set('user', $user);
 
 			return $this->render('::admin', $data);
 		}
