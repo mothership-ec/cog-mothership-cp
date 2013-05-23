@@ -15,7 +15,8 @@
 	},
 	"autoload": {
 		"psr-0": {
-			"Message\\Mothership\\ControlPanel": ""
+			"Message\\Mothership\\ControlPanel"      : "src",
+			"Message\\Mothership\\ControlPanel\\Test": "tests"
 		}
 	},
 	"repositories": [
