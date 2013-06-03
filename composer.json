@@ -22,14 +22,19 @@
 	"repositories": [
 		{
 			"type": "vcs",
-			"url" : "git@server.local:cog/cog.git"
+			"url" : "git@github.com:messagedigital/cog.git"
+		},
+		{
+			"type": "vcs",
+			"url" : "git@github.com:messagedigital/cog-user.git"
 		}
 	],
 	"minimum-stability": "dev",
 	"require": {
 		"php"        : ">=5.3.0",
 
-		"message/cog": "dev-master"
+		"message/cog"     : "dev-master",
+		"message/cog-user": "dev-master"
 	},
 	"suggest": {
 	}
