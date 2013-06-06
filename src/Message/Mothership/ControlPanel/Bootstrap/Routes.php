@@ -10,7 +10,7 @@ class Routes implements RoutesInterface
 	{
 		$router['ms.cp']->setPrefix('/admin');
 
-		$router['ms.cp']->add('ms.cp.dashboard', '/dashboard', '::Controller:Dashboard#index');
+		$router['ms.cp']->add('ms.cp.dashboard', '/', '::Controller:Dashboard#index');
 
 		$router['ms.cp']->add('ms.cp.login', '/login', '::Controller:Authentication#login');
 		$router['ms.cp']->add('ms.cp.logout', '/logout', '::Controller:Authentication#logout');

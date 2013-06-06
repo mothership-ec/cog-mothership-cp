@@ -1,4 +1,6 @@
-{% block content %}
+{% extends '::_templates/cp' %}
+
+{% block main %}
 <p>Hi, {{ user.getName() }}!</p>
 
 <a href="{{ url('ms.cp.logout') }}">Log out</a>

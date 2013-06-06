@@ -1,0 +1,16 @@
+{% extends 'Message:Mothership:ControlPanel::_templates/main' %}
+
+{% block content %}
+
+<nav>
+	<ol>
+		<li><a href="{{ url('ms.cp.dashboard') }}">Dashboard</a></li>
+		<li><a href="{{ url('ms.file_manager.listing') }}">File Manager</a></li>
+	</ol>
+</nav>
+
+<section>
+{% block main %}{% endblock %}
+</section>
+
+{% endblock %}
