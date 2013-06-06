@@ -1,0 +1,7 @@
+<!-- extend my base template -->
+
+<h1>Log in to Mothership</h1>
+
+{{ render(controller('Message:User::Controller:Authentication#login', {
+	redirectURL: url('ms.cp.dashboard')
+})) }}
