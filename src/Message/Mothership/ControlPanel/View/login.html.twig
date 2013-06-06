@@ -1,7 +1,10 @@
-<!-- extend my base template -->
+{% extends '::_templates/main' %}
 
+{% block content %}
 <h1>Log in to Mothership</h1>
 
 {{ render(controller('Message:User::Controller:Authentication#login', {
-	redirectURL: url('ms.cp.dashboard')
+	redirectURL: url(redirectRoute),
+	forgottenPasswordRoute: 'ms.cp.password.request'
 })) }}
+{% endblock %}

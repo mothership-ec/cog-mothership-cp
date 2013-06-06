@@ -2,21 +2,25 @@
 
 namespace Message\Mothership\ControlPanel\Controller;
 
-use Message\Mothership\CMS\Page\Page;
-use Message\Mothership\CMS\Page\Authorisation;
-use Message\Cog\ValueObject\DateRange;
-
 class Authentication extends \Message\Cog\Controller\Controller
 {
+	protected $_redirectRoute = 'ms.cp.dashboard';
+
 	public function login()
 	{
-		return $this->render('::login');
+		if ($this->get('user.current') instanceof User) {
+			$this->redirect($this->generateUrl($this->_redirectRoute));
+		}
+
+		return $this->render('::login', array(
+			'redirectRoute' => $this->_redirectRoute,
+		));
 	}
 
 	public function logout()
 	{
-		#$this->_services['http.session']->remove('user');
-
-		return $this->redirect($this->generateUrl('ms.cp.login'));
+		return $this->forward('Message:User::Controller:Authentication#logout', array(
+			'redirectURL' => $this->generateUrl('ms.cp.login')
+		));
 	}
 }
