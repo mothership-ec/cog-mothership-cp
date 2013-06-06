@@ -19,7 +19,7 @@ class Authentication extends \Message\Cog\Controller\Controller
 
 	public function logout()
 	{
-		return $this->forward('Message:User::Controller:Authentication#logout', array(
+		return $this->forward('Message:User::Controller:Authentication#logoutAction', array(
 			'redirectURL' => $this->generateUrl('ms.cp.login')
 		));
 	}
