@@ -5,7 +5,7 @@
 		<title>{% block title %}Mothership Control Panel{% endblock %}</title>
 	</head>
 	<body>
-		{% for types in flash %}
+		{% for types in flashes %}
 			{% for message in types %}
 				<p>{{ message|raw }}</p>
 			{% endfor %}
