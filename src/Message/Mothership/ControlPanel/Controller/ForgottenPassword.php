@@ -11,11 +11,14 @@ class ForgottenPassword extends \Message\Cog\Controller\Controller
 		));
 	}
 
-	public function logout()
+	public function reset($email, $hash)
 	{
-		// @todo
-		#$this->_services['http.session']->remove('user');
+		$user = $this->get('user.loader')->getByEmail($email);
 
-		return $this->redirect($this->generateUrl('ms.cp.login'));
+		return $this->render('::password/reset', array(
+			'email' => $email,
+			'hash'  => $hash,
+			'user'  => $user,
+		));
 	}
 }

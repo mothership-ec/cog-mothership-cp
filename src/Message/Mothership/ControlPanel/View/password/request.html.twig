@@ -2,6 +2,7 @@
 <h1>Forgotten your password?</h1>
 
 {{ render(controller('Message:User::Controller:ForgottenPassword#request', {
+	resetRoute: 'ms.cp.password.reset',
 	email: email
 })) }}
 {% endblock %}

@@ -1,0 +1,9 @@
+{% block content %}
+<h1>Welcome back, {{user.forename}}.</h1>
+
+{{ render(controller('Message:User::Controller:ForgottenPassword#reset', {
+	email: email,
+	hash: hash,
+	redirectURL: url('ms.cp.dashboard'),
+})) }}
+{% endblock %}
