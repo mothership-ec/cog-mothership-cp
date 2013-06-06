@@ -5,6 +5,12 @@
 		<title>{% block title %}Mothership Control Panel{% endblock %}</title>
 	</head>
 	<body>
+		{% for types in flash %}
+			{% for message in types %}
+				<p>{{ message|raw }}</p>
+			{% endfor %}
+		{% endfor %}
+
 		{% block content %}
 		{% endblock %}
 	</body>
