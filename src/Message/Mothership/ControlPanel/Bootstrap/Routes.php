@@ -15,8 +15,8 @@ class Routes implements RoutesInterface
 		$router['ms.cp']->add('ms.cp.login', '/login', '::Controller:Authentication#login');
 		$router['ms.cp']->add('ms.cp.logout', '/logout', '::Controller:Authentication#logout');
 
-		$router['ms.cp']->add('ms.cp.password.request', '/password/request/{email}', '::Controller:ForgottenPassword#request')
-			->setDefault('email', null);
+		$router['ms.cp']->add('ms.cp.password.request', '/password/request', '::Controller:ForgottenPassword#request');
+		$router['ms.cp']->add('ms.cp.password.request.email_prefill', '/password/request/{email}', '::Controller:ForgottenPassword#request');
 		$router['ms.cp']->add('ms.cp.password.reset', '/password/reset/{email}/{hash}', '::Controller:ForgottenPassword#reset');
 	}
 }
