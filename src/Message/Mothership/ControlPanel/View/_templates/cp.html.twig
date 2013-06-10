@@ -2,12 +2,7 @@
 
 {% block content %}
 
-<nav>
-	<ol>
-		<li><a href="{{ url('ms.cp.dashboard') }}">Dashboard</a></li>
-		<li><a href="{{ url('ms.cp.file_manager.listing') }}">File Manager</a></li>
-	</ol>
-</nav>
+{{ render(controller('Message:Mothership:ControlPanel::Controller:Menu#main')) }}
 
 <a href="{{ url('ms.cp.logout') }}">Log out</a>
 
