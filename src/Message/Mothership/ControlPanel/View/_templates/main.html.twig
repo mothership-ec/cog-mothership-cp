@@ -13,5 +13,10 @@
 
 		{% block content %}
 		{% endblock %}
+
+		<section role="contentinfo">
+			<small>&copy; <a href="http://message.co.uk">Message</a> {{ "now"|date('Y') }}</small>
+			<a class="frontend" href="{{ cfg.mothership.url }}" target="_blank">{{ cfg.mothership.url }}</a>
+		</section>
 	</body>
 </html>
