@@ -3,6 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{% block title %}Mothership Control Panel{% endblock %}</title>
+
+		{#
+		{% stylesheets '@ms_cp_css' output='/assets/css/ms_cp.css' %}
+			<link href="{{ asset_url }}" rel="stylesheet">
+		{% endstylesheets %}
+		#}
 	</head>
 	<body>
 		{% for types in flashes %}
