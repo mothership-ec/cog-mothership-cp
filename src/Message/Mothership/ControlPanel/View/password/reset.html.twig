@@ -1,6 +1,6 @@
 {% extends '::_templates/main' %}
 
-{% block content %}
+{% block body %}
 <h1>Welcome back, {{user.forename}}.</h1>
 
 {{ render(controller('Message:User::Controller:ForgottenPassword#reset', {

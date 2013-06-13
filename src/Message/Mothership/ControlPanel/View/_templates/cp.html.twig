@@ -1,13 +1,13 @@
 {% extends '::_templates/main' %}
 
-{% block content %}
+{% block body %}
 
 {{ render(controller('Message:Mothership:ControlPanel::Controller:Menu#main')) }}
 
 <a href="{{ url('ms.cp.logout') }}">Log out</a>
 
 <section>
-{% block main %}{% endblock %}
+{% block content %}{% endblock %}
 </section>
 
 {% endblock %}
