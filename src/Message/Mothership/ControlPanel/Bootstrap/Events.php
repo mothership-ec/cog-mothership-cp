@@ -2,8 +2,7 @@
 
 namespace Message\Mothership\ControlPanel\Bootstrap;
 
-use Message\Mothership\ControlPanel\Event;
-use Message\Mothership\ControlPanel\UserGroup;
+use Message\Mothership\ControlPanel;
 
 use Message\Cog\Bootstrap\EventsInterface;
 use Message\Cog\Service\ContainerAwareInterface;
@@ -23,18 +22,19 @@ class Events implements EventsInterface, ContainerAwareInterface
 
 	public function registerEvents($dispatcher)
 	{
-		$dispatcher->addListener(Event\Event::BUILD_MAIN_MENU, function($event) {
+		$dispatcher->addListener(ControlPanel\Event\Event::BUILD_MAIN_MENU, function($event) {
 			$event->addItem('ms.cp.dashboard', 'Dashboard');
 		});
 
 		$dispatcher->addListener('modules.load.success', array($this, 'addGroups'));
 
+		$dispatcher->addSubscriber(new ControlPanel\EventListener);
 	}
 
 	public function addGroups()
 	{
 		$this->_services['user.groups']
-			->add(new UserGroup\SuperAdmin)
-			->add(new UserGroup\TestGroup);
+			->add(new ControlPanel\UserGroup\SuperAdmin)
+			->add(new ControlPanel\UserGroup\TestGroup);
 	}
 }
