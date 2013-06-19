@@ -21,12 +21,8 @@
 	},
 	"repositories": [
 		{
-			"type": "vcs",
-			"url" : "git@github.com:messagedigital/cog.git"
-		},
-		{
-			"type": "vcs",
-			"url" : "git@github.com:messagedigital/cog-user.git"
+			"type": "composer",
+			"url" : "http://packages.message.co.uk"
 		}
 	],
 	"minimum-stability": "dev",
