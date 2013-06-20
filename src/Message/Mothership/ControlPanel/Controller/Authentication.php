@@ -2,6 +2,8 @@
 
 namespace Message\Mothership\ControlPanel\Controller;
 
+use Message\User\User;
+
 class Authentication extends \Message\Cog\Controller\Controller
 {
 	protected $_redirectRoute = 'ms.cp.dashboard';
@@ -9,7 +11,7 @@ class Authentication extends \Message\Cog\Controller\Controller
 	public function login()
 	{
 		if ($this->get('user.current') instanceof User) {
-			$this->redirect($this->generateUrl($this->_redirectRoute));
+			return $this->redirectToRoute($this->_redirectRoute);
 		}
 
 		return $this->render('::login', array(
