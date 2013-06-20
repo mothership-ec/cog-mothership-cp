@@ -2,6 +2,8 @@
 
 namespace Message\Mothership\ControlPanel;
 
+use Message\Mothership\ControlPanel\Event\BuildMenuEvent;
+
 use Message\User\AnonymousUser;
 
 use Message\Cog\Event\EventListener as BaseListener;
@@ -13,7 +15,7 @@ use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 /**
- * Event listener for the Mothership Control Panel
+ * Event listener for the Mothership Control Panel.
  *
  * @author Joe Holdcroft <joe@message.co.uk>
  */
@@ -27,6 +29,12 @@ class EventListener extends BaseListener implements SubscriberInterface
 		return array(
 			KernelEvents::EXCEPTION => array(
 				array('sendToLogin')
+			),
+			'modules.load.success' => array(
+				array('registerGroups')
+			),
+			BuildMenuEvent::BUILD_MAIN_MENU => array(
+				array('registerMainMenuItems')
 			),
 		);
 	}
@@ -51,5 +59,25 @@ class EventListener extends BaseListener implements SubscriberInterface
 				$this->_services['routing.generator']->generate('ms.cp.login')
 			));
 		}
+	}
+
+	/**
+	 * Register items to the main menu of the control panel.
+	 *
+	 * @param  BuildMenuEvent $event The event
+	 */
+	public function registerMainMenuItems(BuildMenuEvent $event)
+	{
+		$event->addItem('ms.cp.dashboard', 'Dashboard');
+	}
+
+	/**
+	 * Register user groups.
+	 */
+	public function registerGroups()
+	{
+		$this->_services['user.groups']
+			->add(new UserGroup\SuperAdmin)
+			->add(new UserGroup\TestGroup);
 	}
 }
