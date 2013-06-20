@@ -28,8 +28,6 @@ class Events implements EventsInterface, ContainerAwareInterface
 		});
 
 		$dispatcher->addListener('modules.load.success', array($this, 'addGroups'));
-
-		#$dispatcher->addSubscriber(new \Message\Mothership\ControlPanel\EventListener\RegisterAssets);
 	}
 
 	public function addGroups()
