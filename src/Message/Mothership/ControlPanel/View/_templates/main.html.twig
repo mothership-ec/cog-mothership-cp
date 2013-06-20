@@ -11,20 +11,26 @@
 			output='/assets/css/ms_cp.css' %}
 			<link href="{{ asset_url }}" rel="stylesheet">
 		{% endstylesheets %}
+			<link rel="stylesheet" href="//fast.fonts.com/cssapi/97534885-97aa-4253-9892-b983a466ab47.css"/>
 	</head>
 	<body>
-		{% for types in flashes %}
-			{% for message in types %}
-				<p>{{ message|raw }}</p>
+			{% for types in flashes %}
+				{% for message in types %}
+					<p>{{ message|raw }}</p>
+				{% endfor %}
 			{% endfor %}
-		{% endfor %}
 
-		{% block body %}
-		{% endblock %}
+			{% block body %}
+			{% endblock %}
 
-		<section role="contentinfo">
-			<small>&copy; <a href="http://message.co.uk">Message</a> {{ "now"|date('Y') }}</small>
-			<a class="frontend" href="{{ cfg.mothership.url }}" target="_blank">{{ cfg.mothership.url }}</a>
-		</section>
+			<footer role="contentinfo">
+
+				<small class="copy">&copy; <a href="http://message.co.uk">Message</a> {{ "now"|date('Y') }}</small>
+				<a href="{{ cfg.mothership.url }}" target="_blank" class="website icon-external-link"><i class="icon-external-link"></i>{{ cfg.mothership.url }}</a>
+
+			</footer>
+		
+		<!-- End of the container div -->
+		</div>
 	</body>
 </html>

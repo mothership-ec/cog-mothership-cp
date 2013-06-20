@@ -1,10 +1,29 @@
 {% extends '::_templates/main' %}
 
 {% block body %}
-<h1>Log in to Mothership</h1>
+	<div class="login container">
+		
+		<div class="center">
+			<header>
 
-{{ render(controller('Message:User::Controller:Authentication#login', {
-	redirectURL: url(redirectRoute),
-	forgottenPasswordRoute: 'ms.cp.password.request'
-})) }}
+				<span class="spaceship"></span>
+
+				<h1>Welcome to Mothership</h1>
+
+				<span class="shadow"></span>
+
+			</header>
+
+
+			<section class="form">
+
+				<h1>Log in to Mothership</h1>
+				
+				{{ render(controller('Message:User::Controller:Authentication#login', {
+					redirectURL: url(redirectRoute),
+					forgottenPasswordRoute: 'ms.cp.password.request'
+				})) }}
+
+			</section>
+		</div>
 {% endblock %}
