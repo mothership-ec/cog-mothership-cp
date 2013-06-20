@@ -11,7 +11,7 @@
 	],
 	"support": {
 		"wiki"  : "http://server.local/wiki/projects/cog",
-		"issues": "http://server.local:3000/cog/cog-mothership-cp/issues"
+		"issues": "http://github.com/messagedigital/cog-mothership-cp/issues"
 	},
 	"autoload": {
 		"psr-0": {
@@ -21,12 +21,8 @@
 	},
 	"repositories": [
 		{
-			"type": "vcs",
-			"url" : "git@github.com:messagedigital/cog.git"
-		},
-		{
-			"type": "vcs",
-			"url" : "git@github.com:messagedigital/cog-user.git"
+			"type": "composer",
+			"url" : "http://packages.message.co.uk"
 		}
 	],
 	"minimum-stability": "dev",
