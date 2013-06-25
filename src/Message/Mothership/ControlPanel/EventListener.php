@@ -77,7 +77,6 @@ class EventListener extends BaseListener implements SubscriberInterface
 	public function registerGroups()
 	{
 		$this->_services['user.groups']
-			->add(new UserGroup\SuperAdmin)
-			->add(new UserGroup\TestGroup);
+			->add(new UserGroup\SuperAdmin);
 	}
 }
