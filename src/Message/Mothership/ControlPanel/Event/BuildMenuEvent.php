@@ -14,12 +14,13 @@ class BuildMenuEvent extends Event
 	/**
 	 * Add an item to the menu.
 	 *
-	 * The target route is added to the array of routes for this item if it is
-	 * not already in there.
+	 * The target route is added to the array of route and route collection
+	 * names for this item if it is not already in there.
 	 *
 	 * @param string $targetRoute Name of the route to link to
 	 * @param string $label       Label for the menu item
-	 * @param array  $routes      Array of routes that sit within this item
+	 * @param array  $routes      Array of route or route collection names that
+	 *                            sit within this item
 	 * @param array  $classes     Array of classes to apply to the menu item
 	 *
 	 * @throws \InvalidArgumentException If a route is defined that is already

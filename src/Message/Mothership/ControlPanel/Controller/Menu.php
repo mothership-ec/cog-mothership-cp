@@ -20,16 +20,19 @@ class Menu extends \Message\Cog\Controller\Controller
 	 * menu.
 	 *
 	 * It then checks which item the current request should fall within by
-	 * checking which item has the current route's name defined in the array
-	 * of routes for the item. The current item then has "current" added to the
-	 * array of classes for the menu item.
+	 * looping through the list of allowed route names and route collection
+	 * names for each menu item, and checking if any of these match either the
+	 * current route name or any collection the current route is in.
+	 * The current item then has "current" added to the array of classes for the
+	 * menu item.
 	 *
 	 * @return \Message\Cog\HTTP\Response
 	 */
 	public function main()
 	{
-		$currentRoute = $this->get('http.request.master')->attributes->get('_route');
-		$event        = new BuildMenuEvent;
+		$currentRoute       = $this->get('http.request.master')->attributes->get('_route');
+		$currentCollections = $this->get('http.request.master')->attributes->get('_route_collections');
+		$event              = new BuildMenuEvent;
 
 		$this->get('event.dispatcher')->dispatch(
 			Event::BUILD_MAIN_MENU,
@@ -39,8 +42,12 @@ class Menu extends \Message\Cog\Controller\Controller
 		$items = $event->getItems();
 
 		foreach ($items as $key => $item) {
-			if (in_array($currentRoute, $item['routes'])) {
-				$items[$key]['classes'][] = 'current';
+			foreach ($item['routes'] as $route) {
+				if ($route === $currentRoute
+				 || in_array($route, $currentCollections)) {
+					$items[$key]['classes'][] = 'current';
+					break;
+				}
 			}
 		}
 
