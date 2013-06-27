@@ -177,6 +177,7 @@
 
 .navigation {
 	position: relative;
+	box-sizing: border-box;
 	width: 100%;
 	height: 59px;
 	border: 1px solid #26537c;
@@ -188,6 +189,7 @@
 	background-image: -ms-linear-gradient(top, #528cb6, #4473a6);
 	background-image: linear-gradient(top, #528cb6, #4473a6);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#528cb6', EndColorStr='#4473a6');
+	overflow: hidden;
 }
 
 .navigation a {
@@ -213,6 +215,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3f759f', EndColorStr='#34608c');
 	border-right: 1px solid #26537c;
 	position: relative;
+	text-indent: 15px;
 }
 
 .navigation .vendor a {
@@ -280,5 +283,15 @@
 	margin-right: 10px;
 }
 
+/* Dashboard / Welcome
+------------------------------------------------------------ */
 
+.welcome {
+	font-family:'Proxima N W15 Bold';
+	font-size: 26px;
+	text-align: center;
+	position: absolute;
+	top: 50%; 
+	width: 100%;
+}
 
