@@ -1,13 +1,18 @@
 {% extends '::_templates/main' %}
 
 {% block body %}
+	<div class="container-cp">
 
 {{ render(controller('Message:Mothership:ControlPanel::Controller:Menu#main')) }}
-
-<a href="{{ url('ms.cp.logout') }}">Log out</a>
 
 <section>
 {% block content %}{% endblock %}
 </section>
+		<footer role="contentinfo">
 
+		<small class="copy">&copy; <a href="http://message.co.uk">Message</a> {{ "now"|date('Y') }}</small>
+		<a href="{{ cfg.mothership.url }}" target="_blank" class="website"><i class="icon-external-link"></i>{{ cfg.mothership.url }}</a>
+
+		</footer>
+	</div>
 {% endblock %}

@@ -3,7 +3,7 @@
 {% block title %}Log in to Mothership{% endblock %}
 
 {% block body %}
-	<div class="login container">
+	<div class="container-login">
 
 		<div class="center">
 			<header>
@@ -28,4 +28,12 @@
 
 			</section>
 		</div>
+
+		<footer role="contentinfo">
+
+		<small class="copy">&copy; <a href="http://message.co.uk">Message</a> {{ "now"|date('Y') }}</small>
+		<a href="{{ cfg.mothership.url }}" target="_blank" class="website icon-external-link">{{ cfg.mothership.url }}</a>
+
+		</footer>
+	</div>
 {% endblock %}
