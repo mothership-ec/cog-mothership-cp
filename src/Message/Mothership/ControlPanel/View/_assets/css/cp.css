@@ -179,7 +179,7 @@
 	position: relative;
 	box-sizing: border-box;
 	width: 100%;
-	height: 59px;
+	height: 60px;
 	border: 1px solid #26537c;
 	background-color: #528cb6;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#528cb6), to(#4473a6));
@@ -189,7 +189,9 @@
 	background-image: -ms-linear-gradient(top, #528cb6, #4473a6);
 	background-image: linear-gradient(top, #528cb6, #4473a6);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#528cb6', EndColorStr='#4473a6');
-	overflow: hidden;
+	-webkit-box-shadow: 0px 0px 1px 3px rgba(17,48,81,0.1);
+	-moz-box-shadow: 0px 0px 1px 3px rgba(17,48,81,0.1);
+	box-shadow: 0px 0px 1px 3px rgba(17,48,81,0.1);
 }
 
 .navigation a {
@@ -230,6 +232,7 @@
 .navigation ol {
 	float: left;
 	list-style: none;
+	height: 59px;
 }
 
 .navigation li {
@@ -259,6 +262,18 @@
 	box-shadow: inset 0px 1px 5px 0px rgba(000, 000, 000, 0.25);
 }
 
+.navigation li.current {
+	background: #F1F1F1;
+	-webkit-box-shadow: 0px 4px 0px #F1F1F1;
+	-moz-box-shadow: 0px 4px 0px #F1F1F1;
+	box-shadow: 0px 4px 0px #F1F1F1;
+}
+
+.navigation li.current a {
+	color: #333;
+	text-shadow: 0px 1px 0px #FFF;
+}
+
 .logout {
 	width: 101px;
 	height: 31px;
@@ -283,6 +298,12 @@
 	margin-right: 10px;
 }
 
+.logout:hover {
+	-webkit-box-shadow: inset 0px -2px 5px 0px rgba(000, 000, 000, 0.25), 1px 1px 0px #5584b4;
+	-moz-box-shadow: inset 0px -2px 5px 0px rgba(000, 000, 000, 0.25), 1px 1px 0px #5584b4;
+	box-shadow: inset 0px 1px 5px 0px rgba(000, 000, 000, 0.25), 1px 1px 0px #5584b4;
+}
+
 /* Dashboard / Welcome
 ------------------------------------------------------------ */
 
@@ -293,5 +314,23 @@
 	position: absolute;
 	top: 50%; 
 	width: 100%;
+	-webkit-box-shadow: 0px 4px 0px #F1F1F1;
+	-moz-box-shadow: 0px 4px 0px #F1F1F1;
+	box-shadow: 0px 4px 0px #F1F1F1;
 }
 
+.welcome:before {
+	font-family: 'FontAwesome';
+	content: "\f118";
+	margin-right: 10px;
+}
+
+/* Sidebar
+------------------------------------------------------------ */
+
+.sidebar {
+	width: 250px;
+	background: #222;
+	float: left;
+	height: 100%;
+}
