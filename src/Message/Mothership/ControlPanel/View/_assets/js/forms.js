@@ -11,7 +11,7 @@ $(function() {
 			prototypeName = self.attr('data-prototype-name') || '__name__',
 			prototype     = self.attr('data-prototype').replace(new RegExp(prototypeName, 'g'), index);
 
-		self.before(prototype);
+		self.before($(prototype).hide().fadeIn(200));
 
 		return false;
 	});
