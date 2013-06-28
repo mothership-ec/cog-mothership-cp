@@ -192,6 +192,7 @@
 	-webkit-box-shadow: 0px 0px 1px 3px rgba(17,48,81,0.1);
 	-moz-box-shadow: 0px 0px 1px 3px rgba(17,48,81,0.1);
 	box-shadow: 0px 0px 1px 3px rgba(17,48,81,0.1);
+	z-index: 100;
 }
 
 .navigation a {
@@ -333,11 +334,20 @@
 	background: #222;
 	float: left;
 	height: 100%;
-	position: absolute;
+	position: fixed;
+	padding-top: 59px;
+	margin-top: -59px;
+	z-index: 0;
 }
 
 .sidebar .create {
 	
+}
+
+.sidebar li {
+	margin-left: 10px;
+	margin-bottom: 10px;
+	color: #FFF;
 }
 
 /* Main
