@@ -8,10 +8,20 @@
 			'Message:Mothership:ControlPanel::_assets/css/basic.css'
 			'Message:Mothership:ControlPanel::_assets/css/fonts.css'
 			'Message:Mothership:ControlPanel::_assets/css/cp.css'
-			output='/assets/css/ms_cp.css' %}
-			<link href="{{ asset_url }}" rel="stylesheet">
+			output='/assets/css/ms_cp.css'
+		%}
+			<link rel="stylesheet" href="{{ asset_url }}">
 		{% endstylesheets %}
-			<link rel="stylesheet" href="//fast.fonts.com/cssapi/97534885-97aa-4253-9892-b983a466ab47.css"/>
+		<link rel="stylesheet" href="//fast.fonts.com/cssapi/97534885-97aa-4253-9892-b983a466ab47.css">
+
+		{% javascripts
+			'Message:Mothership:ControlPanel::_assets/js/components/jquery/jquery.min.js'
+			'Message:Mothership:ControlPanel::_assets/js/forms.js'
+			output='/assets/js/ms_cp.js'
+		%}
+			<script src="{{ asset_url }}"></script>
+		{% endjavascripts %}
+
 	</head>
 	<body>
 			{% for types in flashes %}
