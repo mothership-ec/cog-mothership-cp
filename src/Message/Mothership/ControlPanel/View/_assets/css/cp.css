@@ -333,4 +333,19 @@
 	background: #222;
 	float: left;
 	height: 100%;
+	position: absolute;
+}
+
+.sidebar .create {
+	
+}
+
+/* Main
+------------------------------------------------------------ */
+
+.main {
+	float: left;
+	width: 100%;
+	margin-left: 250px;
+	box-sizing: border-box;
 }

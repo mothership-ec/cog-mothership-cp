@@ -233,6 +233,7 @@ button:active {
 ------------------------------------------------------------ */
 
 .submit,
+.create,
 button[type="submit"]{
 	border-color: #081d31;
 	background-color: #528bb6;
@@ -413,6 +414,7 @@ dd {
 	width: 100%;
 	height: 100%;
 	background: #F1F1F1;
+	overflow: hidden;
 }
 
 [class^="container-"] footer {
