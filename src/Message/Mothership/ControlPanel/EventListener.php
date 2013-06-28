@@ -33,9 +33,6 @@ class EventListener extends BaseListener implements SubscriberInterface
 			'modules.load.success' => array(
 				array('registerGroups')
 			),
-			BuildMenuEvent::BUILD_MAIN_MENU => array(
-				array('registerMainMenuItems')
-			),
 		);
 	}
 
@@ -59,16 +56,6 @@ class EventListener extends BaseListener implements SubscriberInterface
 				$this->_services['routing.generator']->generate('ms.cp.login')
 			));
 		}
-	}
-
-	/**
-	 * Register items to the main menu of the control panel.
-	 *
-	 * @param  BuildMenuEvent $event The event
-	 */
-	public function registerMainMenuItems(BuildMenuEvent $event)
-	{
-		$event->addItem('ms.cp.dashboard', 'Dashboard');
 	}
 
 	/**

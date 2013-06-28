@@ -1,13 +1,5 @@
-<nav class="navigation">
-	<h1 class="vendor">
-		<a href="/">
-			Uniform Wares
-		</a>
-	</h1>
-	<ol>
-		{% for item in items %}
-		<li class="{{ item.classes|join(' ') }}"><a href="{{ url(item.target) }}">{{ item.label }}</a></li>
-		{% endfor %}
-	</ol>
-	<a class="logout" href="{{ url('ms.cp.logout') }}">Log out</a>
-</nav>
+<ol>
+	{% for item in items %}
+	<li class="{{ item.classes|join(' ') }}"><a href="{{ url(item.target) }}">{{ item.label }}</a></li>
+	{% endfor %}
+</ol>

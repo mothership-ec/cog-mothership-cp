@@ -24,14 +24,13 @@
 
 	</head>
 	<body>
-			{% for types in flashes %}
-				{% for message in types %}
-					<p>{{ message|raw }}</p>
-				{% endfor %}
+		{% for types in flashes %}
+			{% for message in types %}
+				<p>{{ message|raw }}</p>
 			{% endfor %}
+		{% endfor %}
 
-			{% block body %}
-			{% endblock %}
-
+		{% block body %}
+		{% endblock %}
 	</body>
 </html>
