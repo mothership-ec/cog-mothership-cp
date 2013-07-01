@@ -504,7 +504,7 @@
 }
 
 .title {
-	text-decoration: 0px 1px 0px rgba(255,255,255,1.0);
+	text-decoration: 0px 1px 0px #FFF;
 }
 
 .title h1 {
@@ -517,7 +517,36 @@
 }
 
 .edit-title {
+	position: absolute;
+	top: 61px;
+	height: 82px;
+	width: 100%;
+	background: #F1F1F1;
 	display: none;
+	z-index: 999;
+}
+
+.edit-title label {
+	font-size: 1.250em;
+	float: left;
+	height: 82px;
+	line-height: 84px;
+}
+
+.edit-title input {
+	max-width: 300px;
+	margin: 19px;
+	float: left;
+}
+
+.edit-title button {
+	float: left;
+	margin-top: 19px;
+	padding: 13px 15px 10px;
+}
+
+.title:hover + .edit-title {
+	display: block;
 }
 
 .topbar {
@@ -640,16 +669,11 @@
 	-webkit-box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
 	-moz-box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
 	box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
-	-webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	transition: all .5s ease;
-	height: 0;
-	opacity: 0;
+	display: none;
 }
 
 .publish:hover form {
-	height: auto;
-	opacity: 1;
+	display: block;
 }
 
 .publish input.text-input {
