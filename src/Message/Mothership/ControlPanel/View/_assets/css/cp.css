@@ -587,7 +587,7 @@
 
 .controls {
 	float: right;
-	width: 50%;
+	width: 466px;
 }
 
 .delete-page {
@@ -634,15 +634,20 @@
     width: calc(100% - 250px);
 	box-sizing: border-box;
 	padding: 23px 23px 3px 23px;
-	display: none;
 	border-bottom: 1px solid #C1C1C1;
 	-webkit-box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
 	-moz-box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
 	box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	transition: all .5s ease;
+	height: 0;
+	opacity: 0;
 }
 
 .publish:hover form {
-	display: block;
+	height: auto;
+	opacity: 1;
 }
 
 .publish input.text-input {
@@ -688,5 +693,14 @@
 .publish input[type="time"]::-webkit-calendar-picker-indicator,
 .publish input[type="time"]::-webkit-inner-spin-button {
     display: none;
+}
+
+/* Content
+------------------------------------------------------------ */
+
+#save-content {
+	position: absolute;
+	top: 155px;
+	right: 23px;
 }
 
