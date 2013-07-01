@@ -206,6 +206,10 @@ button,
 	transform: all .15s linear;
 }
 
+.button.small {
+	padding: 8px 15px 5px;
+}
+
 input:hover,
 textarea:hover {
 	border: 1px solid #999;
@@ -225,6 +229,9 @@ select:active {
 button:hover,
 .button:hover {
 	cursor: pointer;
+	-webkit-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.1), inset 0px -5px 5px rgba(152,152,152,0.1);
+	-moz-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.1), inset 0px -5px 5px rgba(152,152,152,0.1);
+	box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.1), inset 0px -5px 5px rgba(152,152,152,0.1);
 }
 
 button:active,
@@ -334,6 +341,9 @@ button:active,
 
 .button.group {
 	padding: 0px;
+	-webkit-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.1);
+	-moz-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.1);
+	box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.1);
 }
 
 .button.group a {
@@ -346,6 +356,13 @@ button:active,
 	padding: 12px 9px;
 	display: block;
 	float: left;
+}
+
+.button.group a:hover,
+.button.group span:hover {
+	-webkit-box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1);
+	-moz-box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1);
+	box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1);
 }
 
 /* Code snippets

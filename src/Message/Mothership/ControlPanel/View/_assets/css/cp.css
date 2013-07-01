@@ -543,7 +543,6 @@
 
 .topbar .button {
 	float: left;
-	padding: 8px 15px 5px;
 	margin-top: 11px;
 }
 
@@ -608,8 +607,15 @@
 	font-family: 'FontAwesome';
 }
 
+.delete-page:hover {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
 .publish {
 	float: left;
+	padding-bottom: 10px;
 }
 
 .publish a {
@@ -617,6 +623,52 @@
 }
 
 .publish form {
-	display: none;
 	background: #FFF;
+	position: absolute;
+	left: 250px;
+	top: 201px;
+	z-index: 100;
+	width: -moz-calc(100% - 250px);
+    width: -webkit-calc(100% - 250px);
+    width: calc(100% - 250px);
+	box-sizing: border-box;
+	padding: 23px;
+/*	display: none;*/
+	border-bottom: 1px solid #C1C1C1;
 }
+
+.publish:hover form {
+	display: block;
+}
+
+.publish input.text-input {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.publish .date-time {
+	float: left;
+	width: 100%;
+	height: 32px;
+	margin-bottom: 20px;
+}
+
+.publish .date-time label {
+	width: auto;
+	float: left;
+	height: 32px;
+	line-height: 32px;
+	margin: 0 20px 0 0;
+}
+
+.publish .date-time input {
+	width: auto;
+	float: left;
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 32px;
+	margin: 0 20px 0 0;
+}
+
+
