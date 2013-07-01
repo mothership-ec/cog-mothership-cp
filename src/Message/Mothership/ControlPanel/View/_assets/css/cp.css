@@ -535,10 +535,11 @@
 	background-image: -o-linear-gradient(top, #f9f9f9, #f1f1f1);
 	background-image: -ms-linear-gradient(top, #f9f9f9, #f1f1f1);
 	background-image: linear-gradient(top, #f9f9f9, #f1f1f1);
-	-webkit-box-shadow: 0 -1px 0 rgba(255,255,255,1.0);
-	-moz-box-shadow: 0 -1px 0 rgba(255,255,255,1.0);
-	box-shadow: 0 -1px 0 rgba(255,255,255,1.0);
+	-webkit-box-shadow: 0 -1px 0 rgba(255,255,255,1.0), 0px 1px 3px rgba(000,000,000,0.1);
+	-moz-box-shadow: 0 -1px 0 rgba(255,255,255,1.0), 0px 1px 3px rgba(000,000,000,0.1);
+	box-shadow: 0 -1px 0 rgba(255,255,255,1.0), 0px 1px 3px rgba(000,000,000,0.1);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
+	z-index: 999;
 }
 
 .topbar .button {
@@ -632,9 +633,12 @@
     width: -webkit-calc(100% - 250px);
     width: calc(100% - 250px);
 	box-sizing: border-box;
-	padding: 23px;
-/*	display: none;*/
+	padding: 23px 23px 3px 23px;
+	display: none;
 	border-bottom: 1px solid #C1C1C1;
+	-webkit-box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
+	-moz-box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
+	box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
 }
 
 .publish:hover form {
@@ -647,11 +651,17 @@
 	box-shadow: none;
 }
 
+.publish .wrap {
+	float: left;
+	width: 460px;
+}
+
 .publish .date-time {
 	float: left;
 	width: 100%;
 	height: 32px;
 	margin-bottom: 20px;
+	width: 460px;
 }
 
 .publish .date-time label {
@@ -667,8 +677,16 @@
 	float: left;
 	padding-top: 0;
 	padding-bottom: 0;
+	padding-right: 0;
 	height: 32px;
 	margin: 0 20px 0 0;
+	-webkit-appearance: none;
 }
 
+.publish input[type="date"]::-webkit-calendar-picker-indicator,
+.publish input[type="date"]::-webkit-inner-spin-button,
+.publish input[type="time"]::-webkit-calendar-picker-indicator,
+.publish input[type="time"]::-webkit-inner-spin-button {
+    display: none;
+}
 
