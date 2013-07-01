@@ -177,7 +177,8 @@ label[for="setloggedin"]:hover {
 	cursor: pointer;
 }
 
-button {
+button,
+.button {
 	padding: 12px 15px;
 	border: 1px solid #CCC;
 	-webkit-border-radius: 2px;
@@ -190,9 +191,9 @@ button {
 	background-image: -o-linear-gradient(top, #f2f2f2, #e5e5e5);
 	background-image: -ms-linear-gradient(top, #f2f2f2, #e5e5e5);
 	background-image: linear-gradient(top, #f2f2f2, #e5e5e5);
-	-webkit-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.25);
-	-moz-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.25);
-	box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.25);
+	-webkit-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.1);
+	-moz-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.1);
+	box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.1);
 	color: #333;
 	text-shadow: 0px 1px 0px #FFF;
 	font-size: 1.0em;
@@ -221,11 +222,13 @@ select:active {
 	box-shadow: 0 1px 5px rgba(208,60,69,0.1);
 }
 
-button:hover {
+button:hover,
+.button:hover {
 	cursor: pointer;
 }
 
-button:active {
+button:active,
+.button:active {
 	padding: 14px 15px 10px;
 }
 
@@ -233,8 +236,7 @@ button:active {
 ------------------------------------------------------------ */
 
 .submit,
-.create,
-button[type="submit"]{
+.create {
 	border-color: #081d31;
 	background-color: #528bb6;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#528bb6), to(#4473a7));
@@ -247,7 +249,8 @@ button[type="submit"]{
 	text-shadow: 0px -1px 0px #081d31;
 }
 
-.accept {
+.accept,
+.save {
 	border-color: #0f5b23;
 	background-color: #3fa262;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#3fa262), to(#196d2e));
@@ -282,8 +285,7 @@ button[type="submit"]{
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#d84939', EndColorStr='#bc1b1a');
 }
 
-.submit:hover,
-button[type="submit"]:hover {
+.submit:hover {
 	background-color: #528bb6;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#528bb6), to(#2a537b));
 	background-image: -webkit-linear-gradient(top, #528bb6, #2a537b);
@@ -316,8 +318,7 @@ button[type="submit"]:hover {
 	padding: 14px 15px 10px;
 }
 
-.submit:active,
-button[type="submit"]:hover {
+.submit:active {
 	background-color: #2a537b;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#2a537b), to(#2a547b));
 	background-image: -webkit-linear-gradient(top, #2a537b, #2a547b);
@@ -326,6 +327,25 @@ button[type="submit"]:hover {
 	background-image: -ms-linear-gradient(top, #2a537b, #2a547b);
 	background-image: linear-gradient(top, #2a537b, #2a547b);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2a537b', EndColorStr='#2a547b');
+}
+
+/* Button group
+------------------------------------------------------------ */
+
+.button.group {
+	padding: 0px;
+}
+
+.button.group a {
+	padding: 12px 15px;
+	border-right: 1px solid #CCC;
+	float: left;
+}
+
+.button.group span {
+	padding: 12px 9px;
+	display: block;
+	float: left;
 }
 
 /* Code snippets
