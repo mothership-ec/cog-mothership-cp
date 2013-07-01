@@ -587,7 +587,9 @@
 
 .controls {
 	float: right;
-	width: 466px;
+	min-width: 330px;
+	width: auto;
+	margin-right: 170px;
 }
 
 .delete-page {
