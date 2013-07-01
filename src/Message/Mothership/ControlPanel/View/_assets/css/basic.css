@@ -5,7 +5,7 @@
 /*                                                         */
 /*                                                         */
 /* ======================================================= */
-/*                                                         
+/*
 /*
 /*    Development by Message
 /*    http://www.message.co.uk
@@ -48,7 +48,7 @@
 html {
 	height: 100%;
     font-size: 1em;
-	-webkit-text-size-adjust: 1em; 
+	-webkit-text-size-adjust: 1em;
 	-ms-text-size-adjust: 1em;
 }
 
@@ -59,7 +59,7 @@ body {
 	font-family:'Proxima N W15 Reg';
 }
 
-/* Text and links 
+/* Text and links
 ------------------------------------------------------------ */
 
 a {
@@ -84,10 +84,10 @@ p a:hover {
 	text-decoration: underline;
 }
 
-h1, 
-h2, 
-h3, 
-h4, 
+h1,
+h2,
+h3,
+h4,
 h5 {
 	color: #333;
 	font-weight: normal;
@@ -153,8 +153,8 @@ input.success {
 	border-color: #22a437;
 }
 
-input[type="checkbox"], 
-input[type="radio"], 
+input[type="checkbox"],
+input[type="radio"],
 input[type="image"] {
 	float: left;
 	margin-right: 9px;
@@ -210,9 +210,9 @@ textarea:hover {
 	border: 1px solid #999;
 }
 
-input[type]:focus, 
-textarea:focus, 
-select:focus, 
+input[type]:focus,
+textarea:focus,
+select:focus,
 select:active {
 	outline: none;
 	border: 1px solid #467eb0;
@@ -302,7 +302,7 @@ button[type="submit"]:hover {
 .cancel:hover,
 .edit:hover,
 .delete:hover {
-	
+
 }
 
 .submit:active,
@@ -393,7 +393,7 @@ dd {
 
 .feedback.error {
 	color: #ce2828 !important;
-	font-family:'Proxima N W15 Smbd'; 
+	font-family:'Proxima N W15 Smbd';
 }
 
 .feedback.error:before {
