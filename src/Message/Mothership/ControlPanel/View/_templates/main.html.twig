@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 	<head>
 		<meta charset="utf-8">
 		<title>{% block title %}Mothership Control Panel{% endblock %}</title>
@@ -16,6 +16,7 @@
 
 		{% javascripts
 			'Message:Mothership:ControlPanel::_assets/js/components/jquery/jquery.min.js'
+			'Message:Mothership:ControlPanel::_assets/js/setup.js'
 			'Message:Mothership:ControlPanel::_assets/js/forms.js'
 			output='/assets/js/ms_cp.js'
 		%}
