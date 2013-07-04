@@ -41,13 +41,13 @@
 		},
 
 		bindEvents : function() {
-			// Set up history event listener for loading content
-			History.Adapter.bind(window, 'statechange.livePane', function() {
-				methods.loadUri.call(this, History.getState().url);
-			});
-
 			return this.each(function() {
 				var self = $(this);
+
+				// Set up history event listener for loading content
+				History.Adapter.bind(window, 'statechange.livePane', function() {
+					methods.loadUri.call(self, History.getState().url);
+				});
 
 				// Set up click event for live links
 				if (self.data('livePane').settings.linkSelector != false) {
@@ -81,8 +81,6 @@
 					},
 					success : function(html) {
 						self.html($(state.selector, html).html());
-
-						History.pushState(null, null, uri);
 					}
 				});
 			});
