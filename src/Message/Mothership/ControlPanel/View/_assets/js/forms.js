@@ -5,7 +5,7 @@
  */
 $(function() {
 	// Set up add links for repeatable groups
-	$('a[data-group-add]').click(function() {
+	$(document).on('click', 'a[data-group-add]', function() {
 		var self          = $(this),
 			index         = self.attr('data-group-index') || 0,
 			prototypeName = self.attr('data-prototype-name') || '__name__',
@@ -17,7 +17,7 @@ $(function() {
 	});
 
 	// Set up remove links for repeatable groups
-	$('a[data-group-remove]').click(function() {
+	$(document).on('click', 'a[data-group-remove]', function() {
 		$(this).parent('.group').fadeOut(200, function() {
 			$(this).remove();
 		});
