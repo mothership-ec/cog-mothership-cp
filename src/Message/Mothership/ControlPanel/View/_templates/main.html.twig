@@ -27,7 +27,7 @@
 
 	</head>
 	<body>
-		{% for types in flashes %}
+		{% for types in app.session.getFlashBag.all %}
 			{% for message in types %}
 				<p>{{ message|raw }}</p>
 			{% endfor %}
