@@ -38,7 +38,8 @@ class EventListener extends BaseListener implements SubscriberInterface
 
 	/**
 	 * Send the user to the login page if the exception relates to a HTTP 403
-	 * status code and the user is not currently logged in.
+	 * status code, user is not currently logged in and the request matched a
+	 * route in the 'ms.cp' collection.
 	 *
 	 * @param GetResponseForExceptonEvent $event The event object
 	 */
@@ -51,7 +52,8 @@ class EventListener extends BaseListener implements SubscriberInterface
 
 		// If it's an access denied exception, send the user to the login page
 		if ($event->getException() instanceof HttpException
-		 && 403 === $event->getException()->getStatusCode()) {
+		 && 403 === $event->getException()->getStatusCode()
+		 && in_array('ms.cp', $event->getRequest()->get('_route_collections'))) {
 			$event->setResponse(new RedirectResponse(
 				$this->_services['routing.generator']->generate('ms.cp.login')
 			));
