@@ -206,8 +206,12 @@ button,
 	transform: all .15s linear;
 }
 
+a.button {
+	text-decoration: none;
+}
+
 .button.small {
-	padding: 8px 15px 5px;
+	padding: 7px 13px 5px;
 }
 
 input:hover,
@@ -269,6 +273,9 @@ button:active,
 	color: #FFF;
 	text-shadow: 0px -1px 0 rgba(15,91,35,0.5);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3fa262', EndColorStr='#196d2e');1px 0px #238241;
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.25);
+	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.25);
+	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.25);
 }
 
 .accept:before,
@@ -348,9 +355,9 @@ button:active,
 
 .button.group {
 	padding: 0px;
-	-webkit-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.1);
-	-moz-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.1);
-	box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.1);
+	-webkit-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.05);
+	-moz-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.05);
+	box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.05);
 }
 
 .button.group a {
