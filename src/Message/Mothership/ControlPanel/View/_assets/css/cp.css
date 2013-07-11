@@ -121,10 +121,10 @@
 
 .container-login .form label {
 	float: left;
+	margin-bottom: 30px;
+	height: 44px;
 	color: #E1E1E1;
 	font-size: 0.875em;
-	height: 44px;
-	margin-bottom: 30px;
 }
 
 .container-login .form label[for="login_email"],
@@ -358,6 +358,7 @@
 
 
 .sidebar {
+	position: fixed;
 	z-index: 0;
 	float: left;
 	overflow-x: hidden;
@@ -366,7 +367,6 @@
 	width: 250px;
 	height: 100%;
 	background: #222;
-	position: fixed;
 }
 
 .sidebar .search {
@@ -576,6 +576,8 @@
 /* Main
 ------------------------------------------------------------ */
 
+
+
 .pos-clear /* clear space for the navigation */ {
 	margin: 61px 0 0 0;
 }
@@ -600,9 +602,9 @@
 
 .title {
 	position: fixed;
-	width: 100%;
 	z-index: 10;
 	padding: 14px 22px 12px;
+	width: 100%;
 	background-color: #f1f1f1;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e7e7e7));
 	background-image: -webkit-linear-gradient(top, #f1f1f1, #e7e7e7);
@@ -651,10 +653,10 @@
 .edit-title label {
 	z-index: 11;
 	float: left;
+	width: auto;
 	height: 82px;
 	font-size: 1.250em;
 	line-height: 84px;
-	width: auto;
 }
 
 .edit-title input {
@@ -683,7 +685,11 @@
 
 
 .topbar {
+	position: fixed;
 	z-index: 10;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	margin: 81px 0 20px;
 	padding: 0 23px 0 0;
 	width: inherit;
@@ -701,10 +707,6 @@
 	-moz-box-shadow: 0px 1px 3px rgba(000,000,000,0.05);
 	box-shadow: 0px 1px 3px rgba(000,000,000,0.05);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
-	position: fixed;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .topbar .button {
@@ -730,13 +732,13 @@
 }
 
 .topbar .tabs li {
+	position: relative;
 	float: left;
 	height: 56px;
 	border-right: 1px solid #EDEDED;
 	text-decoration: 0px 1px 0px rgba(255,255,255,1.0);
 	font-size: 0.938em;
 	font-family:'Proxima N W15 Smbd';
-	position: relative;
 }
 
 /*.topbar .tabs li.active:after {
@@ -936,13 +938,13 @@
 }
 
 .container-content {
-	overflow: visible;
 	position: inherit;
-	padding: 0 23px 23px;
-	margin: 157px 0 0 0;
+	overflow: visible;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	margin: 157px 0 0 0;
+	padding: 0 23px 23px;
 }
 
 
@@ -952,15 +954,15 @@
 
 
 .group {
-	margin: 0 0 30px 0;
 	float: left;
+	margin: 0 0 30px 0;
 	width: 100%;
 }
 
 .group h2 {
 	float: left;
-	width: 100%;
 	margin-bottom: 20px;
+	width: 100%;
 }
 
 .group label {
@@ -975,31 +977,31 @@
 
 
 .repeatable-group {
-	margin: 0 0 30px 0;
 	float: left;
+	margin: 0 0 30px 0;
 	width: 100%;
 	position: relative;
 }
 
 .repeatable-group .container {
-	width: 50%;
+	display: inline-block;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	width: 50%;
 	border: 1px solid #b1b1b1;
-	display: inline-block;
 }
 
 .repeatable-group h2 {
 	float: left;
-	width: 100%;
 	margin-bottom: 20px;
+	width: 100%;
 }
 
 .repeatable-group .group {
-	background: #FFF;
-	margin-bottom: 0;
 	position: relative;
+	margin-bottom: 0;
+	background: #FFF;
 }
 
 .repeatable-group .field {
@@ -1008,11 +1010,15 @@
 
 .repeatable-group .title {
 	position: relative;
-	background: none;
+	z-index: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 0 20px 0;
 	width: 100%;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
+	border-top: 1px solid #b1b1b1;
+	border-bottom: 1px solid #b1b1b1;
+	background: none;
 	background-color: #f9f9f9;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#f1f1f1));
 	background-image: -webkit-linear-gradient(top, #f9f9f9, #f1f1f1);
@@ -1020,15 +1026,11 @@
 	background-image: -o-linear-gradient(top, #f9f9f9, #f1f1f1);
 	background-image: -ms-linear-gradient(top, #f9f9f9, #f1f1f1);
 	background-image: linear-gradient(top, #f9f9f9, #f1f1f1);
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	border-top: 1px solid #b1b1b1;
-	border-bottom: 1px solid #b1b1b1;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 	font-size: 1em;
-	margin: 0 0 20px 0;
-	z-index: 0;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
 }
 
 .repeatable-group .group:nth-child(1) .title {
@@ -1047,11 +1049,11 @@
 }
 
 .repeatable-group .add-group {
-	width: 50%;
+	display: inline-block;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	display: inline-block;
+	width: 50%;
 }
 
 .repeatable-group .submit {
@@ -1072,25 +1074,25 @@
 
 
 .field {
-	margin: 0 0 30px 0;
 	float: left;
+	margin: 0 0 30px 0;
 	width: 100%;
 }
 
 .field h2 {
 	float: left;
-	width: 100%;
 	margin-bottom: 20px;
+	width: 100%;
 }
 
 .field input {
-	width: 50%;
 	max-width: 50%;
+	width: 50%;
 }
 
 .field textarea {
-	width: 70%;
 	max-width: 70%;
+	width: 70%;
 }
 
 .field label {
@@ -1106,8 +1108,8 @@
 
 .help {
 	float: right;
-	width: 25%;
 	margin: 10px 0 0 0;
+	width: 25%;
 }
 
 .help .short {
