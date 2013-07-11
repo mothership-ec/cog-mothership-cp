@@ -319,7 +319,10 @@ button:active,
 
 }
 
-.delete {
+.delete,
+.remove,
+.cancel {
+	color: #FFF;
 	border-color: #98180f;
 	background-color: #d84939;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#d84939), to(#bc1b1a));
