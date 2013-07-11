@@ -651,6 +651,7 @@
 	height: 82px;
 	font-size: 1.250em;
 	line-height: 84px;
+	width: auto;
 }
 
 .edit-title input {
@@ -939,24 +940,56 @@
 
 .group {
 	margin: 0 0 30px 0;
+	float: left;
+	width: 100%;
 }
 
 .repeatable.group {
 	margin: 0 0 30px 0;
+	float: left;
+	width: 100%;
 }
 
 .field {
-	margin: 0 0 10px 0;
+	margin: 0 0 30px 0;
+	float: left;
+	width: 100%;
 }
 
 .help {
 	float: right;
 	width: 49%;
+	margin: 10px 0 0 0;
+}
+
+.help .short {
+
+}
+
+.help .long {
+	display: none;
+}
+
+.help:hover .short {
+	display: none;
+}
+
+.help:hover .long {
+	display: block;
+}
+
+.field .help {
+	width: 69%;
 }
 
 .group h2,
 .repeatable.group h2,
-.field h2,
+.field h2 {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
 .group label,
 .repeatable.group label,
 .field label {
@@ -964,7 +997,10 @@
 	width: 100%;
 }
 
-.field input,
+.field input {
+	width: 28%;
+}
+
 .field textarea {
 	width: 48%;
 }

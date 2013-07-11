@@ -176,7 +176,7 @@ input[type="radio"],
 input[type="image"] {
 	float: left;
 	margin-right: 9px;
-	width: auto;
+	width: auto !important;
 	height: auto;
 }
 
