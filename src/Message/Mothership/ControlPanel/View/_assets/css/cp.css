@@ -1028,6 +1028,7 @@
 	border-bottom: 1px solid #b1b1b1;
 	font-size: 1em;
 	margin: 0 0 20px 0;
+	z-index: 0;
 }
 
 .repeatable-group .group:nth-child(1) .title {
@@ -1051,6 +1052,11 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	display: inline-block;
+}
+
+.repeatable-group .submit {
+	float: right;
+	margin-top: 10px;
 }
 
 .repeatable-group .help {
