@@ -129,10 +129,13 @@ input,
 textarea {
 	margin-bottom: 30px;
 	width: 100%;
+	max-width: 100%;
 	font-size: 1.0em;
+	margin: 0 0 10px 0;
 }
 
-input {
+input,
+textarea {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -153,6 +156,10 @@ input {
 	z-index: 0;
 }
 
+textarea {
+	min-height: 200px;
+}
+
 input.error {
 	border-color: #ce2828;
 }
@@ -171,14 +178,15 @@ input[type="image"] {
 }
 
 select {
-
+	margin: 0 0 10px 0;
 }
 
 label {
-	margin-bottom: 30px;
-	height: 44px;
 	font-size: 1.0em;
 	font-family:'Proxima N W15 Smbd';
+	margin: 0 0 10px 0;
+	float: left;
+	width: 100%;
 }
 
 label[for="setloggedin"]:hover {
@@ -208,10 +216,6 @@ button,
 	font-family:'Proxima N W15 Smbd';
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#528bb6', EndColorStr='#4473a7');
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f2f2f2', EndColorStr='#e5e5e5');
-	-webkit-transform: all .15s linear;
-	-moz-transform: all .15s linear;
-	-ms-transform: all .15s linear;
-	transform: all .15s linear;
 }
 
 a.button {
@@ -241,14 +245,13 @@ select:active {
 button:hover,
 .button:hover {
 	cursor: pointer;
-	-webkit-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.1), inset 0px -5px 5px rgba(152,152,152,0.1);
-	-moz-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.1), inset 0px -5px 5px rgba(152,152,152,0.1);
-	box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.1), inset 0px -5px 5px rgba(152,152,152,0.1);
 }
 
 button:active,
 .button:active {
-
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.9);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.9);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 
@@ -296,6 +299,13 @@ button:active,
 	content: "\f00c";
 	font-family: 'FontAwesome';
 }
+
+/*.accept:active,
+.save:active {
+	-webkit-box-shadow: inset 1px 1px 3px #10481e, 0px 1px 0px rgba(255,255,255,1.0);
+	-moz-box-shadow: inset 1px 1px 3px #10481e, 0px 1px 0px rgba(255,255,255,1.0);
+	box-shadow: inset 1px 1px 3px #10481e, 0px 1px 0px rgba(255,255,255,1.0);
+}*/
 
 .read-more,
 .load,
@@ -369,30 +379,37 @@ button:active,
 
 
 
-.button.group {
+.button.button-group {
 	padding: 0px;
 	-webkit-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.05);
 	-moz-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.05);
 	box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.05);
 }
 
-.button.group a {
+.button.button-group a {
 	padding: 12px 15px;
 	border-right: 1px solid #CCC;
 	float: left;
 }
 
-.button.group span {
+.button.button-group span {
 	padding: 12px 9px;
 	display: block;
 	float: left;
 }
 
-.button.group a:hover,
-.button.group span:hover {
+.button.button-group a:hover,
+.button.button-group span:hover {
 	-webkit-box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1);
 	-moz-box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1);
 	box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1);
+}
+
+.button.button-group a:active,
+.button.button-group span:active {
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.9);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.9);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 
