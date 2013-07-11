@@ -958,7 +958,7 @@
 
 .help {
 	float: right;
-	width: 49%;
+	width: 25%;
 	margin: 10px 0 0 0;
 }
 
@@ -978,10 +978,6 @@
 	display: block;
 }
 
-.field .help {
-	width: 69%;
-}
-
 .group h2,
 .repeatable.group h2,
 .field h2 {
@@ -998,9 +994,9 @@
 }
 
 .field input {
-	width: 28%;
+	width: 50%;
 }
 
 .field textarea {
-	width: 48%;
+	width: 70%;
 }
