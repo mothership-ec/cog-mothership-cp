@@ -185,6 +185,8 @@
 .navigation {
 	position: relative;
 	z-index: 100;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 100%;
 	height: 61px;
@@ -361,12 +363,13 @@
 .sidebar {
 	z-index: 0;
 	float: left;
+	overflow-x: hidden;
 	margin-top: -59px;
 	padding-top: 59px;
 	width: 250px;
 	height: 100%;
 	background: #222;
-	overflow-x: hidden;
+	position: fixed;
 }
 
 .sidebar .search {
@@ -466,14 +469,14 @@
 }
 
 .sidebar .main-menu a {
+	overflow: hidden;
 	color: #FFF;
 	text-decoration: none;
+	text-overflow: ellipsis;
 	text-shadow: 0px 1px 1px rgba(000,000,000,0.25);
+	white-space: nowrap;
 	font-size: 0.875em;
 	font-family:'Proxima N W15 Smbd';
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
 	
 }
 
@@ -503,15 +506,15 @@
 	background-image: -o-linear-gradient(top, #252525, #1a1a1a);
 	background-image: -ms-linear-gradient(top, #252525, #1a1a1a);
 	background-image: linear-gradient(top, #252525, #1a1a1a);
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#252525', EndColorStr='#1a1a1a');
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-ms-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
 }
 
 .sidebar .main-menu .active li a {
@@ -522,23 +525,25 @@
 
 .sidebar .main-menu a:hover,
 .sidebar .main-menu .active li a:hover {
+	position: relative;
+	z-index: 1000;
 	background: #292929;
 	-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05), 0px 1px 3px rgba(000,000,000,0.5);
 	-moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05), 0px 1px 3px rgba(000,000,000,0.5);
 	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05), 0px 1px 3px rgba(000,000,000,0.5);
-	z-index: 1000;
-	position: relative;
 }
 
 .sidebar .main-menu .active {
+	position: relative;
+	z-index: 1000;
 	-webkit-box-shadow: 0px 1px 3px rgba(000,000,000,0.5);
 	-moz-box-shadow: 0px 1px 3px rgba(000,000,000,0.5);
 	box-shadow: 0px 1px 3px rgba(000,000,000,0.5);
-	z-index: 1000;
-	position: relative;
 }
 
 .sidebar .main-menu .active a {
+	width: 208px;
+	border: 1px solid #1D3F5F;
 	background-color: #396c9c;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#396c9c), to(#20405e));
 	background-image: -webkit-linear-gradient(top, #396c9c, #20405e);
@@ -546,18 +551,13 @@
 	background-image: -o-linear-gradient(top, #396c9c, #20405e);
 	background-image: -ms-linear-gradient(top, #396c9c, #20405e);
 	background-image: linear-gradient(top, #396c9c, #20405e);
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#396c9c', EndColorStr='#20405e');
 	-webkit-box-shadow: inset 0px -1px 0px rgba(255,255,255,0.05);
 	-moz-box-shadow: inset 0px -1px 0px rgba(255,255,255,0.05);
 	box-shadow: inset 0px -1px 0px rgba(255,255,255,0.05);
-	border: 1px solid #1D3F5F;
-	width: 208px;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#396c9c', EndColorStr='#20405e');
 }
 
 .sidebar .main-menu .active a:hover {
-	-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05);
-	-moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05);
-	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05);
 	background-color: #396c9c;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#396c9c), to(#294d6f));
 	background-image: -webkit-linear-gradient(top, #396c9c, #294d6f);
@@ -565,6 +565,9 @@
 	background-image: -o-linear-gradient(top, #396c9c, #294d6f);
 	background-image: -ms-linear-gradient(top, #396c9c, #294d6f);
 	background-image: linear-gradient(top, #396c9c, #294d6f);
+	-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05);
+	-moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05);
+	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#396c9c', EndColorStr='#294d6f');
 }
 
@@ -588,7 +591,10 @@
 .main {
 	display: inline-block;
 	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	margin-left: 250px;
 	width: -moz-calc(100% - 250px);
     width: -webkit-calc(100% - 250px);
     width: calc(100% - 250px);
@@ -632,9 +638,9 @@
 	top: 61px;
 	z-index: 1001;
 	display: none;
+	padding-left: 22px;
 	width: 100%;
 	height: 81px;
-	padding-left: 22px;
 	background: #F1F1F1;
 	background-color: #f1f1f1;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e7e7e7));
@@ -650,25 +656,25 @@
 }
 
 .edit-title label {
+	z-index: 2000;
 	float: left;
 	height: 82px;
 	font-size: 1.250em;
 	line-height: 84px;
-	z-index: 2000;
 }
 
 .edit-title input {
+	z-index: 2000;
 	float: left;
 	margin: 19px;
 	max-width: 300px;
-	z-index: 2000;
 }
 
 .edit-title button {
+	z-index: 2000;
 	float: left;
 	margin-top: 19px;
 	padding: 13px 15px 10px;
-	z-index: 2000;
 }
 
 .title:hover + .edit-title {
@@ -685,7 +691,7 @@
 .topbar {
 	z-index: 999;
 	margin-bottom: 20px;
-	padding: 0 23px;
+	padding: 0 23px 0 0;
 	width: 100%;
 	height: 56px;
 	border-top: 1px solid #C8C8C8;
@@ -732,6 +738,34 @@
 	text-decoration: 0px 1px 0px rgba(255,255,255,1.0);
 	font-size: 0.938em;
 	font-family:'Proxima N W15 Smbd';
+	position: relative;
+}
+
+.topbar .tabs li.active:after {
+	display: block;
+	content: '';
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #F1F1F1;
+	position: absolute;
+	left: 50%;
+	margin: -6px 0 0 -10px;
+}
+
+.topbar .tabs li.active:before {
+	display: block;
+	content: '';
+	width: 0; 
+	height: 0; 
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #C8C8C8;
+	position: absolute;
+	left: 50%;
+	bottom: -1px;
+	margin: 0 0 0 -8px;
 }
 
 .topbar .tabs a {
@@ -739,19 +773,15 @@
 	padding: 0 23px;
 	height: 56px;
 	text-decoration: none;
-	line-height: 61px;
 	text-shadow: 0px 1px 0px rgba(255,255,255,1.0);
-}
-
-.topbar .tabs li:first-child a {
-	padding-left: 0;
+	line-height: 61px;
 }
 
 .controls {
 	margin-right: 209px;
 	width: auto;
-	text-align: right;
 	height: 56px;
+	text-align: right;
 }
 
 
@@ -761,16 +791,16 @@
 
 
 #delete-page {
-	display: inline-block;
-	top: -12px;
 	position: relative;
+	top: -12px;
+	display: inline-block;
 }
 
 .delete-page {
 	display: inline-block;
 	margin-top: 7px;
-	padding: 0;
 	margin-right: 35px;
+	padding: 0;
 	border: none !important;
 	border-bottom: 1px solid #555;
 	background: none !important;
@@ -906,5 +936,14 @@
 	position: absolute;
 	top: 154px;
 	right: 14px;
+}
+
+.container-content {
+	overflow: visible;
+	position: inherit;
+	padding: 0 23px 23px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
