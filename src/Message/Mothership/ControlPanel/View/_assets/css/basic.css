@@ -459,7 +459,7 @@ dd {
 	height: 100%;
 	background: #F1F1F1;
 	overflow-x: hidden;
-	overflow-y: scroll;
+/*	overflow-y: scroll;*/
 }
 
 [class^="container-"] footer {
