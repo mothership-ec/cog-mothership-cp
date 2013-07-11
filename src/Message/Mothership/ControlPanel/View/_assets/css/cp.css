@@ -449,6 +449,10 @@
 	text-shadow: 0px 1px 1px rgba(000,000,000,0.25);
 	font-size: 0.875em;
 	font-family:'Proxima N W15 Smbd';
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	
 }
 
 .sidebar .main-menu li {
@@ -477,6 +481,30 @@
 	background-image: -ms-linear-gradient(top, #252525, #1a1a1a);
 	background-image: linear-gradient(top, #252525, #1a1a1a);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#252525', EndColorStr='#1a1a1a');
+}
+
+.sidebar .main-menu .active {
+	-webkit-box-shadow: 0px 1px 3px rgba(000,000,000,0.5);
+	-moz-box-shadow: 0px 1px 3px rgba(000,000,000,0.5);
+	box-shadow: 0px 1px 3px rgba(000,000,000,0.5);
+	z-index: 1000;
+	position: relative;
+}
+
+.sidebar .main-menu .active a {
+	background-color: #396c9c;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#396c9c), to(#20405e));
+	background-image: -webkit-linear-gradient(top, #396c9c, #20405e);
+	background-image: -moz-linear-gradient(top, #396c9c, #20405e);
+	background-image: -o-linear-gradient(top, #396c9c, #20405e);
+	background-image: -ms-linear-gradient(top, #396c9c, #20405e);
+	background-image: linear-gradient(top, #396c9c, #20405e);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#396c9c', EndColorStr='#20405e');
+	-webkit-box-shadow: inset 0px -1px 0px rgba(255,255,255,0.05);
+	-moz-box-shadow: inset 0px -1px 0px rgba(255,255,255,0.05);
+	box-shadow: inset 0px -1px 0px rgba(255,255,255,0.05);
+	border: 1px solid #1D3F5F;
+	width: 208px;
 }
 
 .sidebar .main-menu li ol,
