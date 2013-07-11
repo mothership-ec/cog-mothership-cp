@@ -944,10 +944,18 @@
 	width: 100%;
 }
 
-.repeatable.group {
+.repeatable-group {
 	margin: 0 0 30px 0;
 	float: left;
 	width: 100%;
+}
+
+.repeatable-group .group {
+	width: 70%;
+}
+
+.repeatable-group a {
+	float: left;
 }
 
 .field {
