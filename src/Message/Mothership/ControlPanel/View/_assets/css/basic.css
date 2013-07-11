@@ -59,8 +59,12 @@ body {
 	font-family:'Proxima N W15 Reg';
 }
 
+
+
 /* Text and links
 ------------------------------------------------------------ */
+
+
 
 a {
 	color: #333;
@@ -114,8 +118,12 @@ h5 {
 	font-size: 1.000em;
 }
 
+
+
 /* Form elements
 ------------------------------------------------------------ */
+
+
 
 input,
 textarea {
@@ -243,8 +251,12 @@ button:active,
 
 }
 
+
+
 /* Button styles
 ------------------------------------------------------------ */
+
+
 
 .submit,
 .create {
@@ -350,8 +362,12 @@ button:active,
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2a537b', EndColorStr='#2a547b');
 }
 
+
+
 /* Button group
 ------------------------------------------------------------ */
+
+
 
 .button.group {
 	padding: 0px;
@@ -379,16 +395,24 @@ button:active,
 	box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1);
 }
 
+
+
 /* Code snippets
 ------------------------------------------------------------ */
+
+
 
 pre,
 code {
 
 }
 
+
+
 /* Table styles
 ------------------------------------------------------------ */
+
+
 
 table {
 
@@ -402,8 +426,12 @@ table td {
 
 }
 
+
+
 /* Lists
 ------------------------------------------------------------ */
+
+
 
 ul,
 ol {
@@ -427,8 +455,12 @@ dd {
 
 }
 
+
+
 /* Feedback
 ------------------------------------------------------------ */
+
+
 
 .feedback {
 	font-family:'Proxima N W15 Smbd';
@@ -453,8 +485,12 @@ dd {
 	margin-right: 10px;
 }
 
+
+
 /* General styles
 ------------------------------------------------------------ */
+
+
 
 [id^="profiler-"] {
 	display: none;
@@ -505,3 +541,5 @@ dd {
 	margin-right: 10px;
 	text-decoration: none;
 }
+
+

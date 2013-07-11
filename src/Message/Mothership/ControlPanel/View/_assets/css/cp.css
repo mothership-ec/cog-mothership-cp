@@ -17,8 +17,11 @@
 /* ======================================================= */
 
 
+
 /* Login
 ------------------------------------------------------------ */
+
+
 
 .center {
 	position: absolute;
@@ -172,8 +175,12 @@
 	color: #b1b3b4;
 }
 
+
+
 /* Navigation
 ------------------------------------------------------------ */
+
+
 
 .navigation {
 	position: relative;
@@ -319,8 +326,12 @@
 	box-shadow: inset 0px 1px 5px 0px rgba(000, 000, 000, 0.25), 1px 1px 0px #5584b4;
 }
 
+
+
 /* Dashboard / Welcome
 ------------------------------------------------------------ */
+
+
 
 .welcome {
 	position: absolute;
@@ -340,8 +351,12 @@
 	font-family: 'FontAwesome';
 }
 
+
+
 /* Sidebar
 ------------------------------------------------------------ */
+
+
 
 .sidebar {
 	z-index: 0;
@@ -351,6 +366,7 @@
 	width: 250px;
 	height: 100%;
 	background: #222;
+	overflow-x: hidden;
 }
 
 .sidebar .search {
@@ -436,6 +452,12 @@
 	font-family: 'FontAwesome';
 }
 
+
+
+/* Sidebar Menu */
+
+
+
 .sidebar .main-menu {
 	float: left;
 	margin: 0;
@@ -468,7 +490,8 @@
 	width: 250px;
 }
 
-.sidebar .main-menu a {
+.sidebar .main-menu a,
+.sidebar .main-menu .active li a {
 	display: block;
 	padding: 12px 20px;
 	width: 210px;
@@ -481,6 +504,30 @@
 	background-image: -ms-linear-gradient(top, #252525, #1a1a1a);
 	background-image: linear-gradient(top, #252525, #1a1a1a);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#252525', EndColorStr='#1a1a1a');
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.sidebar .main-menu .active li a {
+	border-right: none;
+	border-bottom: none;
+	border-left: none;
+}
+
+.sidebar .main-menu a:hover,
+.sidebar .main-menu .active li a:hover {
+	background: #292929;
+	-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05), 0px 1px 3px rgba(000,000,000,0.5);
+	-moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05), 0px 1px 3px rgba(000,000,000,0.5);
+	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05), 0px 1px 3px rgba(000,000,000,0.5);
+	z-index: 1000;
+	position: relative;
 }
 
 .sidebar .main-menu .active {
@@ -507,6 +554,20 @@
 	width: 208px;
 }
 
+.sidebar .main-menu .active a:hover {
+	-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05);
+	-moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05);
+	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05);
+	background-color: #396c9c;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#396c9c), to(#294d6f));
+	background-image: -webkit-linear-gradient(top, #396c9c, #294d6f);
+	background-image: -moz-linear-gradient(top, #396c9c, #294d6f);
+	background-image: -o-linear-gradient(top, #396c9c, #294d6f);
+	background-image: -ms-linear-gradient(top, #396c9c, #294d6f);
+	background-image: linear-gradient(top, #396c9c, #294d6f);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#396c9c', EndColorStr='#294d6f');
+}
+
 .sidebar .main-menu li ol,
 .sidebar .main-menu li ol li ol {
 	display: none;
@@ -517,8 +578,12 @@
 	display: block;
 }
 
+
+
 /* Main
 ------------------------------------------------------------ */
+
+
 
 .main {
 	display: inline-block;
@@ -529,8 +594,11 @@
     width: calc(100% - 250px);
 }
 
+
+
 /* Page title
 ------------------------------------------------------------ */
+
 
 .title {
 	position: relative;
@@ -607,8 +675,12 @@
 	display: block;
 }
 
+
+
 /* Top Bar
 ------------------------------------------------------------ */
+
+
 
 .topbar {
 	z-index: 999;
@@ -682,6 +754,12 @@
 	height: 56px;
 }
 
+
+
+/* Delete page */
+
+
+
 #delete-page {
 	display: inline-block;
 	top: -12px;
@@ -712,6 +790,12 @@
 	-moz-box-shadow: none;
 	box-shadow: none;
 }
+
+
+
+/* Publish */
+
+
 
 .publish {
 	display: inline-block;
@@ -790,6 +874,12 @@
     display: none;
 }
 
+
+
+/* Preview */
+
+
+
 .preview {
 	display: inline-block;
 	margin-top: 11px;
@@ -805,8 +895,12 @@
 	font-family: 'FontAwesome';
 }
 
+
+
 /* Content
 ------------------------------------------------------------ */
+
+
 
 #save-content {
 	position: absolute;
