@@ -186,7 +186,7 @@
 
 .navigation {
 	position: fixed;
-	z-index: 9999;
+	z-index: 10;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -523,7 +523,7 @@
 .sidebar .main-menu a:hover,
 .sidebar .main-menu .active li a:hover {
 	position: relative;
-	z-index: 1000;
+	z-index: 10;
 	background: #292929;
 	-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05), 0px 1px 3px rgba(000,000,000,0.5);
 	-moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.05), 0px 1px 3px rgba(000,000,000,0.5);
@@ -532,7 +532,7 @@
 
 .sidebar .main-menu .active {
 	position: relative;
-	z-index: 1000;
+	z-index: 10;
 	-webkit-box-shadow: 0px 1px 3px rgba(000,000,000,0.5);
 	-moz-box-shadow: 0px 1px 3px rgba(000,000,000,0.5);
 	box-shadow: 0px 1px 3px rgba(000,000,000,0.5);
@@ -601,7 +601,7 @@
 .title {
 	position: fixed;
 	width: 100%;
-	z-index: 1000;
+	z-index: 10;
 	padding: 14px 22px 12px;
 	background-color: #f1f1f1;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e7e7e7));
@@ -629,7 +629,7 @@
 .edit-title {
 	position: absolute;
 	top: 61px;
-	z-index: 1001;
+	z-index: 11;
 	display: none;
 	padding-left: 22px;
 	width: 100%;
@@ -649,7 +649,7 @@
 }
 
 .edit-title label {
-	z-index: 2000;
+	z-index: 11;
 	float: left;
 	height: 82px;
 	font-size: 1.250em;
@@ -658,14 +658,14 @@
 }
 
 .edit-title input {
-	z-index: 2000;
+	z-index: 11;
 	float: left;
 	margin: 19px;
 	max-width: 300px;
 }
 
 .edit-title button {
-	z-index: 2000;
+	z-index: 11;
 	float: left;
 	margin-top: 19px;
 	padding: 13px 15px 10px;
@@ -683,7 +683,7 @@
 
 
 .topbar {
-	z-index: 999;
+	z-index: 10;
 	margin: 81px 0 20px;
 	padding: 0 23px 0 0;
 	width: inherit;
@@ -837,15 +837,13 @@
 
 .publish form {
 	position: absolute;
-	top: 201px;
-	left: 250px;
+	top: 0px;
+	left: 0;
 	z-index: 100;
 	display: none;
 	box-sizing: border-box;
 	padding: 23px 23px 3px 23px;
-	width: -moz-calc(100% - 250px);
-    width: -webkit-calc(100% - 250px);
-    width: calc(100% - 250px);
+	width: 100%;
 	border-bottom: 1px solid #C1C1C1;
 	background: #FFF;
 	-webkit-box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
@@ -855,12 +853,6 @@
 
 .publish:hover form {
 	display: block;
-}
-
-.publish input.text-input {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
 }
 
 .publish .wrap {
@@ -884,6 +876,12 @@
 	line-height: 32px;
 }
 
+/* .publish input.text-input {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
 .publish .date-time input {
 	float: left;
 	margin: 0 20px 0 0;
@@ -900,7 +898,7 @@
 .publish input[type="time"]::-webkit-calendar-picker-indicator,
 .publish input[type="time"]::-webkit-inner-spin-button {
     display: none;
-}
+} */
 
 
 
@@ -947,16 +945,45 @@
 	box-sizing: border-box;
 }
 
+
+
+/* Group */
+
+
+
 .group {
 	margin: 0 0 30px 0;
 	float: left;
 	width: 100%;
 }
 
+.group h2 {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.group label {
+	float: left;
+	width: 100%;
+}
+
+
+
+/* Repeatable group */
+
+
+
 .repeatable-group {
 	margin: 0 0 30px 0;
 	float: left;
 	width: 100%;
+}
+
+.repeatable-group h2 {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
 }
 
 .repeatable-group .group {
@@ -967,11 +994,48 @@
 	float: left;
 }
 
+.repeatable-group label {
+	float: left;
+	width: 100%;
+}
+
+
+/* Field */
+
+
+
 .field {
 	margin: 0 0 30px 0;
 	float: left;
 	width: 100%;
 }
+
+.field h2 {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.field input {
+	width: 50%;
+	max-width: 50%;
+}
+
+.field textarea {
+	width: 70%;
+	max-width: 70%;
+}
+
+.field label {
+	float: left;
+	width: 100%;
+}
+
+
+
+/* Contextual help */
+
+
 
 .help {
 	float: right;
@@ -995,25 +1059,4 @@
 	display: block;
 }
 
-.group h2,
-.repeatable.group h2,
-.field h2 {
-	float: left;
-	width: 100%;
-	margin-bottom: 20px;
-}
 
-.group label,
-.repeatable.group label,
-.field label {
-	float: left;
-	width: 100%;
-}
-
-.field input {
-	width: 50%;
-}
-
-.field textarea {
-	width: 70%;
-}

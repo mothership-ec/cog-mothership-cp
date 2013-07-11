@@ -161,6 +161,7 @@ textarea {
 textarea {
 	min-height: 200px;
 	line-height: 1.5em;
+	overflow: auto;
 }
 
 input.error {
