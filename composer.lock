@@ -129,7 +129,11 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:messagedigital/cog.git",
+<<<<<<< HEAD
                 "reference": "63d517669b52be75398072b1bd8a517d862396b9"
+=======
+                "reference": "bb5427213b0e08b550629a997faa838478ed42c9"
+>>>>>>> lock
             },
             "require": {
                 "ext-curl": "*",
@@ -200,7 +204,11 @@
                 "wiki": "http://server.local/wiki/projects/cog",
                 "issues": "http://github.com/messagedigital/cog/issues"
             },
+<<<<<<< HEAD
             "time": "2013-07-10 11:10:53"
+=======
+            "time": "2013-07-11 14:07:11"
+>>>>>>> lock
         },
         {
             "name": "message/cog-user",
@@ -679,12 +687,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
+<<<<<<< HEAD
                 "reference": "21559401b50b6992d73ca458ae4afe4d5455ea09"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/21559401b50b6992d73ca458ae4afe4d5455ea09",
                 "reference": "21559401b50b6992d73ca458ae4afe4d5455ea09",
+=======
+                "reference": "bf583a362cca85a7c0103b3e2e5e4b0f99e34a38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/bf583a362cca85a7c0103b3e2e5e4b0f99e34a38",
+                "reference": "bf583a362cca85a7c0103b3e2e5e4b0f99e34a38",
+>>>>>>> lock
                 "shasum": ""
             },
             "require": {
@@ -720,7 +737,11 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
+<<<<<<< HEAD
             "time": "2013-07-08 13:37:01"
+=======
+            "time": "2013-07-11 19:37:15"
+>>>>>>> lock
         },
         {
             "name": "symfony/http-kernel",
@@ -729,12 +750,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
+<<<<<<< HEAD
                 "reference": "1fc0a1d294a19948f9755ca8957cc61e7d2aab41"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/1fc0a1d294a19948f9755ca8957cc61e7d2aab41",
                 "reference": "1fc0a1d294a19948f9755ca8957cc61e7d2aab41",
+=======
+                "reference": "8055d68c62f3a85b831fe8271d6be41ad43391be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/8055d68c62f3a85b831fe8271d6be41ad43391be",
+                "reference": "8055d68c62f3a85b831fe8271d6be41ad43391be",
+>>>>>>> lock
                 "shasum": ""
             },
             "require": {
@@ -790,7 +820,11 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
+<<<<<<< HEAD
             "time": "2013-07-08 13:36:15"
+=======
+            "time": "2013-07-11 19:36:36"
+>>>>>>> lock
         },
         {
             "name": "symfony/icu",
