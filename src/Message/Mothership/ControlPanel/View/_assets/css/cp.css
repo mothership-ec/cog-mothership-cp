@@ -989,7 +989,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 50%;
-	border: 1px solid #b1b1b1;
+	margin-bottom: 20px;
 }
 
 .repeatable-group h2 {
@@ -1002,10 +1002,19 @@
 	position: relative;
 	margin-bottom: 0;
 	background: #FFF;
+	border-right: 1px solid #b1b1b1;
+	border-left: 1px solid #b1b1b1;
+}
+
+.repeatable-group .group:last-child {
+	border-bottom: 1px solid #b1b1b1;
 }
 
 .repeatable-group .field {
 	padding: 0 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .repeatable-group .title {
@@ -1033,10 +1042,6 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
 }
 
-.repeatable-group .group:nth-child(1) .title {
-	border-top: none;
-}
-
 .repeatable-group label {
 	float: left;
 	width: 100%;
@@ -1059,6 +1064,7 @@
 .repeatable-group .add-group .group {
 	border: 1px solid #b1b1b1;
 	padding-top: 20px;
+	margin-bottom: 20px;
 }
 
 .repeatable-group .submit {
