@@ -474,7 +474,7 @@
 	white-space: nowrap;
 	font-size: 0.875em;
 	font-family:'Proxima N W15 Smbd';
-	
+
 }
 
 .sidebar .main-menu li {
@@ -604,8 +604,8 @@
 	position: fixed;
 	z-index: 10;
 	padding: 14px 22px 0px;
-	border-bottom: 1px solid #c4c4c4;
 	width: 100%;
+	border-bottom: 1px solid #c4c4c4;
 	background-color: #f1f1f1;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e7e7e7));
 	background-image: -webkit-linear-gradient(top, #f1f1f1, #e7e7e7);
@@ -745,8 +745,8 @@
 /*.topbar .tabs li.active:after {
 	display: block;
 	content: '';
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
 	border-bottom: 10px solid #F1F1F1;
@@ -758,8 +758,8 @@
 .topbar .tabs li.active:before {
 	display: block;
 	content: '';
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border-left: 8px solid transparent;
 	border-right: 8px solid transparent;
 	border-bottom: 8px solid #C8C8C8;
@@ -940,13 +940,13 @@
 
 .container-content {
 	position: inherit;
+	float: left;
 	overflow: visible;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 157px 0 0 0;
 	padding: 0 23px 23px;
-	float: left;
 }
 
 
@@ -964,18 +964,42 @@
 }
 
 .option-block {
+	position: relative;
 	display: inline-block;
-	width: 47.7%;
-	margin: 0 2% 2% 0px;
-	background: #f6f6f6;
-	min-height: 100px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	border: 1px solid #CCC;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	margin: 0 2% 2% 0px;
+	min-height: 100px;
+	width: 47.7%;
+	border: 1px solid #CCC;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #f6f6f6;
+}
+
+.option-block input {
+	position: absolute;
+	top: 40px;
+	left: 30px;
+}
+
+.option-block label {
+	float: left;
+	margin: 25px 0 10px 75px;
+}
+
+.option-block p {
+	float: left;
+	margin-left: 75px;
+}
+
+.create-page button {
+	position: fixed;
+	top: 72px;
+	right: 14px;
+	z-index: 11;
 }
 
 
@@ -1008,10 +1032,10 @@
 
 
 .repeatable-group {
+	position: relative;
 	float: left;
 	margin: 0 0 30px 0;
 	width: 100%;
-	position: relative;
 }
 
 .repeatable-group .container {
@@ -1019,8 +1043,8 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	width: 50%;
 	margin-bottom: 20px;
+	width: 50%;
 }
 
 .repeatable-group h2 {
@@ -1032,9 +1056,9 @@
 .repeatable-group .group {
 	position: relative;
 	margin-bottom: 0;
-	background: #FFF;
 	border-right: 1px solid #b1b1b1;
 	border-left: 1px solid #b1b1b1;
+	background: #FFF;
 }
 
 .repeatable-group .group:last-child {
@@ -1042,10 +1066,10 @@
 }
 
 .repeatable-group .field {
-	padding: 0 20px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	padding: 0 20px;
 }
 
 .repeatable-group .title {
@@ -1094,9 +1118,9 @@
 }
 
 .repeatable-group .add-group .group {
-	border: 1px solid #b1b1b1;
-	padding-top: 20px;
 	margin-bottom: 20px;
+	padding-top: 20px;
+	border: 1px solid #b1b1b1;
 }
 
 .repeatable-group .submit {
