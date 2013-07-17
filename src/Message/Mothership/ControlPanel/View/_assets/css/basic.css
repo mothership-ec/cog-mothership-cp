@@ -181,6 +181,12 @@ input[type="image"] {
 	height: auto;
 }
 
+input[type="checkbox"]:hover,
+input[type="radio"]:hover,
+input[type="image"]:hover {
+	cursor: pointer;
+}
+
 select {
 	margin: 0 0 10px 0;
 }
