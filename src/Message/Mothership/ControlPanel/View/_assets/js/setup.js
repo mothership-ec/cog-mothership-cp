@@ -5,7 +5,7 @@ $(function() {
 		$.error('Your browser does not support the HTML5 History API, so the control panel may not function correctly.');
 	}
 
-	$('[data-confirm]').on('click submit', function() {
+	$(document).on('click submit', '[data-confirm]', function() {
 		return confirm($(this).attr('data-confirm'));
 	});
 
