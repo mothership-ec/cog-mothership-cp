@@ -272,7 +272,8 @@ button:active,
 
 
 .submit,
-.create {
+.create,
+.upload {
 	border-color: #081d31;
 	background-color: #528bb6;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#528bb6), to(#4473a7));
@@ -341,7 +342,9 @@ button:active,
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#d84939', EndColorStr='#bc1b1a');
 }
 
-.submit:hover {
+.submit:hover,
+.create:hover,
+.upload:hover {
 	background-color: #528bb6;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#528bb6), to(#2a537b));
 	background-image: -webkit-linear-gradient(top, #528bb6, #2a537b);
@@ -374,7 +377,9 @@ button:active,
 	padding: 14px 15px 10px;
 }
 
-.submit:active {
+.submit:active,
+.create:active,
+.upload:active {
 	background-color: #2a537b;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#2a537b), to(#2a547b));
 	background-image: -webkit-linear-gradient(top, #2a537b, #2a547b);

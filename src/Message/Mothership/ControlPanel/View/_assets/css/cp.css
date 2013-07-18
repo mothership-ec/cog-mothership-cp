@@ -373,7 +373,16 @@
 	position: relative;
 }
 
-.sidebar .search input {
+.sidebar .search .field input /* Override the field styling */ {
+	max-width: 210px;
+	width: 210px;
+}
+
+.sidebar .search label {
+	display: none;
+}
+
+.sidebar input {
 	margin: 20px 20px 20px 19px;
 	padding: 6px 0 0 4px;
 	width: 210px;
@@ -430,12 +439,13 @@
 	line-height: 12px;
 }
 
-.sidebar .create {
+.sidebar .create,
+.sidebar .upload {
 	display: block;
 	margin: 0 20px 0 19px;
 	margin-bottom: 30px;
 	padding: 13px 20px 10px;
-	width: 170px;
+	width: 210px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -444,6 +454,10 @@
 	font-size: 1.0em;
 	font-family:'Proxima N W15 Smbd';
 	line-height: 15px;
+}
+
+.sidebar a.create {
+	width: 170px;
 }
 
 .sidebar .create:before {
@@ -1199,3 +1213,55 @@
 }
 
 
+
+/* File Manager
+------------------------------------------------------------ */
+
+
+
+.container-file-manager {
+	position: inherit;
+	float: left;
+	overflow: visible;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 76px 0 0 0;
+	padding: 0 23px 23px;
+}
+
+.listing a {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	-webkit-box-shadow: inset 0 0 0 5px #FFF, 0 0 0 1px #CCC;
+	-moz-box-shadow: inset 0 0 0 5px #FFF, 0 0 0 1px #CCC;
+	box-shadow: inset 0 0 0 5px #FFF, 0 0 0 1px #CCC;
+	margin: 0 10px 10px 0;
+}
+
+
+
+/* Sidebar */
+
+
+
+.search.file .field {
+	margin-bottom: 0;
+}
+
+.file-upload {
+	float: left;
+}
+
+.file-upload input[type=file] {
+	padding-top: 12px;
+	padding-left: 10px;	
+	margin-top: 0;
+}
+
+.sidebar .upload:before {
+	margin-right: 8px;
+	content: "\f093";
+	font-family: 'FontAwesome';
+}
