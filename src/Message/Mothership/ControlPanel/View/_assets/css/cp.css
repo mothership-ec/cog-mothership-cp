@@ -1234,10 +1234,17 @@
 	display: inline-block;
 	width: 200px;
 	height: 200px;
-	-webkit-box-shadow: inset 0 0 0 5px #FFF, 0 0 0 1px #CCC;
-	-moz-box-shadow: inset 0 0 0 5px #FFF, 0 0 0 1px #CCC;
-	box-shadow: inset 0 0 0 5px #FFF, 0 0 0 1px #CCC;
-	margin: 0 10px 10px 0;
+	border: 5px solid #FFF;
+	margin: 0 10px 15px 0;
+	-webkit-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
+	-moz-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
+	box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
+}
+
+.listing img {
+	width: 200px;
+	height: 200px;
+	background: #FFF;
 }
 
 
