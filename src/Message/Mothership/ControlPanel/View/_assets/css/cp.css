@@ -1227,7 +1227,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 76px 0 0 0;
-	padding: 0 23px 23px;
+	padding: 0 0 23px 23px;
 }
 
 .listing a {
@@ -1235,7 +1235,7 @@
 	width: 200px;
 	height: 200px;
 	border: 5px solid #FFF;
-	margin: 0 10px 15px 0;
+	margin: 0 23px 23px 0;
 	-webkit-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
 	-moz-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
 	box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
