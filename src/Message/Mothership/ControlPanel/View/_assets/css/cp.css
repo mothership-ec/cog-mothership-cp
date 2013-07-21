@@ -851,9 +851,9 @@
 	text-decoration: none;
 }
 
-.publish form {
+.publish .dropdown-menu {
 	position: absolute;
-	top: 0px;
+	top: 55px;
 	left: 0;
 	z-index: 100;
 	display: none;
@@ -866,12 +866,12 @@
 	-moz-box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
 	box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
 }
-
-.publish:hover form {
+/*
+.publish:hover .dropdown-menu {
 	display: block;
-}
+}*/
 
-.publish .wrap {
+.publish .dropdown-wrap {
 	float: left;
 	width: 460px;
 }
