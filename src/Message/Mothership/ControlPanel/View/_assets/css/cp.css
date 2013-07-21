@@ -1293,13 +1293,12 @@
 
 
 
-.file-details {
+.file-attributes {
 	display: inline-block;
-	margin-bottom: 30px;
 	width: 100%;
 }
 
-.file-details img {
+.file-attributes img {
 	float: left;
 	width: 500px;
 	height: auto;
@@ -1310,7 +1309,7 @@
 	box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
 }
 
-.file-details h1 {
+.file-attributes h1 {
 	display: inline-block;
 	clear: right;
 	width: -moz-calc(100% - 550px);
@@ -1319,13 +1318,58 @@
     margin: 20px 0;
 }
 
-.file-details form {
+.file-attributes form {
 	display: inline-block;
 	width: -moz-calc(100% - 550px);
     width: -webkit-calc(100% - 550px);
     width: calc(100% - 550px);
 }
 
-.file-details #save-content {
+.file-attributes #save-content {
 	top: 77px;
 }
+
+.file-details {
+	list-style: none;
+	font-family:'Proxima N W15 Smbd';
+	text-shadow: 0 1px 0 #FFF;
+}
+
+.file-details li {
+	margin-bottom: 20px;
+}
+
+.file-details span {
+	display: inline-block;
+	width: 150px;
+}
+
+.delete-file {
+	display: inline-block;
+	margin-top: 7px;
+	margin-right: 35px;
+	padding: 0;
+	border: none !important;
+	border-bottom: 1px solid #555;
+	background: none !important;
+	box-shadow: none;
+	color: #333 !important;
+	text-shadow: 0px 1px 0px #FFF !important;
+	position: fixed;
+	top: 79px;
+	right: 151px;
+	z-index: 12;
+}
+
+.delete-file:before {
+	margin-right: 8px;
+	content: "\f014";
+	font-family: 'FontAwesome';
+}
+
+.delete-file:hover {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
