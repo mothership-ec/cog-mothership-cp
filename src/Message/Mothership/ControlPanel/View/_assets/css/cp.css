@@ -488,7 +488,6 @@
 	white-space: nowrap;
 	font-size: 0.875em;
 	font-family:'Proxima N W15 Smbd';
-
 }
 
 .sidebar .main-menu li {
@@ -635,7 +634,7 @@
 }
 
 .title h1 {
-	margin-bottom: 12px;
+	margin-bottom: 22px;
 }
 
 .title h2 {
@@ -1226,7 +1225,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: 76px 0 0 0;
+	margin: 96px 0 0 0;
 	padding: 0 0 23px 23px;
 }
 
@@ -1263,7 +1262,7 @@
 
 .file-upload input[type=file] {
 	padding-top: 12px;
-	padding-left: 10px;	
+	padding-left: 10px;
 	margin-top: 0;
 }
 
@@ -1271,4 +1270,62 @@
 	margin-right: 8px;
 	content: "\f093";
 	font-family: 'FontAwesome';
+}
+
+.sidebar .back {
+	color: #FFF;
+	font-family:'Proxima N W15 Smbd';
+	text-decoration: none;
+	margin: 20px 0 0 25px;
+	text-align: left;
+	display: block;
+}
+
+.sidebar .back:before {
+	margin-right: 8px;
+	content: "\f606";
+	font-family: 'FontAwesome';
+}
+
+
+
+/* File Details */
+
+
+
+.file-details {
+	display: inline-block;
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+.file-details img {
+	float: left;
+	width: 500px;
+	height: auto;
+	border: 5px solid #FFF;
+	margin: 0 23px 23px 0;
+	-webkit-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
+	-moz-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
+	box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
+}
+
+.file-details h1 {
+	display: inline-block;
+	clear: right;
+	width: -moz-calc(100% - 550px);
+    width: -webkit-calc(100% - 550px);
+    width: calc(100% - 550px);
+    margin: 20px 0;
+}
+
+.file-details form {
+	display: inline-block;
+	width: -moz-calc(100% - 550px);
+    width: -webkit-calc(100% - 550px);
+    width: calc(100% - 550px);
+}
+
+.file-details #save-content {
+	top: 77px;
 }
