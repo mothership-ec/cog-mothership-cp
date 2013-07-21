@@ -10,47 +10,37 @@
 
 $(function() {
 
-	var toggleMenu = '[data-toggle=dropdown]',
-		dropdown = $('.dropdown-menu'),
-		parent = '.dropdown',
-		open = false;
+	var toggleMenu = '[data-toggle=dropdown]';
 
-	// If click on HTML hide any dropdown menus
-  	$('html').on('click.dropdown', function() {
+	// Dropdown toggle animation
+	var DropDownToggle = function(parent, dropdown) {
 
-  		clearMenu();
+		if (parent.hasClass('open')) {
 
-  	});
-
-  	// Does not hide if you click inside of the dropdown
-  	dropdown.on('click', function(e) {
-
-  		e.stopPropagation();
-
-  	});
-
-  	// Show dropdown
-	var dropDown = function() {
-
-		open = true;
-
-		dropdown.stop().slideDown();
-
-	};
-
-	// Clear dropdown menu
-	var clearMenu = function() {
-
-		if (open == true) {
 			dropdown.stop().slideUp();
+			parent.removeClass('open');
+
+		} else {
+
+			dropdown.stop().slideDown();
+			parent.addClass('open');
+
 		}
 
-		open = false;
-
 	};
 
-	// Dropdown menu toggle
-	$(document).on('click.dropdown', toggleMenu, dropDown)
+	$(toggleMenu).on('click', function() {
+
+		// Set dropdown parent
+		var dParent = $(this).parent();
+
+		// Find dropdown menu
+		var dropDown = dParent.find('.dropdown-menu');
+
+		// Run dropdown toggle
+		DropDownToggle(dParent, dropDown);
+
+	});
 
 });
 
