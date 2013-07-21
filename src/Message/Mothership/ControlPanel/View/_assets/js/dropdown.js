@@ -17,12 +17,16 @@ $(function() {
 
 	// If click on HTML hide any dropdown menus
   	$('html').on('click.dropdown', function() {
+
   		clearMenu();
+
   	});
 
   	// Does not hide if you click inside of the dropdown
   	dropdown.on('click', function(e) {
+
   		e.stopPropagation();
+
   	});
 
   	// Show dropdown
