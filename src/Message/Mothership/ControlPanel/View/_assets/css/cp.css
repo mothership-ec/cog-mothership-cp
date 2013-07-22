@@ -866,10 +866,6 @@
 	-moz-box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
 	box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
 }
-/*
-.publish:hover .dropdown-menu {
-	display: block;
-}*/
 
 .publish .dropdown-wrap {
 	float: left;
@@ -1181,6 +1177,17 @@
 .field label {
 	float: left;
 	width: 100%;
+}
+
+.field.inline input[type="checkbox"],
+.field.inline input[type="radio"] {
+	display: inline-block;
+	position: absolute;
+}
+
+.field.inline label {
+	display: inline-block;
+	text-indent: 25px;
 }
 
 

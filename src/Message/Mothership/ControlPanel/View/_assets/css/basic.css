@@ -437,6 +437,17 @@ button:active,
 
 
 
+.dropdown-menu {
+	display: none;
+}
+
+
+
+/* Code snippets
+------------------------------------------------------------ */
+
+
+
 pre,
 code {
 
