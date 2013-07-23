@@ -978,7 +978,7 @@
 
 
 .create-page {
-	margin-top: 73px;
+	margin-top: 89px;
 }
 
 .create-page form {
@@ -991,9 +991,9 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: 0 2% 2% 0px;
+	margin: 0 0 2% 0;
 	min-height: 100px;
-	width: 47.7%;
+	width: 49%;
 	border: 1px solid #CCC;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -1002,6 +1002,25 @@
 	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,1.0);
 	-moz-box-shadow: 0 1px 0 rgba(255,255,255,1.0);
 	box-shadow: 0 1px 0 rgba(255,255,255,1.0);
+	text-shadow: 0 1px 0 #FFF;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+.option-block:hover {
+	cursor: pointer;
+	background: #f1f1f1;
+}
+
+.option-block:nth-child(odd) {
+	margin-left: 1%;
+}
+
+.option-block:nth-child(even) {
+	margin-right: 1%;
 }
 
 .option-block input {
@@ -1016,13 +1035,24 @@
 }
 
 .option-block p {
-	float: left;
+	display: inline-block;
+	top: 40px;
+	margin-left: 10px;
+	position: relative;
+}
+
+.option-block p strong {
+	font-family:'Proxima N W15 Bold';
+	font-weight: normal;
+}
+
+.option-block .type {
 	margin-left: 75px;
 }
 
 .create-page button {
 	position: fixed;
-	top: 72px;
+	top: 77px;
 	right: 14px;
 	z-index: 11;
 }
