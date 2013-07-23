@@ -242,14 +242,17 @@ textarea:hover {
 }
 
 input[type]:focus,
-textarea:focus,
-select:focus,
-select:active {
+textarea:focus {
 	outline: none;
 	border: 1px solid #467eb0;
 	-webkit-box-shadow: 0 1px 5px rgba(208,60,69,0.1);
 	-moz-box-shadow: 0 1px 5px rgba(208,60,69,0.1);
 	box-shadow: 0 1px 5px rgba(208,60,69,0.1);
+}
+
+select:focus,
+select:active {
+	outline: none;
 }
 
 button:hover,
