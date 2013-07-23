@@ -643,6 +643,16 @@
 	font-size: 0.9em;
 }
 
+.title h1:hover,
+.title h2:hover {
+	cursor: default;
+}
+
+.title h1[data-title]:hover {
+	cursor: text;
+	text-shadow: 0 0 10px rgba(193,213,240,0.8), 0px 1px 0px #FFF;
+}
+
 .edit-title {
 	position: absolute;
 	top: 61px;
@@ -686,10 +696,6 @@
 	float: left;
 	margin-top: 19px;
 	padding: 13px 15px 10px;
-}
-
-.title:hover + .edit-title {
-	display: block;
 }
 
 
@@ -850,6 +856,12 @@
 
 .publish a {
 	text-decoration: none;
+}
+
+.publish .dropdown-toggle i:before {
+	content: "\f017";
+	font-family: 'FontAwesome';
+	font-style: normal;
 }
 
 .publish .dropdown-menu {
@@ -1157,6 +1169,7 @@
 	float: left;
 	margin: 0 0 30px 0;
 	width: 100%;
+	position: relative;
 }
 
 .field h2 {
@@ -1180,15 +1193,30 @@
 	width: 100%;
 }
 
+
+/* Inline field styling */
+
+
+
 .field.inline input[type="checkbox"],
 .field.inline input[type="radio"] {
 	display: inline-block;
 	position: absolute;
+	left: 0;
 }
 
 .field.inline label {
 	display: inline-block;
 	text-indent: 25px;
+	width: auto;
+}
+
+.field.inline .help {
+	display: inline-block;
+	position: relative;
+	width: auto;
+	left: 0;
+	margin: 0 0 0 10px;
 }
 
 
@@ -1198,17 +1226,24 @@
 
 
 .help {
-	float: right;
-	margin: 10px 0 0 0;
-	width: 25%;
+	margin: 29px 0 0 0;
+	width: 48%;
+	position: absolute;
+	top: 0;
+	left: 52%;
 }
 
 .help .short {
 
 }
 
+.help .short:hover {
+	cursor: pointer;
+}
+
 .help .long {
 	display: none;
+	position: absolute;
 }
 
 .help:hover .short {
@@ -1291,7 +1326,7 @@
 
 .sidebar .back:before {
 	margin-right: 8px;
-	content: "\f606";
+	content: "\f060";
 	font-family: 'FontAwesome';
 }
 
