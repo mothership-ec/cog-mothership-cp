@@ -1245,7 +1245,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	width: 100%;
+	width: 70%;
 }
 
 .repeatable-group .add-group .group {
@@ -1260,7 +1260,9 @@
 }
 
 .repeatable-group .help {
-	margin-top: 44px;
+	position: absolute;
+	top: 44px;
+	right: 0;
 }
 
 
@@ -1312,6 +1314,9 @@
 	text-indent: 25px;
 }
 
+.field.inline .help .long {
+	top: 0;
+}
 
 
 /* Field slug */
@@ -1378,15 +1383,14 @@
 
 
 .help {
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 29px 0 0 2%;
+	float: right;
+	margin: 0 0 0 2%;
 	width: 28%;
 }
 
-.help .short {
-
+.help .short a {
+	text-decoration: none;
+	font-family:'Proxima N W15 Smbd';
 }
 
 .help .short:hover {
@@ -1397,7 +1401,7 @@
 	position: absolute;
 	display: none;
 	padding: 15px;
-	width: 100%;
+	width: inherit;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -1405,18 +1409,17 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	float: left;
+	top: 29px;
+	z-index: 20;
+}
+
+.help .long:hover {
+	cursor: pointer;
 }
 
 .help .long p {
 	line-height: 1.5em;
-}
-
-.help:hover .short {
-	display: none;
-}
-
-.help:hover .long {
-	display: block;
 }
 
 
