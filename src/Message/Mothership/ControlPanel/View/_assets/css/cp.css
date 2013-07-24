@@ -1161,6 +1161,7 @@
 	float: left;
 	margin: 0 0 30px 0;
 	width: 100%;
+	max-width: 1400px;
 }
 
 .repeatable-group .container {
@@ -1169,7 +1170,8 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin-bottom: 20px;
-	width: 50%;
+	width: 70%;
+	max-width: 70%;
 }
 
 .repeatable-group h2 {
@@ -1254,9 +1256,7 @@
 }
 
 .repeatable-group .help {
-	position: absolute;
-	top: 44px;
-	right: 0;
+	margin-top: 44px;
 }
 
 
@@ -1269,7 +1269,8 @@
 	position: relative;
 	float: left;
 	margin: 0 0 30px 0;
-	width: 100%;
+	max-width: 1400px;
+	width: 100%;	
 }
 
 .field h2 {
@@ -1278,11 +1279,7 @@
 	width: 100%;
 }
 
-.field input {
-	max-width: 50%;
-	width: 50%;
-}
-
+.field input,
 .field textarea {
 	max-width: 70%;
 	width: 70%;
@@ -1321,6 +1318,65 @@
 
 
 
+/* Field slug */
+
+
+
+.slug {
+	display: inline-block;
+	width: 70%;
+	max-width: 70%;
+}
+
+.slug p {
+	float: left;
+	display: block;
+	background: #CCC;
+	-webkit-border-radius: 5px 0px 0px 5px;
+	-moz-border-radius: 5px 0px 0px 5px;
+	border-radius: 5px 0px 0px 5px;
+	padding: 13px;
+	font-family:'Proxima N W15 Smbd';
+}
+
+.slug input {
+	-webkit-border-radius: 0px 5px 5px 0px;
+	-moz-border-radius: 0px 5px 5px 0px;
+	border-radius: 0px 5px 5px 0px;
+	display: inline-block;
+	width: 100%;
+}
+
+
+
+/* Authorship */
+
+
+
+.authorship {
+	float: left;
+	width: 100%;
+}
+
+.authorship h2 {
+	margin: 0 0 20px 0;
+}
+
+.authorship dt {
+	float: left;
+	white-space: nowrap;
+	clear: left;
+	margin: 0 3px 10px 0;
+}
+
+.authorship dd {
+	float: left;
+	white-space: nowrap;
+	margin: 0 0 10px 0;
+}
+
+
+
 /* Contextual help */
 
 
@@ -1328,9 +1384,9 @@
 .help {
 	position: absolute;
 	top: 0;
-	left: 52%;
-	margin: 29px 0 0 0;
-	width: 48%;
+	right: 0;
+	margin: 29px 0 0 2%;
+	width: 28%;
 }
 
 .help .short {
