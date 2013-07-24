@@ -1199,6 +1199,10 @@
 	padding: 0 20px;
 }
 
+.repeatable-group .field .field {
+	padding: 0;
+}
+
 .repeatable-group .title {
 	position: relative;
 	z-index: 0;
@@ -1241,7 +1245,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	width: 50%;
+	width: 100%;
 }
 
 .repeatable-group .add-group .group {
@@ -1251,7 +1255,7 @@
 }
 
 .repeatable-group .submit {
-	float: right;
+	float: left;
 	margin-top: 10px;
 }
 
@@ -1306,14 +1310,6 @@
 	display: inline-block;
 	width: auto;
 	text-indent: 25px;
-}
-
-.field.inline .help {
-	position: relative;
-	left: 0;
-	display: inline-block;
-	margin: 0 0 0 10px;
-	width: auto;
 }
 
 
@@ -1401,15 +1397,14 @@
 	position: absolute;
 	display: none;
 	padding: 15px;
-	width: 540px;
-	border: 1px solid #CCC;
+	width: 100%;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	background: #FFF;
-	-webkit-box-shadow: 0 1px 5px rgba(000,000,000,0.1);
-	-moz-box-shadow: 0 1px 5px rgba(000,000,000,0.1);
-	box-shadow: 0 1px 5px rgba(000,000,000,0.1);
+	background: #CCC;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .help .long p {
