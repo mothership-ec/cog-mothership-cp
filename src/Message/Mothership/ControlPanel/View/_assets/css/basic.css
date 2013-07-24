@@ -464,15 +464,45 @@ code {
 
 
 table {
-
+	width: 100%;
+	max-width: 1400px;
+	font-size: 1.0em;
+	border-collapse: collapse;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: left;
+	margin-bottom: 30px;
 }
 
 table th {
-
+	font-family:'Proxima N W15 Smbd';
+	padding: 10px;
+	font-weight: normal;
+	background: none;
+	border-bottom: 1px solid #CCC;
 }
 
 table td {
+	font-family:'Proxima N W15 Reg';
+	padding: 20px 10px;
+	vertical-align: middle;
+	border-bottom: 1px solid #CCC;
+}
 
+table tr:nth-child(odd) td {
+	background: #FFF;
+}
+
+table tr:nth-child(even) td {
+	background: #EFEFEF;
+}
+
+table input {
+	float: left;
+	width: 100%;
+	max-width: 100px;
+	margin-right: 10px;
 }
 
 
