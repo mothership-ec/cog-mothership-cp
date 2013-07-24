@@ -36,6 +36,14 @@ $(function() {
 					self.removeAttr('disabled');
 				}
 			});
+		},
+		afterReplace: function(pane, responseData) {
+			$('ol#main-menu li')
+				.removeClass('current')
+				.eq(
+					$('ol#main-menu li.current', responseData).index()
+				)
+				.addClass('current');
 		}
 	});
 });

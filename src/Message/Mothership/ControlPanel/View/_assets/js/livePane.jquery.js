@@ -20,7 +20,8 @@
 			var defaults = {
 					linkSelector: false, // Selector string for links that should load in the pane
 					beforeSend  : false, // Event for before the ajax request is made
-					afterSend   : false  // Event for when the ajax response is received
+					afterSend   : false, // Event for when the ajax response is received
+					afterReplace: false  // Event for when the ajax response is received + successful
 				},
 				settings = $.extend({}, defaults, options),
 				selector = this.selector;
@@ -81,6 +82,11 @@
 					},
 					success : function(html) {
 						self.html($(state.selector, html).html());
+
+						// If set, fire the afterSend event
+						if (typeof state.settings.afterReplace === 'function') {
+							state.settings.afterReplace(self, $(html));
+						}
 					}
 				});
 			});
