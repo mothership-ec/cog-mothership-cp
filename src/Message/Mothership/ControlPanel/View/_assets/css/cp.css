@@ -352,6 +352,76 @@
 
 
 
+/* Loading spinner
+------------------------------------------------------------ */
+
+
+
+.loading-spinner {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(000,000,000,0.4);
+	display: none;
+	z-index: 9999;
+}
+
+.spinner {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: 1000;
+   margin: -100px 0 0 -70px;
+   width: 140px;
+   height: 140px;
+   border: 20px solid rgba(255,255,255,0.15);
+   border-radius: 100%;
+   -webkit-animation: rotation .6s infinite linear;
+   -moz-animation: rotation .6s infinite linear;
+   -o-animation: rotation .6s infinite linear;
+   animation: rotation .6s infinite linear;
+}
+
+.spinner:before {
+   position: absolute;
+   top: -20px;
+   left: -20px;
+   display: block;
+   width: 100%;
+   height: 100%;
+   border: 20px solid rgba(255,255,255,0.8);
+   border-right: 20px solid transparent;
+   border-bottom: 20px solid transparent;
+   border-left: 20px solid transparent;
+   border-radius: 100%;
+   content: "";
+}
+
+@-webkit-keyframes rotation {
+   from {-webkit-transform: rotate(0deg);}
+   to {-webkit-transform: rotate(359deg);}
+}
+@-moz-keyframes rotation {
+   from {-moz-transform: rotate(0deg);}
+   to {-moz-transform: rotate(359deg);}
+}
+@-o-keyframes rotation {
+   from {-o-transform: rotate(0deg);}
+   to {-o-transform: rotate(359deg);}
+}
+@keyframes rotation {
+   from {transform: rotate(0deg);}
+   to {transform: rotate(359deg);}
+}
+
+.loading .loading-spinner {
+	display: block;
+}
+
+
+
 /* Sidebar
 ------------------------------------------------------------ */
 
@@ -638,8 +708,8 @@
 }
 
 .title h2 {
-	margin-bottom: 12px;
 	margin-top: -12px;
+	margin-bottom: 12px;
 	font-size: 0.9em;
 }
 
@@ -649,8 +719,8 @@
 }
 
 .title h1[data-title]:hover {
-	cursor: text;
 	text-shadow: 0 0 10px rgba(193,213,240,0.8), 0px 1px 0px #FFF;
+	cursor: text;
 }
 
 .edit-title {
@@ -860,8 +930,8 @@
 
 .publish .dropdown-toggle i:before {
 	content: "\f017";
-	font-family: 'FontAwesome';
 	font-style: normal;
+	font-family: 'FontAwesome';
 }
 
 .publish .dropdown-menu {
@@ -957,7 +1027,7 @@
 	position: fixed;
 	top: 154px;
 	right: 14px;
-	z-index: 10000;
+	z-index: 12;
 }
 
 .container-content {
@@ -1011,8 +1081,8 @@
 }
 
 .option-block:hover {
-	cursor: pointer;
 	background: #f1f1f1;
+	cursor: pointer;
 }
 
 .option-block:nth-child(odd) {
@@ -1035,15 +1105,15 @@
 }
 
 .option-block p {
-	display: inline-block;
-	top: 40px;
-	margin-left: 10px;
 	position: relative;
+	top: 40px;
+	display: inline-block;
+	margin-left: 10px;
 }
 
 .option-block p strong {
-	font-family:'Proxima N W15 Bold';
 	font-weight: normal;
+	font-family:'Proxima N W15 Bold';
 }
 
 .option-block .type {
@@ -1196,10 +1266,10 @@
 
 
 .field {
+	position: relative;
 	float: left;
 	margin: 0 0 30px 0;
 	width: 100%;
-	position: relative;
 }
 
 .field h2 {
@@ -1230,23 +1300,23 @@
 
 .field.inline input[type="checkbox"],
 .field.inline input[type="radio"] {
-	display: inline-block;
 	position: absolute;
 	left: 0;
+	display: inline-block;
 }
 
 .field.inline label {
 	display: inline-block;
-	text-indent: 25px;
 	width: auto;
+	text-indent: 25px;
 }
 
 .field.inline .help {
-	display: inline-block;
 	position: relative;
-	width: auto;
 	left: 0;
+	display: inline-block;
 	margin: 0 0 0 10px;
+	width: auto;
 }
 
 
@@ -1256,11 +1326,11 @@
 
 
 .help {
-	margin: 29px 0 0 0;
-	width: 48%;
 	position: absolute;
 	top: 0;
 	left: 52%;
+	margin: 29px 0 0 0;
+	width: 48%;
 }
 
 .help .short {
@@ -1272,8 +1342,22 @@
 }
 
 .help .long {
-	display: none;
 	position: absolute;
+	display: none;
+	padding: 15px;
+	width: 540px;
+	border: 1px solid #CCC;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #FFF;
+	-webkit-box-shadow: 0 1px 5px rgba(000,000,000,0.1);
+	-moz-box-shadow: 0 1px 5px rgba(000,000,000,0.1);
+	box-shadow: 0 1px 5px rgba(000,000,000,0.1);
+}
+
+.help .long p {
+	line-height: 1.5em;
 }
 
 .help:hover .short {
@@ -1304,10 +1388,10 @@
 
 .listing a {
 	display: inline-block;
+	margin: 0 23px 23px 0;
 	width: 200px;
 	height: 200px;
 	border: 5px solid #FFF;
-	margin: 0 23px 23px 0;
 	-webkit-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
 	-moz-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
 	box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
@@ -1334,9 +1418,9 @@
 }
 
 .file-upload input[type=file] {
+	margin-top: 0;
 	padding-top: 12px;
 	padding-left: 10px;
-	margin-top: 0;
 }
 
 .sidebar .upload:before {
@@ -1346,12 +1430,12 @@
 }
 
 .sidebar .back {
-	color: #FFF;
-	font-family:'Proxima N W15 Smbd';
-	text-decoration: none;
-	margin: 20px 0 0 25px;
-	text-align: left;
 	display: block;
+	margin: 20px 0 0 25px;
+	color: #FFF;
+	text-align: left;
+	text-decoration: none;
+	font-family:'Proxima N W15 Smbd';
 }
 
 .sidebar .back:before {
@@ -1373,10 +1457,10 @@
 
 .file-attributes img {
 	float: left;
+	margin: 0 23px 23px 0;
 	width: 500px;
 	height: auto;
 	border: 5px solid #FFF;
-	margin: 0 23px 23px 0;
 	-webkit-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
 	-moz-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
 	box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
@@ -1385,10 +1469,10 @@
 .file-attributes h1 {
 	display: inline-block;
 	clear: right;
+    margin: 20px 0;
 	width: -moz-calc(100% - 550px);
     width: -webkit-calc(100% - 550px);
     width: calc(100% - 550px);
-    margin: 20px 0;
 }
 
 .file-attributes form {
@@ -1404,8 +1488,8 @@
 
 .file-details {
 	list-style: none;
-	font-family:'Proxima N W15 Smbd';
 	text-shadow: 0 1px 0 #FFF;
+	font-family:'Proxima N W15 Smbd';
 }
 
 .file-details li {
@@ -1418,6 +1502,10 @@
 }
 
 .delete-file {
+	position: fixed;
+	top: 79px;
+	right: 151px;
+	z-index: 12;
 	display: inline-block;
 	margin-top: 7px;
 	margin-right: 35px;
@@ -1428,10 +1516,6 @@
 	box-shadow: none;
 	color: #333 !important;
 	text-shadow: 0px 1px 0px #FFF !important;
-	position: fixed;
-	top: 79px;
-	right: 151px;
-	z-index: 12;
 }
 
 .delete-file:before {
@@ -1445,4 +1529,8 @@
 	-moz-box-shadow: none;
 	box-shadow: none;
 }
+
+
+
+
 

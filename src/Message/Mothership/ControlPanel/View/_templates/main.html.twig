@@ -29,6 +29,9 @@
 
 	</head>
 	<body>
+		<div class="loading-spinner">
+			<div class="spinner"></div>
+		</div>
 		{% for types in app.session.getFlashBag.all %}
 			{% for message in types %}
 				<p>{{ message|raw }}</p>
@@ -37,5 +40,6 @@
 
 		{% block body %}
 		{% endblock %}
+
 	</body>
 </html>
