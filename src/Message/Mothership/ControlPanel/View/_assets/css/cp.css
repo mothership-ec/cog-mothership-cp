@@ -1096,7 +1096,7 @@
 .option-block input {
 	position: absolute;
 	top: 40px;
-	left: 30px;
+	left: 25px;
 }
 
 .option-block label {
@@ -1106,9 +1106,13 @@
 
 .option-block p {
 	position: relative;
-	top: 40px;
-	display: inline-block;
+	top: 30px;
+	float: left;
 	margin-left: 10px;
+	margin-left: 55px;
+	width: -moz-calc(100% - 55px);
+    width: -webkit-calc(100% - 55px);
+    width: calc(100% - 55px);
 }
 
 .option-block p strong {
@@ -1117,7 +1121,7 @@
 }
 
 .option-block .type {
-	margin-left: 75px;
+	margin-left: 55px;
 }
 
 .create-page button {
