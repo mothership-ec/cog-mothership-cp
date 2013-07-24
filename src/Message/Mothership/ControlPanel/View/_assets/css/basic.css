@@ -189,7 +189,6 @@ input[type="image"]:hover {
 
 select {
 	margin: 0 0 10px 0;
-	-webkit-appearance: none;
 }
 
 label {
