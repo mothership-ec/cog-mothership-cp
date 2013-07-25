@@ -465,7 +465,6 @@ code {
 
 table {
 	width: 100%;
-	max-width: 1400px;
 	font-size: 1.0em;
 	border-collapse: collapse;
 	-webkit-box-sizing: border-box;
@@ -488,6 +487,15 @@ table td {
 	padding: 20px 10px;
 	vertical-align: middle;
 	border-bottom: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+}
+
+table tr {
+	border-right: 1px solid #CCC;
+}
+
+table thead tr {
+	border-right: none;
 }
 
 table tr:nth-child(odd) td {
