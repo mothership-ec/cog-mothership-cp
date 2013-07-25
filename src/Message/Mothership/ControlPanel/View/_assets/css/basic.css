@@ -203,6 +203,12 @@ select {
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#e6e6e6');
 	border: 1px solid #b1b1b1;
 	min-width: 310px;
+	font-size: 0.875em;
+	font-family:'Proxima N W15 Reg';
+}
+
+select[multiple] {
+	background: #FFF;
 }
 
 label {

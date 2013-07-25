@@ -1351,11 +1351,21 @@
 .slug p {
 	float: left;
 	display: block;
-	background: #CCC;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	background-color: #ffffff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e6e6e6));
+	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: linear-gradient(top, #ffffff, #e6e6e6);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#e6e6e6');
 	-webkit-border-radius: 5px 0px 0px 5px;
 	-moz-border-radius: 5px 0px 0px 5px;
 	border-radius: 5px 0px 0px 5px;
-	padding: 13px;
+	padding: 12px 13px 12px;
 	font-family:'Proxima N W15 Smbd';
 }
 
