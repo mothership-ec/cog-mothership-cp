@@ -5,6 +5,11 @@
 	{% block sidebar %}{% endblock %}
 </section>
 <section class="main">
+		{% for key,types in app.session.getFlashBag.all %}
+			{% for message in types %}
+				<p class="{{ key }}">{{ message|raw }}</p>
+			{% endfor %}
+		{% endfor %}
 	{% block main %}{% endblock %}
 </section>
 {% endblock %}
