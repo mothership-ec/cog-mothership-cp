@@ -7,12 +7,14 @@
 <section class="main">
 
 		{% for key,types in app.session.getFlashBag.all %}
-			{% for message in types %}
-				<div class="feedback {{ key }}">
+			<div class="feedback {{ key }}">
+				{% for message in types %}
 					<p>{{ message|raw }}</p>
-				</div>
-			{% endfor %}
+				{% endfor %}
+			</div>
 		{% endfor %}
+
 	{% block main %}{% endblock %}
+
 </section>
 {% endblock %}
