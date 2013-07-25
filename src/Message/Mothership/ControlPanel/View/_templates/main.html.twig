@@ -33,9 +33,9 @@
 		<div class="loading-spinner">
 			<div class="spinner"></div>
 		</div>
-		{% for types in app.session.getFlashBag.all %}
+		{% for key,types in app.session.getFlashBag.all %}
 			{% for message in types %}
-				<p>{{ message|raw }}</p>
+				<p class="{{ key }}">{{ message|raw }}</p>
 			{% endfor %}
 		{% endfor %}
 
