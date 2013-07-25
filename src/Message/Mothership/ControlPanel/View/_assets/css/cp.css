@@ -741,7 +741,6 @@
 
 .edit-title {
 	position: absolute;
-	top: 61px;
 	z-index: 11;
 	display: none;
 	padding-left: 22px;
@@ -1630,6 +1629,22 @@
 	top: 137px;
 }
 
+
+
+/* Create product */
+
+
+
+.create-product {
+	margin-top: 89px;
+}
+
+.create-product button {
+	position: fixed;
+	top: 77px;
+	right: 14px;
+	z-index: 11;
+}
 
 
 /* Units */
