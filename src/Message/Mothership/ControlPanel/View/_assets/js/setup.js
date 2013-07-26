@@ -46,4 +46,6 @@ $(function() {
 				.addClass('current');
 		}
 	});
+
+	$('section.sidebar > ol').nestedAccordian();
 });
