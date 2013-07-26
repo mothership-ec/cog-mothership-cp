@@ -651,8 +651,8 @@
 
 .sidebar .main-menu li:hover ol,
 .sidebar .main-menu li ol li:hover ol {
-	display: block;
-}
+/*	display: block;
+*/}
 
 
 
