@@ -4,7 +4,7 @@
 <section class="sidebar">
 	{% block sidebar %}{% endblock %}
 </section>
-<section class="main">
+<section class="main" data-live-pane>
 
 		{% for key,types in app.session.getFlashBag.all %}
 			<div class="feedback {{ key }}">
