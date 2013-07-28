@@ -25,8 +25,7 @@
 			return this.each(function() {
 				var self  = $(this),
 					state = {
-						settings: settings,
-						open    : []
+						settings: settings
 					};
 
 				// Save state on the element for use later
@@ -66,37 +65,36 @@
 
 		open : function(elem) {
 			return this.each(function() {
-				var settings = $(this).data('nestedAccordian');
+				var list = $(this);
 
 				elem.each(function() {
 					var self     = $(this)
 						children = self.children('ol, ul');
 
-					// Close every other one
-					if (settings.open.length > 0
-					 && settings.open.get(0) !== self.parents('li').get(0)) {
-					 	settings.open.find('ol, ul').filter(':visible').hide();
-					 	settings.open = null;
+					// If a sibling is open, close it recursively
+					methods.close.call(list, self.siblings('.open'));
 
-						console.log('closed her');
-					}
-					else {
-						console.log('not closing');
-						console.log(settings.open);
-					}
-
-
-					// Ignore if this page has no children
+					// Can't open this section if there's no children
 					if (children.length === 0) {
-						settings.open = null;
-
 						return false;
 					}
 
-					console.log('ope her up');
-					settings.open = self;
-
+					// Open up this section
+					self.addClass('open');
 					children.fadeIn(100);
+				});
+			});
+		},
+
+		close : function(elem) {
+			return this.each(function() {
+				elem.each(function() {
+					var self = $(this);
+
+					self.find('.open').add(self)
+						.removeClass('open')
+						.children('ol')
+							.fadeOut(100);
 				});
 			});
 		}
