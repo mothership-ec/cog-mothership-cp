@@ -12,7 +12,7 @@ $(function() {
 	$('[data-live-pane]').livePane({
 		linkSelector: 'a[data-live]',
 		beforeSend: function(pane) {
-			$('html').addClass('loading');
+			//$('html').addClass('loading');
 
 			// Disable form inputs
 			pane.find('input, select, textarea, button').each(function() {
@@ -46,4 +46,6 @@ $(function() {
 				.addClass('current');
 		}
 	});
+
+	$('section.sidebar > ol').nestedAccordian();
 });
