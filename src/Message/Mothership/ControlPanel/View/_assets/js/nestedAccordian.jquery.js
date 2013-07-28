@@ -25,7 +25,8 @@
 			return this.each(function() {
 				var self  = $(this),
 					state = {
-						settings: settings
+						settings: settings,
+						open    : []
 					};
 
 				// Save state on the element for use later
@@ -41,13 +42,11 @@
 		},
 
 		bindEvents : function() {
+			var list = this;
+
 			return this.each(function() {
-				var self = $(this);
-
-				self.on('click.nestedAccordian', 'li a', function() {
-
-					// ignore if sibling isn't <ol>
-					console.log('clicked!');
+				$(this).on('click.nestedAccordian', 'li a', function() {
+					methods.open.call(list, $(this).parent('li'));
 				});
 			});
 		},
@@ -61,6 +60,43 @@
 					if (children.length > 0) {
 						self.append('<span class="badge">' + children.find('li').length + '</span>');
 					}
+				});
+			});
+		},
+
+		open : function(elem) {
+			return this.each(function() {
+				var settings = $(this).data('nestedAccordian');
+
+				elem.each(function() {
+					var self     = $(this)
+						children = self.children('ol, ul');
+
+					// Close every other one
+					if (settings.open.length > 0
+					 && settings.open.get(0) !== self.parents('li').get(0)) {
+					 	settings.open.find('ol, ul').filter(':visible').hide();
+					 	settings.open = null;
+
+						console.log('closed her');
+					}
+					else {
+						console.log('not closing');
+						console.log(settings.open);
+					}
+
+
+					// Ignore if this page has no children
+					if (children.length === 0) {
+						settings.open = null;
+
+						return false;
+					}
+
+					console.log('ope her up');
+					settings.open = self;
+
+					children.fadeIn(100);
 				});
 			});
 		}
