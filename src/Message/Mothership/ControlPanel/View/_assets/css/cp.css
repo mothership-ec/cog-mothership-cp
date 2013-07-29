@@ -637,13 +637,6 @@
 	display: none;
 }
 
-.sidebar .menu li:hover ol,
-.sidebar .menu li ol li:hover ol {
-	display: block;
-	z-index: 20;
-}
-
-
 
 /* Main
 ------------------------------------------------------------ */
