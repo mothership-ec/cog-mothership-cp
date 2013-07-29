@@ -548,7 +548,7 @@
 	margin: 0;
 	padding: 0;
 	width: 250px;
-	margin-top: 40px;
+	margin-top: 41px;
 	list-style: none;
 }
 
@@ -557,7 +557,7 @@
 	width: 250px;
 	min-height: 40px;
 	color: #FFF;
-	border-bottom: 1px solid #222;
+	border-bottom: 1px solid #151515;
 	position: relative;
 	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
 	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
@@ -565,50 +565,17 @@
 	list-style: none;
 }
 
-.sidebar .menu li.open a {
+.sidebar .menu .open {
+	background: #444;
+	border-bottom: none;
+}
+
+.sidebar .menu .open > a:first-child {
 	border-bottom: 1px solid #1d1d1d;
 }
 
-.sidebar .menu li li /* First child  */ {
-	background: #252525;
-	text-indent: 20px;
-	min-height: 40px;
-	-webkit-box-shadow: inset 5px 0 0 #467eb0;
-	-moz-box-shadow: inset 5px 0 0 #467eb0;
-	box-shadow: inset 5px 0 0 #467eb0;
-	border-bottom: none;
-}
-
-.sidebar .menu li li li /* Second child */ {
-	text-indent: 40px;
-	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae;
-	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae;
-	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae;
-	border-bottom: none;
-}
-
-.sidebar .menu li li li li /* Third child */ {
-	text-indent: 60px;
-	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
-	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
-	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
-	border-bottom: none;
-}
-
-.sidebar .menu li li li li li /* Fourth child */ {
-	text-indent: 60px;
-	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f, inset 16px 0 0 #252525, inset 23px 0 0 #153a5a;
-	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f, inset 16px 0 0 #252525, inset 23px 0 0 #153a5a;
-	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 11px 0 0 #286fae, inset 12px 0 0 #252525, inset 17px 0 0 #1f527f, inset 18px 0 0 #252525, inset 23px 0 0 #153a5a;
-	border-bottom: none;
-}
-
-.sidebar .menu li li li li li /* Fifth child */ {
-	text-indent: 60px;
-	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
-	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
-	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
-	border-bottom: none;
+.sidebar .menu li:hover {
+	background: #444;
 }
 
 .sidebar .menu li a,
@@ -627,6 +594,7 @@
 .sidebar .menu li ol,
 .sidebar .menu li ol li ol {
 	display: none;
+	background: #252525;
 }
 
 .sidebar .menu .badge {
@@ -644,6 +612,43 @@
 	top: 7px;
 	right: 7px;
 	text-indent: 0 !important;
+}
+
+.sidebar .menu li li /* First child  */ {
+	background: #252525;
+	text-indent: 20px;
+	min-height: 40px;
+	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525;
+	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525;
+	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525;
+}
+
+.sidebar .menu li li li /* Second child */ {
+	text-indent: 40px;
+	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae;
+	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae;
+	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae;
+}
+
+.sidebar .menu li li li li /* Third child */ {
+	text-indent: 60px;
+	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
+	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
+	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
+}
+
+.sidebar .menu li li li li li /* Fourth child */ {
+	text-indent: 60px;
+	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f, inset 16px 0 0 #252525, inset 23px 0 0 #153a5a;
+	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f, inset 16px 0 0 #252525, inset 23px 0 0 #153a5a;
+	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 11px 0 0 #286fae, inset 12px 0 0 #252525, inset 17px 0 0 #1f527f, inset 18px 0 0 #252525, inset 23px 0 0 #153a5a;
+}
+
+.sidebar .menu li li li li li /* Fifth child */ {
+	text-indent: 60px;
+	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
+	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
+	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
 }
 
 
