@@ -565,6 +565,10 @@
 	list-style: none;
 }
 
+.sidebar .menu li.open a {
+	border-bottom: 1px solid #1d1d1d;
+}
+
 .sidebar .menu li li /* First child  */ {
 	background: #252525;
 	text-indent: 20px;
@@ -572,7 +576,6 @@
 	-webkit-box-shadow: inset 5px 0 0 #467eb0;
 	-moz-box-shadow: inset 5px 0 0 #467eb0;
 	box-shadow: inset 5px 0 0 #467eb0;
-	border-top: 1px solid #1d1d1d;
 	border-bottom: none;
 }
 
@@ -581,7 +584,6 @@
 	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae;
 	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae;
 	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae;
-	border-top: 1px solid #1d1d1d;
 	border-bottom: none;
 }
 
@@ -590,7 +592,6 @@
 	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
 	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
 	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
-	border-top: 1px solid #1d1d1d;
 	border-bottom: none;
 }
 
@@ -599,7 +600,6 @@
 	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f, inset 16px 0 0 #252525, inset 23px 0 0 #153a5a;
 	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f, inset 16px 0 0 #252525, inset 23px 0 0 #153a5a;
 	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 11px 0 0 #286fae, inset 12px 0 0 #252525, inset 17px 0 0 #1f527f, inset 18px 0 0 #252525, inset 23px 0 0 #153a5a;
-	border-top: 1px solid #1d1d1d;
 	border-bottom: none;
 }
 
@@ -608,7 +608,6 @@
 	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
 	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
 	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
-	border-top: 1px solid #1d1d1d;
 	border-bottom: none;
 }
 
