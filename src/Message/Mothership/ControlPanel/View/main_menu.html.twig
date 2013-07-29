@@ -1,5 +1,5 @@
 <ol id="main-menu">
 	{% for item in items %}
-	<li class="{{ item.classes|join(' ') }}"><a href="{{ url(item.target) }}" data-live>{{ item.label }}</a></li>
+	<li class="{{ item.classes|join(' ') }}"><a href="{{ url(item.target) }}">{{ item.label }}</a></li>
 	{% endfor %}
 </ol>
