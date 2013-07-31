@@ -1465,7 +1465,6 @@
     height: -webkit-calc(100% - 65px);
     height: calc(100% - 65px);
 	width: inherit;
-	top: 65px;
 	float: left;
 	overflow: visible;
 	overflow-y: scroll;
@@ -1633,7 +1632,6 @@
     height: -webkit-calc(100% - 120px);
     height: calc(100% - 120px);
 	width: inherit;
-	top: 120px;
 	float: left;
 	overflow: visible;
 	overflow-y: scroll;
