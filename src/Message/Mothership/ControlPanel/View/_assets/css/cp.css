@@ -45,7 +45,7 @@
 	text-align: center;
 	text-shadow: 0px 1px 2px rgba(000,000,000,0.75);
 	font-size: 3.250em;
-	font-family:'Proxima N W15 Bold';
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .spaceship {
@@ -211,7 +211,7 @@
 	text-decoration: none;
 	text-shadow: 0px 1px 1px rgba(000,000,000,0.25);
 	font-size: 0.875em;
-	font-family:'Proxima N W15 Smbd';
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .navigation h1 a {
@@ -245,7 +245,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	font-family:'Proxima N W15 Bold';
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .navigation ol {
@@ -270,7 +270,7 @@
 .navigation li a {
 	display: block;
 	padding: 0 25px;
-	font-family:'Proxima N W15 Bold';
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .navigation li:hover {
@@ -341,7 +341,7 @@
 	box-shadow: 0px 4px 0px #F1F1F1;
 	text-align: center;
 	font-size: 26px;
-	font-family:'Proxima N W15 Bold';
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .welcome:before {
@@ -464,7 +464,7 @@
 	text-align: left;
 	text-indent: 0px;
 	font-size: 0.875em;
-	font-family:'Proxima N W15 Bold';
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	-webkit-appearance: none;
 }
 
@@ -538,7 +538,7 @@
 	text-shadow: 0px 1px 1px rgba(000,000,000,0.25);
 	white-space: nowrap;
 	font-size: 0.875em;
-	font-family:'Proxima N W15 Smbd';
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .sidebar .menu ol {
@@ -608,7 +608,7 @@
 	background: #111;
 	text-align: center;
 	text-indent: 0 !important;
-	font-family:'Proxima N W15 Smbd';
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 16px;
 }
 
@@ -841,7 +841,7 @@
 	border-right: 1px solid #EDEDED;
 	text-decoration: 0px 1px 0px rgba(255,255,255,1.0);
 	font-size: 0.938em;
-	font-family:'Proxima N W15 Smbd';
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /*.topbar .tabs li.active:after {
@@ -1133,7 +1133,7 @@
 
 .option-block p strong {
 	font-weight: normal;
-	font-family:'Proxima N W15 Bold';
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .option-block .type {
@@ -1366,7 +1366,7 @@
 	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
 	background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
 	background-image: linear-gradient(top, #ffffff, #e6e6e6);
-	font-family:'Proxima N W15 Smbd';
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#e6e6e6');
 }
 
@@ -1420,7 +1420,7 @@
 
 .help .short a {
 	text-decoration: none;
-	font-family:'Proxima N W15 Smbd';
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .help .short:hover {
@@ -1525,7 +1525,7 @@
 	color: #FFF;
 	text-align: left;
 	text-decoration: none;
-	font-family:'Proxima N W15 Smbd';
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .sidebar .back:before {
@@ -1579,7 +1579,7 @@
 .file-details {
 	list-style: none;
 	text-shadow: 0 1px 0 #FFF;
-	font-family:'Proxima N W15 Smbd';
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .file-details li {

@@ -56,7 +56,7 @@ body {
 	height: 100%;
 	color: #333;
 	font-size: 100%;
-	font-family:'Proxima N W15 Reg';
+	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	overflow: hidden;
 }
 
@@ -78,7 +78,7 @@ a:hover {
 
 p {
 	font-size: 1em;
-	font-family:'Proxima N W15 Reg';
+	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 p a {
@@ -96,7 +96,7 @@ h4,
 h5 {
 	color: #333;
 	font-weight: normal;
-	font-family:'Proxima N W15 Smbd';
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -146,7 +146,7 @@ textarea {
     box-sizing: border-box;
 	padding: 12px 15px;
 	color: #333;
-	font-family:'Proxima N W15 Reg';
+	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	border: 1px solid #CCC;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -209,7 +209,7 @@ select {
 	border: 1px solid #b1b1b1;
 	min-width: 310px;
 	font-size: 0.875em;
-	font-family:'Proxima N W15 Reg';
+	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 select[multiple] {
@@ -218,7 +218,7 @@ select[multiple] {
 
 label {
 	font-size: 1.0em;
-	font-family:'Proxima N W15 Smbd';
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	margin: 0 0 10px 0;
 	float: left;
 	width: 100%;
@@ -509,7 +509,7 @@ table {
 }
 
 table th {
-	font-family:'Proxima N W15 Smbd';
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	padding: 10px;
 	font-weight: normal;
 	background: none;
@@ -517,7 +517,7 @@ table th {
 }
 
 table td {
-	font-family:'Proxima N W15 Reg';
+	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	padding: 20px 10px;
 	vertical-align: middle;
 	border-bottom: 1px solid #CCC;
@@ -599,7 +599,6 @@ dd {
 	box-sizing: border-box;
 	z-index: 1000;
 	position: relative;
-	border: 1px solid #10460a;
 	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5), 0px 1px 3px rgba(000,000,000,0.5);
 	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5), 0px 1px 3px rgba(000,000,000,0.5);
 	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5), 0px 1px 3px rgba(000,000,000,0.5);
@@ -608,7 +607,7 @@ dd {
 
 .feedback p {
 	padding-bottom: 15px;
-	font-family:'Proxima N W15 Bold';
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .feedback p:before {
@@ -625,7 +624,6 @@ dd {
 
 .feedback.error {
 	background: #e8a6a6;
-	border: 1px #700d0d solid;
 }
 
 .feedback.error p {
@@ -646,7 +644,6 @@ dd {
 
 .feedback.notice {
 	background: #d9e6f2;
-	border: 1px #184c7f solid;
 }
 
 .feedback.notice p {
@@ -667,7 +664,6 @@ dd {
 
 .feedback.warning {
 	background: #fed779;
-	border: 1px #5d460d solid;
 }
 
 .feedback.warning p {
@@ -714,7 +710,7 @@ dd {
 	height: 18px;
 	background: url(../images/message-logo-footer.png) no-repeat left;
 	font-size: 0.813em !important;
-	font-family:'Proxima N W15 Smbd';
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	float: left;
 	margin-top: 13px
 }
@@ -722,7 +718,7 @@ dd {
 [class^="container-"] footer a {
 	color: #b1b3b4;
 	font-size: 13px;
-	font-family:'Proxima N W15 Smbd';
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 [class^="container-"] .website {
