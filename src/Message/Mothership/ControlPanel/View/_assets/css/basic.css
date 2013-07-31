@@ -57,6 +57,7 @@ body {
 	color: #333;
 	font-size: 100%;
 	font-family:'Proxima N W15 Reg';
+	overflow: hidden;
 }
 
 
@@ -124,6 +125,10 @@ h5 {
 ------------------------------------------------------------ */
 
 
+
+form {
+	position: relative;
+}
 
 input,
 textarea {
@@ -586,25 +591,92 @@ dd {
 
 
 .feedback {
-	font-family:'Proxima N W15 Smbd';
-	padding: 0 0 20px;
-	color: #22a437 !important;
+	color: #10460a;
+	padding: 15px 15px 0 15px;
+	background: #c9e5c9;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 1000;
+	position: relative;
+	border: 1px solid #10460a;
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5), 0px 1px 3px rgba(000,000,000,0.5);
+	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5), 0px 1px 3px rgba(000,000,000,0.5);
+	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5), 0px 1px 3px rgba(000,000,000,0.5);
+	text-shadow: 0px 1px 0 rgba(255,255,255,0.5);
 }
 
-.feedback:before {
+.feedback p {
+	padding-bottom: 15px;
+	font-family:'Proxima N W15 Bold';
+}
+
+.feedback p:before {
 	font-family: 'FontAwesome';
 	content: "\f058";
 	margin-right: 10px;
 }
 
+
+
+/* Error */
+
+
+
 .feedback.error {
-	color: #ce2828 !important;
-	font-family:'Proxima N W15 Smbd';
+	background: #e8a6a6;
+	border: 1px #700d0d solid;
 }
 
-.feedback.error:before {
+.feedback.error p {
+	color: #700d0d;
+}
+
+.feedback.error p:before {
 	font-family: 'FontAwesome';
 	content: "\f057";
+	margin-right: 10px;
+}
+
+
+
+/* Notice */
+
+
+
+.feedback.notice {
+	background: #d9e6f2;
+	border: 1px #184c7f solid;
+}
+
+.feedback.notice p {
+	color: #184c7f;
+}
+
+.feedback.notice p:before {
+	font-family: 'FontAwesome';
+	content: "\f06a";
+	margin-right: 10px;
+}
+
+
+
+/* Warning */
+
+
+
+.feedback.warning {
+	background: #fed779;
+	border: 1px #5d460d solid;
+}
+
+.feedback.warning p {
+	color: #5d460d;
+}
+
+.feedback.warning p:before {
+	font-family: 'FontAwesome';
+	content: "\f071";
 	margin-right: 10px;
 }
 
@@ -624,8 +696,7 @@ dd {
 	width: 100%;
 	height: 100%;
 	background: #F1F1F1;
-	overflow-x: hidden;
-/*	overflow-y: scroll;*/
+	float: left;
 }
 
 [class^="container-"] footer {
@@ -664,5 +735,4 @@ dd {
 	margin-right: 10px;
 	text-decoration: none;
 }
-
 

@@ -363,9 +363,9 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: rgba(000,000,000,0.4);
-	display: none;
 	z-index: 9999;
+	display: none;
+	background: rgba(000,000,000,0.4);
 }
 
 .spinner {
@@ -432,10 +432,8 @@
 	z-index: 0;
 	float: left;
 	overflow-x: hidden;
-	margin-top: -59px;
-	padding-top: 59px;
 	width: 250px;
-	height: 100%;
+	height: inherit;
 	background: #333;
 }
 
@@ -510,8 +508,8 @@
 }
 
 .sidebar .create {
-	margin: 0px 40px 22px;
 	float: left;
+	margin: 0px 40px 22px;
 	white-space: nowrap;
 }
 
@@ -533,6 +531,7 @@
 
 .sidebar .menu a {
 	overflow: hidden;
+	max-height: 40px;
 	color: #FFF;
 	text-decoration: none;
 	text-overflow: ellipsis;
@@ -540,34 +539,33 @@
 	white-space: nowrap;
 	font-size: 0.875em;
 	font-family:'Proxima N W15 Smbd';
-	max-height: 40px;
 }
 
 .sidebar .menu ol {
 	float: left;
 	margin: 0;
+	margin-top: 41px;
 	padding: 0;
 	width: 250px;
-	margin-top: 41px;
 	list-style: none;
 }
 
 .sidebar .menu li /* Top level */ {
-	float: left;
-	width: 250px;
-	min-height: 40px;
-	color: #FFF;
-	border-bottom: 1px solid #151515;
 	position: relative;
+	float: left;
+	min-height: 40px;
+	width: 250px;
+	border-bottom: 1px solid #151515;
 	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
 	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
 	box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	color: #FFF;
 	list-style: none;
 }
 
 .sidebar .menu .open {
-	background: #444;
 	border-bottom: none;
+	background: #444;
 }
 
 .sidebar .menu .open > a:first-child {
@@ -580,14 +578,14 @@
 
 .sidebar .menu li a,
 .sidebar .menu .active li a {
-	display: block;
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	width: 210px;
+	display: block;
 	padding: 0 20px;
+	width: 210px;
 	line-height: 40px;
 }
 
@@ -598,57 +596,57 @@
 }
 
 .sidebar .menu .badge {
-	background: #111;
-	line-height: 16px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	display: block;
-	width: 16px;
-	padding: 5px;
-	text-align: center;
-	font-family:'Proxima N W15 Smbd';
 	position: absolute;
 	top: 7px;
 	right: 7px;
+	display: block;
+	padding: 5px;
+	width: 16px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #111;
+	text-align: center;
 	text-indent: 0 !important;
+	font-family:'Proxima N W15 Smbd';
+	line-height: 16px;
 }
 
 .sidebar .menu li li /* First child  */ {
-	background: #252525;
-	text-indent: 20px;
 	min-height: 40px;
+	background: #252525;
 	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525;
 	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525;
 	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525;
+	text-indent: 20px;
 }
 
 .sidebar .menu li li li /* Second child */ {
-	text-indent: 40px;
 	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae;
 	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae;
 	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae;
+	text-indent: 40px;
 }
 
 .sidebar .menu li li li li /* Third child */ {
-	text-indent: 60px;
 	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
 	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
 	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
+	text-indent: 60px;
 }
 
 .sidebar .menu li li li li li /* Fourth child */ {
-	text-indent: 60px;
 	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f, inset 16px 0 0 #252525, inset 23px 0 0 #153a5a;
 	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f, inset 16px 0 0 #252525, inset 23px 0 0 #153a5a;
 	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 11px 0 0 #286fae, inset 12px 0 0 #252525, inset 17px 0 0 #1f527f, inset 18px 0 0 #252525, inset 23px 0 0 #153a5a;
+	text-indent: 60px;
 }
 
 .sidebar .menu li li li li li /* Fifth child */ {
-	text-indent: 60px;
 	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
 	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
 	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
+	text-indent: 60px;
 }
 
 
@@ -658,13 +656,18 @@
 
 
 .pos-clear /* clear space for the navigation */ {
-	margin: 61px 0 0 0;
-	height: 100%;
+	margin: 61px 0 40px 0;
 	width: 100%;
+	height: -moz-calc(100% - 101px);
+    height: -webkit-calc(100% - 101px);
+    height: calc(100% - 101px);
 }
 
 .main {
+    position: fixed;
 	display: inline-block;
+    float: left;
+    overflow: hidden;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -672,18 +675,15 @@
 	width: -moz-calc(100% - 250px);
     width: -webkit-calc(100% - 250px);
     width: calc(100% - 250px);
-    position: relative;
-    height: 100%;
-    height: auto;
-    float: left;
+	height: inherit;
 }
 
 .dashboard {
-	width: 100%;
-	padding: 23px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	padding: 23px;
+	width: 100%;
 }
 
 .dashboard h1 {
@@ -696,7 +696,6 @@
 
 
 .title {
-	position: fixed;
 	z-index: 10;
 	padding: 20px 22px 15px;
 	width: 100%;
@@ -716,15 +715,15 @@
 }
 
 .title h1 {
-	width: auto;
 	display: inline-block;
+	width: auto;
 }
 
 .title h2 {
 	font-size: 0.9em;
 	margin-left: 15px;
-	width: auto;
 	display: inline-block;
+	width: auto;
 }
 
 .title h1:hover,
@@ -735,8 +734,8 @@
 .title h1[data-title]:after {
 	margin-left: 8px;
 	content: "\f040";
-	font-family: 'FontAwesome';
 	font-size: 0.875em;
+	font-family: 'FontAwesome';
 }
 
 .title h1[data-title]:hover {
@@ -790,14 +789,13 @@
 
 
 .topbar {
-	position: fixed;
 	z-index: 10;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: 64px 0 20px;
+	margin: -1px 0 0;
 	padding: 0 23px 0 0;
-	width: inherit;
+	width: 100%;
 	height: 56px;
 	border-top: 1px solid #C8C8C8;
 	border-bottom: 1px solid #C8C8C8;
@@ -1045,14 +1043,18 @@
 }
 
 .container-content {
-	position: inherit;
-	float: left;
+	position: relative;
+	height: -moz-calc(100% - 173px);
+    height: -webkit-calc(100% - 173px);
+    height: calc(100% - 173px);
+	width: inherit;
 	overflow: visible;
+	overflow-y: scroll;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: 157px 0 0 0;
-	padding: 0 23px 23px;
+	padding: 23px 0 23px 23px; 
+	width: 100%;
 }
 
 
@@ -1178,8 +1180,8 @@
 	position: relative;
 	float: left;
 	margin: 0 0 30px 0;
-	width: 100%;
 	max-width: 1400px;
+	width: 100%;
 }
 
 .repeatable-group .container {
@@ -1188,8 +1190,8 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin-bottom: 20px;
-	width: 70%;
 	max-width: 70%;
+	width: 70%;
 }
 
 .repeatable-group h2 {
@@ -1343,16 +1345,20 @@
 
 .slug {
 	display: inline-block;
-	width: 70%;
 	max-width: 70%;
+	width: 70%;
 }
 
 .slug p {
-	float: left;
 	display: block;
+	float: left;
+	padding: 12px 13px 12px;
 	border-top: 1px solid #CCC;
 	border-bottom: 1px solid #CCC;
 	border-left: 1px solid #CCC;
+	-webkit-border-radius: 5px 0px 0px 5px;
+	-moz-border-radius: 5px 0px 0px 5px;
+	border-radius: 5px 0px 0px 5px;
 	background-color: #ffffff;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e6e6e6));
 	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
@@ -1360,20 +1366,16 @@
 	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
 	background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
 	background-image: linear-gradient(top, #ffffff, #e6e6e6);
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#e6e6e6');
-	-webkit-border-radius: 5px 0px 0px 5px;
-	-moz-border-radius: 5px 0px 0px 5px;
-	border-radius: 5px 0px 0px 5px;
-	padding: 12px 13px 12px;
 	font-family:'Proxima N W15 Smbd';
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#e6e6e6');
 }
 
 .slug input {
+	display: inline-block;
+	width: 100%;
 	-webkit-border-radius: 0px 5px 5px 0px;
 	-moz-border-radius: 0px 5px 5px 0px;
 	border-radius: 0px 5px 5px 0px;
-	display: inline-block;
-	width: 100%;
 }
 
 
@@ -1393,15 +1395,15 @@
 
 .authorship dt {
 	float: left;
-	white-space: nowrap;
 	clear: left;
 	margin: 0 3px 10px 0;
+	white-space: nowrap;
 }
 
 .authorship dd {
 	float: left;
-	white-space: nowrap;
 	margin: 0 0 10px 0;
+	white-space: nowrap;
 }
 
 
@@ -1427,19 +1429,19 @@
 
 .help .long {
 	position: absolute;
+	top: 29px;
+	z-index: 20;
 	display: none;
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	padding: 15px;
 	width: inherit;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	background: #CCC;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	float: left;
-	top: 29px;
-	z-index: 20;
 }
 
 .help .long:hover {
@@ -1458,14 +1460,20 @@
 
 
 .container-file-manager {
-	position: inherit;
+	position: relative;
+	height: -moz-calc(100% - 65px);
+    height: -webkit-calc(100% - 65px);
+    height: calc(100% - 65px);
+	width: inherit;
+	top: 65px;
 	float: left;
 	overflow: visible;
+	overflow-y: scroll;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: 96px 0 0 0;
-	padding: 0 0 23px 23px;
+	padding: 23px 0 23px 23px; 
+	width: 100%;
 }
 
 .listing a {
@@ -1620,14 +1628,20 @@
 
 
 .container-products {
-	position: inherit;
+	position: relative;
+	height: -moz-calc(100% - 120px);
+    height: -webkit-calc(100% - 120px);
+    height: calc(100% - 120px);
+	width: inherit;
+	top: 120px;
 	float: left;
 	overflow: visible;
+	overflow-y: scroll;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: 143px 0 0 0;
-	padding: 0 23px 23px;
+	padding: 23px 0 23px 23px; 
+	width: 100%;
 }
 
 .container-products #save-content {
@@ -1658,8 +1672,8 @@
 
 #new_option_name_2,
 #new_option_value_2 {
-	clear: left;
 	float: left;
+	clear: left;
 }
 
 

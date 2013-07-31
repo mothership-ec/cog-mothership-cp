@@ -34,6 +34,14 @@
 		<div class="loading-spinner">
 			<div class="spinner"></div>
 		</div>
+		
+		{% for key,types in app.session.getFlashBag.all %}
+			<div class="feedback {{ key }}">
+				{% for message in types %}
+					<p>{{ message|raw }}</p>
+				{% endfor %}
+			</div>
+		{% endfor %}
 
 		{% block body %}
 		{% endblock %}

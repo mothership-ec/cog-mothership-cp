@@ -6,14 +6,6 @@
 </section>
 <section class="main" data-live-pane>
 
-		{% for key,types in app.session.getFlashBag.all %}
-			<div class="feedback {{ key }}">
-				{% for message in types %}
-					<p>{{ message|raw }}</p>
-				{% endfor %}
-			</div>
-		{% endfor %}
-
 	{% block main %}{% endblock %}
 
 </section>
