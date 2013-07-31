@@ -58,6 +58,7 @@ body {
 	font-size: 100%;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	overflow: hidden;
+	position: relative;
 }
 
 
