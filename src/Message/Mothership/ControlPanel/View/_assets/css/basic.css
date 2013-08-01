@@ -684,9 +684,9 @@ dd {
 
 
 
-[id^="profiler-"] {
+/*[id^="profiler-"] {
 	display: none;
-}
+}*/
 
 [class^="container-"] {
 	position: relative;
