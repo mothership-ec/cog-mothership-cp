@@ -1055,16 +1055,16 @@
 
 .container-content {
 	position: relative;
-	height: -moz-calc(100% - 173px);
-    height: -webkit-calc(100% - 173px);
-    height: calc(100% - 173px);
+	height: -moz-calc(100% - 120px);
+    height: -webkit-calc(100% - 120px);
+    height: calc(100% - 120px);
 	width: inherit;
 	overflow: visible;
 	overflow-y: scroll;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 23px 0 23px 23px; 
+	padding: 23px; 
 	width: 100%;
 }
 
@@ -1687,3 +1687,15 @@
 
 
 
+/* Orders
+------------------------------------------------------------ */
+
+
+
+/* Fulfillment */
+
+
+
+.fulfillment li {
+	list-style-type: none;
+}
