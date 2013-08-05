@@ -16,7 +16,7 @@
 		<section class="pos-clear">
 			{% block content %}{% endblock %}
 		</section>
-		<footer role="contentinfo">
+		<footer class="footer" role="contentinfo">
 			<small class="copy">&copy; <a href="http://message.co.uk">Message</a> {{ "now"|date('Y') }}</small>
 			<a href="//{{ app.cfg.mothership.url|trim('//') }}" target="_blank" class="website"><i class="icon-external-link"></i>{{ app.cfg.mothership.url }}</a>
 		</footer>

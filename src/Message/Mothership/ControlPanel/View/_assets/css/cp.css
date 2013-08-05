@@ -22,24 +22,19 @@
 ------------------------------------------------------------ */
 
 
+.login {
+	background: #050505 url(../images/login-background.jpg) no-repeat top center;
+	width: 100%;
+	height: 100%;
+}
 
 .center {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -325px;
-	margin-right: 0;
-	margin-bottom: 0;
-	margin-left: -412px;
-	width: 824px;
-	height: 650px;
+	width: 100%;
+	top: 20%;
 }
 
-.container-login {
-	background: #050505 url(../images/login-background.jpg) no-repeat top center;
-}
-
-.container-login h1 {
+.login h1 {
 	margin: 49px 0 39px;
 	color: #E1E1E1;
 	text-align: center;
@@ -64,39 +59,48 @@
 	background: url(../../images/shadow.png) no-repeat;
 }
 
-.container-login .form {
-	float: left;
+.login-form {
 	max-width: 824px;
 	width: 100%;
-}
-
-.container-login .form div {
+	margin: 0 auto;
 	position: relative;
 }
 
-.container-login .form h1 {
+.login-form h1 {
 	margin-top: 18px;
 	margin-bottom: 17px;
 	text-align: left;
 	font-size: 1.125em;
 }
 
-.container-login .form p {
+.login-form p {
 	padding-bottom: 30px;
 	color: #E1E1E1;
 	line-height: 1.8;
 }
 
-.container-login .form input[type="email"],
-.container-login .form input[type="password"] {
+.login-form .field {
+	max-width: 368px;
+}
+
+.login-form .field.inline {
+	position: absolute;
+}
+
+.login-form .field.inline label {
+	text-indent: 0;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
 	float: left;
 	margin-right: 2.4271844660194173%;
-	max-width: 325px;
-	width: 39.44174757281553%;
+	max-width: 360px;
+	width: 100%;
 	height: 48px;
 }
 
-.container-login .form button {
+.login-form button {
 	position: absolute;
 	float: left;
 	clear: right;
@@ -107,19 +111,19 @@
 	border-radius: 5px;
 }
 
-.container-login .form button:active {
+.login-form button:active {
 	padding: 17px 21px 11px;
 	text-shadow: 0px -1px 0 rgba(000,000,000,0.8);
 }
 
-.container-login .form .checkbox {
+.login-form .checkbox {
 	float: left;
 	margin-right: 2.4271844660194173%;
 	max-width: 325px;
 	width: 39.44174757281553%;
 }
 
-.container-login .form label {
+.login-form label {
 	float: left;
 	margin-bottom: 30px;
 	height: 44px;
@@ -127,8 +131,8 @@
 	font-size: 0.875em;
 }
 
-.container-login .form label[for="login_email"],
-.container-login .form label[for="login_password"] {
+.login-form label[for="login_email"],
+.login-form label[for="login_password"] {
 	position: absolute;
 	top: 15px;
 	z-index: 999;
@@ -138,42 +142,48 @@
 	font-family: 'Lucida Grande';
 }
 
-.container-login .form label[for="login_email"]:before {
+.login-form label[for="login_email"]:before {
 	margin-right: 10px;
 	content: "\f007";
 	font-family: 'FontAwesome';
 }
 
-.container-login .form label[for="login_password"]:before {
+.login-form label[for="login_password"]:before {
 	margin-right: 10px;
 	content: "\f023";
 	font-family: 'FontAwesome';
 }
 
-.container-login .form label[for="login_remember"] {
+.login-form label[for="login_remember"] {
 	position: absolute;
 	top: 79px;
 	left: 25px;
+	display: block !important;
 }
 
-.container-login .form input[type="checkbox"] {
+.login-form input[type="checkbox"] {
 	position: absolute;
 	top: 79px;
 	left: 0;
 }
 
-.container-login .form a {
-	float: left;
-	margin-left: 344px;
+.login-form .forgotten-password {
+	position: absolute;
+	top: 79px;
+	right: 295px;
+	width: auto;
 	color: #E1E1E1;
 	font-size: 0.875em;
+	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.container-login footer {
+.login footer {
 	color: #b1b3b4;
+	position: absolute;
+	bottom: 0;
 }
 
-.container-login footer a {
+.login footer a {
 	color: #b1b3b4;
 }
 

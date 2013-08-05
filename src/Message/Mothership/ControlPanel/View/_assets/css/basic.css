@@ -904,7 +904,7 @@ dd {
 	background: #F1F1F1;
 }
 
-[class^="container-"] footer {
+.footer {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
@@ -913,7 +913,7 @@ dd {
 	color: #b1b3b4;
 }
 
-[class^="container-"] .copy {
+.footer .copy {
 	float: left;
 	margin-top: 13px;
 	margin-left: 15px;
@@ -924,19 +924,19 @@ dd {
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-[class^="container-"] footer a {
+.footer a {
 	color: #b1b3b4;
 	font-size: 13px;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-[class^="container-"] .website {
+.footer .website {
 	float: right;
 	margin-top: 13px;
 	margin-right: 15px;
 }
 
-[class^="container-"] .website i {
+.footer .website i {
 	margin-right: 10px;
 	text-decoration: none;
 }
