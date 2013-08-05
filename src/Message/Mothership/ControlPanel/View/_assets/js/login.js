@@ -18,10 +18,19 @@ $(function() {
 	    var input = $(element);
 	    var label = $('label[for=' + input.attr('id') + ']');
 
+	    // On load hide label if input has a value
+    	$(window).on('load', function() {
+			if (input.val()) {
+				label.hide();
+			};
+		});
+
+    	// Hide label on focus
 	    input.focus(function() {
 	        label.fadeOut();
 	    });
 
+	    // Show label off focus if input has no value
 	    input.blur(function(){
 	        if(!input.val()) { label.fadeIn(); }
 	    });

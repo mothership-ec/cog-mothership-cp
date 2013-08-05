@@ -218,7 +218,7 @@ label {
 	margin: 0 0 10px 0;
 	width: 100%;
 	font-size: 1.0em;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 label[for="setloggedin"]:hover {
