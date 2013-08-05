@@ -358,26 +358,26 @@
 
 
 .loading-spinner {
-	position: absolute;;
-	z-index: 9999;
-	display: none;
-	background: rgba(000,000,000,0.4);
-	width: 300px;
-	height: 65px;
+	position: absolute;
 	top: 20px;
 	right: 20px;
+	z-index: 9999;
+	display: none;
+	width: 300px;
+	height: 65px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	background: rgba(000,000,000,0.4);;
 }
 
 .loading-spinner p {
-	font-family: 'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 1.5em;
-	color: #FFF;
 	position: absolute;
 	top: 20px;
 	left: 20px;
+	color: #FFF;
+	font-size: 1.5em;
+	font-family: 'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .spinner {
@@ -518,11 +518,6 @@
 	line-height: 12px;
 }
 
-.sidebar .create {
-	float: left;
-	margin: 0px 40px 22px;
-	white-space: nowrap;
-}
 
 
 /* Sidebar Menu */
@@ -731,10 +726,10 @@
 }
 
 .title h2 {
-	font-size: 0.9em;
-	margin-left: 15px;
 	display: inline-block;
+	margin-left: 15px;
 	width: auto;
+	font-size: 0.9em;
 }
 
 .title h1:hover,
@@ -755,6 +750,7 @@
 
 .edit-title {
 	position: absolute;
+	top: 0;
 	z-index: 11;
 	display: none;
 	padding-left: 22px;
@@ -789,7 +785,6 @@
 	z-index: 11;
 	float: left;
 	margin-top: 11px;
-	padding: 13px 15px 10px;
 }
 
 
@@ -821,23 +816,6 @@
 	-moz-box-shadow: 0px 1px 3px rgba(000,000,000,0.05);
 	box-shadow: 0px 1px 3px rgba(000,000,000,0.05);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
-}
-
-.topbar .button {
-	float: left;
-}
-
-.topbar .button.button-group {
-	padding: 0;
-	height: 32px;
-}
-
-.topbar .button.button-group a {
-	padding: 8px 14px 5px;
-}
-
-.topbar .button.button-group span {
-	padding: 7px 9px 5px;
 }
 
 .topbar .tabs {
@@ -906,8 +884,8 @@
 
 #delete-page {
 	position: relative;
-	top: -12px;
 	display: inline-block;
+	margin-right: 8px;
 }
 
 .delete-page {
@@ -921,6 +899,8 @@
 	box-shadow: none;
 	color: #333 !important;
 	text-shadow: 0px 1px 0px #FFF !important;
+	font-size: 1.0em;
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .delete-page:before {
@@ -943,7 +923,7 @@
 
 .publish {
 	display: inline-block;
-	margin-top: 10px;
+	margin-top: 12px;
 	margin-right: 8px;
 }
 
@@ -951,7 +931,7 @@
 	text-decoration: none;
 }
 
-.publish .dropdown-toggle i:before {
+.publish .button-group span:before {
 	content: "\f017";
 	font-style: normal;
 	font-family: 'FontAwesome';
@@ -1024,22 +1004,6 @@
 
 
 
-.preview {
-	display: inline-block;
-	margin-top: 11px;
-}
-
-.preview a {
-	margin-top: 0;
-}
-
-.preview a:before {
-	margin-right: 12px;
-	content: "\f06e";
-	font-family: 'FontAwesome';
-}
-
-
 
 /* Content
 ------------------------------------------------------------ */
@@ -1048,24 +1012,24 @@
 
 #save-content {
 	position: fixed;
-	top: 137px;
+	top: 138px;
 	right: 14px;
 	z-index: 12;
 }
 
 .container-content {
 	position: relative;
-	height: -moz-calc(100% - 120px);
-    height: -webkit-calc(100% - 120px);
-    height: calc(100% - 120px);
-	width: inherit;
 	overflow: visible;
 	overflow-y: scroll;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 23px; 
+	padding: 23px;
+	width: inherit; 
 	width: 100%;
+	height: -moz-calc(100% - 120px);
+    height: -webkit-calc(100% - 120px);
+    height: calc(100% - 120px);
 }
 
 
@@ -1074,8 +1038,20 @@
 
 
 
-.create-page {
-	margin-top: 89px;
+.container-content.create-page {
+	position: relative;
+	float: left;
+	overflow: visible;
+	overflow-y: scroll;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 23px 0 23px 23px;
+	width: inherit; 
+	width: 100%;
+	height: -moz-calc(100% - 65px);
+    height: -webkit-calc(100% - 65px);
+    height: calc(100% - 65px);
 }
 
 .create-page form {
@@ -1472,18 +1448,18 @@
 
 .container-file-manager {
 	position: relative;
-	height: -moz-calc(100% - 65px);
-    height: -webkit-calc(100% - 65px);
-    height: calc(100% - 65px);
-	width: inherit;
 	float: left;
 	overflow: visible;
 	overflow-y: scroll;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 23px 0 23px 23px; 
+	padding: 23px 0 23px 23px;
+	width: inherit; 
 	width: 100%;
+	height: -moz-calc(100% - 65px);
+    height: -webkit-calc(100% - 65px);
+    height: calc(100% - 65px);
 }
 
 .listing a {
@@ -1521,12 +1497,6 @@
 	margin-top: 0;
 	padding-top: 12px;
 	padding-left: 10px;
-}
-
-.sidebar .upload:before {
-	margin-right: 8px;
-	content: "\f093";
-	font-family: 'FontAwesome';
 }
 
 .sidebar .back {
@@ -1583,7 +1553,7 @@
 }
 
 .file-attributes #save-content {
-	top: 77px;
+	top: 73px;
 }
 
 .file-details {
@@ -1601,7 +1571,7 @@
 	width: 150px;
 }
 
-.delete-file {
+.container-file-manager .button.delete {
 	position: fixed;
 	top: 79px;
 	right: 151px;
@@ -1618,7 +1588,7 @@
 	text-shadow: 0px 1px 0px #FFF !important;
 }
 
-.delete-file:before {
+/*.delete-file:before {
 	margin-right: 8px;
 	content: "\f014";
 	font-family: 'FontAwesome';
@@ -1629,7 +1599,7 @@
 	-moz-box-shadow: none;
 	box-shadow: none;
 }
-
+*/
 
 
 /* Products
@@ -1639,18 +1609,18 @@
 
 .container-products {
 	position: relative;
-	height: -moz-calc(100% - 120px);
-    height: -webkit-calc(100% - 120px);
-    height: calc(100% - 120px);
-	width: inherit;
 	float: left;
 	overflow: visible;
 	overflow-y: scroll;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 23px 0 23px 23px; 
+	padding: 23px 0 23px 23px;
+	width: inherit; 
 	width: 100%;
+	height: -moz-calc(100% - 120px);
+    height: -webkit-calc(100% - 120px);
+    height: calc(100% - 120px);
 }
 
 .container-products #save-content {
@@ -1687,6 +1657,16 @@
 
 
 
+/* Sidebar */
+
+
+
+.create.product {
+	margin-top: 20px;
+}
+
+
+
 /* Orders
 ------------------------------------------------------------ */
 
@@ -1699,3 +1679,5 @@
 .fulfillment li {
 	list-style-type: none;
 }
+
+
