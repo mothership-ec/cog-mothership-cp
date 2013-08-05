@@ -896,10 +896,6 @@ dd {
 
 
 
-/*[id^="profiler-"] {
-	display: none;
-}*/
-
 [class^="container-"] {
 	position: relative;
 	float: left;
