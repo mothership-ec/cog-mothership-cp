@@ -140,6 +140,7 @@
 	color: #999;
 	font-size: 16px;
 	font-family: 'Lucida Grande';
+	left: 0;
 }
 
 .login-form label[for="login_email"]:before {
@@ -1361,7 +1362,7 @@
 .slug p {
 	display: block;
 	float: left;
-	padding: 12px 13px 12px;
+	padding: 12px 13px 10px;
 	border-top: 1px solid #CCC;
 	border-bottom: 1px solid #CCC;
 	border-left: 1px solid #CCC;

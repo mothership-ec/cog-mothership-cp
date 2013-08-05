@@ -138,16 +138,12 @@ textarea {
 	max-width: 100%;
 	width: 100%;
 	font-size: 1.0em;
-}
-
-input,
-textarea {
 	position: relative;
 	z-index: 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
     box-sizing: border-box;
-	padding: 12px 15px;
+	padding: 12px 15px 10px;
 	border: 1px solid #CCC;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
