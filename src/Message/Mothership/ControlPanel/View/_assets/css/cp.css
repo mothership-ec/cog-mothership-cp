@@ -1672,10 +1672,8 @@
 
 
 
-#new_option_name_2,
-#new_option_value_2 {
-	float: left;
-	clear: left;
+table td .inline {
+	display: inline-block;
 }
 
 
