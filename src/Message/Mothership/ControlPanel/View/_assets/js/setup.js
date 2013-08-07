@@ -48,4 +48,5 @@ $(function() {
 	});
 
 	$('section.sidebar > ol').nestedAccordian();
+
 });

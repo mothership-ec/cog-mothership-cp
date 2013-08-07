@@ -1292,7 +1292,8 @@
 .repeatable-group .help {
 	position: absolute;
 	top: 44px;
-	right: 0;
+	right: -30px;
+	width: 30%;
 }
 
 
@@ -1423,6 +1424,25 @@
 
 
 
+/* Display date */
+
+#content-edit-content_date {
+	float: left;
+	width: 70%;
+}
+
+#content-edit-content_date select {
+	min-width: 100px;
+	margin-right: 10px;
+}
+
+#content-edit-content_date_time {
+	float: left;
+	width: 70%;
+	clear: both;
+}
+
+
 /* Contextual help */
 
 
@@ -1516,7 +1536,7 @@
 
 
 
-.container-file-manager {
+.container-content.file-manager {
 	position: relative;
 	float: left;
 	overflow: visible;
@@ -1641,7 +1661,7 @@
 	width: 150px;
 }
 
-.container-file-manager .button.delete {
+.container-content.file-manager .button.delete {
 	position: fixed;
 	top: 79px;
 	right: 151px;
@@ -1677,7 +1697,7 @@
 
 
 
-.container-products {
+.container-content.products {
 	position: relative;
 	float: left;
 	overflow: visible;
@@ -1693,7 +1713,7 @@
     height: calc(100% - 120px);
 }
 
-.container-products #save-content {
+.container-content.products #save-content {
 	top: 137px;
 }
 

@@ -18,7 +18,16 @@ $(function() {
 		var self     = $(this),
 			longHelp = self.attr('href');
 
-		$(longHelp).addClass('open').fadeIn(200);
+		// Check if long help is visible then show or hide
+		if ($(longHelp).is(':visible')) {
+			
+			$(longHelp).removeClass('open').fadeOut(200);
+
+		} else {
+
+			$(longHelp).addClass('open').fadeIn(200);
+
+		}
 
 	});
 
