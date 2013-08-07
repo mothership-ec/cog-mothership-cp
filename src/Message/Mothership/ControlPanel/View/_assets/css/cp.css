@@ -1475,6 +1475,14 @@
 	width: 70%;
 }
 
+
+#content-edit-content_date:before {
+	content: 'Month / Day / Year';
+	float: left;
+	line-height: 39px;
+	margin-right: 10px;
+}
+
 #content-edit-content_date select {
 	min-width: 100px;
 	margin-right: 10px;
@@ -1486,6 +1494,21 @@
 	clear: both;
 }
 
+#content-edit-content_date_time:before {
+	content: 'Hours : Minutes';
+	float: left;
+	line-height: 39px;
+	margin-right: 10px;
+}
+
+
+#content-edit-content_date_time select {
+	float: none;
+}
+
+#content-edit-content_date_time select:last-child {
+	margin-left: 5px;
+}
 
 /* Contextual help */
 
