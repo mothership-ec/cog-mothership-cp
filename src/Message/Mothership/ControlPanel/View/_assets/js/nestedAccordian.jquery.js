@@ -93,6 +93,7 @@
 					methods.close.call(list, self.siblings());
 
 					// Set active class
+					list.find('li.' + activeClass).removeClass(activeClass);
 					self.addClass(activeClass);
 
 					// Can't open this section if there's no children
@@ -109,17 +110,9 @@
 
 		close : function(elem) {
 			return this.each(function() {
-				var list        = $(this),
-					activeClass = list.data('nestedAccordian').settings.activeClass;
-
 				elem.each(function() {
 					var self = $(this);
 
-					// Recursively remove active classes
-					self.find('.' + activeClass).add(self)
-						.removeClass(activeClass);
-
-					// Recursively close
 					self.find('.open').add(self)
 						.removeClass('open')
 						.children('ol')
