@@ -18,7 +18,8 @@
 		 */
 		init : function(options) {
 			var defaults = {
-					showNumberBadge: true
+					showNumberBadge: true,
+					activeClass    : 'active'
 				},
 				settings = $.extend({}, defaults, options);
 
@@ -36,6 +37,12 @@
 
 				if (state.settings.showNumberBadge) {
 					methods.initNumberBadges.call(self);
+				}
+
+				// If something is already active, open up the accordian to that place
+				var current = self.find('.' + settings.activeClass);
+				if (current.length > 0) {
+					methods.openAt.call(self, current);
 				}
 			});
 		},
@@ -63,16 +70,30 @@
 			});
 		},
 
-		open : function(elem) {
+		openAt : function(elem) {
 			return this.each(function() {
 				var list = $(this);
+
+				elem.each(function() {
+					methods.open.call(list, elem.add(elem.parents('li')));
+				});
+			});
+		},
+
+		open : function(elem) {
+			return this.each(function() {
+				var list        = $(this),
+					activeClass = list.data('nestedAccordian').settings.activeClass;
 
 				elem.each(function() {
 					var self     = $(this)
 						children = self.children('ol, ul');
 
 					// If a sibling is open, close it recursively
-					methods.close.call(list, self.siblings('.open'));
+					methods.close.call(list, self.siblings());
+
+					// Set active class
+					self.addClass(activeClass);
 
 					// Can't open this section if there's no children
 					if (children.length === 0) {
@@ -88,9 +109,17 @@
 
 		close : function(elem) {
 			return this.each(function() {
+				var list        = $(this),
+					activeClass = list.data('nestedAccordian').settings.activeClass;
+
 				elem.each(function() {
 					var self = $(this);
 
+					// Recursively remove active classes
+					self.find('.' + activeClass).add(self)
+						.removeClass(activeClass);
+
+					// Recursively close
 					self.find('.open').add(self)
 						.removeClass('open')
 						.children('ol')
