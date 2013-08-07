@@ -133,17 +133,16 @@ form {
 
 input,
 textarea {
-	margin: 0 0 10px 0;
-	margin-bottom: 30px;
-	max-width: 100%;
-	width: 100%;
-	font-size: 1.0em;
 	position: relative;
 	z-index: 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
     box-sizing: border-box;
+	margin: 0 0 10px 0;
+	margin-bottom: 30px;
 	padding: 12px 15px 10px;
+	max-width: 100%;
+	width: 100%;
 	border: 1px solid #CCC;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -152,12 +151,14 @@ textarea {
 	-moz-box-shadow: 0 1px 5px rgba(000,000,000,0.1);
 	box-shadow: 0 1px 5px rgba(000,000,000,0.1);
 	color: #333;
+	font-size: 1.0em;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.0em;
 	-webkit-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
 	-moz-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
 	-ms-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
 	transition: border .15s linear, color .15s linear, box-shadow .15s linear;
+	float: left;
 }
 
 textarea {
@@ -207,6 +208,7 @@ select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+	float: left;
 }
 
 select[multiple] {
@@ -246,8 +248,8 @@ select:active {
 
 button:hover,
 .button:hover {
-	cursor: pointer;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 button:active,
@@ -333,26 +335,26 @@ button:active,
 .create:before {
 	margin-right: 8px;
 	content: "\f067";
-	font-family: 'FontAwesome';
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
 	white-space: nowrap;
 	font-weight: 500;
 	font-size: 0.8em;
+	font-family: 'FontAwesome';
 	line-height: 0.2em;
 }
 
 .upload:before {
 	margin-right: 8px;
 	content: "\f093";
-	font-family: 'FontAwesome';
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
 	white-space: nowrap;
 	font-weight: 500;
 	font-size: 0.8em;
+	font-family: 'FontAwesome';
 	line-height: 0.2em;
 }
 
@@ -404,26 +406,26 @@ button:active,
 .save:before {
 	margin-right: 8px;
 	content: "\f00c";
-	font-family: 'FontAwesome';
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
 	white-space: nowrap;
 	font-weight: 500;
 	font-size: 0.8em;
+	font-family: 'FontAwesome';
 	line-height: 0.2em;
 }
 
 .update:before {
 	margin-right: 8px;
 	content: "\f021";
-	font-family: 'FontAwesome';
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
 	white-space: nowrap;
 	font-weight: 500;
 	font-size: 0.8em;
+	font-family: 'FontAwesome';
 	line-height: 0.2em;
 }
 
@@ -457,39 +459,39 @@ button:active,
 .load:before {
 	margin-right: 8px;
 	content: "\f110";
-	font-family: 'FontAwesome';
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
 	white-space: nowrap;
 	font-weight: 500;
 	font-size: 0.8em;
+	font-family: 'FontAwesome';
 	line-height: 0.2em;
 }
 
 .edit:before {
 	margin-right: 8px;
 	content: "\f044";
-	font-family: 'FontAwesome';
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
 	white-space: nowrap;
 	font-weight: 500;
 	font-size: 0.8em;
+	font-family: 'FontAwesome';
 	line-height: 0.2em;
 }
 
 .preview:before {
 	margin-right: 8px;
 	content: "\f06e";
-	font-family: 'FontAwesome';
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
 	white-space: nowrap;
 	font-weight: 500;
 	font-size: 0.8em;
+	font-family: 'FontAwesome';
 	line-height: 0.2em;
 }
 
@@ -537,26 +539,26 @@ button:active,
 .remove:before {
 	margin-right: 8px;
 	content: "\f00d";
-	font-family: 'FontAwesome';
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
 	white-space: nowrap;
 	font-weight: 500;
 	font-size: 0.8em;
+	font-family: 'FontAwesome';
 	line-height: 0.2em;
 }
 
 .delete:before {
 	margin-right: 8px;
 	content: "\f014";
-	font-family: 'FontAwesome';
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
 	white-space: nowrap;
 	font-weight: 500;
 	font-size: 0.8em;
+	font-family: 'FontAwesome';
 	line-height: 0.2em;
 }
 
@@ -581,23 +583,23 @@ button:active,
 
 
 .button.button-group {
+	position: relative;
 	padding: 0px;
+    border-top: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    border-bottom: none;
+    border-left: 1px solid #CCC;
 	-webkit-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.05);
 	-moz-box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.05);
 	box-shadow: inset 0px -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.05);
-	position: relative;
-    border-right: 1px solid #CCC;
-    border-top: 1px solid #CCC;
-    border-left: 1px solid #CCC;
-    border-bottom: none;
 }
 
 .button.button-group a {
 	float: left;
 	padding: 12px 15px;
 	border-right: 1px solid #CCC;
-	text-decoration: none;
 	border-bottom: 1px solid #CCC;
+	text-decoration: none;
 }
 
 .button.button-group.small a {
@@ -628,13 +630,13 @@ button:active,
 
 .button.button-group span:before {
 	content: "\f0d7";
-	font-family: 'FontAwesome';
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
 	white-space: nowrap;
 	font-weight: 500;
 	font-size: 0.8em;
+	font-family: 'FontAwesome';
 	line-height: 0.2em;
 }
 
@@ -653,8 +655,8 @@ button:active,
 }
 
 .button.button-group.open span {
-	background: #eee;
 	border-bottom: 1px solid #eee;
+	background: #eee;
 }
 
 .button.button-group.open span:hover {
@@ -664,24 +666,24 @@ button:active,
 }
 
 .button.button-group .dropdown-menu {
-	display: none;
 	position: absolute;
 	top: 41px;
 	left: -1px;
+	display: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
 	padding: 12px 0;
 	width: -webkit-calc(100% + 3px);
 	width: -moz-calc(100% + 3px);
 	width: calc(100% + 3px);
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: #eee;
-    -webkit-border-radius: 0px 0px 2px 2px;
-    -moz-border-radius: 0px 0px 2px 2px;
-    border-radius: 0px 0px 2px 2px;
     border-right: 1px solid #CCC;
     border-bottom: 1px solid #CCC;
     border-left: 1px solid #CCC;
+    -webkit-border-radius: 0px 0px 2px 2px;
+    -moz-border-radius: 0px 0px 2px 2px;
+    border-radius: 0px 0px 2px 2px;
+    background: #eee;
     -webkit-box-shadow: 0px 1px 3px rgba(000,000,000,0.05);
     -moz-box-shadow: 0px 1px 3px rgba(000,000,000,0.05);
     box-shadow: 0px 1px 3px rgba(000,000,000,0.05);
@@ -759,9 +761,9 @@ table tr:hover td {
 table input {
 	float: left;
 	margin-right: 10px;
+	margin-bottom: 0;
 	max-width: 100px !important;
 	width: 100% !important;
-	margin-bottom: 0;
 }
 
 table select {
@@ -956,10 +958,10 @@ dd {
 }
  
 /* Track */
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(000,000,000,0.1); 
+::-webkit-scrollbar-track { 
     -webkit-border-radius: 2px;
     border-radius: 2px;
+    -webkit-box-shadow: inset 0 0 6px rgba(000,000,000,0.1);
 }
  
 /* Handle */
@@ -976,18 +978,18 @@ dd {
 @-moz-document url-prefix() {
 
 	scrollbar {
-	   -moz-appearance: none !important;
 	   background: rgb(0,255,0) !important;
+	   -moz-appearance: none !important;
 	}
 
 	thumb,scrollbarbutton {
-	   -moz-appearance: none !important;
 	   background-color: rgb(0,0,255) !important;
+	   -moz-appearance: none !important;
 	}
 
 	thumb:hover,scrollbarbutton:hover {
-	   -moz-appearance: none !important;
 	   background-color: rgb(255,0,0) !important;
+	   -moz-appearance: none !important;
 	}
 
 	scrollbarbutton {
