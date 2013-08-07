@@ -899,7 +899,7 @@
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/*.topbar .tabs li.active:after {
+.topbar .tabs li.active:after {
 	display: block;
 	content: '';
 	width: 0;
@@ -924,7 +924,7 @@
 	left: 50%;
 	bottom: -1px;
 	margin: 0 0 0 -8px;
-}*/
+}
 
 .topbar .tabs a {
 	display: block;
