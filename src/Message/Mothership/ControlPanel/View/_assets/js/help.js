@@ -30,7 +30,7 @@ $(function() {
 			activeHelp.removeClass('open').fadeOut(150);
 
 			$(longHelp).addClass('open').fadeIn(200);
-
+			
 		}
 
 	});

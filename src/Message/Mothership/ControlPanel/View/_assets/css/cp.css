@@ -997,6 +997,10 @@
 	text-decoration: none;
 }
 
+.publish .button.button-group {
+	position: inherit;
+}
+
 .publish .button-group span:before {
 	content: "\f017";
 	font-style: normal;
@@ -1005,15 +1009,15 @@
 
 .publish .dropdown-menu {
 	position: absolute;
-	top: 55px;
+	top: 120px !important;
 	left: 0;
 	z-index: 100;
 	display: none;
 	box-sizing: border-box;
 	padding: 23px 23px 3px 23px;
-	width: 100%;
+	width: 100% !important;
 	border-bottom: 1px solid #C1C1C1;
-	background: #FFF;
+	background: #FFF !important;
 	-webkit-box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
 	-moz-box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
 	box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
@@ -1659,7 +1663,7 @@
 
 
 
-.search.file .field {
+.search.files .field {
 	margin-bottom: 0;
 }
 
@@ -1699,6 +1703,12 @@
 	width: 100%;
 }
 
+.file {
+	float: left;
+	width: 550px;
+	min-height: 550px;
+}
+
 .file-attributes img {
 	float: left;
 	margin: 0 23px 23px 0;
@@ -1731,6 +1741,8 @@
 }
 
 .file-details {
+	border-top: 1px solid #CCC;
+	width: 510px;
 	list-style: none;
 	text-shadow: 0 1px 0 #FFF;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
