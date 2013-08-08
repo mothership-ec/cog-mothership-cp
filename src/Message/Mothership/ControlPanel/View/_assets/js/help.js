@@ -17,8 +17,21 @@ $(function() {
 
 		var self     = $(this),
 			longHelp = self.attr('href');
+			activeHelp = $('body').find('.long.open');
 
-		$(longHelp).addClass('open').fadeIn(200);
+		// Check if long help is visible then show or hide
+		if ($(longHelp).is(':visible')) {
+
+			$(longHelp).removeClass('open').fadeOut(200);
+
+		} else {
+
+			// Hide all active contextual help popups
+			activeHelp.removeClass('open').fadeOut(150);
+
+			$(longHelp).addClass('open').fadeIn(200);
+			
+		}
 
 	});
 

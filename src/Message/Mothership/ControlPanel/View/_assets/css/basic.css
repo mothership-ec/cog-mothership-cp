@@ -139,7 +139,7 @@ textarea {
 	-moz-box-sizing: border-box;
     box-sizing: border-box;
 	margin: 0 0 10px 0;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	padding: 12px 15px 10px;
 	max-width: 100%;
 	width: 100%;
@@ -213,6 +213,10 @@ select {
 
 select[multiple] {
 	background: #FFF;
+}
+
+select:hover {
+	cursor: pointer;
 }
 
 label {
@@ -319,7 +323,7 @@ button:active,
 .create,
 .upload,
 .add {
-	border-color: #081d31;
+	border-color: #0b4174;
 	background-color: #528cb6;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#528cb6), to(#4473a6));
 	background-image: -webkit-linear-gradient(top, #528cb6, #4473a6);
@@ -735,6 +739,7 @@ table td {
 	-moz-box-shadow: inset 1px 2px 0 #FFF;
 	box-shadow: inset 1px 2px 0 #FFF;
 	vertical-align: middle;
+	text-align: center;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -759,19 +764,35 @@ table tr:hover td {
 }
 
 table input {
-	float: left;
-	margin-right: 10px;
-	margin-bottom: 0;
-	max-width: 100px !important;
+	display: inline-block;
+	float: none;
+	margin: 0;
+	margin: 10px 0;
 	width: 100% !important;
 }
 
 table select {
 	margin-bottom: 0;
+	min-width: 0;
+	display: inline-block;
+	margin: 0 10px;
+	float: none;
+	margin: 10px 0;
+}
+
+table input[type="checkbox"], 
+table input[type="radio"], 
+table input[type="image"] {
+	display: inline-block;
+	float: none;
 }
 
 table td .inline {
 	display: inline-block;
+}
+
+table td .field {
+	margin-bottom: 0;
 }
 
 
@@ -948,57 +969,4 @@ dd {
 	text-decoration: none;
 }
 
-
-
-/* Scroll bars */
-
-/* Let's get this party started */
-::-webkit-scrollbar {
-    width: 4px;
-}
- 
-/* Track */
-::-webkit-scrollbar-track { 
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    -webkit-box-shadow: inset 0 0 6px rgba(000,000,000,0.1);
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    background: rgba(000,000,000,0.2); 
-    -webkit-box-shadow: inset 0 0 6px rgba(000,000,000,0.5); 
-}
-::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(000,000,000,0.0); 
-}
-
-@-moz-document url-prefix() {
-
-	scrollbar {
-	   background: rgb(0,255,0) !important;
-	   -moz-appearance: none !important;
-	}
-
-	thumb,scrollbarbutton {
-	   background-color: rgb(0,0,255) !important;
-	   -moz-appearance: none !important;
-	}
-
-	thumb:hover,scrollbarbutton:hover {
-	   background-color: rgb(255,0,0) !important;
-	   -moz-appearance: none !important;
-	}
-
-	scrollbarbutton {
-	   display: none !important;
-	}
-	 
-	scrollbar[orient="vertical"] {
-	  min-width: 15px !important;
-	}
-
-}
 
