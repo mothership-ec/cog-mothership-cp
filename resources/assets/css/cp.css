@@ -1860,3 +1860,28 @@
 }
 
 
+/* Orders */
+
+.summary {
+	width: 100%;
+	display: inline-block;
+}
+
+.order-details {
+	float: left;
+	list-style: none;
+	padding: 10px 0 10px 20px;
+	width: 100%;
+}
+
+.order-details li {
+	margin-bottom: 10px;
+}
+
+.order-details span {
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	width: 150px;
+	display: inline-block;
+}
+
+

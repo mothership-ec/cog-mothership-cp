@@ -739,7 +739,7 @@ table td {
 	-moz-box-shadow: inset 1px 2px 0 #FFF;
 	box-shadow: inset 1px 2px 0 #FFF;
 	vertical-align: middle;
-	text-align: center;
+	text-align: left;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
