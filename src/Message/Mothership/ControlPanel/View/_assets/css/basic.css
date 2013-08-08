@@ -215,6 +215,10 @@ select[multiple] {
 	background: #FFF;
 }
 
+select:hover {
+	cursor: pointer;
+}
+
 label {
 	float: left;
 	margin: 0 0 10px 0;
@@ -735,6 +739,7 @@ table td {
 	-moz-box-shadow: inset 1px 2px 0 #FFF;
 	box-shadow: inset 1px 2px 0 #FFF;
 	vertical-align: middle;
+	text-align: center;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -759,19 +764,35 @@ table tr:hover td {
 }
 
 table input {
-	float: left;
-	margin-right: 10px;
-	margin-bottom: 0;
-	max-width: 100px !important;
+	display: inline-block;
+	float: none;
+	margin: 0;
+	margin: 10px 0;
 	width: 100% !important;
 }
 
 table select {
 	margin-bottom: 0;
+	min-width: 0;
+	display: inline-block;
+	margin: 0 10px;
+	float: none;
+	margin: 10px 0;
+}
+
+table input[type="checkbox"], 
+table input[type="radio"], 
+table input[type="image"] {
+	display: inline-block;
+	float: none;
 }
 
 table td .inline {
 	display: inline-block;
+}
+
+table td .field {
+	margin-bottom: 0;
 }
 
 
