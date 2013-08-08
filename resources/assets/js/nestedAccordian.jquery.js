@@ -9,7 +9,7 @@
  * @author Message Digital Design <dev@message.co.uk>
  * @author Joe Holdcroft <joe@message.co.uk>
  */
-(function( $ ){
+;(function( $ ){
 	var methods = {
 		/**
 		 * Initialise the plugin.

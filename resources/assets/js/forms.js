@@ -3,7 +3,7 @@
  *
  * @author Joe Holdcroft <joe@message.co.uk>
  */
-$(function() {
+;$(function() {
 	// Set up add links for repeatable groups
 	$(document).on('click', 'a[data-group-add]', function() {
 		var self          = $(this),
