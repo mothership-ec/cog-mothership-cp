@@ -35,10 +35,6 @@
 	</head>
 	<body>
 
-		<div class="loading-spinner">
-			<p>Loading&hellip;</p><div class="spinner"></div>
-		</div>
-
 		{% for key,types in app.session.getFlashBag.all %}
 			<div class="feedback {{ key }}">
 				{% for message in types %}
