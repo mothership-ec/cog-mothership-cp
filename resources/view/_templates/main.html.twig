@@ -16,18 +16,11 @@
 		<link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/adb45bb0-8b19-4114-9732-22f09ca5cade.css"/>
 
 		{% javascripts
-			'Message:Mothership:ControlPanel::_assets/js/components/jquery/jquery.min.js'
-			'Message:Mothership:ControlPanel::_assets/js/components/history.js/scripts/bundled/html5/jquery.history.js'
-			'Message:Mothership:ControlPanel::_assets/js/setup.js'
-			'Message:Mothership:ControlPanel::_assets/js/livePane.jquery.js'
-			'Message:Mothership:ControlPanel::_assets/js/nestedAccordian.jquery.js'
-			'Message:Mothership:ControlPanel::_assets/js/forms.js'
-			'Message:Mothership:ControlPanel::_assets/js/dropdown.js'
-			'Message:Mothership:ControlPanel::_assets/js/title.js'
-			'Message:Mothership:ControlPanel::_assets/js/help.js'
-			'Message:Mothership:ControlPanel::_assets/js/login.js'
-			'Message:Mothership:ControlPanel::_assets/js/feedback.js'
-
+			'@Message:Mothership:ControlPanel::resources/assets/js/components/jquery/jquery.min.js'
+			'@Message:Mothership:ControlPanel::resources/assets/js/components/history.js/scripts/bundled/html5/jquery.history.js'
+			'@Message:Mothership:ControlPanel::resources/assets/js/setup.js'
+			'@Message:Mothership:ControlPanel::resources/assets/js/livePane.jquery.js'
+			'@Message:Mothership:ControlPanel::resources/assets/js/forms.js'
 			output='/assets/js/ms_cp.js'
 		%}
 			<script src="{{ asset_url }}"></script>
