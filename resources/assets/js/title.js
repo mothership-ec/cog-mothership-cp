@@ -21,7 +21,7 @@ $(function() {
 			$(edit).show();
 
 		// stop clicking
-		} else if ( $(e.target).is(edit) ) {
+		} else if ( $(e.target).is(edit) || $(e.target).is($(edit).children()) ) {
 
 			e.stopPropagation();
 

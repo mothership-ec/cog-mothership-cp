@@ -1486,6 +1486,8 @@
 	box-shadow: 0 1px 0 rgba(255,255,255,1.0);
 	text-shadow: 0 1px 0 #FFF;
 	min-width: 270px;
+	float: left;
+	clear: both;
 }
 
 .authorship h2 {

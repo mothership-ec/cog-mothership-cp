@@ -11,48 +11,23 @@
 
 $(function() {
 
-	var feedback    = '.feedback',
-		height      = 0,
-		offSet      = 120,
-		container   = '.container-content',
-		saveButton  = '#save-content';
-
-
-	// Check if its the filemanager 
-	function checkContainer() {
-
-		if ( $(container).hasClass('file-manager') || $(container).hasClass('create-page')) {
-	
-			offSet = 65;
-
-		} else {
-
-			offSet = 120;
-
-		}
-
-	};
-
+	var feedback   = '.feedback',
+		height     = 0,
+		saveButton = '#save-content';
+		// topOffset        = $('#saveButton').offset().top;
 
 	// If the feedback is visible work out offset
 	if ( $(feedback).is(':visible')) {
 
-		// Check the container first
-		checkContainer();
-
 		height = $(feedback).outerHeight();
 
-		offSet = offSet + height;
+		topOffset = topOffset + height;
 
-		$(container).css({
-			width: 'calc(100% - 200px)',
-			width: 'calc(100% - 200px)',
-			width: 'calc(100% - 200px)'
-		});
+		$(saveButton).css('top', topOffset + 'px');
 
 	} else {
 
-		console.log('bye');
+		return false;
 
 	}
 
