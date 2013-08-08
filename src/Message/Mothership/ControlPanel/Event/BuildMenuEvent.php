@@ -2,6 +2,8 @@
 
 namespace Message\Mothership\ControlPanel\Event;
 
+use Message\Cog\HTTP\Request;
+
 /**
  * Event for building a menu.
  *
@@ -51,6 +53,33 @@ class BuildMenuEvent extends Event
 			'routes'  => $routes,
 			'classes' => $classes,
 		);
+	}
+
+	/**
+	 * This method checks which item the current request should fall within by
+	 * looping through the list of allowed route names and route collection
+	 * names for each menu item, and checking if any of these match either the
+	 * current route name or any collection the current route is in.
+	 * The current item then has $className added to the array of classes for the
+	 * menu item.
+	 *
+	 * @param Message\Cog\HTTP\Request	$request 	Current request
+	 * @param string					$className 	Name of the class added to the current item
+	 */
+	public function setClassOnCurrent(Request $request, $className)
+	{
+		$currentRoute       = $request->attributes->get('_route');
+		$currentCollections = $request->attributes->get('_route_collections');
+
+		foreach ($this->_items as $key => $item) {
+			foreach ($item['routes'] as $route) {
+				if ($route === $currentRoute
+				 || in_array($route, $currentCollections)) {
+					$this->_tems[$key]['classes'][] = $className;
+					break;
+				}
+			}
+		}
 	}
 
 	/**

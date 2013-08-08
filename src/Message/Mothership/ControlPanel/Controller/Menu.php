@@ -30,29 +30,17 @@ class Menu extends \Message\Cog\Controller\Controller
 	 */
 	public function main()
 	{
-		$currentRoute       = $this->get('http.request.master')->attributes->get('_route');
-		$currentCollections = $this->get('http.request.master')->attributes->get('_route_collections');
-		$event              = new BuildMenuEvent;
+		$event = new BuildMenuEvent;
 
 		$this->get('event.dispatcher')->dispatch(
 			Event::BUILD_MAIN_MENU,
 			$event
 		);
 
-		$items = $event->getItems();
+		$event->setClassOnCurrent($this->get('http.request.master'), 'current');
 
-		foreach ($items as $key => $item) {
-			foreach ($item['routes'] as $route) {
-				if ($route === $currentRoute
-				 || in_array($route, $currentCollections)) {
-					$items[$key]['classes'][] = 'current';
-					break;
-				}
-			}
-		}
-
-		return $this->render('::main_menu', array(
-			'items' => $items,
+		return $this->render('Message:Mothership:ControlPanel::main_menu', array(
+			'items' => $event->getItems(),
 		));
 	}
 }
