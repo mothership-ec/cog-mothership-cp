@@ -457,6 +457,7 @@
 	width: 250px;
 	height: inherit;
 	background: #333;
+	color: #FFF;
 }
 
 .sidebar .search {
@@ -1850,6 +1851,31 @@
 ------------------------------------------------------------ */
 
 
+/* Sidebar */
+
+
+
+.order-overview {
+	float: left;
+}
+
+.order-overview h2 {
+	color: #FFF;
+}
+
+.order-overview ul {
+	list-style: none;
+	float: left;
+}
+
+.order-overview li {
+	float: left;
+	margin-bottom: 10px;
+}
+
+.order-overview span {
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
 /* Fulfillment */
 
