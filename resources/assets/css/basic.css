@@ -297,7 +297,7 @@ button:active,
 	white-space: nowrap;
 	font-weight: 500;
 	font-size: 1.0em;
-	font-family:'Proxima N W15 Smbd';
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.0em;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#528bb6', EndColorStr='#4473a7');
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f2f2f2', EndColorStr='#e5e5e5');
@@ -602,7 +602,7 @@ button:active,
 	white-space: nowrap;
 	font-weight: 500;
 	font-size: 1.0em;
-	font-family:'Proxima N W15 Smbd';
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.0em;	
 }
 
