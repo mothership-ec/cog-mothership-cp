@@ -694,16 +694,16 @@
 }
 
 .sidebar .menu li li li li /* Third child */ {
-	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
-	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
-	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
+	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 16px 0 0 #1f527f, inset 17px 0 0 #252525;
+	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 16px 0 0 #1f527f, inset 17px 0 0 #252525;
+	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 16px 0 0 #1f527f, inset 17px 0 0 #252525;
 	text-indent: 60px;
 }
 
 .sidebar .menu li li li li li /* Fourth child */ {
-	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f, inset 16px 0 0 #252525, inset 23px 0 0 #153a5a;
-	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f, inset 16px 0 0 #252525, inset 23px 0 0 #153a5a;
-	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 11px 0 0 #286fae, inset 12px 0 0 #252525, inset 17px 0 0 #1f527f, inset 18px 0 0 #252525, inset 23px 0 0 #153a5a;
+	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 16px 0 0 #1f527f, inset 17px 0 0 #252525, inset 22px 0 0 #153a5a, inset 23px 0 0 #252525;
+	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 16px 0 0 #1f527f, inset 17px 0 0 #252525, inset 22px 0 0 #153a5a, inset 23px 0 0 #252525;
+	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 16px 0 0 #1f527f, inset 17px 0 0 #252525, inset 22px 0 0 #153a5a, inset 23px 0 0 #252525;
 	text-indent: 60px;
 }
 
@@ -729,23 +729,23 @@
 
 .sidebar .menu li li li.active > a:first-child {
 	background: #286fae;
-	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae;
-	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae;
-	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae;
+	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 11px 0 0 #286fae, inset 12px 0 0 #252525;
+	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 11px 0 0 #286fae, inset 12px 0 0 #252525;
+	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 11px 0 0 #286fae, inset 12px 0 0 #252525;
 }
 
 .sidebar .menu li li li li.active > a:first-child {
 	background: #1f527f;
-	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
-	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
-	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f;
+	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 16px 0 0 #1f527f, inset 17px 0 0 #252525;
+	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 16px 0 0 #1f527f, inset 17px 0 0 #252525;
+	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 16px 0 0 #1f527f, inset 17px 0 0 #252525;
 }
 
 .sidebar .menu li li li li li.active > a:first-child {
 	background: #153a5a;
-	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f, inset 16px 0 0 #252525, inset 23px 0 0 #153a5a;
-	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 15px 0 0 #1f527f, inset 16px 0 0 #252525, inset 23px 0 0 #153a5a;
-	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 11px 0 0 #286fae, inset 12px 0 0 #252525, inset 17px 0 0 #1f527f, inset 18px 0 0 #252525, inset 23px 0 0 #153a5a;
+	-webkit-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 16px 0 0 #1f527f, inset 17px 0 0 #252525, inset 22px 0 0 #153a5a, inset 23px 0 0 #252525;
+	-moz-box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 16px 0 0 #1f527f, inset 17px 0 0 #252525, inset 22px 0 0 #153a5a, inset 23px 0 0 #252525;
+	box-shadow: inset 5px 0 0 #467eb0, inset 6px 0 0 #252525, inset 10px 0 0 #286fae, inset 11px 0 0 #252525, inset 16px 0 0 #1f527f, inset 17px 0 0 #252525, inset 22px 0 0 #153a5a, inset 23px 0 0 #252525;
 }
 
 
@@ -766,7 +766,6 @@
 .main {
     position: fixed;
 	display: inline-block;
-    float: left;
     overflow: hidden;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -1861,7 +1860,7 @@
 
 .order-overview {
 	float: left;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .order-overview h2 {
