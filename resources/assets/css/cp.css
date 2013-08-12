@@ -1855,8 +1855,13 @@
 
 
 
+.search.order .field {
+	margin-bottom: 10px;
+}
+
 .order-overview {
 	float: left;
+	font-size: 14px;
 }
 
 .order-overview h2 {
@@ -1866,16 +1871,26 @@
 .order-overview ul {
 	list-style: none;
 	float: left;
+	padding-top: 20px;
 }
 
 .order-overview li {
 	float: left;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+	width: 200px;
+	margin-left: 25px;
 }
 
 .order-overview span {
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Proxima N W15 Reg It', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	white-space: nowrap;
+	display: block;
+	width: 100%;
+	color: #AAA;
+	margin-bottom: 5px;
 }
+
+
 
 /* Fulfillment */
 

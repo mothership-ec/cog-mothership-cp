@@ -10,17 +10,17 @@
  */
 
 $(function() {
-
+		
 	var inputArray = $('.login-form input');
 
 	$.each(inputArray, function(index, element){
 
-	    var input = $(element);
-	    var label = $('label[for=' + input.attr('id') + ']');
+	    var input = $(element),
+	    	label = $('label[for=' + input.attr('id') + ']');
 
 	    // On load hide label if input has a value
     	$(window).on('load', function() {
-			if (input.val()) {
+			if ( input.val()) {
 				label.hide();
 			};
 		});
