@@ -526,8 +526,7 @@ button:active,
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#d84939', EndColorStr='#bc1b1a');
 }
 
-.cancel:before,
-.remove:before {
+.cancel:before {
 	margin-right: 8px;
 	content: "\f00d";
 	vertical-align: middle;
@@ -540,7 +539,8 @@ button:active,
 	line-height: 0.2em;
 }
 
-.delete:before {
+.delete:before,
+.remove:before {
 	margin-right: 8px;
 	content: "\f014";
 	vertical-align: middle;
