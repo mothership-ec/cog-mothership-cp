@@ -225,8 +225,11 @@
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+
+
 .navigation h1 a {
 	font-size: 0.6em;
+	
 }
 
 .navigation .vendor {
@@ -257,6 +260,7 @@
 	bottom: 0;
 	left: 0;
 	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background: url(../images/mothership-logo.png) 20px center no-repeat;
 }
 
 .navigation ol {
