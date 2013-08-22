@@ -508,13 +508,14 @@ button:active,
 
 
 
-/* Delete, remove and cancel button styles */
+/* Delete, remove, invalidate and cancel button styles */
 
 
 
 .delete,
 .remove,
-.cancel {
+.cancel,
+.invalidate {
 	border-color: #98180f;
 	background-color: #d84939;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#d84939), to(#bc1b1a));
@@ -528,6 +529,7 @@ button:active,
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#d84939', EndColorStr='#bc1b1a');
 }
 
+.invalidate:before,
 .cancel:before {
 	margin-right: 8px;
 	content: "\f00d";
