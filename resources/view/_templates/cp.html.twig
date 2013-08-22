@@ -17,12 +17,12 @@
 			<a class="logout" href="{{ url('ms.cp.logout') }}">Log Out</a>
 		</nav>
 
-		<section class="pos-clear">
+		<section class="clear">
 			{% block content %}{% endblock %}
 		</section>
 		<footer class="footer" role="contentinfo">
 			<small class="copy">&copy; <a href="http://message.co.uk">Message</a> {{ "now"|date('Y') }}</small>
 			<a href="//{{ app.cfg.mothership.url|trim('//') }}" target="_blank" class="website"><i class="icon-external-link"></i>{{ app.cfg.mothership.url }}</a>
 		</footer>
-	</div>
+</div>
 {% endblock %}

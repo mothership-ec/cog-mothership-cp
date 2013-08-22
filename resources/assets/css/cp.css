@@ -765,7 +765,7 @@
 
 
 
-.pos-clear /* clear space for the navigation */ {
+.clear /* clear space for the navigation */ {
 	margin: 61px 0 40px 0;
 	width: 100%;
 	height: -moz-calc(100% - 101px);
@@ -1124,6 +1124,15 @@
     height: calc(100% - 120px);
 }
 
+.container-content.extended {
+	padding: 23px;
+	width: inherit; 
+	width: 100%;
+	height: -moz-calc(100% - 65px);
+    height: -webkit-calc(100% - 65px);
+    height: calc(100% - 65px);
+}
+
 #save-content {
 	position: fixed;
 	top: 138px;
@@ -1136,22 +1145,6 @@
 /* Create page */
 
 
-
-.container-content.create-page {
-	position: relative;
-	float: left;
-	overflow: visible;
-	overflow-y: scroll;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 23px 0 23px 23px;
-	width: inherit; 
-	width: 100%;
-	height: -moz-calc(100% - 65px);
-    height: -webkit-calc(100% - 65px);
-    height: calc(100% - 65px);
-}
 
 .create-page form {
 	float: left;
@@ -1658,22 +1651,6 @@
 ------------------------------------------------------------ */
 
 
-
-.container-content.file-manager {
-	position: relative;
-	float: left;
-	overflow: visible;
-	overflow-y: scroll;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 23px 0 23px 23px;
-	width: inherit; 
-	width: 100%;
-	height: -moz-calc(100% - 65px);
-    height: -webkit-calc(100% - 65px);
-    height: calc(100% - 65px);
-}
 
 .listing a {
 	display: inline-block;
