@@ -720,6 +720,7 @@ table th {
 	background: none;
 	font-weight: normal;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	position: relative;
 }
 
 table td {
@@ -732,6 +733,7 @@ table td {
 	vertical-align: middle;
 	text-align: left;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	position: relative;
 }
 
 table tr {

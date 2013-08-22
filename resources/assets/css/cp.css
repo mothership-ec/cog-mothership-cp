@@ -79,6 +79,10 @@
 	line-height: 1.8;
 }
 
+.login-form form {
+	display: block;
+}
+
 .login-form .field {
 	max-width: 368px;
 }
