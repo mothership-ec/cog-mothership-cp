@@ -1991,3 +1991,7 @@
 	float: left;
 	width: 100%;
 }
+
+.create-voucher {
+	display: block;
+}
