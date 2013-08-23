@@ -129,6 +129,8 @@ h5 {
 
 form {
 	position: relative;
+	display: inline-block;
+	margin-bottom: 30px;
 }
 
 input,
@@ -506,13 +508,14 @@ button:active,
 
 
 
-/* Delete, remove and cancel button styles */
+/* Delete, remove, invalidate and cancel button styles */
 
 
 
 .delete,
 .remove,
-.cancel {
+.cancel,
+.invalidate {
 	border-color: #98180f;
 	background-color: #d84939;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#d84939), to(#bc1b1a));
@@ -526,6 +529,7 @@ button:active,
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#d84939', EndColorStr='#bc1b1a');
 }
 
+.invalidate:before,
 .cancel:before {
 	margin-right: 8px;
 	content: "\f00d";
@@ -708,26 +712,29 @@ table {
 	border-collapse: collapse;
 	text-align: left;
 	font-size: 1.0em;
+	border-bottom: 1px solid #CCC;
 }
 
 table th {
 	padding: 10px;
-	border-bottom: 1px solid #CCC;
+	border: none;
 	background: none;
 	font-weight: normal;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	position: relative;
 }
 
 table td {
 	padding: 20px 10px;
-	border-bottom: 1px solid #CCC;
+	border-top: 1px solid #CCC;
 	border-left: 1px solid #CCC;
-	-webkit-box-shadow: inset 1px 2px 0 #FFF;
-	-moz-box-shadow: inset 1px 2px 0 #FFF;
-	box-shadow: inset 1px 2px 0 #FFF;
+	-webkit-box-shadow: inset 1px 1px 0 #FFF;
+	-moz-box-shadow: inset 1px 1px 0 #FFF;
+	box-shadow: inset 1px 1px 0 #FFF;
 	vertical-align: middle;
 	text-align: left;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	position: relative;
 }
 
 table tr {
@@ -740,14 +747,28 @@ table thead tr {
 
 table tr:nth-child(odd) td {
 	background: #FAFAFA;
+	z-index: 1;
 }
 
 table tr:nth-child(even) td {
 	background: #EFEFEF;
+	z-index: 0;
 }
 
 table tr:hover td {
 	background: #FFF;
+}
+
+table td a {
+/*	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	line-height: 60px;
+	padding-left: 10px;
+	width: 100%;
+	word-wrap:break-word;*/
 }
 
 table input {

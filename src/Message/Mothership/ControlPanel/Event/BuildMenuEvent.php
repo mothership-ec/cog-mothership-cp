@@ -75,7 +75,7 @@ class BuildMenuEvent extends Event
 			foreach ($item['routes'] as $route) {
 				if ($route === $currentRoute
 				 || in_array($route, $currentCollections)) {
-					$this->_tems[$key]['classes'][] = $className;
+					$this->_items[$key]['classes'][] = $className;
 					break;
 				}
 			}
