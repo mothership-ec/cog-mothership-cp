@@ -324,7 +324,8 @@ button:active,
 .submit,
 .create,
 .upload,
-.add {
+.add,
+.filter {
 	border-color: #0b4174;
 	background-color: #528cb6;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#528cb6), to(#4473a6));
@@ -364,10 +365,24 @@ button:active,
 	line-height: 0.2em;
 }
 
+.filter:before {
+	margin-right: 8px;
+	content: "\f0b0";
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	font-weight: 500;
+	font-size: 0.8em;
+	font-family: 'FontAwesome';
+	line-height: 0.2em;
+}
+
 .add:hover,
 .submit:hover,
 .create:hover,
-.upload:hover {
+.upload:hover,
+.filter:hover {
 	background-color: #528bb6;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#528bb6), to(#2a537b));
 	background-image: -webkit-linear-gradient(top, #528bb6, #2a537b);
@@ -382,7 +397,8 @@ button:active,
 .add:active,
 .submit:active,
 .create:active,
-.upload:active {
+.upload:active,
+.filter:active {
 
 }
 
