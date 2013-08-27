@@ -3,35 +3,26 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{% block title %}Mothership Control Panel{% endblock %}</title>
-
-		{% stylesheets
-			'@Message:Mothership:ControlPanel::resources/assets/css/basic.css'
-			'@Message:Mothership:ControlPanel::resources/assets/css/fonts.css'
-			'@Message:Mothership:ControlPanel::resources/assets/css/cp.css'
-			output='/assets/css/ms_cp.css'
-			filter='csscogulerewrite'
-		%}
-			<link rel="stylesheet" href="{{ asset_url }}">
-		{% endstylesheets %}
+		
+		{% block stylesheets %}
+			{% stylesheets
+				'@Message:Mothership:ControlPanel::resources/assets/css/basic.css'
+				'@Message:Mothership:ControlPanel::resources/assets/css/fonts.css'
+				output='/assets/css/ms_base.css'
+				filter='csscogulerewrite'
+			%}
+				<link rel="stylesheet" href="{{ asset_url }}">
+			{% endstylesheets %}
+		{% endblock %}
 
 		{% block javascripts %}
-		{% javascripts
-			'@Message:Mothership:ControlPanel::resources/assets/js/components/jquery/jquery.min.js'
-			'@Message:Mothership:ControlPanel::resources/assets/js/components/history.js/scripts/bundled/html5/jquery.history.js'
-			'@Message:Mothership:ControlPanel::resources/assets/js/livePane.jquery.js'
-			'@Message:Mothership:ControlPanel::resources/assets/js/nestedAccordian.jquery.js'
-			'@Message:Mothership:ControlPanel::resources/assets/js/setup.js'
-			'@Message:Mothership:ControlPanel::resources/assets/js/forms.js'
-			'@Message:Mothership:ControlPanel::resources/assets/js/help.js'
-			'@Message:Mothership:ControlPanel::resources/assets/js/title.js'
-			'@Message:Mothership:ControlPanel::resources/assets/js/dropdown.js'
-			'@Message:Mothership:ControlPanel::resources/assets/js/feedback.js'
-			'@Message:Mothership:ControlPanel::resources/assets/js/login.js'
+			{% javascripts
+				'@Message:Mothership:ControlPanel::resources/assets/js/components/jquery/jquery.min.js'
 
-			output='/assets/js/ms_cp.js'
-		%}
-			<script src="{{ asset_url }}"></script>
-		{% endjavascripts %}
+				output='/assets/js/ms_base.js'
+			%}
+				<script src="{{ asset_url }}"></script>
+			{% endjavascripts %}
 		{% endblock %}
 
 	</head>
