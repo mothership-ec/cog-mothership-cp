@@ -1,11 +1,68 @@
 {% extends '::_templates/main' %}
 
+{% block stylesheets %}
+	{{ parent() }}
+	{% stylesheets
+		'@Message:Mothership:ControlPanel::resources/assets/css/basic.css'
+		'@Message:Mothership:ControlPanel::resources/assets/css/fonts.css'
+		'@Message:Mothership:ControlPanel::resources/assets/css/login.css'
+		output='/assets/css/ms_login.css'
+		filter='csscogulerewrite'
+	%}
+		<link rel="stylesheet" href="{{ asset_url }}">
+	{% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	{% javascripts
+		'@Message:Mothership:ControlPanel::resources/assets/js/login.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/feedback.js'
+
+		output='/assets/js/ms_login.js'
+	%}
+		<script src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+{% endblock %}
+
+{% block title %}Mothership Password Reset{% endblock %}
+
 {% block body %}
-<h1>Welcome back, {{user.forename}}.</h1>
+
+<div class="login">
+
+		<div class="center">
+
+			<header>
+
+				<span class="spaceship"></span>
+
+				<h1>Welcome to Mothership</h1>
+
+				<span class="shadow"></span>
+
+			</header>
+
+
+			<section class="login-form">
+
+<h1>Welcome back, {{user.forename}}. Change your password and log in.</h1>
 
 {{ render(controller('Message:User::Controller:ForgottenPassword#reset', {
 	email: email,
 	hash: hash,
 	redirectURL: url('ms.cp.dashboard'),
 })) }}
+
+	</section>
+			
+		</div>
+
+		<footer class="footer" role="contentinfo">
+
+		<small class="copy">&copy; <a href="http://message.co.uk">Message</a> {{ "now"|date('Y') }}</small>
+		<a href="{{ cfg.mothership.url }}" target="_blank" class="website icon-external-link">{{ cfg.mothership.url }}</a>
+
+		</footer>
+	</div>
 {% endblock %}

@@ -1,0 +1,242 @@
+/* ======================================================= */
+/*                                                         */
+/*                                                         */
+/*    Mothership                                           */
+/*                                                         */
+/*                                                         */
+/* ======================================================= */
+/*
+/*
+/*    Development by Message
+/*    http://www.message.co.uk
+/*
+/*    Login Style Style Sheet v1.0
+/*    Created by Richard McCartney
+/*
+/*
+/* ======================================================= */
+
+
+/* Login
+------------------------------------------------------------ */
+
+
+.login {
+	width: 100%;
+	height: 100%;
+	background: #050505 url(../images/login-background.jpg) no-repeat top center;
+}
+
+.center {
+	position: absolute;
+	top: 20%;
+	width: 100%;
+}
+
+.login h1 {
+	margin: 49px 0 39px;
+	color: #E1E1E1;
+	text-align: center;
+	text-shadow: 0px 1px 2px rgba(000,000,000,0.75);
+	font-size: 3.250em;
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.spaceship {
+	display: block;
+	margin: 0 auto;
+	width: 212px;
+	height: 192px;
+	background: url(../images/spaceship.png) no-repeat;
+}
+
+.shadow {
+	display: block;
+	margin: 0 auto;
+	width: 220px;
+	height: 23px;
+	background: url(../../images/shadow.png) no-repeat;
+}
+
+.login-form {
+	position: relative;
+	margin: 0 auto;
+	max-width: 824px;
+	width: 100%;
+}
+
+.login-form.forgotten {
+	position: relative;
+	margin: 0 auto;
+	max-width: 670px;
+	width: 100%;
+}
+
+.login-form h1 {
+	margin-top: 18px;
+	margin-bottom: 17px;
+	text-align: left;
+	font-size: 1.125em;
+}
+
+.login-form p {
+	padding-bottom: 30px;
+	color: #E1E1E1;
+	line-height: 1.8;
+}
+
+.login-form form {
+	display: block;
+}
+
+.login-form .field {
+	max-width: 368px;
+}
+
+.login-form .field.inline {
+	position: absolute;
+}
+
+.login-form .field.inline label {
+	text-indent: 0;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form input[type="text"]
+ {
+	float: left;
+	margin-right: 2.4271844660194173%;
+	max-width: 360px;
+	width: 100%;
+	height: 48px;
+}
+
+
+.login-form button {
+	position: absolute;
+	float: left;
+	clear: right;
+	margin-bottom: 30px;
+	padding: 16px 21px 12px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+}
+
+.login-form button:active {
+	padding: 17px 21px 11px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0);
+	text-shadow: 0px -1px 0 rgba(000,000,000,0.8);
+
+}
+
+.login-form .checkbox {
+	float: left;
+	margin-right: 2.4271844660194173%;
+	max-width: 325px;
+	width: 39.44174757281553%;
+}
+
+.login-form label {
+	float: left;
+	margin-bottom: 30px;
+	height: 44px;
+	color: #E1E1E1;
+	font-size: 0.875em;
+}
+
+.login-form label[for="login_email"],
+.login-form label[for="login_password"],
+.login-form label[for="forgotten_email"],
+.login-form label[for="reset_password"],
+.login-form label[for="reset_confirm"] {
+	position: absolute;
+	top: 15px;
+	left: 0;
+	z-index: 999;
+	margin-left: 15px;
+	color: #999;
+	font-size: 16px;
+	font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.login-form label[for="login_email"]:before {
+	margin-right: 10px;
+	content: "\f007";
+	font-family: 'FontAwesome';
+}
+
+.login-form label[for="login_password"]:before {
+	margin-right: 10px;
+	content: "\f023";
+	font-family: 'FontAwesome';
+}
+
+.login-form label[for="login_remember"] {
+	position: absolute;
+	top: 79px;
+	left: 25px;
+	display: block !important;
+}
+
+.login-form input[type="checkbox"] {
+	position: absolute;
+	top: 79px;
+	left: 0;
+}
+
+.login-form .forgotten-password {
+	position: absolute;
+	top: 79px;
+	right: 295px;
+	width: auto;
+	color: #E1E1E1;
+	font-size: 0.875em;
+	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.login footer {
+	position: absolute;
+	bottom: 0;
+	color: #b1b3b4;
+}
+
+.login footer a {
+	color: #b1b3b4;
+}
+
+
+
+/* Fields */
+
+
+
+.field {
+	position: relative;
+	float: left;
+	margin: 0 0 30px 0;
+	max-width: 1400px;
+	width: 100%;
+}
+
+.field h2 {
+	float: left;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.field input,
+.field textarea {
+	max-width: 70%;
+	width: 70%;
+}
+
+.field label {
+	float: left;
+	width: 100%;
+}
+

@@ -1,10 +1,66 @@
 {% extends '::_templates/main' %}
 
+{% block stylesheets %}
+	{{ parent() }}
+	{% stylesheets
+		'@Message:Mothership:ControlPanel::resources/assets/css/basic.css'
+		'@Message:Mothership:ControlPanel::resources/assets/css/fonts.css'
+		'@Message:Mothership:ControlPanel::resources/assets/css/login.css'
+		output='/assets/css/ms_login.css'
+		filter='csscogulerewrite'
+	%}
+		<link rel="stylesheet" href="{{ asset_url }}">
+	{% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	{% javascripts
+		'@Message:Mothership:ControlPanel::resources/assets/js/login.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/feedback.js'
+
+		output='/assets/js/ms_login.js'
+	%}
+		<script src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+{% endblock %}
+
+{% block title %}Mothership Forgotten Password{% endblock %}
+
 {% block body %}
+	<div class="login">
+
+		<div class="center">
+
+			<header>
+
+				<span class="spaceship"></span>
+
+				<h1>Welcome to Mothership</h1>
+
+				<span class="shadow"></span>
+
+			</header>
+
+
+			<section class="login-form forgotten">
 <h1>Forgotten your password?</h1>
 
 {{ render(controller('Message:User::Controller:ForgottenPassword#request', {
 	resetRoute: 'ms.cp.password.reset',
 	email: email
 })) }}
+
+
+			</section>
+			
+		</div>
+
+		<footer class="footer" role="contentinfo">
+
+		<small class="copy">&copy; <a href="http://message.co.uk">Message</a> {{ "now"|date('Y') }}</small>
+		<a href="{{ cfg.mothership.url }}" target="_blank" class="website icon-external-link">{{ cfg.mothership.url }}</a>
+
+		</footer>
+	</div>
 {% endblock %}
