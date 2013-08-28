@@ -33,6 +33,7 @@ $(function() {
 		// Set button top CSS 
 		buttonOffset = buttonOffset + feedbackHeight;
 
+		// Set new save button top CSS value
 		$(saveButton).css('top', buttonOffset + 'px');
 	}
 
@@ -43,10 +44,16 @@ $(function() {
 
 	$(window).resize(function(event) {
 
+		// Set container height to the current height
 		containerHeight = $(container).height();
 
+		// Set container offset value
 		containerOffset = feedbackHeight + 101;
 		
+		/**
+		 * Minus container offset off the current height value, this resolves content being hidden when
+		 * feedback is visible
+		 */
 		$('.clear').css({
 			height : containerHeight - containerOffset
 		});
