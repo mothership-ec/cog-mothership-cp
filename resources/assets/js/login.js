@@ -11,19 +11,13 @@
 
 $(function() {
 		
-	var inputArray = $('.login-form input');
+	var inputArray = $('.login-form input'),
+		webkitInput = '.login-form input:-webkit-autofill';
 
-	$.each(inputArray, function(index, element){
+	$.each(inputArray, function(index, element) {
 
 	    var input = $(element),
 	    	label = $('label[for=' + input.attr('id') + ']');
-
-	    // On load hide label if input has a value
-    	$(window).on('load', function() {
-			if ( input.val()) {
-				label.hide();
-			};
-		});
 
     	// Hide label on focus
 	    input.focus(function() {
@@ -34,6 +28,11 @@ $(function() {
 	    input.blur(function(){
 	        if(!input.val()) { label.fadeIn(); }
 	    });
+	    
+	    // On load hide label if input has a value
+    	$(window).load(function() {	
+			if (input.val() && webkitInput) { label.hide(); }
+		});
 
 	});
 

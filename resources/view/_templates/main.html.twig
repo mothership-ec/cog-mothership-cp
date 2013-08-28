@@ -17,8 +17,9 @@
 
 		{% block javascripts %}
 			{% javascripts
-				'@Message:Mothership:ControlPanel::resources/assets/js/components/jquery/jquery.min.js'
-
+				'@Message:Mothership:ControlPanel::resources/assets/js/components/jquery/jquery.js'
+				'@Message:Mothership:ControlPanel::resources/assets/js/setup.js'
+				
 				output='/assets/js/ms_base.js'
 			%}
 				<script src="{{ asset_url }}"></script>
