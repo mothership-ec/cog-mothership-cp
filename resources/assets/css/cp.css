@@ -971,12 +971,15 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 23px;
-	width: inherit; 
-	width: 100%;
+	width: -moz-calc(100% - 250px);
+    width: -webkit-calc(100% - 250px);
+    width: calc(100% - 250px);
 	height: -moz-calc(100% - 120px);
     height: -webkit-calc(100% - 120px);
     height: calc(100% - 120px);
 }
+
+
 
 .container-content.extended {
 	padding: 23px;
@@ -1657,6 +1660,8 @@
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+
+
 .file-manager .button.delete {
 	position: fixed;
 	top: 79px;
@@ -1958,3 +1963,35 @@
 {
 	margin: 0 -3px 0 0;
 }
+
+
+
+/* Widgets 
+---------------------------------------- */
+
+.container-widgets {
+	width: 250px;
+	position: relative;
+}
+
+.widget .file-details {
+	width: 250px;
+	border: none;
+	border-radius: 7px;
+	list-style: none;
+	text-shadow: 0 1px 0 #FFF;
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background-color: #2e2e2e;
+	color: #d7d7d7;
+	font-size: 14px;
+
+}
+
+.widget .file-details tr, .widget .file-details td {
+	background: none !important;
+	border: none;
+	
+}
+
+
+
