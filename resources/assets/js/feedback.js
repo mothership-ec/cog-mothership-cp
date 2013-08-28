@@ -11,24 +11,52 @@
 
 $(function() {
 
-	var feedback   = '.feedback',
-		height     = 0,
-		saveButton = '#save-content';
-		// topOffset        = $('#saveButton').offset().top;
+	// Elements
+	var container       = '.container-cp',
+		feedback        = '.feedback',
+		saveButton 	    = '#save-content',
+		feedbackHeight  = 0,
+		containerHeight = 0,
+		containerOffset = 0,
+		buttonOffset    = parseInt($(saveButton).css('top'), 10);
 
-	// If the feedback is visible work out offset
+	/**
+	 * Checking the page if there is feedback, this sets the feedback height variable
+	 * and if there is a save button on the page changes its CSS top element to not loose its positioning.
+	 */
+
 	if ( $(feedback).is(':visible')) {
 
-		height = $(feedback).outerHeight();
+		// Set feedback height value
+		feedbackHeight = $(feedback).outerHeight();
 
-		topOffset = topOffset + height;
+		// Set button top CSS 
+		buttonOffset = buttonOffset + feedbackHeight;
 
-		$(saveButton).css('top', topOffset + 'px');
-
-	} else {
-
-		return false;
-
+		$(saveButton).css('top', buttonOffset + 'px');
 	}
+
+	/**
+	 * This window resize function keeps the container at the correct height, this can basically effect
+	 * any child containers which rely on this height value
+	 */
+
+	$(window).resize(function(event) {
+
+		containerHeight = $(container).height();
+
+		containerOffset = feedbackHeight + 101;
+		
+		$('.clear').css({
+			height : containerHeight - containerOffset
+		});
+
+	});
+
+	/**
+	 * Window resize trigger here
+	 */
+
+	$(window).trigger('resize');
 
 });
