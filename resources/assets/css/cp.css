@@ -1855,6 +1855,8 @@
 /* Scrollbars 
 -------------------------------------------- */
 
+
+
 ::-webkit-scrollbar {
 	  width: 5px;
 } /* this targets the default scrollbar (compulsory) */
@@ -1890,12 +1892,13 @@
 	text-shadow: 0 1px 0 #FFF;
 	font-size: 1.0em;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background: #FAFAFA;
 }
 
 .widget h1,
 .widget h2,
 .widget h3 {
-	padding: 12px 0 10px;
+	padding: 12px 10px 10px;
 	border: 1px solid #CCC;
 	border-bottom: none;
 	background-color: #f1f1f1;
@@ -1906,11 +1909,21 @@
 	background-image: -ms-linear-gradient(top, #f1f1f1, #e7e7e7);
 	background-image: linear-gradient(top, #f1f1f1, #e7e7e7);
 	color: #333;
-	text-align: center;
+	font-size: 1.0em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
+
+
+
+/* Table styles */
+
+
 
 .widget table {
 	margin-bottom: 0px;
+	border-bottom: none;
 }
 
 .widget tr {
@@ -1918,9 +1931,36 @@
 }
 
 .widget td {
-	border: 1px solid #CCC;
 	background: #FFF !important;
+	border: 1px solid #CCC;
 }
+
+
+
+/* Definition list styles */
+
+
+
+.widget dl {
+	border: 1px solid #CCC;
+	padding: 20px 10px 0;
+	display: inline-block;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.widget dd {
+	margin-bottom: 20px;
+	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+
+/* Dark styling */
+
+
 
 .widget.dark {
 	background-color: #2e2e2e;
