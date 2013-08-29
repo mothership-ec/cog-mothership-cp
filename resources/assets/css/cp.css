@@ -1429,6 +1429,7 @@
 	margin-right: 10px;
 	content: 'Month / Day / Year';
 	line-height: 39px;
+	width: 175px;
 }
 
 #content-edit-content_date select {
@@ -1447,6 +1448,7 @@
 	margin-right: 10px;
 	content: 'Hours : Minutes';
 	line-height: 39px;
+	width: 175px;
 }
 
 

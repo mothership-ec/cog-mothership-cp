@@ -31,7 +31,7 @@ $(function() {
 	    
 	    // On load hide label if input has a value
     	$(window).load(function() {	
-			if (input.val() && webkitInput) { label.hide(); }
+			if (webkitInput || input.val()) { label.hide(); }
 		});
 
 	});
