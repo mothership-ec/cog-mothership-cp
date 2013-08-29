@@ -90,6 +90,12 @@ p a:hover {
 	text-decoration: underline;
 }
 
+b, 
+strong {
+	font-family:'Proxima N W15 Bold'; 
+	font-weight: normal;
+}
+
 h1,
 h2,
 h3,

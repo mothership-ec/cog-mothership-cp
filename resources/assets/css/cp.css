@@ -393,6 +393,7 @@
     top: 34px;
     right: 35px;
     padding: 0;
+	width: 12px;
 	border: none;
 	background: none;
 	-webkit-box-shadow: none;
@@ -403,7 +404,6 @@
     text-shadow: none;
     font-size: 0;
 	line-height: 0;
-	width: 12px;
 }
 
 .sidebar .search button:before {
@@ -645,8 +645,8 @@
 
 
 .title {
-	z-index: 10;
 	position: relative;
+	z-index: 10;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -826,13 +826,13 @@
 }
 
 .title .controls {
+	position: absolute;
+	top: 18px;
+	right: 23px;
 	margin: 0;
 	width: auto;
 	height: 56px;
-	position: absolute;
 	text-align: right;
-	top: 18px;
-	right: 23px;
 }
 
 
@@ -1442,9 +1442,9 @@
 #content-edit-content_date:before {
 	float: left;
 	margin-right: 10px;
+	width: 175px;
 	content: 'Month / Day / Year';
 	line-height: 39px;
-	width: 175px;
 }
 
 #content-edit-content_date select {
@@ -1461,9 +1461,9 @@
 #content-edit-content_date_time:before {
 	float: left;
 	margin-right: 10px;
+	width: 175px;
 	content: 'Hours : Minutes';
 	line-height: 39px;
-	width: 175px;
 }
 
 
@@ -1827,9 +1827,9 @@
 }
 
 .updated-date {
+	margin-left: 20px;
 	color: #807f7f;
 	font-size: smaller;
-	margin-left: 20px;
 }
 
 
@@ -1875,30 +1875,28 @@
 
 
 .widget-sidebar {
-	width: 300px;
 	position: absolute;
-	top: 75px;
 	right: 15px;
+	width: 300px;
+	padding-top: 23px;
 }
 
 .widget {
 	width: 300px;
 	border-radius: 3px;
-	list-style: none;
-	text-shadow: 0 1px 0 #FFF;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 14px;
 	background-color: #eee;
 	color: #333;
-
-
+	list-style: none;
+	text-shadow: 0 1px 0 #FFF;
+	font-size: 1.0em;
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.widget h1,
+.widget h2,
 .widget h3 {
-	color: #333;
-	text-align: center;
-	padding: 10px 0px;
-	border: 1px solid #b1b1b1;
+	padding: 12px 0 10px;
+	border: 1px solid #CCC;
 	border-bottom: none;
 	background-color: #f1f1f1;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e7e7e7));
@@ -1907,6 +1905,8 @@
 	background-image: -o-linear-gradient(top, #f1f1f1, #e7e7e7);
 	background-image: -ms-linear-gradient(top, #f1f1f1, #e7e7e7);
 	background-image: linear-gradient(top, #f1f1f1, #e7e7e7);
+	color: #333;
+	text-align: center;
 }
 
 .widget table {
@@ -1914,20 +1914,12 @@
 }
 
 .widget tr {
-	border: none !important;
+	border: none;
 }
 
 .widget td {
-	background: #fff !important;
-	border: 1px solid #b1b1b1 !important;
-
-}
-
-.widget td:nth-child(odd) {
-	color: #000;
-	font-weight: bold;
-	width: 100px;
-
+	border: 1px solid #CCC;
+	background: #FFF !important;
 }
 
 .widget.dark {
@@ -1943,5 +1935,4 @@
 
 .widget.dark td:nth-child(odd) {
 	color: #fff;
-
 }
