@@ -201,7 +201,7 @@ input[type="image"]:hover {
 select {
 	margin: 0 0 10px 0;
 	padding: 10px;
-	min-width: 310px;
+	min-width: 475px;
 	border: 1px solid #b1b1b1;
 	background-color: #ffffff;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e6e6e6));

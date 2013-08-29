@@ -993,7 +993,6 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 23px;
 	width: -moz-calc(100% - 300px);
     width: -webkit-calc(100% - 300px);
     width: calc(100% - 300px);
@@ -1105,6 +1104,7 @@
 	float: left;
 	margin: 0 0 30px 0;
 	width: 100%;
+	background: #FFF;
 }
 
 .group h2 {
@@ -1151,13 +1151,12 @@
 .repeatable-group .group {
 	position: relative;
 	margin-bottom: 0;
-	border-right: 1px solid #b1b1b1;
-	border-left: 1px solid #b1b1b1;
-	background: #FFF;
+	border-right: 1px solid #CCC;
+	border-left: 1px solid #CCC;
 }
 
 .repeatable-group .group:last-child {
-	border-bottom: 1px solid #b1b1b1;
+	border-bottom: 1px solid #CCC;
 }
 
 .repeatable-group .field {
@@ -1180,8 +1179,8 @@
 	margin: 0 0 20px 0;
 	padding-bottom: 12px;
 	width: 100%;
-	border-top: 1px solid #b1b1b1;
-	border-bottom: 1px solid #b1b1b1;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
 	background: none;
 	background-color: #f9f9f9;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#f1f1f1));
@@ -1219,7 +1218,7 @@
 .repeatable-group .add-group .group {
 	margin-bottom: 20px;
 	padding-top: 20px;
-	border: 1px solid #b1b1b1;
+	border: 1px solid #CCC;
 }
 
 .repeatable-group .submit {
@@ -1852,6 +1851,20 @@
 }
 
 
+
+/* Reports
+------------------------------------------------------------ */
+
+
+
+.filter-by .field {
+	margin-bottom: 10px;
+}
+
+.filter-by .button {
+	margin-left: 23px;
+}
+
 /* Scrollbars 
 -------------------------------------------- */
 
@@ -1880,7 +1893,6 @@
 	position: absolute;
 	right: 15px;
 	width: 300px;
-	padding-top: 23px;
 }
 
 .widget {
