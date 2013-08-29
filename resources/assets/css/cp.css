@@ -1824,6 +1824,12 @@
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.updated-date {
+	color: #807f7f;
+	font-size: smaller;
+	margin-left: 20px;
+}
+
 
 
 /* Vouchers
