@@ -31,9 +31,11 @@
 
 		{% for key,types in app.session.getFlashBag.all %}
 			<div class="feedback {{ key }}">
+				<ul>
 				{% for message in types %}
-					<p>{{ message|raw }}</p>
+					<li>{{ message|raw }}</li>
 				{% endfor %}
+				</ul>
 			</div>
 		{% endfor %}
 
