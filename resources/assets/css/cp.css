@@ -1118,16 +1118,20 @@
 	width: 100%;
 }
 
+.small-box-row {
+	border-collapse: separate;
+	border-spacing: 15px; 
+	display: table;
+}
+
 .group.small-box {
 	width: 30%;
-	border-bottom: 1px solid #b1b1b1;
+	border-bottom: 1px solid #ccc;
 	overflow: hidden;
 	position: relative;
 	float: none;
 	display: table-cell;
 	vertical-align: top;
-	border-collapse: separate;
-	border-spacing: 15px;
 }	
 
 .group.small-box ul {
