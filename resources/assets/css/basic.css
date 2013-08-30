@@ -964,6 +964,7 @@ dd {
 	position: relative;
 	float: left;
 	width: 100%;
+	min-width: 1005px;
 	height: 100%;
 	background: #F1F1F1;
 }
