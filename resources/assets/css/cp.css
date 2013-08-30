@@ -1120,14 +1120,19 @@
 
 .group.small-box {
 	width: 30%;
-	margin-right: 15px;
 	border-bottom: 1px solid #b1b1b1;
 	overflow: hidden;
 	position: relative;
 	float: none;
 	display: table-cell;
 	vertical-align: top;
+	border-collapse: separate;
+	border-spacing: 15px;
 }	
+
+.group.small-box ul {
+	width: 90%;
+}
 
 
 
@@ -1863,11 +1868,20 @@
 	color: #555;
 }
 
-.summary-totals li:last-child span {
+.summary-totals li:last-child {
 	font-weight: bold;
 	color: #333;
 }
 
+
+
+.grand-total {
+	border-top: 1px solid #eee;
+	padding: 20px 0px 0px 0px;
+	margin-top: 20px;
+	font-size: 1.250em;
+	font-weight: bold;
+}
 
 
 
