@@ -999,9 +999,8 @@
 	width: -moz-calc(100% - 300px);
     width: -webkit-calc(100% - 300px);
     width: calc(100% - 300px);
-    height: -moz-calc(100% - 120px);
-    height: -webkit-calc(100% - 120px);
-    height: calc(100% - 120px);
+	height: inherit;
+    display: inline-block;
 }
 
 #save-content {
@@ -1657,13 +1656,13 @@
 
 .file-attributes .file {
 	float: left;
-	min-height: 550px;
-	width: 550px;
+	min-height: 530px;
+	width: 530px;
 }
 
 .file-attributes .file img {
 	float: left;
-	margin: 0 23px 23px 0;
+	margin: 0 0 23px 0;
 	width: 500px;
 	height: auto;
 	border: 5px solid #FFF;
@@ -1686,6 +1685,13 @@
 	width: -moz-calc(100% - 550px);
     width: -webkit-calc(100% - 550px);
     width: calc(100% - 550px);
+}
+
+.file-attributes input,
+.file-attributes textarea {
+	max-width: 100%;
+	width: 100%;
+	margin-right: 23px;
 }
 
 .file-details {
@@ -1973,7 +1979,7 @@
 
 
 .widget-sidebar {
-	position: absolute;
+	display: inline-block;
 	right: 15px;
 	width: 300px;
 }
