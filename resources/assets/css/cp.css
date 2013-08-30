@@ -1848,6 +1848,18 @@
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.order-details.col {
+	width: 30%;
+	display: table-cell;
+	padding: 10px 0 10px 10px;
+
+}
+
+.order-details.col span {
+	width: 110px;
+}
+
+
 .updated-date {
 	margin-left: 20px;
 	color: #807f7f;
@@ -1855,7 +1867,7 @@
 }
 
 
-.order-progress tr:first-child {
+.progress tr:first-child {
 	font-weight: bold;
 }
 
@@ -1864,7 +1876,7 @@
 	text-align: right;
 	list-style: none;
 	margin: 10px 0px;
-	color: #a2a2a2;
+	color: #444;
 }
 
 .summary-totals span {
