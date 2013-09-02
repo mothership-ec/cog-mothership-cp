@@ -679,7 +679,7 @@
 	white-space: nowrap;
 }
 
-.title h2 {
+.title h2  {
 	display: inline-block;
 	margin-left: 15px;
 	width: auto;
@@ -1507,13 +1507,13 @@
 /* Discounts */
 
 
-#discount-edit_start {
+#discount-edit_start, #discount-create_start {
 	float: left;
 	width: 70%;
 }
 
 
-#discount-edit_start_date:before, #discount-edit_end_date:before {
+#discount-edit_start_date:before, #discount-edit_end_date:before, #discount-create_start_date:before, #discount-create_end_date:before {
 	float: left;
 	margin-right: 10px;
 	width: 175px;
@@ -1521,18 +1521,18 @@
 	line-height: 39px;
 }
 
-#discount-edit_start select, #discount-edit_end select {
+#discount-edit_start select, #discount-edit_end select, #discount-create_start select, #discount-create_end select  {
 	margin-right: 10px;
 	min-width: 100px;
 }
 
-#discount-edit_date_time {
+#discount-edit_date_time, #discount-create_date_time {
 	float: left;
 	clear: both;
 	width: 70%;
 }
 
-#discount-edit_start_time:before, #discount-edit_end_time:before {
+#discount-edit_start_time:before, #discount-edit_end_time:before, #discount-create_start_time:before, #discount-create_end_time:before {
 	float: left;
 	margin-right: 10px;
 	width: 175px;
@@ -1541,19 +1541,17 @@
 }
 
 
-#discount-edit_start select, #discount-edit_end select  {
+#discount-edit_start select, #discount-edit_end select, #discount-create_start select, #discount-create_end select  {
 	float: none;
 }
 
-#discount-edit_date_time select:last-child {
+#discount-edit_date_time select:last-child, #discount-create_date_time select:last-child  {
 	margin-left: 5px;
 }
 
 #benefit-edit_discountAmounts input[type=text] {
 	float: none;
 }
-
-
 
 
 
@@ -1954,9 +1952,10 @@
 .order-details {
 	float: left;
 	padding: 10px 0 10px 20px;
-	width: 100%;
+	width: 95%;
 	list-style: none;
 }
+
 
 .order-details li {
 	margin-bottom: 10px;
@@ -1974,6 +1973,32 @@
 	display: table-cell;
 	padding: 10px 0 10px 10px;
 
+}
+
+.order-summary h2 {
+	position: relative;
+	z-index: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 0 20px 0;
+	padding: 20px 20px 12px 20px;
+	width: 100%;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	background: none;
+	background-color: #f9f9f9;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#f1f1f1));
+	background-image: -webkit-linear-gradient(top, #f9f9f9, #f1f1f1);
+	background-image: -moz-linear-gradient(top, #f9f9f9, #f1f1f1);
+	background-image: -o-linear-gradient(top, #f9f9f9, #f1f1f1);
+	background-image: -ms-linear-gradient(top, #f9f9f9, #f1f1f1);
+	background-image: linear-gradient(top, #f9f9f9, #f1f1f1);
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	font-size: 1em;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
 }
 
 .updated-date {
