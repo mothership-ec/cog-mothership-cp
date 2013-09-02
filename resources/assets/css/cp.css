@@ -300,6 +300,10 @@
 	position: relative;
 }
 
+.sidebar .search .field {
+	margin-bottom: 0;
+}
+
 .sidebar .search .field input /* Override the field styling */ {
 	max-width: 210px;
 	width: 210px;
@@ -1781,10 +1785,6 @@
 /* Sidebar */
 
 
-
-.search.order .field {
-	margin-bottom: 10px;
-}
 
 .order-overview {
 	float: left;
