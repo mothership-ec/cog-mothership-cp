@@ -1296,7 +1296,7 @@
 
 
 .field.inline input[type="checkbox"],
-.field.inline input[type="radio"] {
+.field.inline input[type="radio"]{
 	position: absolute;
 	left: 0;
 	display: inline-block;
@@ -1500,7 +1500,7 @@
 	margin-left: 5px;
 }
 
-/* Discount Date */
+/* Discounts */
 
 
 #discount-edit_start {
@@ -1544,6 +1544,15 @@
 #discount-edit_date_time select:last-child {
 	margin-left: 5px;
 }
+
+#benefit-edit_discountAmounts input[type=text] {
+	float: none;
+}
+
+
+
+
+
 
 /* Voucher Expiry Date */
 
