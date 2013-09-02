@@ -10,7 +10,7 @@
 /*    Development by Message
 /*    http://www.message.co.uk
 /*
-/*    Control Panel Style Sheet v1.0
+/*    Control Panel Style Sheet v1.0 
 /*    Created by Richard McCartney
 /*
 /*
@@ -983,8 +983,6 @@
     height: calc(100% - 120px);
 }
 
-
-
 .container-content.extended {
 	padding: 23px;
 	width: inherit; 
@@ -1005,6 +1003,10 @@
     width: calc(100% - 300px);
 	height: inherit;
     display: inline-block;
+}
+
+.container-details.full {
+	width: 100%;
 }
 
 #save-content {
@@ -1154,7 +1156,7 @@
 	position: relative;
 	float: left;
 	margin: 0 0 30px 0;
-	max-width: 1400px;
+	max-width: 2000px;
 	width: 100%;
 }
 
@@ -1291,12 +1293,14 @@
 }
 
 
+
+
 /* Inline field styling */
 
 
 
 .field.inline input[type="checkbox"],
-.field.inline input[type="radio"] {
+.field.inline input[type="radio"]{
 	position: absolute;
 	left: 0;
 	display: inline-block;
@@ -1500,6 +1504,103 @@
 	margin-left: 5px;
 }
 
+/* Discounts */
+
+
+#discount-edit_start {
+	float: left;
+	width: 70%;
+}
+
+
+#discount-edit_start_date:before, #discount-edit_end_date:before {
+	float: left;
+	margin-right: 10px;
+	width: 175px;
+	content: 'Month / Day / Year';
+	line-height: 39px;
+}
+
+#discount-edit_start select, #discount-edit_end select {
+	margin-right: 10px;
+	min-width: 100px;
+}
+
+#discount-edit_date_time {
+	float: left;
+	clear: both;
+	width: 70%;
+}
+
+#discount-edit_start_time:before, #discount-edit_end_time:before {
+	float: left;
+	margin-right: 10px;
+	width: 175px;
+	content: 'Hours : Minutes';
+	line-height: 39px;
+}
+
+
+#discount-edit_start select, #discount-edit_end select  {
+	float: none;
+}
+
+#discount-edit_date_time select:last-child {
+	margin-left: 5px;
+}
+
+#benefit-edit_discountAmounts input[type=text] {
+	float: none;
+}
+
+
+
+
+
+
+/* Voucher Expiry Date */
+
+#voucher-create_expiry {
+	float: left;
+	width: 70%;
+}
+
+
+#voucher-create_expiry_date:before {
+	float: left;
+	margin-right: 10px;
+	width: 175px;
+	content: 'Month / Day / Year';
+	line-height: 39px;
+}
+
+#voucher-create_expiry_date select, #voucher-create_expiry_time select {
+	margin-right: 10px;
+	min-width: 100px;
+}
+
+#voucher-create_expiry_time {
+	float: left;
+	clear: both;
+	width: 70%;
+}
+
+#voucher-create_expiry_time:before {
+	float: left;
+	margin-right: 10px;
+	width: 175px;
+	content: 'Hours : Minutes';
+	line-height: 39px;
+}
+
+
+#voucher-create_expiry select  {
+	float: none;
+}
+
+#discount-edit_date_time select:last-child {
+	margin-left: 5px;
+}
 
 
 /* Contextual help */
@@ -1865,6 +1966,7 @@
 	display: inline-block;
 	width: 150px;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
 }
 
 .order-details.col {
@@ -1873,8 +1975,6 @@
 	padding: 10px 0 10px 10px;
 
 }
-
-
 
 .updated-date {
 	margin-left: 20px;
@@ -1915,7 +2015,7 @@
 	padding: 20px 0px 0px 0px;
 	margin-top: 20px;
 	font-size: 1.250em;
-	font-weight: bold;
+
 }
 
 
@@ -1966,6 +2066,10 @@
 ::-webkit-scrollbar-track {
 	  background-color: rgba(0,0,0,0);
 } /* the new scrollbar will have a flat appearance with the set background color */
+
+::-webkit-scrollbar-thumb:horizontal {
+	background-color: rgba(0,0,0,0);
+}
 
 ::-webkit-scrollbar-thumb {
 	  background-color: rgba(0, 0, 0, 0.5); 
