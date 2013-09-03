@@ -52,7 +52,7 @@
 
 			return this.each(function() {
 				$(this).on('click.nestedAccordian', 'li a', function() {
-					methods.open.call(list, $(this).parent('li'));
+					methods.toggle.call(list, $(this).parent('li'));
 				});
 			});
 		},
@@ -117,6 +117,23 @@
 						.removeClass('open')
 						.children('ol')
 							.fadeOut(100);
+				});
+			});
+		},
+
+		toggle: function(elem) {
+			return this.each(function() {
+				var list = $(this);
+
+				elem.each(function() {
+					var self = $(this);
+
+					if (self.hasClass(list.data('nestedAccordian').settings.activeClass)) {
+						methods.close.call(list, self);
+					}
+					else {
+						methods.open.call(list, self);
+					}
 				});
 			});
 		}
