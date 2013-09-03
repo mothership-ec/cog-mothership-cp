@@ -1572,53 +1572,6 @@
 }
 
 
-
-
-/* Voucher Expiry Date */
-
-#voucher-create_expiry {
-	float: left;
-	width: 70%;
-}
-
-
-#voucher-create_expiry_date:before {
-	float: left;
-	margin-right: 10px;
-	width: 175px;
-	content: 'Month / Day / Year';
-	line-height: 39px;
-}
-
-#voucher-create_expiry_date select, #voucher-create_expiry_time select {
-	margin-right: 10px;
-	min-width: 100px;
-}
-
-#voucher-create_expiry_time {
-	float: left;
-	clear: both;
-	width: 70%;
-}
-
-#voucher-create_expiry_time:before {
-	float: left;
-	margin-right: 10px;
-	width: 175px;
-	content: 'Hours : Minutes';
-	line-height: 39px;
-}
-
-
-#voucher-create_expiry select  {
-	float: none;
-}
-
-#discount-edit_date_time select:last-child {
-	margin-left: 5px;
-}
-
-
 /* Contextual help */
 
 
@@ -1944,6 +1897,10 @@
 	list-style-type: none;
 }
 
+.fulfillment form {
+	width: 100%;
+}
+
 
 /* Orders */
 
@@ -2108,6 +2065,46 @@
 
 }
 
+/* Voucher Expiry Date */
+
+#voucher-create_expiry {
+	float: left;
+	width: 70%;
+}
+
+
+#voucher-create_expiry_date:before {
+	float: left;
+	margin-right: 10px;
+	width: 175px;
+	content: 'Month / Day / Year';
+	line-height: 39px;
+}
+
+#voucher-create_expiry_date select, #voucher-create_expiry_time select {
+	margin-right: 10px;
+	min-width: 100px;
+}
+
+#voucher-create_expiry_time {
+	float: left;
+	clear: both;
+	width: 70%;
+}
+
+#voucher-create_expiry_time:before {
+	float: left;
+	margin-right: 10px;
+	width: 175px;
+	content: 'Hours : Minutes';
+	line-height: 39px;
+}
+
+
+#voucher-create_expiry select  {
+	float: none;
+}
+
 
 
 
@@ -2119,17 +2116,23 @@
 .filter-by .field {
 	margin-bottom: 10px;
 	width: 30%;
-	min-width: 300px;
+	max-width: 300px; 
+
+
 
 }
 
 .filter-by .field select {
-	min-width: 300px;
+	min-width: 70%;
+	width: 70%;
+	padding: 15px 10px;
 }
 
 
 .filter-by .button {
 	margin-left: 23px;
+	clear: both;
+	display: block;
 }
 
 
