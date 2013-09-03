@@ -15,11 +15,48 @@ $(function() {
 	var container       = '.container-cp',
 		feedback        = '.feedback',
 		saveButton 	    = '#save-content',
-		feedbackHeight  = 0,
-		containerHeight = 0,
+		max   			= 4,
+		height   		= 0,
+		fbTrueHeight    = 0,
+		fbHeight        = 0,
+		offSet 			= 0,
 		containerOffset = 0,
 		visible			= false,
-		buttonOffset    = parseInt($(saveButton).css('top'), 10);
+		open            = false;
+		buttonTop    	= parseInt($(saveButton).css('top'), 10);
+
+	/**
+	 * Setting up all height calculations if feedback is visibile
+	 */
+	function calcHeight() {
+		
+		if (open == true) {
+
+			offSet = buttonTop + fbTrueHeight;
+			height = $(container).height();
+
+			containerOffset = fbTrueHeight + 101;
+
+		} else {
+
+			offSet = buttonTop + fbHeight;
+			height = $(container).height();
+
+			containerOffset = fbHeight + 101;
+
+		}
+
+		// Set savebutton top position
+		$(saveButton).css('top', offSet + 'px');
+		
+		/**
+		 * Minus container offset off the current height value, this resolves content being hidden when
+		 * feedback is visible
+		 */
+		$('.clear').css({
+			height : height - containerOffset
+		});
+	}		
 
 	/**
 	 * Checking the page if there is feedback, this sets the feedback height variable
@@ -27,58 +64,62 @@ $(function() {
 	 */
 	if ( $(feedback).is(':visible')) {
 
-		visible = true;
+		// Set visible to true and get the outer height of feedback
+		visible      = true;
+		fbTrueHeight = $(feedback).outerHeight();
 
-		$(feedback).find('li').hide().filter(':lt(2)').show();
+		// Variables to hide list elements in the feedback
+		var length = $('.feedback li').length;
 
-		$(feedback).find('ul').append('<li><span>more</span><span class="less">less</span></li>')
-		    .find('li:last')
-		    .click(function(){
-		        $(this)
-		            .siblings(':gt(1)')
-		            .toggle()
-		            .end()
-		            .find('span')
-		            .toggle();
-		});
+		/**
+		 * This if statement will hide errors if there are more than 5, it also contains the function
+		 * to hide and show more errors
+		 */
+		if (length > max) {
 
-		// Set feedback height value
-		feedbackHeight = $(feedback).outerHeight();	
+			// Hide feedback li's
+			$('.feedback li:gt('+max+')').hide().end();
+
+			// Add in show button
+			$('.feedback').append('<span class="show-more">Show more errors</span><span class="less">Hide errors</span>');		
+
+			// Set new feedback height
+			fbHeight = $(feedback).outerHeight();
+
+			/**
+			 * On click function when a user clicks the show more span in the feedback
+			 */ 
+			$('.feedback span').on('click', function() {
+				
+				/**
+				 * Show hidden LI errors
+				 */
+				if (open == false) {
+					
+					open = true;
+
+					$('.feedback li:gt('+max+')').show();
+
+					// Set new outer height
+					fbTrueHeight = $(feedback).outerHeight();
+				
+				} else {
+				
+					open = false;
+
+					$('.feedback li:gt('+max+')').hide().end();
+				}
+
+				// Run calc height function
+				calcHeight();
+
+			});
+		};
 
 	} else {
 
 		visible = false;
 
-	}
-
-	/**
-	 * Setting up all height calculations if feedback is visibile
-	 */
-	function calcHeight() {
-		
-		if (visible == true) {
-
-			// Set container height to the current height
-			containerHeight = $(container).height();
-
-			// Set container offset value
-			containerOffset = feedbackHeight + 101;
-		
-			// Set button top CSS 
-			buttonOffset = buttonOffset + feedbackHeight;
-
-			// Set new save button top CSS value
-			$(saveButton).css('top', buttonOffset + 'px');
-
-			/**
-			 * Minus container offset off the current height value, this resolves content being hidden when
-			 * feedback is visible
-			 */
-			$('.clear').css({
-				height : containerHeight - containerOffset
-			});	
-
-		};
 	}
 
 	/**
