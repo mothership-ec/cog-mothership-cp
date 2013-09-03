@@ -852,6 +852,7 @@
 	position: relative;
 	display: inline-block;
 	margin-right: 8px;
+	margin-top: 12px;
 }
 
 .delete-page {
@@ -889,7 +890,6 @@
 
 .publish {
 	display: inline-block;
-	margin-top: 12px;
 	margin-right: 8px;
 }
 
@@ -1148,6 +1148,24 @@
 
 
 
+/* Checkbox group */
+
+
+
+.group.checkbox {
+	max-width: 1400px;
+	width: 100%;
+	padding: 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #CCC;
+}
+
+.group.checkbox  {
+	display: inline-block;
+	width: 50%;
+}
 /* Repeatable group */
 
 
@@ -2180,4 +2198,12 @@
 
 .widget.dark td:nth-child(odd) {
 	color: #fff;
+}
+
+
+
+/* Discounts */
+
+.create-discount #save-content {
+	top: 79px;
 }
