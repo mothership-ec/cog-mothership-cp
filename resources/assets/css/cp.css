@@ -1897,6 +1897,10 @@
 	list-style-type: none;
 }
 
+.fulfillment form {
+	width: 100%;
+}
+
 
 /* Orders */
 
