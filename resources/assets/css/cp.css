@@ -2064,6 +2064,33 @@
 	clear: both;
 }
 
+.voucher-details {
+	float: left;
+	padding: 10px 0 10px 20px;
+	width: 95%;
+	list-style: none;
+}
+
+.voucher-details li {
+	margin-bottom: 10px;
+}
+
+.voucher-details span {
+	display: inline-block;
+	width: 150px;
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	overflow: hidden;
+}
+
+.voucher-details.col {
+	width: 30%;
+	display: table-cell;
+	padding: 10px 0 10px 10px;
+
+}
+
+
 
 
 /* Reports
@@ -2073,11 +2100,21 @@
 
 .filter-by .field {
 	margin-bottom: 10px;
+	width: 30%;
+	min-width: 300px;
+
 }
+
+.filter-by .field select {
+	min-width: 300px;
+}
+
 
 .filter-by .button {
 	margin-left: 23px;
 }
+
+
 
 /* Scrollbars 
 -------------------------------------------- */
