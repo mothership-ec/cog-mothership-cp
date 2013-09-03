@@ -33,7 +33,6 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 100%;
-	min-width: 1005px;
 	height: 61px;
 	border: 1px solid #26537c;
 	background-color: #528cb6;
@@ -967,7 +966,6 @@
 
 /* Content
 ------------------------------------------------------------ */
-
 
 
 .container-content {
@@ -2059,9 +2057,9 @@
 }
 
 .voucher-details.col {
-	width: 30%;
+	width: 45%;
 	display: table-cell;
-	padding: 10px 0 10px 10px;
+	padding: 10px ;
 
 }
 
@@ -2111,20 +2109,26 @@
 /* Reports
 ------------------------------------------------------------ */
 
-
+.filter-by  {
+	max-width: 650px;
+}
 
 .filter-by .field {
 	margin-bottom: 10px;
-	width: 30%;
-	max-width: 300px; 
-
-
-
+	width: 200px;
+	
 }
 
+.filter-by .field input {
+	width: 100%;
+	min-width: 180px;
+	margin: 0px;
+}
+
+
 .filter-by .field select {
-	min-width: 70%;
 	width: 70%;
+	min-width: 180px;
 	padding: 15px 10px;
 }
 
