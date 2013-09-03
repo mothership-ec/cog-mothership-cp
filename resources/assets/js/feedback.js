@@ -102,12 +102,20 @@ $(function() {
 
 					// Set new outer height
 					fbTrueHeight = $(feedback).outerHeight();
+
+					// Hide and show button
+					$(this).hide();
+					$('.less').show();
 				
 				} else {
 				
 					open = false;
 
 					$('.feedback li:gt('+max+')').hide().end();
+
+					// Hide and show button
+					$(this).hide();
+					$('.show-more').show();
 				}
 
 				// Run calc height function
