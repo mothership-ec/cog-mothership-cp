@@ -1901,7 +1901,7 @@
 
 .fulfillment .repeatable-group {
 	margin-top: 10px;
-	width: 70%;
+	width: 30%;
 }
 
 .fulfillment .address p {
@@ -1909,12 +1909,41 @@
 }
 
 .fulfillment .address a.amend {
-	padding: 20px;
+	margin: 20px;
 	display: block;
+	float: left;
 }
 
 .fulfillment .button {
 	margin-bottom: 30px;
+}
+
+.fulfillment h3 {
+
+	margin: 20px 0px 0px 0px;
+}
+
+.pick-list {
+	margin: 20px 0px;
+	width: 95%;
+}
+
+.pick-list th {
+	text-align: center;
+}
+
+.pick-list input {
+	margin: 0px;
+
+}
+
+.pick-item {
+	text-align: center;
+}
+
+
+.fulfillment .field {
+	margin-bottom: 0px;
 }
 
 
@@ -2225,6 +2254,10 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+.widget {
+
 }
 
 
