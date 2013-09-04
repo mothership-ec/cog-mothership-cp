@@ -1937,6 +1937,15 @@
 
 }
 
+.pick-list img {
+	float: left;
+	margin: 0px 10px 0px 0px;
+}
+
+.pick-list h3 {
+	margin: 0px;
+}
+
 .pick-item {
 	text-align: center;
 }
@@ -2084,6 +2093,7 @@
 
 .notice {
 	clear: both;
+	margin: 10px 0px;
 }
 
 .voucher-details {
