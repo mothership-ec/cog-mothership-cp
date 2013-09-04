@@ -137,6 +137,7 @@ form {
 	position: relative;
 	display: inline-block;
 	margin-bottom: 30px;
+	width: 100%;
 }
 
 input,
