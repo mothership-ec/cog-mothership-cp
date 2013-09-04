@@ -875,6 +875,9 @@ dd {
 	color: #10460a;
 	text-shadow: 0px 1px 0 rgba(255,255,255,0.5);
 	font-size: 0.875em;
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	float: left;
+	width: 100%;
 }
 
 .feedback li {
@@ -889,10 +892,31 @@ dd {
 	font-family: 'FontAwesome';
 }
 
+.feedback span {
+	padding-bottom: 10px;
+	display: block;
+	float: left;
+}
+
+.feedback span:hover {
+	cursor: pointer;
+}
+
 .feedback .less {
 	display: none;
 }
 
+.feedback .show-more:before {
+	margin-right: 10px;
+	content: "\f078";
+	font-family: 'FontAwesome';
+}
+
+.feedback .less:before {
+	margin-right: 10px;
+	content: "\f077";
+	font-family: 'FontAwesome';
+}
 
 
 /* Error */
@@ -901,6 +925,7 @@ dd {
 
 .feedback.error {
 	background: #e8a6a6;
+	color: #700d0d;
 }
 
 .feedback.error li {
@@ -921,6 +946,7 @@ dd {
 
 .feedback.notice {
 	background: #d9e6f2;
+	color: #184c7f;
 }
 
 .feedback.notice li {
@@ -941,6 +967,7 @@ dd {
 
 .feedback.warning {
 	background: #fed779;
+	color: #5d460d;
 }
 
 .feedback.warning li {
