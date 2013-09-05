@@ -844,6 +844,10 @@
 	text-align: right;
 }
 
+.controls form {
+	width: 400px;
+}
+
 
 
 /* Delete page */
