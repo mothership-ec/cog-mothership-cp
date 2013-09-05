@@ -1345,7 +1345,8 @@
 }
 
 .field input,
-.field textarea {
+.field textarea,
+.field select {
 	max-width: 70%;
 	width: 70%;
 }
