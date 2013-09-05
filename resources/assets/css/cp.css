@@ -347,8 +347,9 @@
 	max-width: 210px;
 	width: 210px;
 	border: 1px solid #111;
+	padding: 10px;
 	background-repeat: no-repeat;
-	background-position: top right;
+	background-position: right center;
 	background-color: #343434;
 	background-image: url(../images/select-arrow-dark.png), -webkit-gradient(linear, left top, left bottom, from(#343434), to(#272727));
 	background-image: url(../images/select-arrow-dark.png), -webkit-linear-gradient(top, #343434, #272727);
