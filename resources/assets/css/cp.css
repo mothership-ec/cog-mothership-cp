@@ -844,6 +844,10 @@
 	text-align: right;
 }
 
+.controls form {
+	width: 400px;
+}
+
 
 
 /* Delete page */
@@ -1317,7 +1321,7 @@
 .repeatable-group .help {
 	position: absolute;
 	top: 44px;
-	right: -30px;
+	right: -20px;
 	width: 30%;
 }
 
@@ -1342,7 +1346,8 @@
 }
 
 .field input,
-.field textarea {
+.field textarea,
+.field select {
 	max-width: 70%;
 	width: 70%;
 }
