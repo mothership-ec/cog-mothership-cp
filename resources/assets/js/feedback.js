@@ -37,10 +37,12 @@ $(function() {
 
 			containerOffset = fbTrueHeight + 101;
 
-		} else {
+		} else if (open == false) {
 
 			offSet = buttonTop + fbHeight;
 			height = $(container).height();
+
+			console.log(fbHeight);
 
 			containerOffset = fbHeight + 101;
 
@@ -107,7 +109,7 @@ $(function() {
 					$(this).hide();
 					$('.less').show();
 				
-				} else {
+				} else if (open == true) {
 				
 					open = false;
 
@@ -122,13 +124,13 @@ $(function() {
 				calcHeight();
 
 			});
-		};
 
-	} else {
+		} else {
+			// Set new outer height
+			fbHeight = $(feedback).outerHeight();
+		}
 
-		visible = false;
-
-	}
+	};
 
 	/**
 	 * This window resize function keeps the container at the correct height, this can basically effect
