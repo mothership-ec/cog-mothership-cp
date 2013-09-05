@@ -1009,6 +1009,42 @@
 	width: 100%;
 }
 
+.container-details.dual-column {
+	width: 100%;
+	border: 1px solid #CCC;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.dual-column .column {
+	float: left;
+	position: relative;
+	width: 50%;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.dual-column .column:nth-child(2) {
+	border-left: 1px solid #CCC;
+	background: #F5F5F5;
+}
+
+.column .section {
+	width: 95%;
+	margin: 2.5%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.column .title {
+	border: 1px solid #CCC;
+	border-bottom: none;
+}
+
 #save-content {
 	position: fixed;
 	top: 138px;
@@ -1016,6 +1052,9 @@
 	z-index: 12;
 }
 
+.dual-column #save-content {
+	top: 79px;
+}
 
 
 /* Create page */
@@ -1288,7 +1327,7 @@
 .field {
 	position: relative;
 	float: left;
-	margin: 0 0 20px 0;
+	margin: 0 0 10px 0;
 	max-width: 1400px;
 	width: 100%;
 }
@@ -1307,6 +1346,12 @@
 
 .field label {
 	float: left;
+	width: 100%;
+}
+
+.column .field input,
+.column .field textarea {
+	max-width: 100%;
 	width: 100%;
 }
 
@@ -1723,18 +1768,24 @@
 
 
 
-.file-attributes {
-	display: inline-block;
-	width: 100%;
+.file {
+	overflow: auto;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 80%;
+	height: auto;
+	padding: 0;
+	border: 1px solid #CCC;
+	-webkit-box-shadow: 0 1px 6px rgba(000,000,000,0.1);
+	-moz-box-shadow: 0 1px 6px rgba(000,000,000,0.1);
+	box-shadow: 0 1px 6px rgba(000,000,000,0.1);
 }
 
-.file-attributes .file {
-	float: left;
-	min-height: 530px;
-	width: 530px;
-}
-
-.file-attributes .file img {
+/*.file img {
 	float: left;
 	margin: 0 0 23px 0;
 	width: 500px;
@@ -1743,40 +1794,7 @@
 	-webkit-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
 	-moz-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
 	box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
-}
-
-.file-attributes h1 {
-	display: inline-block;
-	clear: right;
-    margin: 20px 0;
-	width: -moz-calc(100% - 550px);
-    width: -webkit-calc(100% - 550px);
-    width: calc(100% - 550px);
-}
-
-.file-attributes form {
-	display: inline-block;
-	width: -moz-calc(100% - 550px);
-    width: -webkit-calc(100% - 550px);
-    width: calc(100% - 550px);
-}
-
-.file-attributes input,
-.file-attributes textarea {
-	max-width: 100%;
-	width: 100%;
-	margin-right: 23px;
-}
-
-.file-details {
-	width: 510px;
-	border-top: 1px solid #CCC;
-	list-style: none;
-	text-shadow: 0 1px 0 #FFF;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-
+}*/
 
 .file-manager .button.delete {
 	position: fixed;
@@ -1787,9 +1805,6 @@
 	margin-right: 25px;
 }
 
-.file-attributes #save-content {
-	top: 79px;
-}
 
 
 
