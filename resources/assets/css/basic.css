@@ -206,7 +206,7 @@ input[type="image"]:hover {
 
 select {
 	margin: 0 0 10px 0;
-	padding: 5px 5px 3px;
+	padding: 5px 20px 3px 5px;
 	min-width: 475px;
 	border: 1px solid #b1b1b1;
 	background-repeat: no-repeat;
@@ -741,7 +741,7 @@ table {
 	width: 100%;
 	border-collapse: collapse;
 	text-align: left;
-	font-size: 1.0em;
+	font-size: 0.9em;
 	border-bottom: 1px solid #CCC;
 }
 
@@ -799,6 +799,10 @@ table td a {
 	padding-left: 10px;
 	width: 100%;
 	word-wrap:break-word;*/
+}
+
+table a {
+	display: block;
 }
 
 table input {
