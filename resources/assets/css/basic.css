@@ -148,7 +148,7 @@ textarea {
     box-sizing: border-box;
 	margin: 0 0 10px 0;
 	margin-bottom: 15px;
-	padding: 12px 15px 10px;
+	padding: 5px 10px 3px;
 	max-width: 100%;
 	width: 100%;
 	border: 1px solid #CCC;
@@ -171,7 +171,7 @@ textarea {
 
 textarea {
 	overflow: auto;
-	min-height: 200px;
+	min-height: 150px;
 	line-height: 1.5em;
 }
 
@@ -200,7 +200,7 @@ input[type="image"]:hover {
 
 select {
 	margin: 0 0 10px 0;
-	padding: 10px;
+	padding: 5px 5px 3px;
 	min-width: 475px;
 	border: 1px solid #b1b1b1;
 	background-color: #ffffff;
@@ -738,7 +738,7 @@ table {
 }
 
 table th {
-	padding: 10px;
+	padding: 5px;
 	border: none;
 	background: none;
 	font-weight: normal;
@@ -747,7 +747,7 @@ table th {
 }
 
 table td {
-	padding: 15px 10px;
+	padding: 7px 10px 5px;
 	border-top: 1px solid #CCC;
 	border-left: 1px solid #CCC;
 	-webkit-box-shadow: inset 1px 1px 0 #FFF;
@@ -797,8 +797,7 @@ table input {
 	display: inline-block;
 	float: none;
 	margin: 0;
-	margin: 10px 0;
-	width: 100% !important;
+
 }
 
 table select {
