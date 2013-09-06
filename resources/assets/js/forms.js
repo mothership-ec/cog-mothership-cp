@@ -22,4 +22,18 @@
 			$(this).remove();
 		});
 	});
+
+	/**
+	 * Repeatable group collapse
+	 */
+	$(document).on('click', '.group[data-colapse] .title', function() {
+		var self        = $(this),
+			content       = self.next('.content');
+
+		// Toggle the height of the group content
+		content.animate({
+			height: 'toggle',
+		});
+
+	});
 });
