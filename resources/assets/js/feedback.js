@@ -22,7 +22,7 @@ $(function() {
 		offSet 			= 0,
 		containerOffset = 0,
 		visible			= false,
-		open            = false;
+		open            = false,
 		buttonTop    	= parseInt($(saveButton).css('top'), 10);
 
 	/**
