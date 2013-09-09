@@ -42,8 +42,6 @@ $(function() {
 			offSet = buttonTop + fbHeight;
 			height = $(container).height();
 
-			console.log(fbHeight);
-
 			containerOffset = fbHeight + 101;
 
 		}
