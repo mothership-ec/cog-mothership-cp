@@ -1,0 +1,11 @@
+<div data-flashes>
+	{% for key,types in app.session.getFlashBag.all %}
+	<div class="feedback {{ key }}">
+		<ul>
+		{% for message in types %}
+		<li>{{ message|raw }}</li>
+		{% endfor %}
+		</ul>
+	</div>
+	{% endfor %}
+</div>

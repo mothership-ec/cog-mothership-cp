@@ -6,11 +6,11 @@ use Message\Mothership\ControlPanel\Event\Event;
 use Message\Mothership\ControlPanel\Event\BuildMenuEvent;
 
 /**
- * Controllers for the control panel menus.
+ * Controllers for the control panel components.
  *
  * @author Joe Holdcroft <joe@message.co.uk>
  */
-class Menu extends \Message\Cog\Controller\Controller
+class Component extends \Message\Cog\Controller\Controller
 {
 	/**
 	 * Render the main menu.
@@ -28,7 +28,7 @@ class Menu extends \Message\Cog\Controller\Controller
 	 *
 	 * @return \Message\Cog\HTTP\Response
 	 */
-	public function main()
+	public function mainMenu()
 	{
 		$event = new BuildMenuEvent;
 
@@ -42,5 +42,15 @@ class Menu extends \Message\Cog\Controller\Controller
 		return $this->render('Message:Mothership:ControlPanel::main_menu', array(
 			'items' => $event->getItems(),
 		));
+	}
+
+	/**
+	 * Render the HTML for the feedback flashes.
+	 *
+	 * @return \Message\Cog\HTTP\Response
+	 */
+	public function flashes()
+	{
+		return $this->render('Message:Mothership:ControlPanel::flashes');
 	}
 }

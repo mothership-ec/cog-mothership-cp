@@ -6,7 +6,7 @@
 		'@Message:Mothership:ControlPanel::resources/assets/css/basic.css'
 		'@Message:Mothership:ControlPanel::resources/assets/css/fonts.css'
 		'@Message:Mothership:ControlPanel::resources/assets/css/cp.css'
-		
+
 		output='/assets/css/ms_cp.css'
 		filter='csscogulerewrite'
 	%}
@@ -40,14 +40,14 @@
 		<div class="loading-spinner">
 			<p>Loading&hellip;</p><div class="spinner"></div>
 		</div>
-		
+
 		<nav class="navigation">
 			<h1 class="vendor">
 				<a href="{{ url('ms.cp.dashboard') }}">
 					{{ app.cfg.mothership.appName }}
 				</a>
 			</h1>
-			{{ render(controller('Message:Mothership:ControlPanel::Controller:Menu#main')) }}
+			{{ render(controller('Message:Mothership:ControlPanel::Controller:Component#mainMenu')) }}
 			<a class="logout" href="{{ url('ms.cp.logout') }}">Log Out</a>
 		</nav>
 

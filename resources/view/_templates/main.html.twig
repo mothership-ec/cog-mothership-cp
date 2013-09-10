@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{% block title %}Mothership Control Panel{% endblock %}</title>
-		
+
 		{% block stylesheets %}
 			{% stylesheets
 				'@Message:Mothership:ControlPanel::resources/assets/css/basic.css'
@@ -19,7 +19,7 @@
 			{% javascripts
 				'@Message:Mothership:ControlPanel::resources/assets/js/components/jquery/jquery.js'
 				'@Message:Mothership:ControlPanel::resources/assets/js/setup.js'
-				
+
 				output='/assets/js/ms_base.js'
 			%}
 				<script src="{{ asset_url }}"></script>
@@ -29,15 +29,7 @@
 	</head>
 	<body>
 
-		{% for key,types in app.session.getFlashBag.all %}
-			<div class="feedback {{ key }}">
-				<ul>
-				{% for message in types %}
-					<li>{{ message|raw }}</li>
-				{% endfor %}
-				</ul>
-			</div>
-		{% endfor %}
+		{{ render(controller('Message:Mothership:ControlPanel::Controller:Component#flashes')) }}
 
 		{% block body %}
 		{% endblock %}
