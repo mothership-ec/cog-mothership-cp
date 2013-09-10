@@ -1,13 +1,16 @@
 ;$(function() {
 
+	// Check HTML5 History API is available
 	if (!History.enabled) {
 		$.error('Your browser does not support the HTML5 History API, so the control panel may not function correctly.');
 	}
 
+	// Set up elements with the data-confirm attribute set
 	$(document).on('click submit', '[data-confirm]', function() {
 		return confirm($(this).attr('data-confirm'));
 	});
 
+	// Set up live pane
 	$('[data-live-pane]').livePane({
 		linkSelector: 'a[data-live]',
 		beforeSend: function(pane) {
@@ -46,6 +49,13 @@
 		}
 	});
 
+	// Set sidebar ordered lists to a nested accordian
 	$('section.sidebar > ol').nestedAccordian();
 
+	// Set up global success handler for AJAX calls to check for flashes HTML and add to the page
+	$(document).ajaxSuccess(function(event, xhr, options) {
+		if (xhr.responseJSON.flashes.length > 0) {
+			$('[data-flashes]').html($(xhr.responseJSON.flashes).html());
+		}
+	});
 });
