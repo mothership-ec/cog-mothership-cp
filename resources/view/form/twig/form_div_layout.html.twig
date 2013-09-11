@@ -1,0 +1,25 @@
+{# Widgets modified by Message #}
+{% block money_widget %}
+   {% spaceless %}
+   	<div class="add-on">
+		{# get currency-part out of the money_pattern created by the MoneyType #}
+		{% set currency = money_pattern|split('{{ widget }}')[0]|trim %}
+
+		{# replace {{ widget }} with the actual widget and add <p></p> around the currency-sign #}
+		{{ money_pattern|replace({ '{{ widget }}': block('form_widget_simple'), (currency): "<p>%s</p>"|format(currency) })|raw }}
+	</div>
+   {% endspaceless %}
+ {% endblock money_widget %}
+
+{# Custom blocks defined by Message #}
+{% block help_widget %}
+	{% if attr['data-help-key'] is defined %}
+		<section class="help">
+			{% set key        = attr['data-help-key'] %}
+			{% set translated = key|trans %}
+			{% if key != translated %}
+			<p>{{ translated|raw }}</p>
+			{% endif %}
+		</section>
+	{% endif %}
+{% endblock help_widget %}
