@@ -20,10 +20,14 @@
 /* Login
 ------------------------------------------------------------ */
 
+body {
+	overflow: visible;
+}
 
 .login {
 	width: 100%;
 	height: 100%;
+	min-height: 900px;
 	background: #050505 url(../images/login-background.jpg) no-repeat top center;
 }
 
@@ -201,7 +205,7 @@
 }
 
 .login footer {
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	color: #b1b3b4;
 }
@@ -240,4 +244,5 @@
 	float: left;
 	width: 100%;
 }
+
 
