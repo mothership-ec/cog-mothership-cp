@@ -29,7 +29,7 @@ $(function() {
 	 * Setting up all height calculations if feedback is visibile
 	 */
 	function calcHeight() {
-		
+
 		if (open == true) {
 
 			offSet = buttonTop + fbTrueHeight;
@@ -48,7 +48,7 @@ $(function() {
 
 		// Set savebutton top position
 		$(saveButton).css('top', offSet + 'px');
-		
+
 		/**
 		 * Minus container offset off the current height value, this resolves content being hidden when
 		 * feedback is visible
@@ -56,7 +56,7 @@ $(function() {
 		$('.clear').css({
 			height : height - containerOffset
 		});
-	}		
+	}
 
 	/**
 	 * Checking the page if there is feedback, this sets the feedback height variable
@@ -81,21 +81,21 @@ $(function() {
 			$('.feedback li:gt('+max+')').hide().end();
 
 			// Add in show button
-			$('.feedback').append('<span class="show-more">Show more errors</span><span class="less">Hide errors</span>');		
+			$('.feedback').append('<span class="show-more">Show more messages</span><span class="less">Hide messages</span>');
 
 			// Set new feedback height
 			fbHeight = $(feedback).outerHeight();
 
 			/**
 			 * On click function when a user clicks the show more span in the feedback
-			 */ 
+			 */
 			$('.feedback span').on('click', function() {
-				
+
 				/**
 				 * Show hidden LI errors
 				 */
 				if (open == false) {
-					
+
 					open = true;
 
 					$('.feedback li:gt('+max+')').show();
@@ -106,9 +106,9 @@ $(function() {
 					// Hide and show button
 					$(this).hide();
 					$('.less').show();
-				
+
 				} else if (open == true) {
-				
+
 					open = false;
 
 					$('.feedback li:gt('+max+')').hide().end();

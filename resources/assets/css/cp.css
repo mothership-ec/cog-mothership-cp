@@ -10,7 +10,7 @@
 /*    Development by Message
 /*    http://www.message.co.uk
 /*
-/*    Control Panel Style Sheet v1.0 
+/*    Control Panel Style Sheet v1.0
 /*    Created by Richard McCartney
 /*
 /*
@@ -60,7 +60,7 @@
 
 .navigation h1 a {
 	font-size: 0.6em;
-	
+
 }
 
 .navigation .vendor {
@@ -389,7 +389,7 @@
 .sidebar .button:active {
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0);
 	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0);	
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0);
 }
 
 .sidebar .search {
@@ -990,7 +990,7 @@
 
 .container-content.extended {
 	padding: 23px;
-	width: inherit; 
+	width: inherit;
 	width: 100%;
 	height: -moz-calc(100% - 65px);
     height: -webkit-calc(100% - 65px);
@@ -1174,8 +1174,8 @@
 
 .small-box-row {
 	border-collapse: separate;
-	border-spacing: 15px; 
-	display: table; 
+	border-spacing: 15px;
+	display: table;
 }
 
 .group.small-box {
@@ -1186,7 +1186,7 @@
 	float: none;
 	display: table-cell;
 	vertical-align: top;
-}	
+}
 
 .group.small-box ul {
 	width: 90%;
@@ -1411,17 +1411,17 @@
 
 
 
-.slug {
+.add-on {
 	display: inline-block;
 	float: left;
 	max-width: 70%;
 	width: 70%;
 }
 
-.slug p {
+.add-on p {
 	display: block;
 	float: left;
-	padding: 5px 13px 3px;
+	padding: 7px 13px 4px;
 	border-top: 1px solid #CCC;
 	border-bottom: 1px solid #CCC;
 	border-left: 1px solid #CCC;
@@ -1439,7 +1439,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#e6e6e6');
 }
 
-.slug input {
+.add-on input {
 	display: inline-block;
 	max-width: none;
 	width: 40%;
@@ -1846,7 +1846,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 23px 0 23px 23px;
-	width: inherit; 
+	width: inherit;
 	width: 100%;
 	height: -moz-calc(100% - 120px);
     height: -webkit-calc(100% - 120px);
@@ -1999,7 +1999,7 @@
 /* Orders */
 
 
-	
+
 .summary {
 	display: inline-block;
 	width: 100%;
@@ -2213,7 +2213,7 @@
 .filter-by .field {
 	margin-bottom: 10px;
 	width: 200px;
-	
+
 }
 
 .filter-by .field input {
@@ -2224,8 +2224,7 @@
 
 
 .filter-by .field select {
-	width: 70%;
-	min-width: 180px;
+	width: 220px;
 	padding: 8px 10px 6px;
 }
 
@@ -2236,9 +2235,13 @@
 	display: block;
 }
 
+.filter-by label {
+	display: none;
+}
 
 
-/* Scrollbars 
+
+/* Scrollbars
 -------------------------------------------- */
 
 
@@ -2256,13 +2259,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	  background-color: rgba(0, 0, 0, 0.5); 
+	  background-color: rgba(0, 0, 0, 0.5);
 	  border-radius: 20px;
 } /* this will style the thumb, ignoring the track */
 
 
 
-/* Widgets 
+/* Widgets
 ---------------------------------------- */
 
 

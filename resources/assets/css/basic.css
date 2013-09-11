@@ -54,7 +54,7 @@ html {
 
 body {
 	position: relative;
-	overflow: hidden;
+	overflow-y: hidden;
 	height: 100%;
 	color: #333;
 	font-size: 100%;
@@ -95,9 +95,9 @@ p a:hover {
 	text-decoration: underline;
 }
 
-b, 
+b,
 strong {
-	font-family:'Proxima N W15 Bold'; 
+	font-family:'Proxima N W15 Bold';
 	font-weight: normal;
 }
 
@@ -637,7 +637,7 @@ button:active,
 	font-weight: 500;
 	font-size: 1.0em;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	line-height: 1.0em;	
+	line-height: 1.0em;
 }
 
 .button.button-group span {
@@ -821,8 +821,8 @@ table select {
 	margin: 10px 0;
 }
 
-table input[type="checkbox"], 
-table input[type="radio"], 
+table input[type="checkbox"],
+table input[type="radio"],
 table input[type="image"] {
 	display: inline-block;
 	float: none;
