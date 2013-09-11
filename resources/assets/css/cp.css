@@ -1408,6 +1408,31 @@
 	top: -10px;
 }
 
+/* Date Fields */
+
+input[type=date] {
+	width: 330px;
+	margin-right: 20px;
+}
+
+input[type=time]{
+	width: 245px;
+	margin-right: 20px;
+}
+
+ input[type=date]:before {
+ 		content: 'Day / Month / Year';
+ 		margin-right: 20px;
+ 		font-weight: bold;
+ }
+
+ input[type=time]:before {
+ 		content: 'Hours : Minutes';
+ 		margin-right: 20px;
+ 		font-weight: bold;
+ }
+
+
 
 /* Field slug */
 
@@ -1592,50 +1617,8 @@
 	margin-left: 5px;
 }
 
-/* Discounts */
 
 
-#discount-edit_start, #discount-create_start {
-	float: left;
-	width: 70%;
-}
-
-
-#discount-edit_start_date:before, #discount-edit_end_date:before, #discount-create_start_date:before, #discount-create_end_date:before {
-	float: left;
-	margin-right: 10px;
-	width: 175px;
-	content: 'Month / Day / Year';
-	line-height: 39px;
-}
-
-#discount-edit_start select, #discount-edit_end select, #discount-create_start select, #discount-create_end select  {
-	margin-right: 10px;
-	min-width: 100px;
-}
-
-#discount-edit_date_time, #discount-create_date_time {
-	float: left;
-	clear: both;
-	width: 70%;
-}
-
-#discount-edit_start_time:before, #discount-edit_end_time:before, #discount-create_start_time:before, #discount-create_end_time:before {
-	float: left;
-	margin-right: 10px;
-	width: 175px;
-	content: 'Hours : Minutes';
-	line-height: 39px;
-}
-
-
-#discount-edit_start select, #discount-edit_end select, #discount-create_start select, #discount-create_end select  {
-	float: none;
-}
-
-#discount-edit_date_time select:last-child, #discount-create_date_time select:last-child  {
-	margin-left: 5px;
-}
 
 #benefit-edit_discountAmounts input[type=text] {
 	float: none;
