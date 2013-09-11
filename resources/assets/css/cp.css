@@ -33,6 +33,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 100%;
+	min-width: 1400px;
 	height: 61px;
 	border: 1px solid #26537c;
 	background-color: #528cb6;
@@ -98,6 +99,7 @@
 	float: left;
 	height: 59px;
 	list-style: none;
+	width: 1000px;
 }
 
 .navigation li {
