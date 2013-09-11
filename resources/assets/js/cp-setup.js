@@ -54,7 +54,9 @@
 
 	// Set up global success handler for AJAX calls to check for flashes HTML and add to the page
 	$(document).ajaxSuccess(function(event, xhr, options) {
-		if (xhr.responseJSON.flashes.length > 0) {
+		if (typeof xhr.responseJSON !== 'undefined'
+		 && typeof xhr.responseJSON.flashes !== 'undefined'
+		 && xhr.responseJSON.flashes.length > 0) {
 			$('[data-flashes]').html($(xhr.responseJSON.flashes).html());
 		}
 	});
