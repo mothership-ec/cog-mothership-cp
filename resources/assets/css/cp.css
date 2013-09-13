@@ -2167,6 +2167,13 @@ input[type=time]{
 
 }
 
+.column .grand-total {
+	border-top: 1px solid #ddd;
+	padding: 20px 0px 0px 0px;
+	margin-top: 20px;
+	font-size: 1.250em;
+}
+
 
 
 
