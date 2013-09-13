@@ -1026,8 +1026,7 @@
 	float: left;
 	position: relative;
 	width: 50%;
-	height: 100%;
-	min-height: 568px;
+	min-height: 668px;
 	padding: 10px;
 	border: 1px solid #CCC;
 	-webkit-box-sizing: border-box;
@@ -1053,11 +1052,13 @@
 	border-bottom: none;
 }
 
-.column h3 {
+.column h2 {
 	background: #f9f9f9;
 	clear: both;
-	padding: 10px 10px 7px 10px;
-	margin: 10px 0px;
+ 	padding: 10px 0px 7px 10px;
+	margin: 0px;
+	font-size: 1.125em;
+	width: 98% !important;
 }
 
 #save-content {
@@ -1339,18 +1340,48 @@
 	overflow: hidden;
 }
 
-.box h1 {
+.box {
+	position: relative;
+	margin-bottom: 20px;
+	border: 1px solid #CCC;
+	border-top: none;
+	overflow: hidden;
+}
+
+.box h1, .dual-column h1.title {
 	position: relative;
 	z-index: 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	box-sizing: border-box;x
 	margin: 0;
 	padding: 20px 22px 15px;
 	padding-bottom: 12px;
 	width: 100%;
 	border: 1px solid #CCC;
 	border-bottom: none;
+	background-image: none;
+	background-color: #f9f9f9;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	font-size: 1em;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
+}
+
+.small-box h2.title, .box h2.title {
+	position: relative;
+	z-index: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;x
+	margin: 0;
+	padding: 20px 22px 15px;
+	padding-bottom: 12px;
+	width: 100%;
+	border: 1px solid #CCC;
+	border-right: none;
+	border-left: none;
 	background: none;
 	background-color: #f9f9f9;
 	-webkit-box-shadow: none;
@@ -1362,7 +1393,7 @@
 
 .box .title h1:hover,
 .box .title h2:hover {
-	cursor: default;
+	cursor: auto;
 }
 
 .small-box-row {
@@ -1373,7 +1404,8 @@
 
 .group.small-box {
 	width: 30%;
-	border-bottom: 1px solid #ccc;
+	border: 1px solid #ccc;
+	border-top: none;
 	overflow: hidden;
 	position: relative;
 	float: none;
