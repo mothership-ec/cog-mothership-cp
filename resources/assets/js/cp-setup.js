@@ -52,12 +52,18 @@
 	// Set sidebar ordered lists to a nested accordian
 	$('section.sidebar > ol').nestedAccordian();
 
-	// Set up global success handler for AJAX calls to check for flashes HTML and add to the page
+	// Set up global success handler for AJAX calls to check for flashes & redirects
 	$(document).ajaxSuccess(function(event, xhr, options) {
 		if (typeof xhr.responseJSON !== 'undefined'
 		 && typeof xhr.responseJSON.flashes !== 'undefined'
 		 && xhr.responseJSON.flashes.length > 0) {
 			$('[data-flashes]').html($(xhr.responseJSON.flashes).html());
+		}
+
+		if (typeof xhr.responseJSON !== 'undefined'
+		 && typeof xhr.responseJSON.redirect !== 'undefined'
+		 && xhr.responseJSON.redirect.length > 0) {
+			History.pushState(null, null, xhr.responseJSON.redirect);
 		}
 	});
 });
