@@ -30,9 +30,6 @@ class EventListener extends BaseListener implements SubscriberInterface
 			KernelEvents::EXCEPTION => array(
 				array('sendToLogin')
 			),
-			'modules.load.success' => array(
-				array('registerGroups')
-			),
 		);
 	}
 
@@ -58,14 +55,4 @@ class EventListener extends BaseListener implements SubscriberInterface
 				$this->_services['routing.generator']->generate('ms.cp.login')
 			));
 		}
-	}
-
-	/**
-	 * Register user groups.
-	 */
-	public function registerGroups()
-	{
-		$this->_services['user.groups']
-			->add(new UserGroup\SuperAdmin);
-	}
-}
+	}}
