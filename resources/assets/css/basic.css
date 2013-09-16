@@ -50,6 +50,7 @@ html {
     font-size: 1em;
 	-webkit-text-size-adjust: 1em;
 	-ms-text-size-adjust: 1em;
+	overflow: hidden;
 }
 
 body {
