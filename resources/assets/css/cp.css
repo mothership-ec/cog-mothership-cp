@@ -1027,7 +1027,6 @@
 	position: relative;
 	width: 50%;
 	min-height: 668px;
-	padding: 10px;
 	border: 1px solid #CCC;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -1346,6 +1345,7 @@
 	border: 1px solid #CCC;
 	border-top: none;
 	overflow: hidden;
+	padding: 10px;
 }
 
 .box h1, .dual-column h1.title {
@@ -2442,4 +2442,14 @@ input[type=time]{
 
 .create-discount #save-content {
 	top: 79px;
+}
+
+#criteria-edit_products {
+	border: 1px solid #F1F1F1;
+	overflow: hidden;
+}
+
+#criteria-edit_products .field {
+	width: 50%;
+	float: left;
 }
