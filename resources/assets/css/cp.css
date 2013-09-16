@@ -1020,7 +1020,9 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+
 }
+
 
 .dual-column .column {
 	float: left;
@@ -1033,6 +1035,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin-bottom: 20px;
+
 }
 
 .dual-column .column:nth-child(2) {
@@ -1355,7 +1358,7 @@
 
 
 
-.box h1, .dual-column h1.title {
+.box h1, .dual-column h1.title, .dual-column h2.title {
 	position: relative;
 	z-index: 0;
 	-webkit-box-sizing: border-box;
