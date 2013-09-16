@@ -6,7 +6,7 @@ class ForgottenPassword extends \Message\Cog\Controller\Controller
 {
 	public function request($email = null)
 	{
-		return $this->render('::password/request', array(
+		return $this->render('Message:Mothership:ControlPanel::password/request', array(
 			'email' => $email,
 		));
 	}
