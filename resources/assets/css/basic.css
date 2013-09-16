@@ -161,9 +161,9 @@ textarea {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	-webkit-box-shadow: 0 1px 5px rgba(000,000,000,0.1);
+/*	-webkit-box-shadow: 0 1px 5px rgba(000,000,000,0.1);
 	-moz-box-shadow: 0 1px 5px rgba(000,000,000,0.1);
-	box-shadow: 0 1px 5px rgba(000,000,000,0.1);
+	box-shadow: 0 1px 5px rgba(000,000,000,0.1);*/
 	color: #333;
 	font-size: 1.0em;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
