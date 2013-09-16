@@ -1028,6 +1028,7 @@
 	width: 50%;
 	min-height: 668px;
 	border: 1px solid #CCC;
+	padding: 10px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -1051,11 +1052,15 @@
 	border-bottom: none;
 }
 
-.column h2 {
+.column p {
+	margin: 10px;
+}
+
+.column h2, .box div h2 {
 	background: #f9f9f9;
 	clear: both;
  	padding: 10px 0px 7px 10px;
-	margin: 0px;
+	margin: 0px 0px 20px 0px;
 	font-size: 1.125em;
 	width: 98% !important;
 }
@@ -1345,8 +1350,10 @@
 	border: 1px solid #CCC;
 	border-top: none;
 	overflow: hidden;
-	padding: 10px;
 }
+
+
+
 
 .box h1, .dual-column h1.title {
 	position: relative;
@@ -1400,6 +1407,8 @@
 	border-collapse: separate;
 	border-spacing: 15px;
 	display: table;
+	margin: 0px -15px;
+
 }
 
 .group.small-box {
@@ -1934,7 +1943,21 @@ input[type=time]{
 	z-index: 11;
 }
 
+.positive {
+	color: #3fa262;
+}
 
+.negative {
+	color: #d84939;
+}
+
+.stock-total {
+	font-weight: bold;
+}
+
+.unit-count {
+	margin-right: 10px;
+}
 
 /* Sidebar */
 
