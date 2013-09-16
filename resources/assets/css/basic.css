@@ -155,7 +155,7 @@ textarea {
     box-sizing: border-box;
 	margin: 0 0 10px 0;
 	margin-bottom: 15px;
-	padding: 6px 10px 5px;
+	padding: 8px 10px 7px;
 	max-width: 100%;
 	width: 100%;
 	border: 1px solid #CCC;
@@ -207,7 +207,7 @@ input[type="image"]:hover {
 
 select {
 	margin: 0 0 10px 0;
-	padding: 5px 20px 3px 5px;
+	padding: 6px 20px 4px 10px;
 	min-width: 475px;
 	border: 1px solid #b1b1b1;
 	background-repeat: no-repeat;
