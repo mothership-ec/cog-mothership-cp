@@ -2443,3 +2443,13 @@ input[type=time]{
 .create-discount #save-content {
 	top: 79px;
 }
+
+#criteria-edit_products {
+	border: 1px solid #F1F1F1;
+	overflow: hidden;
+}
+
+#criteria-edit_products .field {
+	width: 50%;
+	float: left;
+}
