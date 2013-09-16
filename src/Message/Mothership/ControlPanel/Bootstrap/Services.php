@@ -2,6 +2,8 @@
 
 namespace Message\Mothership\ControlPanel\Bootstrap;
 
+use Message\Mothership\ControlPanel;
+
 use Message\Cog\Bootstrap\ServicesInterface;
 
 class Services implements ServicesInterface
@@ -19,5 +21,11 @@ class Services implements ServicesInterface
 
 			return $templates;
 		});
+
+		$services['user.groups'] = $services->share($services->extend('user.groups', function($groups) {
+			$groups->add(new ControlPanel\UserGroup\SuperAdmin);
+
+			return $groups;
+		}));
 	}
 }
