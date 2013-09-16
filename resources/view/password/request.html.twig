@@ -44,22 +44,22 @@
 
 
 			<section class="login-form forgotten">
-<h1>Forgotten your password?</h1>
 
-{{ render(controller('Message:User::Controller:ForgottenPassword#request', {
-	resetRoute: 'ms.cp.password.reset',
-	email: email
-})) }}
+				<h1>Forgotten your password?</h1>
 
+				{{ render(controller('Message:User::Controller:ForgottenPassword#request', {
+					resetRoute: 'ms.cp.password.reset',
+					email: email
+				})) }}
 
 			</section>
-			
+
 		</div>
 
 		<footer class="footer" role="contentinfo">
 
-		<small class="copy">&copy; <a href="http://message.co.uk">Message</a> {{ "now"|date('Y') }}</small>
-		<a href="{{ cfg.mothership.url }}" target="_blank" class="website icon-external-link">{{ cfg.mothership.url }}</a>
+			<small class="copy">&copy; <a href="http://message.co.uk">Message</a> {{ "now"|date('Y') }}</small>
+			<a href="{{ cfg.mothership.url }}" target="_blank" class="website icon-external-link">{{ cfg.mothership.url }}</a>
 
 		</footer>
 	</div>
