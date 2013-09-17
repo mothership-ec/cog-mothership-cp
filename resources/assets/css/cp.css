@@ -1721,46 +1721,6 @@ input[type=time]{
 	width: 70%;
 }
 
-
-#content-edit-content_date:before {
-	float: left;
-	margin-right: 10px;
-	width: 175px;
-	content: 'Month / Day / Year';
-	line-height: 39px;
-}
-
-#content-edit-content_date select {
-	margin-right: 10px;
-	min-width: 100px;
-}
-
-#content-edit-content_date_time {
-	float: left;
-	clear: both;
-	width: 70%;
-}
-
-#content-edit-content_date_time:before {
-	float: left;
-	margin-right: 10px;
-	width: 175px;
-	content: 'Hours : Minutes';
-	line-height: 39px;
-}
-
-
-#content-edit-content_date_time select {
-	float: none;
-}
-
-#content-edit-content_date_time select:last-child {
-	margin-left: 5px;
-}
-
-
-
-
 #benefit-edit_discountAmounts input[type=text] {
 	float: none;
 }
@@ -2299,46 +2259,6 @@ input[type=time]{
 	display: table-cell;
 	padding: 10px ;
 
-}
-
-/* Voucher Expiry Date */
-
-#voucher-create_expiry {
-	float: left;
-	width: 70%;
-}
-
-
-#voucher-create_expiry_date:before {
-	float: left;
-	margin-right: 10px;
-	width: 175px;
-	content: 'Month / Day / Year';
-	line-height: 39px;
-}
-
-#voucher-create_expiry_date select, #voucher-create_expiry_time select {
-	margin-right: 10px;
-	min-width: 100px;
-}
-
-#voucher-create_expiry_time {
-	float: left;
-	clear: both;
-	width: 70%;
-}
-
-#voucher-create_expiry_time:before {
-	float: left;
-	margin-right: 10px;
-	width: 175px;
-	content: 'Hours : Minutes';
-	line-height: 39px;
-}
-
-
-#voucher-create_expiry select  {
-	float: none;
 }
 
 
