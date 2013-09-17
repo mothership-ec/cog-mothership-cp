@@ -168,6 +168,7 @@ textarea {
 	color: #333;
 	font-size: 1.0em;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
 	line-height: 1.0em;
 	-webkit-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
 	-moz-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
@@ -198,6 +199,30 @@ input[type="image"] {
 	width: auto !important;
 	height: auto;
 }
+
+/* Date Fields */
+
+input[type=date] {
+	width: 330px;
+	margin-right: 20px;
+}
+
+input[type=time]{
+	width: 245px;
+	margin-right: 20px;
+}
+
+ input[type=date]:before {
+ 		content: 'Day / Month / Year';
+ 		margin-right: 20px;
+ 		font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ }
+
+ input[type=time]:before {
+ 		content: 'Hours : Minutes';
+ 		margin-right: 20px;
+ 		font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ }
 
 input[type="checkbox"]:hover,
 input[type="radio"]:hover,

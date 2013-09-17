@@ -1549,30 +1549,6 @@
 	top: -10px;
 }
 
-/* Date Fields */
-
-input[type=date] {
-	width: 330px;
-	margin-right: 20px;
-}
-
-input[type=time]{
-	width: 245px;
-	margin-right: 20px;
-}
-
- input[type=date]:before {
- 		content: 'Day / Month / Year';
- 		margin-right: 20px;
- 		font-weight: bold;
- }
-
- input[type=time]:before {
- 		content: 'Hours : Minutes';
- 		margin-right: 20px;
- 		font-weight: bold;
- }
-
 
 
 /* Field slug */
