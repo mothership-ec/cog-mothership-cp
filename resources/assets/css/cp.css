@@ -1581,7 +1581,7 @@ input[type=time]{
 .add-on p {
 	display: block;
 	float: left;
-	padding: 7px 13px 4px;
+	padding: 11px 13px 4px;
 	border-top: 1px solid #CCC;
 	border-bottom: 1px solid #CCC;
 	border-left: 1px solid #CCC;
@@ -2341,18 +2341,23 @@ input[type=time]{
 ------------------------------------------------------------ */
 
 .filter-by  {
-	max-width: 650px;
 }
 
 .filter-by .field {
-	margin-bottom: 10px;
-	width: 200px;
-
+	float: left;
+	width: 340px;
+	padding: 20px 10px;
 }
 
-.filter-by .field input {
-	width: 100%;
-	min-width: 180px;
+.filter-by input, .filter-by select {
+	width: 340px;
+	height: 40px;
+	min-width: 340px;
+	margin-bottom: 0px;
+}
+
+/*.filter-by .field input {
+	width: 180px;
 	margin: 0px;
 }
 
@@ -2360,18 +2365,16 @@ input[type=time]{
 .filter-by .field select {
 	width: 220px;
 	padding: 8px 10px 6px;
-}
+}*/
 
 
 .filter-by .button {
-	margin-left: 23px;
+	margin: 10px;
 	clear: both;
 	display: block;
 }
 
-.filter-by label {
-	display: none;
-}
+
 
 
 
