@@ -26,7 +26,7 @@
 	/**
 	 * Repeatable group collapse
 	 */
-	$(document).on('click', '.group[data-colapse] .title', function() {
+	$(document).on('click', '.group[data-collapse] .title', function() {
 		var self        = $(this),
 			content       = self.next('.content');
 
