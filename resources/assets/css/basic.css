@@ -781,7 +781,7 @@ table th {
 }
 
 table td {
-	padding: 9px 10px 7px;
+	padding: 12px 15px 10px;
 	border-top: 1px solid #CCC;
 	border-left: 1px solid #CCC;
 	-webkit-box-shadow: inset 1px 1px 0 #FFF;
