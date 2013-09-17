@@ -13,11 +13,13 @@
 $(function() {
 
 	// Show required contextual help
-	$(document).on('click', 'a[data-show]', function() {
+	$(document).on('click', 'a[data-show]', function(e) {
+
+		e.preventDefault();
 
 		var self     = $(this),
-			longHelp = self.attr('href');
-			activeHelp = $('body').find('.long.open');
+			longHelp = self.attr('href'),
+			activeHelp = $('body').find('.description.open');
 
 		// Check if long help is visible then show or hide
 		if ($(longHelp).is(':visible')) {
@@ -36,7 +38,7 @@ $(function() {
 	});
 
 	// Hide contextual help
-	$(document).on('click', '.long.open', function(e) {
+	$(document).on('click', '.description.open', function(e) {
 
 		$(this).removeClass('open').fadeOut(200);
 

@@ -1734,28 +1734,24 @@ input[type=time]{
 	margin: 11px 0 0 15px;
 }
 
-.help .short p {
-	display: none;
-}
-
-.help .short a {
+.help a {
 	visibility: hidden;
 	text-decoration: none;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.help .short a:before {
+.help a:before {
 	visibility: visible;
 	content: "\f06a";
 	font-style: normal;
 	font-family: 'FontAwesome';
 }
 
-.help .short:hover {
+.help a:hover {
 	cursor: pointer;
 }
 
-.help .long {
+.help .description {
 	position: absolute;
 	top: 29px;
 	z-index: 20;
@@ -1776,7 +1772,7 @@ input[type=time]{
 	background: #fcf8e3;
 }
 
-.help .long:before {
+.help .description:before {
 	position: absolute;
 	top: 10px;
 	left: -7px;
@@ -1789,7 +1785,7 @@ input[type=time]{
 	content: '';
 }
 
-.help .long:after {
+.help .description:after {
 	position: absolute;
 	top: 11px;
 	left: -6px;
@@ -1802,11 +1798,11 @@ input[type=time]{
 	content: '';
 }
 
-.help .long:hover {
+.help .description:hover {
 	cursor: pointer;
 }
 
-.help .long p {
+.help .description p {
 	color: #836229;
 	line-height: 1.5em;
 }

@@ -14,17 +14,17 @@
 {# Custom blocks defined by Message #}
 {% block help_widget %}
 	{% if attr['data-help-key'] is defined %}
-		<section class="help">
+		<div class="help">
 			{% set key        = attr['data-help-key'] %}
 			{% set translated = key|trans %}
 			{% if key != translated %}
 
 			<a href="#{{ key }}" data-show>{{ 'Show help'|trans }}</a>
 
-			<div id="{{ key }}">
+			<div class="description" id="{{ key }}">
 				<p>{{ translated|raw }}</p>
 			</div>
 			{% endif %}
-		</section>
+		</div>
 	{% endif %}
 {% endblock help_widget %}
