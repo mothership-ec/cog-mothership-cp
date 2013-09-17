@@ -308,7 +308,7 @@
 	width: 210px;
 }
 
-.sidebar .search label {
+.sidebar .search label, .sidebar .filter-by label {
 	display: none;
 }
 
@@ -341,7 +341,7 @@
 	box-shadow: 0 1px 0 rgba(255,255,255,0.1);
 }
 
-.sidebar select {
+.sidebar select, .sidebar .filter-by select {
 	margin: 0px 20px 20px 19px;
 	min-width: 210px;
 	max-width: 210px;
@@ -365,6 +365,14 @@
 	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#343434', EndColorStr='#272727');
 }
+
+.sidebar .filter-by .field {
+	float: left;
+	width: 210px;
+	padding: 0px;
+}
+
+
 
 .sidebar .search input:focus button {
 	display: none;
@@ -1761,7 +1769,6 @@ input[type=time]{
 /* Contextual help */
 
 
-
 .help {
 	float: left;
 	margin: 11px 0 0 15px;
@@ -2356,25 +2363,12 @@ input[type=time]{
 	margin-bottom: 0px;
 }
 
-/*.filter-by .field input {
-	width: 180px;
-	margin: 0px;
-}
-
-
-.filter-by .field select {
-	width: 220px;
-	padding: 8px 10px 6px;
-}*/
-
 
 .filter-by .button {
 	margin: 10px;
 	clear: both;
 	display: block;
 }
-
-
 
 
 
