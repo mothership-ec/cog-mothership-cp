@@ -18,7 +18,12 @@
 			{% set key        = attr['data-help-key'] %}
 			{% set translated = key|trans %}
 			{% if key != translated %}
-			<p>{{ translated|raw }}</p>
+
+			<a href="#{{ key }}" data-show>{{ 'Show help'|trans }}</a>
+
+			<div id="{{ key }}">
+				<p>{{ translated|raw }}</p>
+			</div>
 			{% endif %}
 		</section>
 	{% endif %}

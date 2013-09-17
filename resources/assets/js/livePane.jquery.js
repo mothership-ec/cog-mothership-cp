@@ -29,8 +29,9 @@
 			return this.each(function() {
 				var self  = $(this),
 					state = {
-						settings: settings,
-						selector: selector
+						settings   : settings,
+						selector   : selector,
+						ajaxRequest: null
 					};
 
 				// Save state on the element for use later
@@ -66,12 +67,17 @@
 				var self  = $(this),
 					state = self.data('livePane');
 
+				// Cancel current Ajax request, if there is one
+				if (null !== state.ajaxRequest) {
+					state.ajaxRequest.abort();
+				}
+
 				// If set, fire the beforeSend event
 				if (typeof state.settings.beforeSend === 'function') {
 					state.settings.beforeSend(self);
 				}
 
-				$.ajax({
+				state.ajaxRequest = $.ajax({
 					url     : uri,
 					dataType: 'html',
 					complete: function() {
@@ -79,8 +85,13 @@
 						if (typeof state.settings.afterSend === 'function') {
 							state.settings.afterSend(self);
 						}
+						console.log('complete?');
 					},
 					success : function(html) {
+						// Clear the current Ajax request
+						state.ajaxRequest = null;
+
+						// Replace the HTML in the pane
 						self.html($(state.selector, html).html());
 
 						// If set, fire the afterSend event

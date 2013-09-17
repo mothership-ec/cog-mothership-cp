@@ -308,7 +308,7 @@
 	width: 210px;
 }
 
-.sidebar .search label {
+.sidebar .search label, .sidebar .filter-by label {
 	display: none;
 }
 
@@ -341,7 +341,7 @@
 	box-shadow: 0 1px 0 rgba(255,255,255,0.1);
 }
 
-.sidebar select {
+.sidebar select, .sidebar .filter-by select {
 	margin: 0px 20px 20px 19px;
 	min-width: 210px;
 	max-width: 210px;
@@ -365,6 +365,14 @@
 	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#343434', EndColorStr='#272727');
 }
+
+.sidebar .filter-by .field {
+	float: left;
+	width: 210px;
+	padding: 0px;
+}
+
+
 
 .sidebar .search input:focus button {
 	display: none;
@@ -1016,26 +1024,35 @@
 
 .container-details.dual-column {
 	width: 100%;
-	min-height: 768px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
+.dual-column {
+	overflow: hidden;
+	display: table;
+	margin-bottom: 20px;
+}
+
 .dual-column .column {
-	float: left;
-	position: relative;
-	width: 50%;
-	min-height: 668px;
+	width: 50% ;
 	border: 1px solid #CCC;
+	padding: 10px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin-bottom: 20px;
+	vertical-align: top;
 }
 
 .dual-column .column:nth-child(2) {
 	background: #F5F5F5;
+}
+
+.column {
+	display: table-cell;
+	position: relative;
 }
 
 .column .section {
@@ -1049,13 +1066,18 @@
 .column .title {
 	border: 1px solid #CCC;
 	border-bottom: none;
+	background-image: none;
 }
 
-.column h2 {
+.column p {
+	margin: 10px;
+}
+
+.column h2, .box div h2 {
 	background: #f9f9f9;
 	clear: both;
  	padding: 10px 0px 7px 10px;
-	margin: 0px;
+	margin: 0px 0px 20px 0px;
 	font-size: 1.125em;
 	width: 98% !important;
 }
@@ -1329,26 +1351,68 @@
 	width: 30%;
 }
 
-/* Box */
+/* Display Group */
 
-.box .group {
+
+.display-group {
 	position: relative;
-	margin-bottom: 0;
-	border-right: 1px solid #CCC;
-	border-left: 1px solid #CCC;
-	overflow: hidden;
+	float: left;
+	margin: 0 0 30px 0;
+	max-width: 2000px;
+	width: 100%;
 }
 
-.box {
+.display-group .container {
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	max-width: 70%;
+	width: 70%;
+}
+
+.display-group h2 {
+	float: left;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.display-group .title {
+	position: relative;
+	z-index: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding-bottom: 12px;
+	width: 100%;
+	border: 1px solid #CCC;
+	border-bottom: none;
+	background: none;
+	background-color: #f9f9f9;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	font-size: 1em;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
+}
+
+
+
+.display-group .group {
 	position: relative;
 	margin-bottom: 20px;
 	border: 1px solid #CCC;
-	border-top: none;
 	overflow: hidden;
-	padding: 10px;
+	max-width: 2000px;
+	width: 99.85%;
 }
 
-.box h1, .dual-column h1.title {
+
+
+/*
+.box h1, .dual-column h1.title, .dual-column h2.title {
 	position: relative;
 	z-index: 0;
 	-webkit-box-sizing: border-box;
@@ -1368,8 +1432,8 @@
 	font-size: 1em;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
 }
-
-.small-box h2.title, .box h2.title {
+*/
+.small-box h2.title/*, .box h2.title*/ {
 	position: relative;
 	z-index: 0;
 	-webkit-box-sizing: border-box;
@@ -1391,15 +1455,17 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
 }
 
-.box .title h1:hover,
+/*.box .title h1:hover,
 .box .title h2:hover {
 	cursor: auto;
-}
+}*/
 
 .small-box-row {
 	border-collapse: separate;
 	border-spacing: 15px;
 	display: table;
+	margin: 0px -15px;
+
 }
 
 .group.small-box {
@@ -1523,7 +1589,7 @@ input[type=time]{
 .add-on p {
 	display: block;
 	float: left;
-	padding: 7px 13px 4px;
+	padding: 11px 13px 4px;
 	border-top: 1px solid #CCC;
 	border-bottom: 1px solid #CCC;
 	border-left: 1px solid #CCC;
@@ -1655,53 +1721,12 @@ input[type=time]{
 	width: 70%;
 }
 
-
-#content-edit-content_date:before {
-	float: left;
-	margin-right: 10px;
-	width: 175px;
-	content: 'Month / Day / Year';
-	line-height: 39px;
-}
-
-#content-edit-content_date select {
-	margin-right: 10px;
-	min-width: 100px;
-}
-
-#content-edit-content_date_time {
-	float: left;
-	clear: both;
-	width: 70%;
-}
-
-#content-edit-content_date_time:before {
-	float: left;
-	margin-right: 10px;
-	width: 175px;
-	content: 'Hours : Minutes';
-	line-height: 39px;
-}
-
-
-#content-edit-content_date_time select {
-	float: none;
-}
-
-#content-edit-content_date_time select:last-child {
-	margin-left: 5px;
-}
-
-
-
-
 #benefit-edit_discountAmounts input[type=text] {
 	float: none;
 }
 
 
 /* Contextual help */
-
 
 
 .help {
@@ -1934,7 +1959,21 @@ input[type=time]{
 	z-index: 11;
 }
 
+.positive {
+	color: #3fa262;
+}
 
+.negative {
+	color: #d84939;
+}
+
+.stock-total {
+	font-weight: bold;
+}
+
+.unit-count {
+	margin-right: 10px;
+}
 
 /* Sidebar */
 
@@ -2222,46 +2261,6 @@ input[type=time]{
 
 }
 
-/* Voucher Expiry Date */
-
-#voucher-create_expiry {
-	float: left;
-	width: 70%;
-}
-
-
-#voucher-create_expiry_date:before {
-	float: left;
-	margin-right: 10px;
-	width: 175px;
-	content: 'Month / Day / Year';
-	line-height: 39px;
-}
-
-#voucher-create_expiry_date select, #voucher-create_expiry_time select {
-	margin-right: 10px;
-	min-width: 100px;
-}
-
-#voucher-create_expiry_time {
-	float: left;
-	clear: both;
-	width: 70%;
-}
-
-#voucher-create_expiry_time:before {
-	float: left;
-	margin-right: 10px;
-	width: 175px;
-	content: 'Hours : Minutes';
-	line-height: 39px;
-}
-
-
-#voucher-create_expiry select  {
-	float: none;
-}
-
 
 
 
@@ -2269,36 +2268,26 @@ input[type=time]{
 ------------------------------------------------------------ */
 
 .filter-by  {
-	max-width: 650px;
 }
 
 .filter-by .field {
-	margin-bottom: 10px;
-	width: 200px;
-
+	float: left;
+	width: 340px;
+	padding: 20px 10px;
 }
 
-.filter-by .field input {
-	width: 100%;
-	min-width: 180px;
-	margin: 0px;
-}
-
-
-.filter-by .field select {
-	width: 220px;
-	padding: 8px 10px 6px;
+.filter-by input, .filter-by select {
+	width: 340px;
+	height: 40px;
+	min-width: 340px;
+	margin-bottom: 0px;
 }
 
 
 .filter-by .button {
-	margin-left: 23px;
+	margin: 10px;
 	clear: both;
 	display: block;
-}
-
-.filter-by label {
-	display: none;
 }
 
 
