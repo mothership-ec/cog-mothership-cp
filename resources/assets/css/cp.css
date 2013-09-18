@@ -743,13 +743,16 @@
 	z-index: 11;
 	float: left;
 	margin: 10px 10px 0 0;
-	max-width: 300px;
+	max-width: 840px;
+	min-width: 200px;
+	width: 70%;
 }
 
 .edit-title button {
 	z-index: 11;
 	float: left;
 	margin-top: 11px;
+	height: 34px;
 }
 
 
@@ -1565,7 +1568,7 @@
 .add-on p {
 	display: block;
 	float: left;
-	padding: 11px 13px 4px;
+	padding: 9px 13px 6px 13px;
 	border-top: 1px solid #CCC;
 	border-bottom: 1px solid #CCC;
 	border-left: 1px solid #CCC;
