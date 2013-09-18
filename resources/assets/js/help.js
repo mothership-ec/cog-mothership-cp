@@ -18,7 +18,7 @@ $(function() {
 		e.preventDefault();
 
 		var self     = $(this),
-			longHelp = self.next('.description'),
+			longHelp = self.attr('href'),
 			activeHelp = $('body').find('.description.open');
 
 		// Check if long help is visible then show or hide
