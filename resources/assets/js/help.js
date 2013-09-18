@@ -18,7 +18,7 @@ $(function() {
 		e.preventDefault();
 
 		var self     = $(this),
-			longHelp = self.attr('href'),
+			longHelp = self.next('.description'),
 			activeHelp = $('body').find('.description.open');
 
 		// Check if long help is visible then show or hide
@@ -33,7 +33,7 @@ $(function() {
 
 			$(longHelp).addClass('open').fadeIn(200);
 			
-		}
+		};
 
 	});
 
