@@ -6,7 +6,11 @@
 	}
 
 	// Set up elements with the data-confirm attribute set
-	$(document).on('click submit', '[data-confirm]', function() {
+	$(document).on('submit', 'form[data-confirm]', function() {
+		return confirm($(this).attr('data-confirm'));
+	});
+
+	$(document).on('click', 'a[data-confirm]', function() {
 		return confirm($(this).attr('data-confirm'));
 	});
 
