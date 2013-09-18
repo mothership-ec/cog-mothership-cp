@@ -44,7 +44,7 @@
 		<nav class="navigation">
 			<h1 class="vendor">
 				<a href="{{ url('ms.cp.dashboard') }}">
-					{{ app.cfg.mothership.appName }}
+					{{ app.cfg.app.name }}
 				</a>
 			</h1>
 			{{ render(controller('Message:Mothership:ControlPanel::Controller:Component#mainMenu')) }}
@@ -56,7 +56,7 @@
 		</section>
 		<footer class="footer" role="contentinfo">
 			<small class="copy">&copy; <a href="http://message.co.uk">Message</a> {{ "now"|date('Y') }}</small>
-			<a href="//{{ app.cfg.mothership.url|trim('//') }}" target="_blank" class="website"><i class="icon-external-link"></i>{{ app.cfg.mothership.url }}</a>
+			<a href="//{{ app.cfg.app.baseUrl|trim('//') }}" target="_blank" class="website"><i class="icon-external-link"></i>{{ app.cfg.app.baseUrl }}</a>
 		</footer>
 </div>
 {% endblock %}

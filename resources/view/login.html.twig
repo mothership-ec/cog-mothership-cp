@@ -55,14 +55,12 @@
 				})) }}
 
 			</section>
-			
+
 		</div>
 
 		<footer class="footer" role="contentinfo">
-
-		<small class="copy">&copy; <a href="http://message.co.uk">Message</a> {{ "now"|date('Y') }}</small>
-		<a href="{{ cfg.mothership.url }}" target="_blank" class="website icon-external-link">{{ cfg.mothership.url }}</a>
-
+			<small class="copy">&copy; <a href="http://message.co.uk">Message</a> {{ "now"|date('Y') }}</small>
+			<a href="//{{ app.cfg.app.baseUrl|trim('//') }}" target="_blank" class="website"><i class="icon-external-link"></i>{{ app.cfg.app.baseUrl }}</a>
 		</footer>
 	</div>
 {% endblock %}
