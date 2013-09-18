@@ -18,7 +18,7 @@
 
 	// Set up remove links for repeatable groups
 	$(document).on('click', 'a[data-group-remove]', function() {
-		$(this).parent('.group').fadeOut(200, function() {
+		$(this).parents('.group').fadeOut(200, function() {
 			$(this).remove();
 		});
 	});
