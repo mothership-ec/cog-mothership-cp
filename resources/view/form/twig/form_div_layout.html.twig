@@ -19,9 +19,9 @@
 			{% set translated = key|trans %}
 			{% if key != translated %}
 
-			<a href="#{{ key }}" data-show>{{ 'Show help'|trans }}</a>
+			<a href="#{{ key|replace({'.': '-'}) }}" data-show="">{{ 'Show help'|trans }}</a>
 
-			<div class="description" id="{{ key }}">
+			<div class="description" id="{{ key|replace({'.': '-'}) }}">
 				<p>{{ translated|raw }}</p>
 			</div>
 			{% endif %}
