@@ -11,6 +11,7 @@ use Message\Cog\Event\SubscriberInterface;
 use Message\Cog\HTTP\RedirectResponse;
 
 use Symfony\Component\HttpKernel\KernelEvents;
+use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
@@ -28,7 +29,8 @@ class EventListener extends BaseListener implements SubscriberInterface
 	{
 		return array(
 			KernelEvents::EXCEPTION => array(
-				array('sendToLogin')
+				array('sendToLogin'),
+				array('renderErrorPage'),
 			),
 		);
 	}
@@ -55,4 +57,30 @@ class EventListener extends BaseListener implements SubscriberInterface
 				$this->_services['routing.generator']->generate('ms.cp.login')
 			));
 		}
-	}}
+	}
+
+	/**
+	 * Render a control panel error page for the exception.
+	 *
+	 * @param GetResponseForExceptonEvent $event The event object
+	 */
+	public function renderErrorPage(GetResponseForExceptionEvent $event)
+	{
+		// Skip if the requested route is not in the control panel
+		if (!in_array('ms.cp', $event->getRequest()->get('_route_collections'))) {
+			return false;
+		}
+
+		$request = $event->getRequest()->duplicate(null, null, array(
+			'_controller' => 'Message\\Mothership\\ControlPanel\\Controller\\Error::exception',
+			'_format'     => $event->getRequest()->getRequestFormat(),
+			'exception'   => $event->getException(),
+		));
+
+		$request->setMethod('GET');
+
+		$response = $event->getKernel()->handle($request, HttpKernelInterface::SUB_REQUEST, true);
+
+		$event->setResponse($response);
+	}
+}
