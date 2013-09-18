@@ -1,7 +1,7 @@
 /**
  * Contextual Help Plugin
  *
- * This plugin provides functionality to all contextual help. 
+ * This plugin provides functionality to all contextual help.
  * Revealing the chosen help section for a field or form element.
  *
  * This is a *private* plugin, and should only be used by Message Digital Design.
@@ -14,7 +14,6 @@ $(function() {
 
 	// Show required contextual help
 	$(document).on('click', 'a[data-show]', function(e) {
-
 		e.preventDefault();
 
 		var self     = $(this),
@@ -32,8 +31,8 @@ $(function() {
 			activeHelp.removeClass('open').fadeOut(150);
 
 			$(longHelp).addClass('open').fadeIn(200);
-			
-		};
+
+		}
 
 	});
 
