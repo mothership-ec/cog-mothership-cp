@@ -38,7 +38,7 @@
 	width: 248px;
 	height: 35px;
 	text-indent: 58px;
-	line-height: 35px;
+	line-height: 37px;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3f759f', EndColorStr='#34608c');
 }
 
@@ -49,7 +49,7 @@
 }
 
 .header-top .vendor a {
-	font-size: 0.7em;
+	font-size: 0.6em;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	position: absolute;
 	top: 5px;
@@ -1158,13 +1158,13 @@
 
 #save-content {
 	position: fixed;
-	top: 138px;
+	top: 178px;
 	right: 14px;
 	z-index: 12;
 }
 
 .dual-column #save-content {
-	top: 79px;
+	top: 120px;
 }
 
 
@@ -1934,7 +1934,7 @@
 
 .file-manager .button.delete {
 	position: fixed;
-	top: 79px;
+	top: 120px;
 	right: 151px;
 	z-index: 12;
 	display: inline-block;
@@ -1965,23 +1965,11 @@
     height: calc(100% - 120px);
 }
 
-.products #save-content {
-	top: 137px;
-}
-
-
-
 /* Create product */
-
-
-
-.create-product {
-	margin-top: 89px;
-}
 
 .create-product button {
 	position: fixed;
-	top: 77px;
+	top: 120px;
 	right: 14px;
 	z-index: 11;
 }
@@ -2465,7 +2453,7 @@
 
 
 .create-discount #save-content {
-	top: 79px;
+	top: 120px;
 }
 
 #criteria-edit_products {
