@@ -2148,13 +2148,18 @@
 
 .order-details li {
 	margin-bottom: 10px;
+	padding-left: 150px;
+	min-height: 20px;
 }
 
 .order-details span {
-	display: inline-block;
+	display: block;
 	width: 150px;
+	margin-left: -150px;
+	float: left;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: normal;
+
 }
 
 
