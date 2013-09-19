@@ -17,19 +17,23 @@
 /* ======================================================= */
 
 
+
 /* Header
 ------------------------------------------------------------ */
 
+
+
 .header-top {
-	height: 40px;
+	height: 45px;
 	overflow: hidden;
-	background-color: #3f759f;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#3f759f), to(#34608c));
-	background-image: -webkit-linear-gradient(top, #3f759f, #34608c);
-	background-image: -moz-linear-gradient(top, #3f759f, #34608c);
-	background-image: -o-linear-gradient(top, #3f759f, #34608c);
-	background-image: -ms-linear-gradient(top, #3f759f, #34608c);
-	background-image: linear-gradient(top, #3f759f, #34608c);
+	background-color: #375d82;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(55, 93, 130)), to(rgb(46, 85, 121)));
+	background-image: -webkit-linear-gradient(top, rgb(55, 93, 130), rgb(46, 85, 121));
+	background-image: -moz-linear-gradient(top, rgb(55, 93, 130), rgb(46, 85, 121));
+	background-image: -o-linear-gradient(top, rgb(55, 93, 130), rgb(46, 85, 121));
+	background-image: -ms-linear-gradient(top, rgb(55, 93, 130), rgb(46, 85, 121));
+	background-image: linear-gradient(top, rgb(55, 93, 130), rgb(46, 85, 121));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#375d82', EndColorStr='#2e5579');
 }
 
 .header-top .vendor {
@@ -52,17 +56,17 @@
 	font-size: 0.6em;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	position: absolute;
-	top: 5px;
+	top: 7px;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: url(../images/mothership-logo.png) 20px center no-repeat;
+	background: url(../images/mothership-logo.png) 20px 3px no-repeat;
 	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .logout {
 	position: absolute;
-	top: 5px;
+	top: 8px;
 	right: 14px;
 	display: block;
 	width: 101px;
@@ -70,10 +74,18 @@
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
-	background: #19517d;
-	-webkit-box-shadow: 1px 1px 0px #5584b4;
-	-moz-box-shadow: 1px 1px 0px #5584b4;
-	box-shadow: 1px 1px 0px #5584b4;
+	border: 1px solid #213c57;
+	background-color: #213c57;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(33, 60, 87)), to(rgb(35, 63, 90)));
+	background-image: -webkit-linear-gradient(top, rgb(33, 60, 87), rgb(35, 63, 90));
+	background-image: -moz-linear-gradient(top, rgb(33, 60, 87), rgb(35, 63, 90));
+	background-image: -o-linear-gradient(top, rgb(33, 60, 87), rgb(35, 63, 90));
+	background-image: -ms-linear-gradient(top, rgb(33, 60, 87), rgb(35, 63, 90));
+	background-image: linear-gradient(top, rgb(33, 60, 87), rgb(35, 63, 90));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#213c57', EndColorStr='#233f5a');
+	-webkit-box-shadow: 0px 1px 0px rgba(255,255,255,0.1);
+	-moz-box-shadow: 0px 1px 0px rgba(255,255,255,0.1);
+	box-shadow: 0px 1px 0px rgba(255,255,255,0.1);
 	text-align: center;
 	text-shadow: none;
 	font-size: 0.875em;
@@ -96,6 +108,8 @@
 	box-shadow: inset 0px 1px 5px 0px rgba(000, 000, 000, 0.25), 1px 1px 0px #5584b4;
 }
 
+
+
 /* Navigation
 ------------------------------------------------------------ */
 
@@ -110,6 +124,7 @@
 	width: 100%;
 	height: 61px;
 	border: 1px solid #26537c;
+	border-top: 1px solid #184268;
 	background-color: #528cb6;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#528cb6), to(#4473a6));
 	background-image: -webkit-linear-gradient(top, #528cb6, #4473a6);
@@ -1158,13 +1173,13 @@
 
 #save-content {
 	position: fixed;
-	top: 178px;
+	top: 183px;
 	right: 14px;
 	z-index: 12;
 }
 
 .dual-column #save-content {
-	top: 120px;
+	top: 125px;
 }
 
 
@@ -1934,7 +1949,7 @@
 
 .file-manager .button.delete {
 	position: fixed;
-	top: 120px;
+	top: 125px;
 	right: 151px;
 	z-index: 12;
 	display: inline-block;
@@ -1969,7 +1984,7 @@
 
 .create-product button {
 	position: fixed;
-	top: 120px;
+	top: 125px;
 	right: 14px;
 	z-index: 11;
 }
@@ -2453,7 +2468,7 @@
 
 
 .create-discount #save-content {
-	top: 120px;
+	top: 125px;
 }
 
 #criteria-edit_products {
