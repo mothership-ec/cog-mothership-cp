@@ -40,16 +40,21 @@
 		<div class="loading-spinner">
 			<p>Loading&hellip;</p><div class="spinner"></div>
 		</div>
-
-		<nav class="navigation">
+	<header class="header">
+		<div class="header-top">
 			<h1 class="vendor">
 				<a href="{{ url('ms.cp.dashboard') }}">
 					{{ app.cfg.app.name }}
 				</a>
 			</h1>
-			{{ render(controller('Message:Mothership:ControlPanel::Controller:Component#mainMenu')) }}
 			<a class="logout" href="{{ url('ms.cp.logout') }}">Log Out</a>
+		</div>
+		<nav class="navigation">
+
+			{{ render(controller('Message:Mothership:ControlPanel::Controller:Component#mainMenu')) }}
+
 		</nav>
+	</header>
 
 		<section class="clear">
 			{% block content %}{% endblock %}
