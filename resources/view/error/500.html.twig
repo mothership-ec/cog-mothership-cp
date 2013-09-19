@@ -1,6 +1,7 @@
 {% extends '::_templates/cp' %}
 
 {% block content %}
+<div class="container-error">
 <h1>Server error</h1>
 
 <p>An unexpected error occured. This has been logged for investigation. Please try your request again, and contact Message if the problem persists. For debugging purposes, the error details are below:</p>
@@ -15,4 +16,5 @@
 	<dt>Date & time</dt>
 		<dd>{{ "now"|date('d/m/Y h:ia') }}</dd>
 </dl>
+</div>
 {% endblock %}

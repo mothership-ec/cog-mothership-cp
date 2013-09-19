@@ -1610,6 +1610,7 @@
 	float: left;
 	max-width: 70%;
 	width: 70%;
+	margin-bottom: 15px;
 }
 
 .add-on p {
@@ -1694,7 +1695,7 @@
 
 
 
-.authorship {
+/*.authorship {
 	position: relative;
 	display: inline-block;
 	float: left;
@@ -1721,13 +1722,14 @@
 .authorship h2 {
 	margin: 0 0 10px 0;
 	font-size: 1.0em;
-}
+}*/
 
 .authorship dt {
 	float: left;
 	clear: left;
 	margin: 0 3px 10px 0;
 	white-space: nowrap;
+	font-weight: bold;
 }
 
 .authorship dd {
@@ -2471,4 +2473,9 @@
 #criteria-edit_products .field {
 	width: 50%;
 	float: left;
+}
+
+.container-error {
+	text-align: center;
+	top: 40%;
 }
