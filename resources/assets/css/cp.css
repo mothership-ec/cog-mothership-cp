@@ -715,12 +715,13 @@
 
 .edit-title {
 	position: absolute;
-	top: 0;
+	top: 0px;
 	z-index: 11;
 	display: none;
 	padding-left: 22px;
+	padding-top: 5px;
 	width: 100%;
-	height: 64px;
+	height: 59px;
 	background: #F1F1F1;
 	background-color: #f1f1f1;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e7e7e7));
@@ -1479,13 +1480,7 @@
 	padding: 20px;
 }
 
-.display-group.container-cms .group {
-	padding-top: 20px;
-}
 
-.display-group.container-cms .field {
-	padding: 0px 20px;
-}
 
 .small-box h2.title/*, .box h2.title*/ {
 	position: relative;
@@ -1594,6 +1589,10 @@
 
 .field.inline .help {
 	margin-top: 0;
+}
+
+.field.inline .help .description {
+	top: -10px;
 }
 
 .field.inline .help .long {
