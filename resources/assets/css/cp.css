@@ -135,6 +135,8 @@
 	float: left;
 	height: 59px;
 	list-style: none;
+	width: 100%;
+	min-width: 1200px;
 }
 
 .navigation li {
