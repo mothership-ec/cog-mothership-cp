@@ -90,9 +90,13 @@
 }
 
 .navigation ol {
-	float: left;
+	position: absolute;
+	top: 0px;
+	left: 249px;
 	height: 59px;
 	list-style: none;
+	width: 950px;
+
 }
 
 .navigation li {
@@ -106,11 +110,12 @@
 	-ms-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
+
 }
 
 .navigation li a {
 	display: block;
-	padding: 0 25px;
+	padding: 0 1em;
 	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -2458,7 +2463,32 @@
 	float: left;
 }
 
+/* Errors
+-------------------------------------- */
+
 .container-error {
 	text-align: center;
-	top: 40%;
+	top: 35%;
+	left: 25%;
+	width: 50%;
+	height: auto;
+}
+
+.container-error p,  .container-error dd {
+	margin: 20px 0px;
+}
+
+.container-error dl {
+	text-align: left;
+	padding-left: 150px;
+}
+
+.container-error dt {
+	font-weight: bold;
+	float: left;
+	margin-left: -150px;
+}
+
+.e-505 p {
+	text-align: left;
 }
