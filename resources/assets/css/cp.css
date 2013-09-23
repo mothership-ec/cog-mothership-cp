@@ -2450,7 +2450,7 @@
 
 
 .create-discount #save-content {
-	top: 120px;
+	top: 80px;
 }
 
 #criteria-edit_products {
@@ -2458,7 +2458,7 @@
 	overflow: hidden;
 }
 
-#criteria-edit_products .field {
+#criteria-edit_products .field, .double-col .field {
 	width: 50%;
 	float: left;
 }
