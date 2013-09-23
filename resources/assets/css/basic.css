@@ -772,7 +772,7 @@ table {
 }
 
 table th {
-	padding: 5px;
+	padding: 5px 5px 5px 15px;
 	border: none;
 	background: none;
 	font-weight: normal;

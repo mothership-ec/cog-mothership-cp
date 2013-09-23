@@ -1155,14 +1155,14 @@
 
 #save-content {
 	position: fixed;
-	top: 178px;
+	top: 138px;
 	right: 14px;
 	z-index: 12;
 }
 
-.dual-column #save-content {
+/*.dual-column #save-content {
 	top: 120px;
-}
+}*/
 
 
 /* Create page */
