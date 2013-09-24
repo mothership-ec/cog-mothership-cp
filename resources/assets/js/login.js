@@ -10,7 +10,7 @@
  */
 
 $(function() {
-		
+
 	var inputArray = $('.login-form input'),
 		webkitInput = '.login-form input:-webkit-autofill';
 
@@ -28,10 +28,14 @@ $(function() {
 	    input.blur(function(){
 	        if(!input.val()) { label.fadeIn(); }
 	    });
-	    
+
 	    // On load hide label if input has a value
-    	$(window).load(function() {	
+    	$(window).load(function() {
 			if (webkitInput || input.val()) { label.hide(); }
+		});
+
+		$(window).load(function() {
+			if(!input.val()) { label.fadeIn(); }
 		});
 
 	});
