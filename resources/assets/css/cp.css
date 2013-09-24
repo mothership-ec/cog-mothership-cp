@@ -1157,6 +1157,11 @@
 	width: 98% !important;
 }
 
+.column h3 {
+	margin: 20px 0px;
+	color: #444;
+}
+
 #save-content {
 	position: fixed;
 	top: 138px;
@@ -2538,3 +2543,19 @@
 .e-505 p {
 	text-align: left;
 }
+
+/* Repairs
+--------------------------------------- */
+
+
+dl.totals dt,
+dl.totals dd {
+	width: 50%;
+	float: left;
+	margin-bottom: 10px;
+}
+
+dl.totals dt {
+	font-weight: bold;
+}
+
