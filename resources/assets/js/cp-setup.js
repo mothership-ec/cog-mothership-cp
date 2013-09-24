@@ -24,21 +24,18 @@
 			pane.find('input, select, textarea, button').each(function() {
 				var self = $(this);
 
-				if (self.attr('disabled')) {
-					self.attr('data-disabled', true);
-				}
-
-				self.attr('disabled', 'disabled');
+				self.attr('data-disabled', (self.attr('disabled') ? 'orig' : true))
+					.attr('disabled', 'disabled');
 			});
 		},
 		afterSend: function(pane) {
 			$('html').removeClass('loading');
 
 			// Re-enable form inputs
-			pane.find('input, select, textarea, button').each(function() {
+			pane.find('input, select, textarea, button').filter('[data-disabled]').each(function() {
 				var self = $(this);
 
-				if (!self.attr('data-disabled')) {
+				if ('orig' === self.attr('data-disabled')) {
 					self.removeAttr('disabled');
 				}
 			});
