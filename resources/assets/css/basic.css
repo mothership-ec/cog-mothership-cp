@@ -205,11 +205,13 @@ input[type="image"] {
 input[type=date] {
 	width: 330px;
 	margin-right: 20px;
+	margin-bottom: 25px;
 }
 
 input[type=time]{
 	width: 245px;
 	margin-right: 20px;
+	margin-bottom: 25px;
 }
 
  input[type=date]:before {
