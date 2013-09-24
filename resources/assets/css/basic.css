@@ -818,7 +818,7 @@ table thead tr {
 
 table tr:nth-child(odd) td {
 	background: #FAFAFA;
-	z-index: 1;
+	z-index: 0;
 }
 
 table tr:nth-child(even) td {
