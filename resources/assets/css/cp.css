@@ -1160,6 +1160,7 @@
 	z-index: 12;
 }
 
+
 /*.dual-column #save-content {
 	top: 120px;
 }*/
@@ -1929,9 +1930,17 @@
 	box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
 }*/
 
+.file-manager .button.save {
+	position: fixed;
+	top: 78px !important;
+	right: 151px;
+	z-index: 12;
+	display: inline-block;
+}
+
 .file-manager .button.delete {
 	position: fixed;
-	top: 120px;
+	top: 78px;
 	right: 151px;
 	z-index: 12;
 	display: inline-block;
