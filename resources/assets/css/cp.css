@@ -1140,6 +1140,10 @@
 	background-image: none;
 }
 
+.column li {
+	list-style: none;
+}
+
 .column p {
 	margin: 10px;
 }
