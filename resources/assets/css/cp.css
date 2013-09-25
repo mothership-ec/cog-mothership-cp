@@ -2094,7 +2094,7 @@
 }
 
 .pick-list {
-	margin: 20px 0px;
+	margin: 0px;
 	width: 95%;
 }
 
@@ -2566,7 +2566,7 @@ dl.totals dt {
 
 /* Mobile
 ---------------------------------------- */
-
+/*
 @media all and (max-width: 600px) and (min-width: 400px) {
 	body {
 		position: static;
@@ -2683,7 +2683,7 @@ dl.totals dt {
  		margin: 0px;
  		overflow: auto;
  		overflow-x: hidden;
- 		padding-left: 20px;
+ 		padding-left: 15px;
  	}
 
  	.container-content {
@@ -2693,6 +2693,7 @@ dl.totals dt {
  		height: auto;
  		padding: 10px;
  		margin-bottom: 60px;
+
  	}
 
  	h1 span.updated-date {
@@ -2717,5 +2718,8 @@ dl.totals dt {
  		z-index: 999;
  	}
 
+ }
 
 
+
+*/
