@@ -77,13 +77,6 @@
 					state.settings.beforeSend(self);
 				}
 
-				// Removes any feedback and clear styling
-				if ( $('.feedback').is(':visible')) {
-					$('.feedback').slideUp().remove();
-					$('.clear').removeAttr('style');
-					$('#save-content').removeAttr('style');
-				}
-
 				state.ajaxRequest = $.ajax({
 					url     : uri,
 					dataType: 'html',
