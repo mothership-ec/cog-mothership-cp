@@ -81,6 +81,7 @@
 				if ( $('.feedback').is(':visible')) {
 					$('.feedback').slideUp().remove();
 					$('.clear').removeAttr('style');
+					$('#save-content').removeAttr('style');
 				}
 
 				state.ajaxRequest = $.ajax({
