@@ -1162,7 +1162,7 @@
 	color: #444;
 }
 
-#save-content {
+#save-content, .save-content {
 	position: fixed;
 	top: 138px;
 	right: 14px;
@@ -1653,6 +1653,20 @@
 	border-radius: 0px 5px 5px 0px;
 }
 
+.column .add-on {
+	width: 100%;
+	max-width: 100%;
+}
+
+.column .add-on p {
+	margin: 0px;
+}
+
+.column .add-on input {
+	max-width: 350px;
+	width: 40%;
+}
+
 
 
 /* Details */
@@ -1904,7 +1918,21 @@
 	font-family: 'FontAwesome';
 }
 
+ul.search-results {
+	margin: 20px;
+}
 
+.search-results li {
+	margin: 20px 0px;
+}
+
+.search-results li a {
+	text-decoration: none;
+}
+
+.search-results li a:hover {
+	text-decoration: underline;
+}
 
 /* File Details */
 
@@ -2169,6 +2197,10 @@
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: normal;
 
+}
+
+ol.order-details li {
+	list-style-type: decimal;
 }
 
 
