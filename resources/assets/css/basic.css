@@ -1,4 +1,4 @@
-/* ======================================================= */
+ /* ======================================================= */
 /*                                                         */
 /*                                                         */
 /*    Mothership                                           */
@@ -205,11 +205,13 @@ input[type="image"] {
 input[type=date] {
 	width: 330px;
 	margin-right: 20px;
+	margin-bottom: 25px;
 }
 
 input[type=time]{
 	width: 245px;
 	margin-right: 20px;
+	margin-bottom: 25px;
 }
 
  input[type=date]:before {
@@ -303,6 +305,11 @@ button:active,
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.9);
 	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.9);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+button.block-btn {
+	clear: both;
+	display: block;
 }
 
 
@@ -626,6 +633,21 @@ button:active,
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#d74738', EndColorStr='#9b1412');
 }
 
+button:disabled, button:disabled:hover {
+	background: #e9e8e8;
+	color: #7f7f7f;
+	border-color: #dcdcdc;
+	text-shadow: 0px 1px 0px #FFF;
+	box-shadow: none;
+	cursor: default;
+
+}
+
+button:disabled:active {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
 
 
 /* Button group
@@ -772,7 +794,7 @@ table {
 }
 
 table th {
-	padding: 5px;
+	padding: 5px 5px 5px 15px;
 	border: none;
 	background: none;
 	font-weight: normal;
@@ -803,7 +825,7 @@ table thead tr {
 
 table tr:nth-child(odd) td {
 	background: #FAFAFA;
-	z-index: 1;
+	z-index: 0;
 }
 
 table tr:nth-child(even) td {
@@ -1071,4 +1093,7 @@ dd {
 	text-decoration: none;
 }
 
+.clearfix {
+	clear: both;
+}
 

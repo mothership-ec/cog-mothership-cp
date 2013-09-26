@@ -40,9 +40,10 @@
 		<div class="loading-spinner">
 			<p>Loading&hellip;</p><div class="spinner"></div>
 		</div>
-
+<a href="#main-menu" class="menu-collapse">Menu</a>
 	<nav class="navigation">
 			<h1 class="vendor">
+
 				<a href="{{ url('ms.cp.dashboard') }}">
 					{{ app.cfg.app.name }}
 				</a>
@@ -57,6 +58,8 @@
 
 
 		<section class="clear">
+
+
 			{% block content %}{% endblock %}
 		</section>
 		<footer class="footer" role="contentinfo">
