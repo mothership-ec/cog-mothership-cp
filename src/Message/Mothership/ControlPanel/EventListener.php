@@ -71,7 +71,7 @@ class EventListener extends BaseListener implements SubscriberInterface
 			return false;
 		}
 		// Skip if the requested route is not in the control panel
-		if (!in_array('ms.cp', $event->getRequest()->get('_route_collections'))) {
+		if (is_array($event->getRequest()->get('_route_collections')) && !in_array('ms.cp', $event->getRequest()->get('_route_collections'))) {
 			return false;
 		}
 
