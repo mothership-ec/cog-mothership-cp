@@ -16,7 +16,6 @@
 {% block javascripts %}
 	{{ parent() }}
 	{% javascripts
-		'@Message:Mothership:ControlPanel::resources/assets/js/login.js'
 		'@Message:Mothership:ControlPanel::resources/assets/js/feedback.js'
 
 		output='/assets/js/ms_login.js'
@@ -52,6 +51,14 @@
 					email: email,
 					hash: hash,
 					redirectURL: url('ms.cp.dashboard'),
+					inputAttributes: {
+						'password': {
+							'placeholder': 'New password'
+						},
+						'confirm': {
+							'placeholder': 'Confirm password'
+						},
+					}
 				})) }}
 
 			</section>

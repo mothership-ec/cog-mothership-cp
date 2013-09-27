@@ -1171,9 +1171,10 @@
 	z-index: 12;
 }
 
-.file-manager #save-content {
+.file-manager #save-content, .create-discount #save-content  {
 	top: 78px;
 }
+
 
 /*.dual-column #save-content {
 	top: 120px;
@@ -2499,9 +2500,7 @@ ol.order-details li {
 
 
 
-.create-discount #save-content {
-	top: 80px;
-}
+
 
 #criteria-edit_products {
 	border: 1px solid #F1F1F1;

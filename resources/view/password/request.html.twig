@@ -16,7 +16,6 @@
 {% block javascripts %}
 	{{ parent() }}
 	{% javascripts
-		'@Message:Mothership:ControlPanel::resources/assets/js/login.js'
 		'@Message:Mothership:ControlPanel::resources/assets/js/feedback.js'
 
 		output='/assets/js/ms_login.js'
@@ -49,7 +48,13 @@
 
 				{{ render(controller('Message:User::Controller:ForgottenPassword#request', {
 					resetRoute: 'ms.cp.password.reset',
-					email: email
+					email: email,
+					inputAttributes: {
+						'email': {
+							'placeholder': 'Email address'
+						},
+					}
+
 				})) }}
 
 			</section>

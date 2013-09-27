@@ -362,7 +362,9 @@ button.block-btn {
 	padding: 7px 13px 5px;
 }
 
-
+input.button {
+	width: 100px;
+}
 
 /* Submit, add, upload, create button styles */
 
@@ -632,6 +634,8 @@ button.block-btn {
 	background-image: linear-gradient(top, #d74738, #9b1412);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#d74738', EndColorStr='#9b1412');
 }
+
+
 
 button:disabled, button:disabled:hover {
 	background: #e9e8e8;
