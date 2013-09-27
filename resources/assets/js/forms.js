@@ -13,6 +13,8 @@
 
 		self.before($(prototype).hide().fadeIn(200));
 
+		self.attr('data-group-index', (index*1) + 1);
+
 		return false;
 	});
 

@@ -114,9 +114,20 @@ body {
 	margin-right: 2.4271844660194173%;
 	max-width: 360px;
 	width: 100%;
-	height: 46px;
+	padding: 15px 20px 10px 30px;
 }
 
+.login-form input[type="email"] {
+	background-image: url(../../images/user-icon.png);
+	background-position: 10px center;
+	background-repeat: no-repeat;
+}
+
+.login-form input[type="password"] {
+	background-image: url(../../images/lock-icon.png);
+	background-position: 10px center;
+	background-repeat: no-repeat;
+}
 
 .login-form button {
 	position: absolute;
@@ -152,9 +163,10 @@ body {
 	height: 44px;
 	color: #E1E1E1;
 	font-size: 0.875em;
+	display: none;
 }
 
-.login-form label[for="login_email"],
+/*.login-form label[for="login_email"],
 .login-form label[for="login_password"],
 .login-form label[for="forgotten_email"],
 .login-form label[for="reset_password"],
@@ -167,7 +179,10 @@ body {
 	color: #999;
 	font-size: 16px;
 	font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
 }
+
+
 
 .login-form label[for="login_email"]:before {
 	margin-right: 10px;
@@ -179,7 +194,7 @@ body {
 	margin-right: 10px;
 	content: "\f023";
 	font-family: 'FontAwesome';
-}
+}*/
 
 .login-form label[for="login_remember"] {
 	position: absolute;

@@ -15,6 +15,7 @@ $(function() {
 	var container       = '.container-cp',
 		feedback        = '.feedback',
 		saveButton 	    = '#save-content',
+		deleteButton    = '#delete',
 		max   			= 4,
 		height   		= 0,
 		fbTrueHeight    = 0,
@@ -48,6 +49,9 @@ $(function() {
 
 		// Set savebutton top position
 		$(saveButton).css('top', offSet + 'px');
+
+		// Set deletebutton top position
+		$(deleteButton).css('top', offSet + 'px');
 
 		/**
 		 * Minus container offset off the current height value, this resolves content being hidden when
