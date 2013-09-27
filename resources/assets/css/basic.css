@@ -307,6 +307,11 @@ button:active,
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
+button.block-btn {
+	clear: both;
+	display: block;
+}
+
 
 
 /* Button styles
@@ -357,7 +362,9 @@ button:active,
 	padding: 7px 13px 5px;
 }
 
-
+input.button {
+	width: 100px;
+}
 
 /* Submit, add, upload, create button styles */
 
@@ -627,6 +634,8 @@ button:active,
 	background-image: linear-gradient(top, #d74738, #9b1412);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#d74738', EndColorStr='#9b1412');
 }
+
+
 
 button:disabled, button:disabled:hover {
 	background: #e9e8e8;

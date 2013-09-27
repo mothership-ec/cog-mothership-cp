@@ -1,4 +1,4 @@
-{% extends '::_templates/main' %}
+ {% extends '::_templates/main' %}
 
 
 {% block stylesheets %}
@@ -17,7 +17,6 @@
 {% block javascripts %}
 	{{ parent() }}
 	{% javascripts
-		'@Message:Mothership:ControlPanel::resources/assets/js/login.js'
 		'@Message:Mothership:ControlPanel::resources/assets/js/feedback.js'
 
 		output='/assets/js/ms_login.js'
@@ -51,7 +50,15 @@
 
 				{{ render(controller('Message:User::Controller:Authentication#login', {
 					redirectURL: url(redirectRoute),
-					forgottenPasswordRoute: 'ms.cp.password.request'
+					forgottenPasswordRoute: 'ms.cp.password.request',
+					inputAttributes: {
+						'email': {
+							'placeholder': 'Email address'
+						},
+						'password': {
+							'placeholder': 'Password'
+						}
+					}
 				})) }}
 
 			</section>

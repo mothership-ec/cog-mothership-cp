@@ -39,6 +39,13 @@
 					self.removeAttr('disabled');
 				}
 			});
+
+			// Removes any feedback and clear styling
+			if ( $('.feedback').is(':visible')) {
+				$('.feedback').slideUp().remove();
+				$('.clear').removeAttr('style');
+				$('#save-content').removeAttr('style');
+			}
 		},
 		afterReplace: function(pane, responseData) {
 			$('ol#main-menu li')
