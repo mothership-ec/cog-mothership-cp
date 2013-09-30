@@ -862,6 +862,7 @@
 
 
 
+
 /* Delete page */
 
 
@@ -2606,3 +2607,25 @@ dl.totals dt {
 	display: none;
 }
 
+/* Users
+--------------------------------------- */
+
+.skip-payment {
+	float: right;
+	height: 19px;
+	overflow: hidden;
+	margin-top: 5px;
+}
+
+.skip-payment .field, skip-payment input {
+	margin: 0px;
+}
+
+
+button.impersonate {
+	position: relative;
+	display: inline-block;
+	margin-right: 8px;
+	margin-top: 12px;
+
+}
