@@ -2174,7 +2174,13 @@ ul.search-results {
 	margin-bottom: 0px;
 }
 
+td.complete {
+	background: #c9e5c9 !important;
+}
 
+td.partial {
+	background: #fed779 !important;
+}
 
 /* Orders */
 
