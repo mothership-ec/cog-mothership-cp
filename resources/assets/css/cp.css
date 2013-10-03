@@ -1944,6 +1944,7 @@
 	position: absolute;
 	bottom: 0px;
 	width: 190px;
+	overflow: hidden;
 }
 
 
