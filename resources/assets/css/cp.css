@@ -1328,9 +1328,9 @@
 
 
 .repeatable-group {
-	position: relative;
 	float: left;
-	width: 100%%;
+	width: 100%;
+
 }
 
 .repeatable-group .container {
@@ -1341,6 +1341,7 @@
 	margin-bottom: 20px;
 	max-width: 100%;
 	width: 100%;
+
 }
 
 .repeatable-group h2 {
@@ -1350,11 +1351,9 @@
 }
 
 .repeatable-group .group {
-	position: relative;
 	margin-bottom: 0;
 	border-right: 1px solid #CCC;
 	border-left: 1px solid #CCC;
-	overflow: hidden;
 }
 
 .repeatable-group .group:last-child {
@@ -1441,11 +1440,32 @@
 }
 
 .repeatable-group .help {
-	position: absolute;
-	top: 44px;
-	right: -20px;
-	width: 30%;
+	float: left;
+	margin: 11px 0 0 15px;
 }
+
+
+.repeatable-group .help .description {
+	position: absolute;
+	top: 25px;
+	z-index: 20;
+	display: none;
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-left: 2%;
+	padding: 15px;
+	min-height: 39px;
+	width: 28%;
+	border: 1px solid #d5cb95;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #fcf8e3;
+}
+
+
 
 .group-desc {
 	margin-bottom: 20px;
@@ -1902,15 +1922,28 @@
 	width: 200px;
 	height: 200px;
 	border: 5px solid #FFF;
+	text-decoration: none;
 	-webkit-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
 	-moz-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
 	box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
+	position: relative;
 }
 
 .listing img {
 	width: 200px;
 	height: 200px;
 	background: #FFF;
+}
+
+.file-overlay {
+	background: rgba(0,0,0,0.5);
+	color: #eee;
+	padding: 5px;
+	height: 40px;
+	z-index: 99px;
+	position: absolute;
+	bottom: 0px;
+	width: 190px;
 }
 
 
