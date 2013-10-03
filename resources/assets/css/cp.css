@@ -1154,15 +1154,16 @@
 }
 
 .column h2, .box div h2 {
-	background-color: #f9f9f9;
-	border: 1px solid #ccc;
+/*	background-color: #f9f9f9;*/
+	border-bottom: 1px solid #ccc;
+	/*border: 1px solid #ccc;
 	-webkit-box-shadow: 0px 1px 3px rgba(000,000,000,0.05);
 	-moz-box-shadow: 0px 1px 3px rgba(000,000,000,0.05);
 	box-shadow: 0px 1px 3px rgba(000,000,000,0.05);
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');*/
 	clear: both;
- 	padding: 10px 15px 7px;
-	margin: 0px 0px 20px 0px;
+ 	padding: 10px 0px 7px;
+	margin: 5px 0px 20px 0px;
 	font-size: 1.125em;
 	width: 100%;
 	-webkit-box-sizing: border-box;
