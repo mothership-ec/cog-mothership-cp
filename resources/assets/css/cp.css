@@ -2100,6 +2100,32 @@ ul.search-results {
 	margin-top: 20px;
 }
 
+.product-image {
+	margin-bottom: 40px;
+	overflow: hidden;
+	float: left;
+}
+
+
+.product-image img {
+	float: left;
+	margin: 0px 30px 10px 0px;
+	border: 5px solid #FFF;
+	-webkit-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
+	-moz-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
+	box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
+}
+
+.product-image dt {
+	font-weight: bold;
+
+}
+
+.product-image dd {
+	margin-bottom: 10px;
+}
+
+
 
 
 /* Orders
