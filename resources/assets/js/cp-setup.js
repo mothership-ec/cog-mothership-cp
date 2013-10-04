@@ -69,4 +69,12 @@
 			History.pushState(null, null, xhr.responseJSON.redirect);
 		}
 	});
+
+	// On document load should take the scroll height of each text area and set it as its height
+	$(document).ready(function() {	
+		$('textarea').each(function(){
+			$(this).height($(this)[0].scrollHeight);
+		});
+	});
+	
 });
