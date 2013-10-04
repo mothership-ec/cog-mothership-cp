@@ -46,6 +46,10 @@
 				$('.clear').removeAttr('style');
 				$('#save-content').removeAttr('style');
 			}
+
+			$('textarea').each(function(){
+				$(this).height($(this)[0].scrollHeight);
+			});
 		},
 		afterReplace: function(pane, responseData) {
 
