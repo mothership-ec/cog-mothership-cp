@@ -67,11 +67,12 @@ class EventListener extends BaseListener implements SubscriberInterface
 	public function renderErrorPage(GetResponseForExceptionEvent $event)
 	{
 		// Skip if working locally
-		if ($this->get('env') === 'local') {
+		if ('local' === $this->get('env')) {
 			return false;
 		}
+
 		// Skip if the requested route is not in the control panel
-		if (is_array($event->getRequest()->get('_route_collections')) && !in_array('ms.cp', $event->getRequest()->get('_route_collections'))) {
+		if (!is_array($event->getRequest()->get('_route_collections')) || !in_array('ms.cp', $event->getRequest()->get('_route_collections'))) {
 			return false;
 		}
 
