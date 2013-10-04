@@ -10,26 +10,31 @@
 
 $(function() {
 
-	var toggleMenu = '[data-toggle=dropdown]';
+	var toggleMenu = '.dropdown-toggle',
+			 input = $('.dropdown-menu input');
+
+	if (input.val().length) {
+		$('.button.button-group.small span').addClass('date-set');
+	}
 
 	// Dropdown toggle animation
 	var DropDownToggle = function(parent, dropdown) {
 
 		if (parent.hasClass('open')) {
 
-			dropdown.stop().slideUp();
+			dropdown.slideUp();
 			parent.removeClass('open');
 
 		} else {
 
-			dropdown.stop().slideDown();
+			dropdown.slideDown();
 			parent.addClass('open');
 
 		}
 
 	};
 
-	$(toggleMenu).on('click', function() {
+	$(document).on('click', toggleMenu, function() {
 
 		// Set dropdown parent
 		var dParent = $(this).parent();
@@ -39,6 +44,13 @@ $(function() {
 
 		// Run dropdown toggle
 		DropDownToggle(dParent, dropDown);
+
+		
+		if (input.val()) {
+			$('.button.button-group.small span').addClass('date-set');
+		} else {
+			return;
+		}
 
 	});
 

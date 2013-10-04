@@ -921,9 +921,13 @@
 }
 
 .publish .button-group span:before {
-	content: "\f017";
+	content: "\f133";
 	font-style: normal;
 	font-family: 'FontAwesome';
+}
+
+.publish .button-group span.date-set:before {
+	content: "\f073";
 }
 
 .publish .dropdown-menu {
@@ -944,9 +948,18 @@
 	box-shadow: inset 0px 1px 3px rgba(000,000,000,0.1), 0px 1px 3px rgba(000,000,000,0.1);
 }
 
+.publish .dropdown-menu .wrap {
+	float: left;
+	position: relative;
+}
+
 .publish form {
 	float: left;
 	width: 100%;
+}
+
+.publish label {
+	text-align: left;
 }
 
 .publish .dropdown-wrap {
@@ -978,21 +991,18 @@
 	min-width: 0;
 }
 
-.publish .button {
-	position: absolute;
-	bottom: 10px;
-	right: 20px;
+.publish .wrap .button {
+	margin-top: 41px;
 }
-
-
 
 .publish .help {
 	float: none;
 	clear: both;
 	margin: 0px;
+	display: none;
 }
 
-.publish .help a:hover {
+/*.publish .help a:hover {
 	cursor: pointer;
 }
 
@@ -1040,7 +1050,7 @@
 	border-right: 6px solid #fcf8e3;
 	border-bottom: 6px solid transparent;
 	content: '';
-}
+}*/
 
 
 
@@ -1845,9 +1855,10 @@
 
 .help a:before {
 	visibility: visible;
-	content: "\f06a";
+	content: "\f059";
 	font-style: normal;
 	font-family: 'FontAwesome';
+	color: #467eb0;
 }
 
 .help a:hover {
