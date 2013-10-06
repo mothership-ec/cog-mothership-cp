@@ -236,6 +236,8 @@ select {
 	-moz-appearance: none;
 	appearance: none;
 	float: left;
+	text-indent: 0.01px;
+    text-overflow: '';
 }
 
 select[multiple] {
