@@ -16,25 +16,6 @@
 /*
 /* ======================================================= */
 
-/* font-family:'Proxima N W15 Black'; */
-
-/* font-family:'Proxima N W15 Black It'; */
-
-/* font-family:'Proxima N W15 Bold'; */
-
-/* font-family:'Proxima N W15 Bold It'; */
-
-/* font-family:'Proxima N W15 Reg'; */
-
-/* font-family:'Proxima N W15 Reg It'; */
-
-/* font-family:'Proxima N W15 Smbd'; */
-
-/* font-family:'Proxima N W15 Smbd It'; */
-
-/* font-family:'Proxima N W15 Light'; */
-
-/* font-family:'Proxima N W15 Light It'; */
 
 
 * {
@@ -218,12 +199,14 @@ input[type=time]{
  		content: 'Day / Month / Year';
  		margin-right: 20px;
  		font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ 		float: left;
  }
 
  input[type=time]:before {
  		content: 'Hours : Minutes';
  		margin-right: 20px;
  		font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ 		float: left;
  }
 
 input[type="checkbox"]:hover,

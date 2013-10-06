@@ -13,7 +13,7 @@ $(function() {
 	var toggleMenu = '.dropdown-toggle',
 			 input = $('.dropdown-menu input');
 
-	if (input.val().length) {
+	if (input.val()) {
 		$('.button.button-group.small span').addClass('date-set');
 	}
 
