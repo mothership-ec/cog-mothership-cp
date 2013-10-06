@@ -1009,6 +1009,7 @@ dd {
 .feedback.notice {
 	background: #d9e6f2;
 	color: #184c7f;
+	margin: 0;
 }
 
 .feedback.notice li {
