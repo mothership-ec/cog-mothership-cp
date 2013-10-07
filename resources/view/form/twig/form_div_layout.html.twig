@@ -17,11 +17,12 @@
 		<div class="help">
 			{% set key        = attr['data-help-key'] %}
 			{% set translated = key|trans %}
+			{% set keyAppend  = '-' ~ random() %}
 			{% if key != translated %}
 
-			<a href="#{{ key|replace({'.': '-'}) }}" data-show="">{{ 'Show help'|trans }}</a>
+			<a href="#{{ (key ~ keyAppend)|replace({'.': '-'}) }}" data-show="">{{ 'Show help'|trans }}</a>
 
-			<div class="description" id="{{ key|replace({'.': '-'}) }}">
+			<div class="description" id="{{ (key ~ keyAppend)|replace({'.': '-'}) }}">
 				<p>{{ translated|raw }}</p>
 			</div>
 			{% endif %}
