@@ -2686,6 +2686,13 @@ dl.totals dt {
 	font-weight: bold;
 }
 
+.option-price {
+	clear: both;
+	position: relative;
+	top: -15px;
+	left: 13px;
+}
+
 .menu-collapse, .sidebar-collapse {
 	display: none;
 }
