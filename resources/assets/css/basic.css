@@ -16,25 +16,6 @@
 /*
 /* ======================================================= */
 
-/* font-family:'Proxima N W15 Black'; */
-
-/* font-family:'Proxima N W15 Black It'; */
-
-/* font-family:'Proxima N W15 Bold'; */
-
-/* font-family:'Proxima N W15 Bold It'; */
-
-/* font-family:'Proxima N W15 Reg'; */
-
-/* font-family:'Proxima N W15 Reg It'; */
-
-/* font-family:'Proxima N W15 Smbd'; */
-
-/* font-family:'Proxima N W15 Smbd It'; */
-
-/* font-family:'Proxima N W15 Light'; */
-
-/* font-family:'Proxima N W15 Light It'; */
 
 
 * {
@@ -218,12 +199,14 @@ input[type=time]{
  		content: 'Day / Month / Year';
  		margin-right: 20px;
  		font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ 		float: left;
  }
 
  input[type=time]:before {
  		content: 'Hours : Minutes';
  		margin-right: 20px;
  		font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ 		float: left;
  }
 
 input[type="checkbox"]:hover,
@@ -253,6 +236,8 @@ select {
 	-moz-appearance: none;
 	appearance: none;
 	float: left;
+	text-indent: 0.01px;
+    text-overflow: '';
 }
 
 select[multiple] {
@@ -732,7 +717,6 @@ button:disabled:active {
 }
 
 .button.button-group.open span {
-	border-bottom: 1px solid #eee;
 	background: #eee;
 }
 
@@ -1010,6 +994,7 @@ dd {
 .feedback.notice {
 	background: #d9e6f2;
 	color: #184c7f;
+	margin: 0;
 }
 
 .feedback.notice li {
