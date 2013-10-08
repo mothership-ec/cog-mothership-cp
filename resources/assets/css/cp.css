@@ -1640,17 +1640,6 @@
 	text-indent: 25px;
 }
 
-.field.inline .help {
-	margin-top: 0;
-}
-
-.field.inline .help .description {
-	top: -10px;
-}
-
-.field.inline .help .long {
-	top: -10px;
-}
 
 
 
@@ -1915,6 +1904,48 @@
 	line-height: 1.5em;
 }
 
+.help .description {
+	position: absolute;
+	top: 29px;
+	z-index: 20;
+	display: none;
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-left: 2%;
+	padding: 15px;
+	min-height: 39px;
+	width: inherit;
+	width: 28%;
+	border: 1px solid #d5cb95;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #fcf8e3;
+}
+
+
+.field.inline .help {
+	margin-top: 0;
+}
+
+.field.inline .help .description {
+	top: -10px;
+	left: 10px;
+
+}
+
+.field.inline .help .long {
+	top: -10px;
+}
+
+.inline .field .help .description {
+	width: 100%;
+	left: 260px;
+	z-index: 999;
+
+}
 
 
 /* File Manager
