@@ -85,7 +85,6 @@
 						if (typeof state.settings.afterSend === 'function') {
 							state.settings.afterSend(self);
 						}
-						console.log('complete?');
 					},
 					success : function(html) {
 						// Clear the current Ajax request
