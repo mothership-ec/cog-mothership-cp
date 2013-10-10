@@ -2316,6 +2316,10 @@ td.partial {
 	min-height: 20px;
 }
 
+.order-details li em {
+	font-size: smaller;
+}
+
 .order-details span {
 	display: block;
 	width: 150px;
