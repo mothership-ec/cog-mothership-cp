@@ -39,7 +39,6 @@
 
 				// Throw an error if the monitor variable isn't a jQuery instance
 				if (!(state.monitor instanceof jQuery)) {
-					console.log(state.monitor);
 					$.error('jQuery.filteredSelect failed to initialise: monitor must be set to a jQuery instance, or a function that returns a jQuery instance');
 				}
 
