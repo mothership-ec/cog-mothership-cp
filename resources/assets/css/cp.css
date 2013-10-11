@@ -2721,6 +2721,20 @@ dl.totals dt {
 	font-weight: bold;
 }
 
+.apply-discount .add-on {
+	float: right;
+	width: 54%;
+	margin-top: -28px;
+}
+
+.apply-discount label {
+	font-size: 1.08em;
+}
+
+.apply-discount .add-on input {
+	width: 100px;
+}
+
 .option-price {
 	clear: both;
 	position: relative;
@@ -2730,6 +2744,11 @@ dl.totals dt {
 
 .menu-collapse, .sidebar-collapse {
 	display: none;
+}
+
+.service-list dt {
+	font-weight: bold;
+	margin-bottom: 20px;
 }
 
 /* Users
