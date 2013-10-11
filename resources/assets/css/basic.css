@@ -643,17 +643,16 @@ button:disabled:active {
 .toggle {
 	width: 130px;
 	float: right;
-	border-color: #0f5b23;
-	background-color: #3fa262;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#3fa262), to(#196d2e));
-	background-image: -webkit-linear-gradient(top, #3fa262, #196d2e);
-	background-image: -moz-linear-gradient(top, #3fa262, #196d2e);
-	background-image: -o-linear-gradient(top, #3fa262, #196d2e);
-	background-image: -ms-linear-gradient(top, #3fa262, #196d2e);
-	background-image: linear-gradient(top, #3fa262, #196d2e);
+	border-color: #0b4174;
+	background-color: #528cb6;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#528cb6), to(#4473a6));
+	background-image: -webkit-linear-gradient(top, #528cb6, #4473a6);
+	background-image: -moz-linear-gradient(top, #528cb6, #4473a6);
+	background-image: -o-linear-gradient(top, #528cb6, #4473a6);
+	background-image: -ms-linear-gradient(top, #528cb6, #4473a6);
+	background-image: linear-gradient(top, #528cb6, #4473a6);
 	color: #FFF;
-	text-shadow: 0px -1px 0 rgba(15,91,35,0.5);
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3fa262', EndColorStr='#196d2e');1px 0px #238241;
+	text-shadow: 0px -1px 0px #081d31;
 }
 
 .toggle:before {
@@ -670,14 +669,15 @@ button:disabled:active {
 }
 
 .toggle:hover {
-	background-color: #3d9f60;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#3d9f60), to(#125925));
-	background-image: -webkit-linear-gradient(top, #3d9f60, #125925);
-	background-image: -moz-linear-gradient(top, #3d9f60, #125925);
-	background-image: -o-linear-gradient(top, #3d9f60, #125925);
-	background-image: -ms-linear-gradient(top, #3d9f60, #125925);
-	background-image: linear-gradient(top, #3d9f60, #125925);
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3d9f60', EndColorStr='#125925');
+	background-color: #528bb6;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#528bb6), to(#2a537b));
+	background-image: -webkit-linear-gradient(top, #528bb6, #2a537b);
+	background-image: -moz-linear-gradient(top, #528bb6, #2a537b);
+	background-image: -o-linear-gradient(top, #528bb6, #2a537b);
+	background-image: -ms-linear-gradient(top, #528bb6, #2a537b);
+	background-image: linear-gradient(top, #528bb6, #2a537b);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#528bb6', EndColorStr='#2a537b');
+	cursor: pointer;
 }
 
 .toggle.all {
