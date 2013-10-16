@@ -2489,7 +2489,18 @@ ol.order-details li {
 	display: block;
 }
 
+tr.total {
+	background-color: #dddcdc;
+	color: #000;
 
+}
+
+table tr.total:nth-child(even) td, table tr.total:nth-child(odd) td  {
+	background: none;
+	-webkit-box-shadow: inset 1px 1px 0 #dddcdc;
+	-moz-box-shadow: inset 1px 1px 0 #dddcdc;
+	box-shadow: inset 1px 1px 0 #dddcdc;
+}
 
 /* Scrollbars
 -------------------------------------------- */
