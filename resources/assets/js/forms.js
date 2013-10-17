@@ -41,4 +41,13 @@
 		});
 
 	});
+
+	// Watch the repeatable group identifier field and push the value to the
+	// title element.
+	$(document).on('keydown', '[data-identifier-field]', function() {
+		var self = $(this), field, value;
+		field = self.attr('data-identifier-field');
+		value = self.find(':input[name*="[' + field + ']"]').val();
+		self.find('.title').html(value);
+	});
 });
