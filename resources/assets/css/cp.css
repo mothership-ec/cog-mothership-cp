@@ -1372,6 +1372,17 @@
 	padding: 0 20px;
 }
 
+.group .field-wrap {
+	overflow: hidden;
+	clear: both;
+}
+
+.group .field-wrap label {
+	margin: 0 20px;
+}
+
+
+
 .repeatable-group .field .field {
 	padding: 0;
 }
@@ -1419,6 +1430,7 @@
 	float: left;
 	width: 100%;
 }
+
 
 .repeatable-group .remove {
 	float: right;
