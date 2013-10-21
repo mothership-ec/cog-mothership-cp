@@ -2490,16 +2490,17 @@ ol.order-details li {
 }
 
 tr.total {
-	background-color: #dddcdc;
-	color: #000;
+	background-color: #5995c0;
+	color: #fff;
+	font-weight: bold;
 
 }
 
 table tr.total:nth-child(even) td, table tr.total:nth-child(odd) td  {
 	background: none;
-	-webkit-box-shadow: inset 1px 1px 0 #dddcdc;
-	-moz-box-shadow: inset 1px 1px 0 #dddcdc;
-	box-shadow: inset 1px 1px 0 #dddcdc;
+	-webkit-box-shadow: inset 1px 1px 0 #6ab5eb;
+	-moz-box-shadow: inset 1px 1px 0 #6ab5eb;
+	box-shadow: inset 1px 1px 0 #6ab5eb;
 }
 
 /* Scrollbars
