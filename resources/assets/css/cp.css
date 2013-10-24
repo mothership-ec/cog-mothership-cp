@@ -2493,14 +2493,17 @@ tr.total {
 	background-color: #5995c0;
 	color: #fff;
 	font-weight: bold;
+	border: 1px solid #26537c;
 
 }
 
+
 table tr.total:nth-child(even) td, table tr.total:nth-child(odd) td  {
 	background: none;
-	-webkit-box-shadow: inset 1px 1px 0 #6ab5eb;
-	-moz-box-shadow: inset 1px 1px 0 #6ab5eb;
-	box-shadow: inset 1px 1px 0 #6ab5eb;
+	-webkit-box-shadow: inset 1px 1px 0 #64a5d4;
+	-moz-box-shadow: inset 1px 1px 0 #64a5d4;
+	box-shadow: inset 1px 1px 0 #64a5d4;
+	border: 1px solid #26537c;
 }
 
 /* Scrollbars
