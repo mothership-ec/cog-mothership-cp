@@ -1361,9 +1361,10 @@
 	border-left: 1px solid #CCC;
 }
 
-.repeatable-group .group:last-child {
+.repeatable-group .group:last-of-type .content {
 	border-bottom: 1px solid #CCC;
 }
+
 
 .repeatable-group .field {
 	-webkit-box-sizing: border-box;
@@ -1483,6 +1484,10 @@
 }
 
 
+
+.repeatable-group .button {
+	margin-top: 40px;
+}
 
 .group-desc {
 	margin-bottom: 20px;
