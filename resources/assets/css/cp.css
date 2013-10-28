@@ -2510,7 +2510,7 @@ tr.total {
 }
 
 
-table tr.total:nth-child(even) td, 
+table tr.total:nth-child(even) td,
 table tr.total:nth-child(odd) td  {
 	background: none;
 	-webkit-box-shadow: inset 1px 1px 0 #64a5d4;
@@ -2520,6 +2520,23 @@ table tr.total:nth-child(odd) td  {
 	font-weight: normal;
 	text-shadow: 0px 1px 1px rgba(000,000,000,0.25);
 }
+
+tr.grandtotal {
+	background-color: #4e82a7;
+	color: #fff;
+	font-weight: bold;
+	border: 1px solid #3e6886;
+
+}
+
+table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
+	background: none;
+	-webkit-box-shadow: inset 1px 1px 0 #5992ba;
+	-moz-box-shadow: inset 1px 1px 0 #5992ba;
+	box-shadow: inset 1px 1px 0 #5992ba;
+	border: 1px solid #3e6886;
+}
+
 
 /* Scrollbars
 -------------------------------------------- */
