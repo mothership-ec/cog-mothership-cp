@@ -2498,12 +2498,15 @@ tr.total {
 }
 
 
-table tr.total:nth-child(even) td, table tr.total:nth-child(odd) td  {
+table tr.total:nth-child(even) td, 
+table tr.total:nth-child(odd) td  {
 	background: none;
 	-webkit-box-shadow: inset 1px 1px 0 #64a5d4;
 	-moz-box-shadow: inset 1px 1px 0 #64a5d4;
 	box-shadow: inset 1px 1px 0 #64a5d4;
 	border: 1px solid #26537c;
+	font-weight: normal;
+	text-shadow: 0px 1px 1px rgba(000,000,000,0.25);
 }
 
 /* Scrollbars
