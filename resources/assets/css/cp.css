@@ -2124,7 +2124,7 @@ ul.search-results {
 
 .create-product button {
 	position: fixed;
-	top: 120px;
+	top: 80px;
 	right: 14px;
 	z-index: 11;
 }
