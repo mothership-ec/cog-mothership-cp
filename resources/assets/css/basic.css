@@ -297,6 +297,15 @@ button.block-btn {
 	display: block;
 }
 
+.field.required label:after {
+	content: '*';
+	font-size: 20px;
+	vertical-align: middle;
+	margin-left: 5px;
+	top: 3px;
+	position: relative;
+}
+
 
 
 /* Button styles
