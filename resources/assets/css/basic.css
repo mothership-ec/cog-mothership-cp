@@ -24,6 +24,7 @@
 	text-rendering: optimizeLegibility;
 	font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased;
+	outline: none;
 }
 
 html {
