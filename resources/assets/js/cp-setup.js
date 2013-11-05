@@ -47,6 +47,11 @@
 				$('#save-content').removeAttr('style');
 			}
 
+			// Toggles all collapsable groups
+			$('.group[data-collapse] .title').next('.content').animate({
+				height: 'toggle',
+			});
+
 			$('textarea').each(function(){
 				$(this).height($(this)[0].scrollHeight);
 			});

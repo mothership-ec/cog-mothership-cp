@@ -1182,14 +1182,18 @@
 
 
 
-#save-content, .save-content {
+#save-content, 
+.save-content {
 	position: fixed;
 	top: 138px;
 	right: 14px;
 	z-index: 12;
 }
 
-.file-manager #save-content, .create-discount #save-content  {
+.create-page #save-content,
+.create-product #save-content,
+.file-manager #save-content, 
+.create-discount #save-content  {
 	top: 78px;
 }
 
@@ -1359,10 +1363,9 @@
 	margin-bottom: 0;
 	border-right: 1px solid #CCC;
 	border-left: 1px solid #CCC;
-}
-
-.repeatable-group .group:last-of-type .content {
-	border-bottom: 1px solid #CCC;
+	-webkit-box-shadow: 0 1px #CCC;
+	-moz-box-shadow: 0 1px #CCC;
+	box-shadow: 0 1px #CCC;
 }
 
 

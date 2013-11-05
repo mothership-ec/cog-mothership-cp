@@ -58,10 +58,15 @@
 		return false;
 	});
 
+	$('.group[data-collapse] .title').next('.content').animate({
+		height: 'toggle',
+	});
+
 	// Collapse repeatable groups
 	$(document).on('click', '.group[data-collapse] .title', function() {
 		var self        = $(this),
 			content       = self.next('.content');
+
 
 		// Toggle the height of the group content
 		content.animate({
