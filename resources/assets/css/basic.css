@@ -24,6 +24,7 @@
 	text-rendering: optimizeLegibility;
 	font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased;
+	outline: none;
 }
 
 html {
@@ -311,6 +312,7 @@ button.block-btn {
 	content: '* required field';
 	clear: both;
 	display: block;
+	margin-top: 10px;
 }
 
 
