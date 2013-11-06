@@ -1182,7 +1182,7 @@
 
 
 
-#save-content, 
+#save-content,
 .save-content {
 	position: fixed;
 	top: 138px;
@@ -1192,7 +1192,7 @@
 
 .create-page #save-content,
 .create-product #save-content,
-.file-manager #save-content, 
+.file-manager #save-content,
 .create-discount #save-content  {
 	top: 78px;
 }
@@ -2776,17 +2776,17 @@ dl.totals dt {
 	font-weight: bold;
 }
 
-.apply-discount .add-on {
+.apply-discount .add-on, .apply-misc .add-on {
 	float: right;
 	width: 54%;
 	margin-top: -28px;
 }
 
-.apply-discount label {
+.apply-discount label, .apply-misc label {
 	font-size: 1.08em;
 }
 
-.apply-discount .add-on input {
+.apply-discount .add-on input, .apply-misc .add-on input {
 	width: 100px;
 }
 
