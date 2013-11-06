@@ -1416,6 +1416,7 @@
 	box-shadow: none;
 	font-size: 1em;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
+	min-height: 52px;
 }
 
 .repeatable-group .title:hover {
