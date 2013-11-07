@@ -1554,7 +1554,9 @@
 	padding: 20px;
 }
 
-
+.display-group p {
+	margin-bottom: 10px;
+}
 
 .small-box h2.title/*, .box h2.title*/ {
 	position: relative;

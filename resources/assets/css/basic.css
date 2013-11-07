@@ -312,7 +312,7 @@ button.block-btn {
 	content: '* required field';
 	clear: both;
 	display: block;
-	margin-top: 10px;
+	margin: 10px 0px;
 }
 
 
