@@ -4,13 +4,17 @@
 		<meta charset="utf-8">
 
 		<title>{% block title %}Mothership Control Panel{% endblock %}</title>
-		
+
 		<link rel="shortcut icon" type="image/png" href="/cogules/Message:Mothership:ControlPanel/images/favicon.png" />
 
+		{# CSSMin is intentionally not used here, for some reason it stops the fonts from loading.
+
+		See issue: https://github.com/messagedigital/cog/issues/258 #}
 		{% block stylesheets %}
 			{% stylesheets
-				'@Message:Mothership:ControlPanel::resources/assets/css/basic.css'
 				'@Message:Mothership:ControlPanel::resources/assets/css/fonts.css'
+				'@Message:Mothership:ControlPanel::resources/assets/css/basic.css'
+
 				output='/assets/css/ms_base.css'
 				filter='csscogulerewrite'
 			%}
@@ -24,6 +28,7 @@
 				'@Message:Mothership:ControlPanel::resources/assets/js/setup.js'
 
 				output='/assets/js/ms_base.js'
+				filter='?jsmin'
 			%}
 				<script src="{{ asset_url }}"></script>
 			{% endjavascripts %}

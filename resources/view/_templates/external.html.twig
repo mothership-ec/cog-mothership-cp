@@ -1,0 +1,25 @@
+{% extends '::_templates/main' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	{% stylesheets
+		'@Message:Mothership:ControlPanel::resources/assets/css/login.css'
+
+		output='/assets/css/ms_login.css'
+		filter='csscogulerewrite,?cssmin'
+	%}
+		<link rel="stylesheet" href="{{ asset_url }}">
+	{% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	{% javascripts
+		'@Message:Mothership:ControlPanel::resources/assets/js/feedback.js'
+
+		output='/assets/js/ms_login.js'
+		filter='?jsmin'
+	%}
+		<script src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+{% endblock %}
