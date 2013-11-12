@@ -3,12 +3,10 @@
 {% block stylesheets %}
 	{{ parent() }}
 	{% stylesheets
-		'@Message:Mothership:ControlPanel::resources/assets/css/basic.css'
-		'@Message:Mothership:ControlPanel::resources/assets/css/fonts.css'
 		'@Message:Mothership:ControlPanel::resources/assets/css/cp.css'
 
 		output='/assets/css/ms_cp.css'
-		filter='csscogulerewrite'
+		filter='csscogulerewrite,?cssmin'
 	%}
 		<link rel="stylesheet" href="{{ asset_url }}">
 	{% endstylesheets %}
@@ -29,6 +27,7 @@
 		'@Message:Mothership:ControlPanel::resources/assets/js/feedback.js'
 
 		output='/assets/js/ms_cp.js'
+		filter='?jsmin'
 	%}
 		<script src="{{ asset_url }}"></script>
 	{% endjavascripts %}

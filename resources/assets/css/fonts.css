@@ -16,14 +16,10 @@
 /*
 /* ======================================================= */
 
-@font-face {
-
-	/* Add font files and name here*/
-
-}
-
 /* Font awesome
 ------------------------------------------------------------ */
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=adb45bb0-8b19-4114-9732-22f09ca5cade");
 
 @font-face {
 	font-family: 'FontAwesome';
@@ -35,8 +31,6 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
-@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=adb45bb0-8b19-4114-9732-22f09ca5cade");
 
 @font-face{
 	font-family:"Proxima N W15 Light";
