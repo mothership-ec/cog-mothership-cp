@@ -2789,6 +2789,7 @@ dl.totals dt {
 	float: right;
 	width: 54%;
 	margin-top: -28px;
+	margin-bottom: -18px;
 }
 
 .apply-discount label, .apply-misc label {
