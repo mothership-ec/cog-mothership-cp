@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "95307f45d418cd01b7ae341914f30111",
+    "hash": "8a542f13d521c206bcf242121a8a1e13",
     "packages": [
         {
             "name": "filp/whoops",
@@ -335,16 +335,16 @@
         },
         {
             "name": "message/cog",
-            "version": "1.0.4",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:messagedigital/cog.git",
-                "reference": "1.0.4"
+                "reference": "1.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/messagedigital/cog/zipball/1.0.4",
-                "reference": "1.0.4",
+                "url": "https://api.github.com/repos/messagedigital/cog/zipball/1.1.0",
+                "reference": "1.1.0",
                 "shasum": ""
             },
             "require": {
@@ -362,7 +362,7 @@
                 "kriswallsmith/assetic": "1.1.*",
                 "lmammino/jsmin4assetic": "1.0.*",
                 "message/wkhtmltopdf": "1.0.*",
-                "monolog/monolog": "1.6.*",
+                "monolog/monolog": "1.7.*",
                 "mtdowling/cron-expression": "1.0.*",
                 "natxet/cssmin": "3.0.*",
                 "php": ">=5.3.0",
@@ -423,26 +423,26 @@
             "support": {
                 "wiki": "http://server.local/wiki/projects/cog",
                 "issues": "http://github.com/messagedigital/cog/issues",
-                "source": "https://github.com/messagedigital/cog/tree/1.0.4"
+                "source": "https://github.com/messagedigital/cog/tree/1.1.0"
             },
-            "time": "2013-11-17 18:13:44"
+            "time": "2013-11-20 09:52:21"
         },
         {
             "name": "message/cog-user",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:messagedigital/cog-user.git",
-                "reference": "1.0.0"
+                "reference": "1.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/messagedigital/cog-user/zipball/1.0.0",
-                "reference": "1.0.0",
+                "url": "https://api.github.com/repos/messagedigital/cog-user/zipball/1.0.1",
+                "reference": "1.0.1",
                 "shasum": ""
             },
             "require": {
-                "message/cog": "1.0.*",
+                "message/cog": "1.*",
                 "php": ">=5.3.0"
             },
             "type": "library",
@@ -457,6 +457,9 @@
                     "Message\\User\\Test": "tests"
                 }
             },
+            "license": [
+                "proprietary"
+            ],
             "authors": [
                 {
                     "name": "The Message Development Team",
@@ -475,9 +478,9 @@
             "support": {
                 "wiki": "http://server.local/wiki/projects/cog",
                 "issues": "http://github.com/messagedigital/cog-user/issues",
-                "source": "https://github.com/messagedigital/cog-user/tree/1.0.0"
+                "source": "https://github.com/messagedigital/cog-user/tree/1.0.1"
             },
-            "time": "2013-11-17 18:18:30"
+            "time": "2013-11-20 12:29:41"
         },
         {
             "name": "message/wkhtmltopdf",
@@ -532,16 +535,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "f72392d0e6eb855118f5a84e89ac2d257c704abd"
+                "reference": "6225b22de9dcf36546be3a0b2fa8e3d986153f57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/f72392d0e6eb855118f5a84e89ac2d257c704abd",
-                "reference": "f72392d0e6eb855118f5a84e89ac2d257c704abd",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/6225b22de9dcf36546be3a0b2fa8e3d986153f57",
+                "reference": "6225b22de9dcf36546be3a0b2fa8e3d986153f57",
                 "shasum": ""
             },
             "require": {
@@ -549,21 +552,26 @@
                 "psr/log": "~1.0"
             },
             "require-dev": {
+                "aws/aws-sdk-php": "~2.4.8",
                 "doctrine/couchdb": "dev-master",
                 "mlehner/gelf-php": "1.0.*",
-                "raven/raven": "0.5.*"
+                "phpunit/phpunit": "~3.7.0",
+                "raven/raven": "0.5.*",
+                "ruflin/elastica": "0.90.*"
             },
             "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
                 "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
                 "ext-mongo": "Allow sending log messages to a MongoDB server",
                 "mlehner/gelf-php": "Allow sending log messages to a GrayLog2 server",
-                "raven/raven": "Allow sending log messages to a Sentry server"
+                "raven/raven": "Allow sending log messages to a Sentry server",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6.x-dev"
+                    "dev-master": "1.7.x-dev"
                 }
             },
             "autoload": {
@@ -590,7 +598,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2013-07-28 22:38:30"
+            "time": "2013-11-14 19:48:31"
         },
         {
             "name": "mtdowling/cron-expression",
