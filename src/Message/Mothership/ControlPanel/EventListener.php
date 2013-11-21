@@ -52,6 +52,7 @@ class EventListener extends BaseListener implements SubscriberInterface
 		// If it's an access denied exception, send the user to the login page
 		if ($event->getException() instanceof HttpException
 		 && 403 === $event->getException()->getStatusCode()
+		 && is_array($event->getRequest()->get('_route_collections'))
 		 && in_array('ms.cp', $event->getRequest()->get('_route_collections'))) {
 			$event->setResponse(new RedirectResponse(
 				$this->_services['routing.generator']->generate('ms.cp.login')
