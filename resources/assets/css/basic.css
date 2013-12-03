@@ -919,13 +919,6 @@ table tr:nth-child(even) td {
 	z-index: 0;
 }
 
-table tr:hover td {
-	background: #e8edf1;
-	-webkit-box-shadow: inset 1px 1px 0 #edf3f7;
-	-moz-box-shadow: inset 1px 1px 0 #edf3f7;
-	box-shadow: inset 1px 1px 0 #edf3f7;
-}
-
 table td a {
 /*	position: absolute;
 	top: 0;

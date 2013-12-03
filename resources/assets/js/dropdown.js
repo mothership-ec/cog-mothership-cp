@@ -18,7 +18,7 @@ $(function() {
 	}
 
 	// Dropdown toggle animation
-	var DropDownToggle = function(parent, dropdown) {
+	var dropDownToggle = function(parent, dropdown) {
 
 		if (parent.hasClass('open')) {
 
@@ -43,7 +43,7 @@ $(function() {
 		var dropDown = dParent.find('.dropdown-menu');
 
 		// Run dropdown toggle
-		DropDownToggle(dParent, dropDown);
+		dropDownToggle(dParent, dropDown);
 
 		
 		if (input.val()) {
