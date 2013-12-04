@@ -124,7 +124,6 @@ h5 {
 form {
 	position: relative;
 	display: inline-block;
-	margin-bottom: 1px;
 	width: 100%;
 }
 
@@ -136,7 +135,7 @@ textarea {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
     box-sizing: border-box;
-	margin: 0 0 10px 0;
+	margin: 0 0 20px 0;
 	padding: 9px 7px 6px 7px;
 	max-width: 100%;
 	width: 100%;
@@ -211,7 +210,7 @@ input[type="image"]:hover {
 }
 
 select {
-	margin: 0 0 15px 0;
+	margin: 0 0 20px 0;
 	padding: 6px 20px 4px 10px;
 	min-width: 475px;
 	border: 1px solid #b1b1b1;
@@ -306,7 +305,7 @@ button.block-btn {
 	content: '* required field';
 	clear: both;
 	display: block;
-	margin: 20px 0 0;
+	margin: 0;
 	float: left;
 }
 
