@@ -2826,18 +2826,20 @@ dl.totals dt {
 	float: right;
 	height: 19px;
 	overflow: hidden;
-	margin-top: 5px;
+	margin: 20px 20px 0 20px;
 }
 
-.skip-payment .field, skip-payment input {
+.skip-payment .field {
 	margin: 0px;
+	max-width: none;
+	width: auto;
 }
 
 
-button.impersonate {
+.impersonate {
 	position: relative;
 	display: inline-block;
 	margin-right: 8px;
 	margin-top: 12px;
-
+	float: right;
 }
