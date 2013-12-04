@@ -687,12 +687,21 @@
 	box-shadow: 0px 1px 3px rgba(150,150,150,0.25), inset 0px -1px 0px rgba(255,255,255,0.5);
 	text-shadow: 0px 1px 0px #FFF;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f1f1f1', EndColorStr='#e7e7e7');
+	font-size: 0.9em;
 }
 
 .title h1 {
 	display: inline-block;
 	width: auto;
 	white-space: nowrap;
+	text-transform: capitalize;
+}
+
+.title h1 span {
+	display: block;
+	color: #807f7f;
+	font-size: 0.7em;
+	font-family: 'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif
 }
 
 .title h2  {
@@ -1186,7 +1195,20 @@
 	color: #444;
 }
 
+.column dt {
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	float: left;
+	width: 200px;
+}
 
+.column dd {
+	min-height: 20px;
+	clear: right;
+}
+
+dt.grand-total, dd.grand-total {
+	border-top: 1px solid #ddd;
+}
 
 #save-content,
 .save-content {
@@ -2394,11 +2416,6 @@ ol.order-details li {
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
 }
 
-.updated-date {
-	margin-left: 20px;
-	color: #807f7f;
-	font-size: smaller;
-}
 
 
 .progress tr:first-child {
@@ -2436,12 +2453,14 @@ ol.order-details li {
 
 }
 
-.column .grand-total {
+/*.column .grand-total {
 	border-top: 1px solid #ddd;
 	padding: 20px 0px 0px 0px;
 	margin-top: 20px;
 	font-size: 1.250em;
+	clear: both;
 }
+*/
 
 
 
