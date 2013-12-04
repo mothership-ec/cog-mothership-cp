@@ -1196,10 +1196,7 @@
 	z-index: 12;
 }
 
-.create-page #save-content,
-.create-product #save-content,
-.file-manager #save-content,
-.create-discount #save-content  {
+.extended #save-content {
 	top: 78px;
 }
 
