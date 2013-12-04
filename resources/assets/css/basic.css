@@ -137,7 +137,6 @@ textarea {
 	-moz-box-sizing: border-box;
     box-sizing: border-box;
 	margin: 0 0 10px 0;
-	margin-bottom: 15px;
 	padding: 9px 7px 6px 7px;
 	max-width: 100%;
 	width: 100%;
@@ -145,14 +144,8 @@ textarea {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-/*	-webkit-box-shadow: 0 1px 5px rgba(000,000,000,0.1);
-	-moz-box-shadow: 0 1px 5px rgba(000,000,000,0.1);
-	box-shadow: 0 1px 5px rgba(000,000,000,0.1);*/
 	color: #333;
-	font-size: 1.0em;
-	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-weight: normal;
-	line-height: 1.0em;
+	font: normal 0.938em/0.938em 'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	-webkit-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
 	-moz-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
 	-ms-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
@@ -252,9 +245,9 @@ select:hover {
 
 label {
 	float: left;
-	margin: 0 0 10px 0;
+	margin: 0 0 5px 0;
 	width: 100%;
-	font-size: 1.0em;
+	font-size: 0.938em;
 	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -313,7 +306,8 @@ button.block-btn {
 	content: '* required field';
 	clear: both;
 	display: block;
-	margin: 10px 0px;
+	margin: 20px 0 0;
+	float: left;
 }
 
 
@@ -921,19 +915,21 @@ table tr:nth-child(even) td {
 }
 
 table td a {
-/*	position: absolute;
+	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	line-height: 60px;
-	padding-left: 10px;
-	width: 100%;
-	word-wrap:break-word;*/
+	padding: 12px 15px 10px;
+	word-wrap:break-word;
 }
 
 table a {
 	display: block;
+}
+
+table a:hover {
+	color: #528cb6;
 }
 
 table input {
