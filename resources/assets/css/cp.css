@@ -1176,20 +1176,15 @@ span.flag {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin-bottom: 20px;
-	padding: 10px;
 	width: 50% ;
-	border: 1px solid #CCC;
 	vertical-align: top;
+	background: #fff;
 }
 
 .dual-column .column:first-of-type {
 	border-right: 1px solid #FFF;
 }
 
-.dual-column .column:nth-child(2) {
-	background: #F5F5F5;
-}
 
 .column {
 	position: relative;
@@ -1222,7 +1217,7 @@ span.flag {
 .box div h2 {
 	clear: both;
  	padding: 10px 0px 7px;
-	margin: 5px 0px 10px 0px;
+	margin: 0px 0px 5px 0px;
 	font-size: 1.125em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -2234,7 +2229,9 @@ ul.search-results {
 
 /* Fulfillment */
 
-
+.fulfillment ul {
+	margin: 0px 0px 10px 0px;
+}
 
 .fulfillment li {
 	list-style-type: none;
@@ -2264,8 +2261,7 @@ ul.search-results {
 }
 
 .fulfillment h3 {
-
-	margin: 20px 0px 0px 0px;
+	margin: 0px;
 }
 
 .pick-list {
@@ -2294,7 +2290,7 @@ ul.search-results {
 
 
 .fulfillment .field {
-	margin-bottom: 0px;
+	margin-bottom: 10px;
 }
 
 td.complete {
@@ -2717,7 +2713,7 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	text-align: center;
 }
 
-.container-error p,  
+.container-error p,
 .container-error dd {
 	margin: 20px 0px;
 }
