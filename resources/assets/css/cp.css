@@ -1226,15 +1226,17 @@ dt.grand-total, dd.grand-total {
 	z-index: 12;
 }
 
-.extended #save-content {
-	top: 78px;
+.short #save-content {
+	top: 153px;
 }
 
+.medium #save-content {
 
-/*.dual-column #save-content {
-	top: 120px;
-}*/
+}
 
+.tall #save-content {
+
+}
 
 /* Create page */
 
