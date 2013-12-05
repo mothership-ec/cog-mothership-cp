@@ -1120,6 +1120,8 @@ span.flag {
 
 .container-content::-webkit-scrollbar {
 	background: #DDD;
+	padding: 0 2px;
+	border-left: 1px solid #CCC;
 }
 
 .container-content.short {
