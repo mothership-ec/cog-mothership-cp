@@ -55,7 +55,6 @@
 }
 .navigation h1 a {
 	font-size: 0.6em;
-
 }
 
 .navigation .vendor {
@@ -1142,34 +1141,32 @@ span.flag {
     height: calc(100% - 80px);
 }
 
-.container-details {
-	position: relative;
-    display: inline-block;
-	overflow: visible;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	width: -moz-calc(100% - 300px);
-    width: -webkit-calc(100% - 300px);
-    width: calc(100% - 300px);
-	height: inherit;
-}
 
-.container-details.full {
-	width: 100%;
-}
 
-.container-details.dual-column {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	width: 100%;
-}
+/* Dual column */
+
+
 
 .dual-column {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	border: 1px solid #CCC;
+	margin-bottom: 20px;
+}
+
+.dual-column .title {
+	float: left;
+	width: 100%;
+	display: block;
+	font-size: 1.125em;
+}
+
+.dual-column .content {
 	display: table;
 	overflow: hidden;
-	margin-bottom: 20px;
+	width: 100%;
 }
 
 .dual-column .column {
@@ -1182,13 +1179,13 @@ span.flag {
 }
 
 .dual-column .column:first-of-type {
-	border-right: 1px solid #FFF;
+	border-right: 1px solid #CCC;
 }
-
 
 .column {
 	position: relative;
 	display: table-cell;
+	padding: 20px;
 }
 
 .column .section {
@@ -2346,8 +2343,6 @@ td.partial {
 
 .order-details {
 	float: left;
-	padding: 10px 0 10px 20px;
-	width: 95%;
 	list-style: none;
 }
 
