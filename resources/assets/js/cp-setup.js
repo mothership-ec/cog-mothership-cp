@@ -15,7 +15,7 @@
 	});
 
 	if (!$('#save-content').is(':visible')) {
-		$('.controls').css('margin-right', -15);
+		$('.controls').css('margin-right', -8);
 	};
 
 	// Set up live pane
