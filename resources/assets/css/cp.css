@@ -773,27 +773,32 @@
 	height: 34px;
 }
 
-.flag {
+span.flag {
 	background: #ccc;
 	width: 80px;
 	text-align: center;
-	text-transform: uppercase;
 	padding: 3px 5px 0px 5px;
 	color: #fff;
 	text-shadow: none;
 	font-size: 0.6em;
-	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	display: inline-block;
-	vertical-align: top;
 	margin: 0px 10px;
+	border-radius: 10px;
 }
 
 .flag.active {
 	background: #258643;
+	color: #fff;
+	display: inline-block;
+	vertical-align: top;
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .flag.inactive {
 	background: #cc3121;
+	color: #fff;
+	display: inline-block;
+	vertical-align: top;
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* Top Bar
