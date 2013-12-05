@@ -1257,7 +1257,7 @@ dt.grand-total, dd.grand-total {
 }
 
 .medium #save-content {
-
+	top: 135px;
 }
 
 .tall #save-content {
