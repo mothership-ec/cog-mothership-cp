@@ -211,8 +211,9 @@
 
 .loading-spinner {
 	position: absolute;
-	top: 20px;
-	right: 20px;
+	top: 50%;
+	right: 50%;
+	margin: -32.5px -150px 0 0;
 	z-index: 9999;
 	display: none;
 	width: 300px;
@@ -220,7 +221,8 @@
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	background: rgba(000,000,000,0.4);;
+	background: rgba(000,000,000,0.8);
+
 }
 
 .loading-spinner p {
@@ -1320,10 +1322,11 @@ dt.grand-total, dd.grand-total {
 	margin: 0 0 20px 0;
 	width: 100%;
 	border: 1px solid #CCC;
-	padding-bottom: 20px;
+	padding-bottom: 0px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	background: #FFF;
 }
 
 .group .title {
@@ -1378,10 +1381,6 @@ dt.grand-total, dd.grand-total {
 .group .field-wrap {
 	overflow: hidden;
 	clear: both;
-}
-
-.group .field-wrap label {
-	margin: 0 20px;
 }
 
 
@@ -1572,6 +1571,10 @@ dt.grand-total, dd.grand-total {
 	width: 100%;
 }
 
+.field.inline {
+	margin-bottom: 20px;
+}
+
 .field h2 {
 	float: left;
 	margin-bottom: 20px;
@@ -1628,7 +1631,6 @@ dt.grand-total, dd.grand-total {
 	float: left;
 	max-width: 70%;
 	width: 70%;
-	margin-bottom: 15px;
 }
 
 .inline .add-on {
@@ -1636,7 +1638,6 @@ dt.grand-total, dd.grand-total {
 	float: left;
 	max-width: 70%;
 	width: 70%;
-	margin-bottom: 15px;
 }
 
 .inline .add-on input {
@@ -2645,48 +2646,19 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 
 
 
-
-
-#criteria-edit_products {
-	border: 1px solid #F1F1F1;
-	overflow: hidden;
-}
-
-#criteria-edit_products .field, .double-col .field {
+#criteria-edit_products .field, 
+.double-col .field {
 	width: 50%;
 	float: left;
 }
 
 .choose {
-	width: 40%;
-	min-width: 210px;
-	float: left;
-	height: 140px;
-	padding: 10px;
-	margin: 0px 0px 40px 0px;
-	border: 1px solid #ccc;
-}
-
-.choose label {
-	background-color: #f9f9f9;
-	padding: 5px;
-	width: 97%;
+	padding-bottom: 0;
 }
 
 .choose input {
 	width: 50%;
 	min-width: 100px;
-}
-
-.choose.or {
-	width: 30px;
-	min-width: 30px;
-	text-align: center;
-	padding: 75px 0px;
-	height: 0px;
-	margin: 0px 20px;
-	vertical-align: center;
-	border: none;
 }
 
 
