@@ -2645,9 +2645,7 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 ---------------------------------------- */
 
 
-
-#criteria-edit_products .field, 
-.double-col .field {
+#criteria-edit_products .field {
 	width: 50%;
 	float: left;
 }
