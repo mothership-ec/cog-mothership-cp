@@ -774,29 +774,29 @@
 }
 
 span.flag {
-	background: #ccc;
-	width: 80px;
-	text-align: center;
+	margin: 0px 10px;
 	padding: 3px 5px 0px 5px;
+	width: 80px;
+	border-radius: 10px;
+	background: #ccc;
 	color: #fff;
+	text-align: center;
 	text-shadow: none;
 	font-size: 0.6em;
-	margin: 0px 10px;
-	border-radius: 10px;
 }
 
 .flag.active {
+	display: inline-block;
 	background: #258643;
 	color: #fff;
-	display: inline-block;
 	vertical-align: top;
 	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .flag.inactive {
+	display: inline-block;
 	background: #cc3121;
 	color: #fff;
-	display: inline-block;
 	vertical-align: top;
 	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -1119,9 +1119,9 @@ span.flag {
 }
 
 .container-content::-webkit-scrollbar {
-	background: #DDD;
 	padding: 0 2px;
 	border-left: 1px solid #CCC;
+	background: #DDD;
 }
 
 .container-content.short {
@@ -1177,8 +1177,8 @@ span.flag {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 50% ;
-	vertical-align: top;
 	background: #fff;
+	vertical-align: top;
 }
 
 .dual-column .column:first-of-type {
@@ -1216,13 +1216,13 @@ span.flag {
 .column h2,
 .box div h2 {
 	clear: both;
- 	padding: 10px 0px 7px;
-	margin: 0px 0px 5px 0px;
-	font-size: 1.125em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	margin: 0px 0px 5px 0px;
+ 	padding: 10px 0px 7px;
 	width: 100%;
+	font-size: 1.125em;
 }
 
 .column h3 {
@@ -2172,7 +2172,7 @@ ul.search-results {
 .product-image dl {
 	display: block;
 	clear: both;
-	font-size: 14px
+	font-size: 14px;
 }
 
 .product-image dt {
@@ -2195,9 +2195,9 @@ ul.search-results {
 
 
 .stock-reason {
-	list-style: none;
-	margin-bottom: 10px;
 	float: left;
+	margin-bottom: 10px;
+	list-style: none;
 }
 
 .stock-reason li {
@@ -2479,8 +2479,8 @@ ol.order-details li {
 }
 
 .voucher-details li {
-	margin-bottom: 10px;
 	float: left;
+	margin-bottom: 10px;
 	width: 100%;
 }
 
@@ -2666,13 +2666,13 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 
 
 .widget dl {
-	border: 1px solid #CCC;
-	padding: 20px 10px 0;
 	display: inline-block;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	padding: 20px 10px 0;
 	width: 100%;
+	border: 1px solid #CCC;
 }
 
 .widget dd {
@@ -2760,8 +2760,8 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 dl.totals dt,
 dl.totals dd {
 	float: left;
-	width: 50%;
 	margin-bottom: 10px;
+	width: 50%;
 }
 
 dl.totals dt {
@@ -2819,7 +2819,7 @@ dl.totals dt {
 .impersonate {
 	position: relative;
 	display: inline-block;
+	float: right;
 	margin-top: 12px;
 	margin-right: 8px;
-	float: right;
 }
