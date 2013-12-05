@@ -887,7 +887,7 @@ span.flag {
 
 .title .controls {
 	position: absolute;
-	top: 18px;
+	top: 5px;
 	right: 23px;
 	margin: 0;
 	width: auto;
@@ -2439,8 +2439,6 @@ ol.order-details li {
 	font-weight: bold;
 }
 
-
-
 .grand-total {
 	margin-top: 20px;
 	padding: 20px 0px 0px 0px;
@@ -2449,21 +2447,16 @@ ol.order-details li {
 
 }
 
-/*.column .grand-total {
-	border-top: 1px solid #ddd;
-	padding: 20px 0px 0px 0px;
-	margin-top: 20px;
-	font-size: 1.250em;
-	clear: both;
-}
-*/
-
 
 
 /* Vouchers
 ------------------------------------------------------------ */
 
 
+
+.vouchers.title .controls {
+	top: 14px;
+}
 
 .vouchers h2 {
 	float: left;
@@ -2481,9 +2474,8 @@ ol.order-details li {
 
 .voucher-details {
 	float: left;
-	padding: 10px 0 10px 20px;
-	width: 95%;
 	list-style: none;
+	margin: 0 0 10px 0;
 }
 
 .voucher-details li {
