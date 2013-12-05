@@ -1113,6 +1113,10 @@
     height: calc(100% - 62px);
 }
 
+.container-content::-webkit-scrollbar {
+	background: #DDD;
+}
+
 .container-content.short {
 	height: -moz-calc(100% - 135px);
     height: -webkit-calc(100% - 135px);
@@ -2706,7 +2710,8 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	text-align: center;
 }
 
-.container-error p,  .container-error dd {
+.container-error p,  
+.container-error dd {
 	margin: 20px 0px;
 }
 
