@@ -2330,6 +2330,8 @@ td.partial {
 	background: #fed779 !important;
 }
 
+
+
 /* Orders */
 
 
@@ -2383,8 +2385,6 @@ td.partial {
 ol.order-details li {
 	list-style-type: decimal;
 }
-
-
 
 .order-summary h2 {
 	position: relative;
