@@ -773,7 +773,28 @@
 	height: 34px;
 }
 
+.flag {
+	background: #ccc;
+	width: 80px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 3px 5px 0px 5px;
+	color: #fff;
+	text-shadow: none;
+	font-size: 0.6em;
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0px 10px;
+}
 
+.flag.active {
+	background: #258643;
+}
+
+.flag.inactive {
+	background: #cc3121;
+}
 
 /* Top Bar
 ------------------------------------------------------------ */
@@ -1186,7 +1207,7 @@
 	margin: 10px;
 }
 
-.column h2, 
+.column h2,
 .box div h2 {
 	clear: both;
  	padding: 10px 0px 7px;
