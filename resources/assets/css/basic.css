@@ -892,7 +892,6 @@ table td {
 	vertical-align: middle;
 	text-align: left;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	position: relative;
 }
 
 table tr {
@@ -943,9 +942,8 @@ table select {
 	margin-bottom: 0;
 	min-width: 0;
 	display: inline-block;
-	margin: 0 10px;
+	margin: 0;
 	float: none;
-	margin: 10px 0;
 }
 
 table input[type="checkbox"],

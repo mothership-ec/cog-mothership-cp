@@ -1267,8 +1267,10 @@ dt.grand-total, dd.grand-total {
 }
 
 .tall #save-content {
-
+	top: 87px;
 }
+
+
 
 /* Create page */
 
@@ -1370,6 +1372,18 @@ dt.grand-total, dd.grand-total {
 	width: 100%;
 	border: 1px solid #CCC;
 	background: #FFF;
+}
+
+.group.third {
+	width: 33.3%;
+}
+
+.clear-group {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0 0 20px 20px;
+	width: auto;
 }
 
 .group .title {
@@ -1504,17 +1518,14 @@ dt.grand-total, dd.grand-total {
 }
 
 .repeatable-group .add-group {
-	display: inline-block;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	width: 70%;
 }
 
 .repeatable-group .add-group .group {
 	margin-bottom: 20px;
 	padding-top: 20px;
-	border: 1px solid #CCC;
 }
 
 .repeatable-group .submit {
@@ -1706,6 +1717,10 @@ dt.grand-total, dd.grand-total {
 	background-image: linear-gradient(top, #ffffff, #e6e6e6);
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#e6e6e6');
+}
+
+table .add-on p {
+	font-size: 15px;
 }
 
 .add-on input {
@@ -1967,13 +1982,19 @@ dt.grand-total, dd.grand-total {
 
 }
 
+table .inline .field .help .description {
+	top: 22px;
+	margin-left: 4%;
+}
+
 
 /* File Manager
 ------------------------------------------------------------ */
 
 
 
-.listing a {
+.listing a,
+.listing .product-image {
 	position: relative;
 	display: inline-block;
 	margin: 0 23px 23px 0;
@@ -1997,9 +2018,8 @@ dt.grand-total, dd.grand-total {
 	bottom: 0px;
 	z-index: 99px;
 	overflow: hidden;
-	padding: 5px;
+	padding: 10px 0 10px 10px;
 	width: 190px;
-	height: 40px;
 	background: rgba(0,0,0,0.5);
 	color: #eee;
 }
@@ -2077,19 +2097,6 @@ ul.search-results {
 	box-shadow: 0 1px 6px rgba(000,000,000,0.1);
 }
 
-/*.file img {
-	float: left;
-	margin: 0 0 23px 0;
-	width: 500px;
-	height: auto;
-	border: 5px solid #FFF;
-	-webkit-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
-	-moz-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
-	box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
-}*/
-
-
-
 .file-manager .button.delete {
 	position: fixed;
 	top: 78px;
@@ -2123,7 +2130,11 @@ ul.search-results {
     height: calc(100% - 120px);
 }
 
+
+
 /* Create product */
+
+
 
 .create-product button {
 	position: fixed;
@@ -2148,6 +2159,7 @@ ul.search-results {
 	margin-right: 10px;
 }
 
+
 /* Sidebar */
 
 
@@ -2156,26 +2168,16 @@ ul.search-results {
 	margin-top: 20px;
 }
 
-.product-image {
-	float: left;
-	overflow: hidden;
-	margin: 0px 30px 40px 0px;
-	width: 210px;
-}
 
 
-.product-image img {
-	float: left;
-	margin: 0px 0px 10px 0px;
-	border: 5px solid #FFF;
-	-webkit-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
-	-moz-box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
-	box-shadow: 0 0 0 1px #ccc, 0 1px 3px rgba(000,000,000,0.2);
-}
+/* Product images */
+
+
 
 .product-image dl {
 	display: block;
 	clear: both;
+	font-size: 14px
 }
 
 .product-image dt {
@@ -2187,7 +2189,25 @@ ul.search-results {
 	margin-bottom: 10px;
 }
 
+.options .group {
+	padding: 20px 0 0 20px;
+}
 
+
+
+/* Stock */
+
+
+
+.stock-reason {
+	list-style: none;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.stock-reason li {
+	margin-bottom: 10px;
+}
 
 
 /* Orders
