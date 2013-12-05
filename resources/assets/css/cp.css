@@ -1221,7 +1221,7 @@ dt.grand-total, dd.grand-total {
 #save-content,
 .save-content {
 	position: fixed;
-	top: 138px;
+	top: 77px;
 	right: 14px;
 	z-index: 12;
 }
