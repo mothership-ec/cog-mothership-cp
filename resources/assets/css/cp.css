@@ -840,6 +840,12 @@
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.topbar .tabs li:hover {
+	background: #EEE;
+	height: 54px;
+	border-bottom: 1px solid #CBCBCB;
+}
+
 .topbar .tabs li.active:after {
 	position: absolute;
 	left: 50%;
@@ -870,10 +876,14 @@
 .topbar .tabs a {
 	display: block;
 	padding: 0 1em;
-	height: 56px;
+	height: 55px;
 	text-decoration: none;
 	text-shadow: 0px 1px 0px rgba(255,255,255,1.0);
 	line-height: 61px;
+}
+
+.topbar .tabs a:hover {
+	color: inherit;
 }
 
 .controls {
