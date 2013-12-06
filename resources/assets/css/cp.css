@@ -2350,6 +2350,7 @@ td.partial {
 	float: left;
 	margin: 0 0 20px 0;
 	list-style: none;
+	width: 100%;
 }
 
 .order-details li {
