@@ -2345,14 +2345,15 @@ td.partial {
 	text-align: right;
 }
 
-.order-listing-overview td.left {
+.order-listing-overview .left {
 	text-align: left;
 }
 
 .order-details {
 	float: left;
 	list-style: none;
-	margin-bottom: 10px;
+	padding: 20px 0 0 20px;
+	margin: 0 0 20px 0;
 }
 
 .order-details li {
@@ -2406,12 +2407,9 @@ ol.order-details li {
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
 }
 
-
-
 .progress tr:first-child {
 	font-weight: bold;
 }
-
 
 .summary-totals li {
 	margin: 10px 0px;
