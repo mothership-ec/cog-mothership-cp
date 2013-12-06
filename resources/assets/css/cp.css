@@ -110,12 +110,6 @@
 	height: 59px;
 	border-right: 1px solid #26537c;
 	line-height: 64px;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
-
 }
 
 .navigation li a {
@@ -2502,7 +2496,6 @@ ol.order-details li {
 
 
 
-
 /* Reports
 ------------------------------------------------------------ */
 
@@ -2566,6 +2559,7 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	-moz-box-shadow: inset 1px 1px 0 #5992ba;
 	box-shadow: inset 1px 1px 0 #5992ba;
 }
+
 
 
 /* Scrollbars
@@ -2722,8 +2716,11 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 }
 
 
+
 /* Errors
 -------------------------------------- */
+
+
 
 .container-error {
 	top: 35%;
@@ -2753,8 +2750,11 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	text-align: left;
 }
 
+
+
 /* Repairs
 --------------------------------------- */
+
 
 
 dl.totals dt,
@@ -2799,8 +2799,12 @@ dl.totals dt {
 	font-weight: bold;
 }
 
+
+
 /* Users
 --------------------------------------- */
+
+
 
 .skip-payment {
 	float: right;

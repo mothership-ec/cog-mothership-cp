@@ -301,12 +301,13 @@ button:active,
 	position: relative;
 }
 
-.container-content form:after {
+.container-content:after {
 	content: '* required field';
 	clear: both;
 	display: block;
 	margin: 0 0 20px 0;
 	float: left;
+	width: 100%;
 }
 
 
