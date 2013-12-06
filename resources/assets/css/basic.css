@@ -68,6 +68,7 @@ a:hover {
 p {
 	font-size: 1em;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin-bottom: 20px;
 }
 
 p a {
@@ -895,6 +896,7 @@ table td {
 	vertical-align: middle;
 	text-align: left;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
 }
 
 table tr {
