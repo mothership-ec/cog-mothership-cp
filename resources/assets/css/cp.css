@@ -1417,16 +1417,21 @@
 
 .content dl {
 	margin-bottom: 20px;
+	font-size: 15px;
 }
 
 .content dt {
 	float: left;
-	width: 100%;
+	width: 30%;
+	margin-right: 5%;
+	margin-bottom: 20px;
+	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.column dd {
-	clear: right;
-	min-height: 20px;
+.content dd {
+	float: left;
+	width: 65%;
+	margin-bottom: 20px;
 }
 
 .grand-total {
@@ -1641,7 +1646,7 @@
 .field.inline label {
 	display: inline-block;
 	width: auto;
-	text-indent: 25px;
+	margin-left: 25px;
 }
 
 
@@ -2772,9 +2777,10 @@ dl.totals dt {
 
 .option-price {
 	position: relative;
-	top: -15px;
-	left: 13px;
+	top: -20px;
+	left: 25px;
 	clear: both;
+	margin-bottom: 0;
 }
 
 .menu-collapse, .sidebar-collapse {
@@ -2783,7 +2789,15 @@ dl.totals dt {
 
 .service-list dt {
 	margin-bottom: 20px;
-	font-weight: bold;
+	margin-right: 5%;
+	width: 30%;
+	float: left;
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.service-list dd {
+	width: 65%;
+	float: left;
 }
 
 
