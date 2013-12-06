@@ -305,9 +305,11 @@ button:active,
 	content: '* required field';
 	clear: both;
 	display: block;
-	margin: 0 0 20px 0;
+	margin: 0;
 	float: left;
 	width: 100%;
+	font-size: 0.8em;
+	font-style: italic;
 }
 
 
