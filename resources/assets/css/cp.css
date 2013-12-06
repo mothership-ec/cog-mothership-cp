@@ -1421,12 +1421,16 @@
 
 .content dt {
 	float: left;
-	width: 100%;
+	clear: left;
+	width: 150px;
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin: 10px 10px 10px 0px;
 }
 
-.column dd {
-	clear: right;
+.content dd {
 	min-height: 20px;
+	float: left;
+	margin: 10px 0px;
 }
 
 .grand-total {
