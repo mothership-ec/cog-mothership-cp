@@ -1192,60 +1192,6 @@
 	padding: 20px;
 }
 
-.column .section {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	margin: 2.5%;
-	width: 95%;
-}
-
-.column .title {
-	border: 1px solid #CCC;
-	border-bottom: none;
-	background-image: none;
-}
-
-.column li {
-	list-style: none;
-}
-
-.column p {
-	margin: 10px;
-}
-
-.column h2,
-.box div h2 {
-	clear: both;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	margin: 0px 0px 5px 0px;
- 	padding: 10px 0px 7px;
-	width: 100%;
-	font-size: 1.125em;
-}
-
-.column h3 {
-	margin: 20px 0px;
-	color: #444;
-}
-
-.column dt {
-	float: left;
-	width: 200px;
-	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.column dd {
-	clear: right;
-	min-height: 20px;
-}
-
-dt.grand-total, dd.grand-total {
-	border-top: 1px solid #ddd;
-}
-
 #save-content,
 .save-content {
 	position: fixed;
@@ -1420,24 +1366,65 @@ dt.grand-total, dd.grand-total {
 	margin: 20px 0 0 20px;
 }
 
-.group .content form {
+.content form {
 	margin: 0;
 }
 
-.group label {
+.contnet label {
 	float: left;
 	width: 100%;
 }
 
-.group .button {
+.content .button {
 	float: left;
 	clear: both;
 	margin-bottom: 20px;
 }
 
-.group .field-wrap {
+.content .field-wrap {
 	clear: both;
 	overflow: hidden;
+}
+
+.content ul,
+.content ol {
+	width: 100%;
+}
+
+.content li {
+	list-style: none;
+}
+
+.content ol li {
+	list-style: decimal;
+}
+
+.content h1,
+.content h2,
+.content h3 {
+	clear: both;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0px 0px 20px 0px;
+ 	padding: 0px 0px 2px;
+	width: 100%;
+	border-bottom: 2px solid #EEE;
+	float: left;
+}
+
+.content dt {
+	float: left;
+	width: 100%;
+}
+
+.column dd {
+	clear: right;
+	min-height: 20px;
+}
+
+.grand-total {
+	border-top: 1px solid #ddd;
 }
 
 
@@ -1451,6 +1438,7 @@ dt.grand-total, dd.grand-total {
 	margin: 0px -15px;
 	border-spacing: 15px;
 	border-collapse: separate;
+	width: 100%;
 }
 
 .small-box {
