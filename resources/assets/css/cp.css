@@ -215,7 +215,6 @@
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	background: rgba(000,000,000,0.8);
-
 }
 
 .loading-spinner p {
@@ -2224,12 +2223,20 @@ ul.search-results {
 
 /* Fulfillment */
 
+
+
 .fulfillment ul {
+	float: left;
+	width: 100%;
 	margin: 0px 0px 10px 0px;
 }
 
 .fulfillment li {
 	list-style-type: none;
+	float: left;
+	margin-bottom: 10px;
+	width: 100%;
+	font-size: 15px;
 }
 
 .fulfillment form {
@@ -2255,28 +2262,31 @@ ul.search-results {
 	margin-bottom: 30px;
 }
 
-.fulfillment h3 {
-	margin: 0px;
-}
-
 .pick-list {
-	margin: 0px;
-	width: 95%;
+	margin: 0 0 20px 0;
 }
-
 
 .pick-list input {
 	margin: 0px;
 
 }
 
-.pick-list img {
+.pick-list .image img {
 	float: left;
-	margin: 0px 10px 0px 0px;
+	position: absolute;
+}
+
+.pick-list .image h3 {
+	width: auto;
+	margin: 0 0 5px 120px;
+	border-bottom: none;
+	min-height: 100px;
+	vertical-align: middle;
 }
 
 .pick-list h3 {
-	margin: 0px;
+	border-bottom: none;
+	margin-bottom: 0;
 }
 
 .pick-item {
