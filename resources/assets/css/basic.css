@@ -187,7 +187,7 @@ input[type=date] {
 }
 
 input[type=time]{
-	width: 245px;
+	width: 330px;
 	margin-right: 20px;
 	margin-bottom: 25px;
 }
@@ -1138,8 +1138,6 @@ dd {
 	height: 100%;
 	background: #F1F1F1;
 }
-
-
 
 .footer {
 	position: fixed;

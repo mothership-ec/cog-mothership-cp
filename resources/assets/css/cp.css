@@ -979,7 +979,7 @@
 
 .publish .dropdown-menu {
 	position: absolute;
-	top: 120px !important;
+	top: 117px !important;
 	left: 0;
 	z-index: 100;
 	display: none;
@@ -998,6 +998,8 @@
 .publish .dropdown-menu .wrap {
 	position: relative;
 	float: left;
+	margin-right: 163px;
+	max-width: 800px;
 }
 
 .publish form {
@@ -1019,6 +1021,10 @@
 	position: relative;
 	float: left;
 	padding: 10px 20px;
+	width: 50%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .publish .date-time .field {
@@ -1039,7 +1045,10 @@
 }
 
 .publish .wrap .button {
-	margin-top: 41px;
+	right: -150px;
+	top: 0;
+	position: absolute;
+	margin-top: 106px;
 }
 
 .publish .help {
@@ -1147,6 +1156,17 @@
 	height: -moz-calc(100% - 80px);
     height: -webkit-calc(100% - 80px);
     height: calc(100% - 80px);
+}
+
+.container-content h1,
+.container-content h2,
+.container-content h3,
+.container-content h4 {
+margin: 0px 0px 10px 0px;
+padding: 0px 0px 5px;
+width: 100%;
+border-bottom: 2px solid #DDD;
+float: left;
 }
 
 
