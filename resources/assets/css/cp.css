@@ -791,6 +791,11 @@
 	color: #FFF;
 }
 
+.flag.role {
+	background: #4473a6;
+	color: #FFF;
+}
+
 
 
 /* Top Bar
@@ -1434,6 +1439,7 @@
 	width: 65%;
 	margin-bottom: 10px;
 	clear: right;
+	min-height: 20px;
 }
 
 .grand-total {
