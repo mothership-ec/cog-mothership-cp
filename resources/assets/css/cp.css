@@ -1421,17 +1421,23 @@
 }
 
 .content dt {
-	float: left;
-	width: 30%;
-	margin-right: 5%;
-	margin-bottom: 20px;
-	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	clear: left;
+	width: 150px;
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin: 10px 10px 10px 0px;
 }
 
 .content dd {
+	clear: left;
+	width: 150px;
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin: 10px 10px 10px 0px;
+}
+
+.content dd {
+	min-height: 20px;
 	float: left;
-	width: 65%;
-	margin-bottom: 20px;
+	margin: 10px 0px;
 }
 
 .grand-total {
