@@ -1353,7 +1353,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 20px 20px 0;
-	width: inherit;
+	width: 100%;
 }
 
 .group h2 {
@@ -1429,33 +1429,27 @@
 
 
 
-/* Small Box */
+/* Box Grid */
 
 
-
-.small-box-row {
-	display: table;
-	margin: 0px -15px;
-	border-spacing: 15px;
-	border-collapse: separate;
-	width: 100%;
+.group-grid {
+	margin: 0 -20px 20px;
 }
 
-.small-box {
+.group-grid .row {
+    display: table;
+    table-layout: fixed; /* keep equal cell widths */
+    width: 100%; /* need width otherwise cells aren't equal and they self collapse */
+    border-spacing: 20px 0; /* best way to space cells but has outer padding */
+}
+
+.group-grid .row .group {
 	position: relative;
 	display: table-cell;
 	float: none;
 	overflow: hidden;
 	width: 30%;
 	vertical-align: top;
-}
-
-.small-box .content {
-	width: 100%;
-}
-
-.small-box ul {
-	width: 100%;
 }
 
 
