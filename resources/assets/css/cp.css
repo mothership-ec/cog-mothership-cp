@@ -1337,7 +1337,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0;
-	padding-bottom: 12px;
+	padding: 20px 22px 12px;
 	width: 100%;
 	border-bottom: 1px solid #CCC;
 	background: none;
