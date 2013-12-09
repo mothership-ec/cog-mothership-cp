@@ -443,6 +443,7 @@ input.button {
 	background-image: linear-gradient(top, #528bb6, #2a537b);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#528bb6', EndColorStr='#2a537b');
 	cursor: pointer;
+	color: #FFF;
 }
 
 .add:active,
