@@ -33,24 +33,36 @@
 	{% endjavascripts %}
 {% endblock %}
 
+
 {% block body %}
 	<div class="container-cp">
+
 		<div class="loading-spinner">
 			<p>Loading&hellip;</p><div class="spinner"></div>
 		</div>
-		<nav class="navigation">
+
+	<nav class="navigation">
 			<h1 class="vendor">
+
 				<a href="{{ url('ms.cp.dashboard') }}">
 					{{ app.cfg.app.name }}
 					<span class="version">Mothership</span>
 				</a>
 			</h1>
+
+
 			{{ render(controller('Message:Mothership:ControlPanel::Controller:Component#mainMenu')) }}
+
 			<a class="logout" href="{{ url('ms.cp.logout') }}">Log Out</a>
 		</nav>
+
+
+
 		<section class="clear">
+
+
 			{% block content %}{% endblock %}
 		</section>
-		{% include 'Message:Mothership:ControlPanel::includes:footer' %}
-	</div>
+			{% include 'Message:Mothership:ControlPanel::includes:footer' %}
+</div>
 {% endblock %}
