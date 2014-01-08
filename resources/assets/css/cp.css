@@ -457,6 +457,11 @@
 	white-space: nowrap;
 	font-size: 0.875em;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-transform: lowercase;
+}
+
+.sidebar .menu a:first-letter {
+	text-transform: uppercase;
 }
 
 .sidebar .menu ol {
@@ -687,8 +692,8 @@
 .title h1 {
 	display: inline-block;
 	width: auto;
-	text-transform: capitalize;
 	white-space: nowrap;
+	text-transform: lowercase;
 }
 
 .title h1 span {
@@ -704,6 +709,7 @@
 	width: auto;
 	white-space: nowrap;
 	font-size: 0.9em;
+	text-transform: lowercase;
 }
 
 .title h1:hover,
@@ -720,6 +726,11 @@
 
 .title h1[data-title]:hover {
 	cursor: pointer;
+}
+
+.title h1:first-letter,
+.title h2:first-letter {
+	text-transform: uppercase;
 }
 
 .edit-title {
