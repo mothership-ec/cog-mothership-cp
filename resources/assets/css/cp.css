@@ -693,7 +693,6 @@
 	display: inline-block;
 	width: auto;
 	white-space: nowrap;
-	text-transform: lowercase;
 }
 
 .title h1 span {
@@ -726,11 +725,6 @@
 
 .title h1[data-title]:hover {
 	cursor: pointer;
-}
-
-.title h1:first-letter,
-.title h2:first-letter {
-	text-transform: uppercase;
 }
 
 .edit-title {
@@ -1667,6 +1661,7 @@
 .field select {
 	max-width: 70%;
 	width: 70%;
+	min-width: inherit;
 }
 
 .field label {
