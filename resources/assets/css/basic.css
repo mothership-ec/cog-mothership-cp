@@ -281,6 +281,7 @@ button:hover,
 .button:hover {
 	text-decoration: none;
 	cursor: pointer;
+	color: inherit;
 }
 
 button:active,
@@ -316,9 +317,9 @@ button:active,
 }
 
 
+
 /* Button styles
 ------------------------------------------------------------ */
-
 
 
 
@@ -367,6 +368,8 @@ button:active,
 input.button {
 	width: 100px;
 }
+
+
 
 /* Submit, add, upload, create button styles */
 
@@ -443,7 +446,7 @@ input.button {
 	background-image: linear-gradient(top, #528bb6, #2a537b);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#528bb6', EndColorStr='#2a537b');
 	cursor: pointer;
-	color: #FFF;
+	color: #FFF !important;
 }
 
 .add:active,
@@ -501,6 +504,7 @@ input.button {
 	background-image: -ms-linear-gradient(top, #3d9f60, #125925);
 	background-image: linear-gradient(top, #3d9f60, #125925);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3d9f60', EndColorStr='#125925');
+	color: #FFF !important; 
 }
 
 
@@ -636,9 +640,8 @@ input.button {
 	background-image: -ms-linear-gradient(top, #d74738, #9b1412);
 	background-image: linear-gradient(top, #d74738, #9b1412);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#d74738', EndColorStr='#9b1412');
+	color: #FFF !important;
 }
-
-
 
 button:disabled, button:disabled:hover {
 	background: #e9e8e8;
@@ -656,7 +659,11 @@ button:disabled:active {
 	box-shadow: none;
 }
 
+
+
 /* Toggle button styles */
+
+
 
 .toggle {
 	width: 130px;
@@ -806,6 +813,7 @@ button:disabled:active {
 	-webkit-box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1);
 	-moz-box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1);
 	box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1);
+	color: inherit;
 }
 
 .button.button-group a:active,
