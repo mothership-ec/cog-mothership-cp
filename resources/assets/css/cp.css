@@ -693,6 +693,7 @@
 	display: inline-block;
 	width: auto;
 	white-space: nowrap;
+	position: relative;
 }
 
 .title h1 span {
@@ -721,6 +722,9 @@
 	content: "\f040";
 	font-size: 0.875em;
 	font-family: 'FontAwesome';
+	position: absolute;
+	top: 0;
+	right: -25px;
 }
 
 .title h1[data-title]:hover {
@@ -735,7 +739,7 @@
 	padding-top: 5px;
 	padding-left: 22px;
 	width: 100%;
-	height: 59px;
+	height: 74px;
 	background: #F1F1F1;
 	background-color: #f1f1f1;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e7e7e7));
@@ -757,7 +761,7 @@
 .edit-title input {
 	z-index: 11;
 	float: left;
-	margin: 10px 10px 0 0;
+	margin: 17px 10px 0 0;
 	min-width: 200px;
 	max-width: 840px;
 	width: 70%;
@@ -766,7 +770,7 @@
 .edit-title button {
 	z-index: 11;
 	float: left;
-	margin-top: 11px;
+	margin-top: 18px;
 	height: 34px;
 }
 
