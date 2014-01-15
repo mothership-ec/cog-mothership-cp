@@ -912,6 +912,10 @@
 	text-align: right;
 }
 
+.title .controls .button {
+	font-size: 16px;
+}
+
 .controls form {
 	width: auto;
 }
