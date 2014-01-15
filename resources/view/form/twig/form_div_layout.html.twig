@@ -6,10 +6,21 @@
 		{% set currency = money_pattern|split('{{ widget }}')[0]|trim %}
 
 		{# replace {{ widget }} with the actual widget and add <p></p> around the currency-sign #}
-		{{ money_pattern|replace({ '{{ widget }}': block('form_widget_simple'), (currency): "<p>%s</p>"|format(currency) })|raw }}
+		{{ money_pattern|replace({ '{{ widget }}': '<div>' ~ block('form_widget_simple') ~ '</div>', (currency): "<p>%s</p>"|format(currency) })|raw }}
 	</div>
    {% endspaceless %}
  {% endblock money_widget %}
+
+{#  {% block percent_widget %}
+	{% spaceless %}
+		<div class="add-on">
+        	<p>%</p>
+        	<div>
+	      		{{ block('form_widget_simple') }}
+      		</div>
+    	</div>
+	{% endspaceless %}
+{% endblock percent_widget %} #}
 
 {# Custom blocks defined by Message #}
 {% block help_widget %}

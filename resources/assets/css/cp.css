@@ -1406,6 +1406,7 @@
 	padding: 20px 20px 0;
 	width: 100%;
 	overflow-wrap: break-word;
+	position: relative;
 }
 
 .group h2 {
@@ -1711,30 +1712,21 @@
 
 
 .add-on {
-	display: inline-block;
-	float: left;
-	max-width: 70%;
+	display: table;
+	border-collapse: collapse;
+	vertical-align: top;
+	margin-bottom: 20px;
 	width: 70%;
-}
-
-.inline .add-on {
-	display: inline-block;
-	float: left;
-	max-width: 70%;
-	width: 70%;
-}
-
-.inline .add-on input {
-	width: 80%;
 }
 
 .add-on p {
-	display: block;
-	float: left;
-	padding: 9px 13px 6px 13px;
-	border-top: 1px solid #CCC;
-	border-bottom: 1px solid #CCC;
-	border-left: 1px solid #CCC;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	padding: 0 10px;
+	-webkit-box-shadow: inset 0 0 0 1px #CCC;
+	-moz-box-shadow: inset 0 0 0 1px #CCC;
+	box-shadow: inset 0 0 0 1px #CCC;
 	-webkit-border-radius: 5px 0px 0px 5px;
 	-moz-border-radius: 5px 0px 0px 5px;
 	border-radius: 5px 0px 0px 5px;
@@ -1747,10 +1739,16 @@
 	background-image: linear-gradient(top, #ffffff, #e6e6e6);
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#e6e6e6');
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	min-width: 20px;
 }
 
-table .add-on p {
-	font-size: 15px;
+.add-on div {
+	display: table-cell;
+	margin-bottom: 0;
+	width: 100%;
 }
 
 .add-on input {
@@ -1760,21 +1758,24 @@ table .add-on p {
 	-webkit-border-radius: 0px 5px 5px 0px;
 	-moz-border-radius: 0px 5px 5px 0px;
 	border-radius: 0px 5px 5px 0px;
-}
-
-.column .add-on {
-	max-width: 100%;
+	border-left: none;
+	margin: 0;
+	height: 37px;
 	width: 100%;
 }
 
-.column .add-on p {
-	margin: 0px;
+.inline .add-on {
+	display: inline-block;
+	float: left;
+	max-width: 70%;
+	width: 70%;
 }
 
-.column .add-on input {
-	max-width: 350px;
-	width: 40%;
+table .add-on p {
+	font-size: 15px;
 }
+
+
 
 
 
@@ -2755,13 +2756,31 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 
 .choose {
 	padding-bottom: 0;
+	position: relative;
 }
 
-.choose input {
-	min-width: 100px;
-	width: 50%;
+.choose .option {
+	float: left;
+	width: 46%;
 }
 
+.choose .or {
+	float: left;
+	width: 8%;
+	text-align: center;
+	margin-top: 31px;
+}
+
+.choose .option .add-on {
+	max-width: 100%;
+	width: 100%;
+}
+
+.choose .field-wrap .field label {
+	position: absolute;
+	top: -23px;
+	left: 170px;
+}
 
 
 /* Errors
