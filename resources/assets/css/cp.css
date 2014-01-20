@@ -1477,7 +1477,7 @@
 	margin-right: 5%;
 	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	margin-bottom: 10px;
-	clear: left;
+	clear: right;
 }
 
 .content dd {
@@ -2360,6 +2360,16 @@ ul.search-results {
 	margin-bottom: 10px;
 }
 
+.adr-line {
+	margin-bottom: 0;
+}
+
+.adr-line span {
+	display: block;
+	clear: both;
+	margin-bottom: 10px;
+}
+
 td.complete {
 	background: #c9e5c9 !important;
 }
@@ -2455,38 +2465,23 @@ ol.order-details li {
 	font-weight: bold;
 }
 
-.summary-totals {
-	background: #fcfac9;
-}
-
-.summary-totals ul {
-	display: block;
-	padding: 0 0 10px 0;
-}
-
-.summary-totals li {
-	margin: 0 0 10px;
-	color: #444;
-	list-style: none;
+.total-summary th {
 	text-align: right;
+	padding: 12px 15px 10px;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	-webkit-box-shadow: inset 1px 1px 0 #FFF;
+	-moz-box-shadow: inset 1px 1px 0 #FFF;
+	box-shadow: inset 1px 1px 0 #FFF;
+	vertical-align: middle;
+	text-align: right;
+	font-family: 'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	background: #FFF;
 }
 
-.summary-totals span {
-	display: inline-block;
-	padding: 0 0 0 20px;
-	width: 140px;
-	color: #555;
-}
-
-.summary-totals li:last-child {
-	color: #333;
-	font-weight: bold;
-}
-
-.grand-total {
-	margin-top: 20px;
-	padding: 20px 0px 0px 0px;
-	border-top: 1px solid #eee;
+.total-summary td {
+	background: #FFF !important;
 }
 
 
@@ -2675,10 +2670,6 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	background-image: linear-gradient(top, #f1f1f1, #e7e7e7);
 	color: #333;
 	font-size: 1.0em;
-}
-
-.widget {
-
 }
 
 
