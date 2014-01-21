@@ -504,7 +504,7 @@ input.button {
 	background-image: -ms-linear-gradient(top, #3d9f60, #125925);
 	background-image: linear-gradient(top, #3d9f60, #125925);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3d9f60', EndColorStr='#125925');
-	color: #FFF !important; 
+	color: #FFF !important;
 }
 
 

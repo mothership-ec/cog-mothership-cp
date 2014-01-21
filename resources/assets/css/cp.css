@@ -1684,7 +1684,11 @@
 	width: 100%;
 }
 
-
+.column h5 {
+	margin: 20px 0px;
+	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+}
 
 
 /* Inline field styling */
@@ -1894,6 +1898,8 @@ table .add-on p {
 .help {
 	float: left;
 	margin: 11px 0 0 15px;
+	position: relative;
+	width: 25%;
 }
 
 .help a {
@@ -1916,7 +1922,8 @@ table .add-on p {
 
 .help .description {
 	position: absolute;
-	top: 29px;
+	top: -10px;
+	left: 20px;
 	z-index: 20;
 	display: none;
 	float: left;
@@ -1927,12 +1934,14 @@ table .add-on p {
 	padding: 15px;
 	min-height: 39px;
 	width: inherit;
-	width: 28%;
+	width: 100%;
+	min-width: 120px;
 	border: 1px solid #d5cb95;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	background: #fcf8e3;
+	font-size: 14px;
 }
 
 .help .description:before {
@@ -1968,31 +1977,11 @@ table .add-on p {
 .help .description p {
 	color: #836229;
 	line-height: 1.5em;
-}
-
-.help .description {
-	position: absolute;
-	top: 29px;
-	z-index: 20;
-	display: none;
-	float: left;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	margin-left: 2%;
-	padding: 15px;
-	min-height: 39px;
-	width: inherit;
-	width: 28%;
-	border: 1px solid #d5cb95;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	background: #fcf8e3;
+	margin-bottom: 0px;
 }
 
 
-.field.inline .help {
+/*.field.inline .help {
 	margin-top: 0;
 }
 
@@ -2016,7 +2005,7 @@ table .add-on p {
 table .inline .field .help .description {
 	top: 22px;
 	margin-left: 4%;
-}
+}*/
 
 
 /* File Manager
@@ -2542,11 +2531,6 @@ ol.order-details li {
 /* Reports
 ------------------------------------------------------------ */
 
-
-
-.filter-by  {
-}
-
 .filter-by .field {
 	float: left;
 	padding: 20px 10px;
@@ -2561,11 +2545,16 @@ ol.order-details li {
 }
 
 
-.filter-by .button {
+button.filter {
 	display: block;
 	clear: both;
 	margin: 10px;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
 }
+
+
 
 tr.total {
 	border: 1px solid #26537c;
@@ -2819,13 +2808,13 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	margin-bottom: 20px;
 }
 
-.apply-discount .add-on, 
+.apply-discount .add-on,
 .apply-misc .add-on {
 	float: left;
 	width: 65%;
 }
 
-.apply-discount label, 
+.apply-discount label,
 .apply-misc label {
 	font-size: 1.08em;
 	float: left;
@@ -2833,12 +2822,12 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	margin-right: 5%;
 }
 
-.apply-discount .add-on p, 
+.apply-discount .add-on p,
 .apply-misc .add-on p {
 	margin-bottom: 0;
 }
 
-.apply-discount .add-on input, 
+.apply-discount .add-on input,
 .apply-misc .add-on input {
 	width: 100px;
 	margin-bottom: 0;
