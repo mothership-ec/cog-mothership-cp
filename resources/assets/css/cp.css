@@ -1196,6 +1196,7 @@
 	width: 100%;
 	border: 1px solid #CCC;
 	background: #fff;
+	overflow: hidden;
 }
 
 .dual-column .title {
