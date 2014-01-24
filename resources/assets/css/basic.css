@@ -305,8 +305,8 @@ button:active,
 	position: relative;
 }
 
-.container-content:after {
-	content: '* required field';
+.container-content form:after {
+	content: '* Required field';
 	clear: both;
 	display: block;
 	margin: 0;
@@ -536,7 +536,7 @@ input.button {
 
 .edit:before {
 	margin-right: 8px;
-	content: "\f044";
+	content: "\f040";
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
