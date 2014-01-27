@@ -305,16 +305,28 @@ button:active,
 	position: relative;
 }
 
+/*.field.required .add-on:after {
+	content: '*';
+}*/
+
 .container-content form:after {
 	content: '* Required field';
 	clear: both;
 	display: block;
-	margin: 0;
+	margin: 0 0 10px 0;
 	float: left;
 	width: 100%;
 	font-size: 0.8em;
 	font-style: italic;
 }
+
+label[for='form_balance_amount'] {
+	display: none;
+}
+
+
+
+
 
 
 

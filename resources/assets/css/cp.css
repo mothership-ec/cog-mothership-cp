@@ -1699,7 +1699,7 @@
 .field.inline input[type="checkbox"],
 .field.inline input[type="radio"]{
 	position: absolute;
-	left: 0;
+	left: 2px;
 	display: inline-block;
 }
 
