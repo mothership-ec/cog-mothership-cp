@@ -305,9 +305,6 @@ button:active,
 	position: relative;
 }
 
-/*.field.required .add-on:after {
-	content: '*';
-}*/
 
 .container-content form:after {
 	content: '* Required field';
