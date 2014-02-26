@@ -44,6 +44,7 @@
 	-moz-box-shadow: 0px 0px 1px 3px rgba(17,48,81,0.1), inset 0px -1px 0px 0px rgba(255,255,255,0.1);
 	box-shadow: 0px 0px 1px 3px rgba(17,48,81,0.1), inset 0px -1px 0px 0px rgba(255,255,255,0.1);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#528cb6', EndColorStr='#4473a6');
+	min-width: 1260px;
 }
 
 .navigation a {
@@ -94,14 +95,16 @@
 	font-size: 13px;
 }
 
+.navigation nav {
+	padding-right: 129px;
+	display: block;
+	width: auto;
+	position: relative;
+}
+
 .navigation ol {
-	position: absolute;
-	top: 0px;
-	left: 249px;
-	width: 950px;
 	height: 59px;
 	list-style: none;
-
 }
 
 .navigation li {

@@ -146,7 +146,11 @@ html, body {
 	width: 39.44174757281553%;
 }
 
-.login-form label {
+.login-form label  {
+	color: #E1E1E1;
+}
+
+.login-form .required label {
 	height: 44px;
 	color: transparent;
 	font-size: 0.875em;
