@@ -19,7 +19,7 @@ class Error extends \Message\Cog\Controller\Controller
 			$errorCode = 500;
 		}
 
-		return $this->render('::error/' . $errorCode, array(
+		return $this->render('Message:Mothership:ControlPanel::error/' . $errorCode, array(
 			'exception' => $exception,
 		));
 	}
