@@ -321,9 +321,52 @@ label[for='form_balance_amount'] {
 	display: none;
 }
 
+.ui-datepicker {
+	padding: 10px;
+	background: #FFF;
+	border: 1px solid #CCC;
+	-webkit-box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+	box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+}
 
+.ui-datepicker-title {
+	text-align: center;
+}
 
+.ui-datepicker-next,
+.ui-datepicker-prev {
+	color: transparent;
+	position: absolute;
+}
 
+.ui-datepicker-next:hover,
+.ui-datepicker-prev:hover {
+	color: transparent;
+}
+
+.ui-datepicker-next {
+	right: 10px;
+}
+
+.ui-datepicker-next:before {
+	content: '\f054';
+	font-family: 'FontAwesome';
+	display: block;
+	top: 0;
+	right: -20px;
+	margin-right: 0px;
+	color: #333;
+	position: relative;
+}
+
+.ui-datepicker-prev:before {
+	content: '\f053';
+	font-family: 'FontAwesome';
+	display: block;
+	color: #333;
+	position: relative;
+}
 
 
 
