@@ -978,10 +978,6 @@ table input[type="image"] {
 	float: none;
 }
 
-table td .inline {
-	display: inline-block;
-}
-
 table td .field {
 	margin-bottom: 0;
 }
