@@ -63,6 +63,7 @@
 	float: left;
 	width: 248px;
 	height: 59px;
+	z-index: 1000;
 	border-right: 1px solid #26537c;
 	background-color: #3f759f;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#3f759f), to(#34608c));
