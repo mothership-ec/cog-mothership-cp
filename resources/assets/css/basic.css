@@ -1184,15 +1184,22 @@ dd {
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.footer .website {
+.footer a.website {
 	float: right;
 	margin-top: 13px;
 	margin-right: 15px;
+	text-decoration: none;
 }
 
-.footer .website i {
-	margin-right: 10px;
-	text-decoration: none;
+.footer a.website span {
+	text-decoration: underline;
+}
+
+.footer a.website i:before {
+	content: '\f08e';
+	font-family: 'FontAwesome';
+	font-style: normal;
+	margin-right: 5px;
 }
 
 .clearfix {
