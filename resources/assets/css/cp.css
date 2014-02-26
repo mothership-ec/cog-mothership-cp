@@ -176,23 +176,29 @@
 ------------------------------------------------------------ */
 
 
-
-.welcome {
-	position: absolute;
-	top: 50%;
+.dashboard {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	width: 100%;
-	-webkit-box-shadow: 0px 4px 0px #F1F1F1;
-	-moz-box-shadow: 0px 4px 0px #F1F1F1;
-	box-shadow: 0px 4px 0px #F1F1F1;
-	text-align: center;
-	font-size: 26px;
-	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	height: 100%;
+	position: relative;
 }
 
-.welcome:before {
-	margin-right: 10px;
-	content: "\f118";
-	font-family: 'FontAwesome';
+.dashboard.home .main {
+    position: fixed;
+	display: inline-block;
+    overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 0 40px 0px;
+	width: 100%;
+	height: inherit;
+}
+
+.dashboard.home .container-content:after {
+	content: '';
 }
 
 
@@ -646,18 +652,6 @@
     width: -webkit-calc(100% - 250px);
     width: calc(100% - 250px);
 	height: inherit;
-}
-
-.dashboard {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 23px;
-	width: 100%;
-}
-
-.dashboard h1 {
-
 }
 
 
@@ -2619,115 +2613,9 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 
 
 
-/* Widgets
----------------------------------------- */
-
-
-
-.widget-sidebar {
-	right: 15px;
-	display: inline-block;
-	width: 300px;
-}
-
-.widget {
-	width: 300px;
-	border-radius: 3px;
-	background: #FAFAFA;
-	background-color: #eee;
-	color: #333;
-	list-style: none;
-	text-shadow: 0 1px 0 #FFF;
-	font-size: 1.0em;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.widget h1,
-.widget h2,
-.widget h3 {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 12px 10px 10px;
-	border: 1px solid #CCC;
-	border-bottom: none;
-	background-color: #f1f1f1;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e7e7e7));
-	background-image: -webkit-linear-gradient(top, #f1f1f1, #e7e7e7);
-	background-image: -moz-linear-gradient(top, #f1f1f1, #e7e7e7);
-	background-image: -o-linear-gradient(top, #f1f1f1, #e7e7e7);
-	background-image: -ms-linear-gradient(top, #f1f1f1, #e7e7e7);
-	background-image: linear-gradient(top, #f1f1f1, #e7e7e7);
-	color: #333;
-	font-size: 1.0em;
-}
-
-
-
-/* Table styles */
-
-
-
-.widget table {
-	margin-bottom: 0px;
-	border-bottom: none;
-}
-
-.widget tr {
-	border: none;
-}
-
-.widget td {
-	border: 1px solid #CCC;
-	background: #FFF !important;
-}
-
-
-
-/* Definition list styles */
-
-
-
-.widget dl {
-	display: inline-block;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 20px 10px 0;
-	width: 100%;
-	border: 1px solid #CCC;
-}
-
-.widget dd {
-	margin-bottom: 20px;
-	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-
-
-/* Dark styling */
-
-
-
-.widget.dark {
-	background-color: #2e2e2e;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#2e2e2e), to(#161616));
-	background-image: -webkit-linear-gradient(top, #2e2e2e, #161616);
-	background-image: -moz-linear-gradient(top, #2e2e2e, #161616);
-	background-image: -o-linear-gradient(top, #2e2e2e, #161616);
-	background-image: -ms-linear-gradient(top, #2e2e2e, #161616);
-	background-image: linear-gradient(top, #2e2e2e, #161616);
-	color: #d7d7d7;
-}
-
-.widget.dark td:nth-child(odd) {
-	color: #fff;
-}
-
-
-
 /* Discounts
 ---------------------------------------- */
+
 
 
 #criteria-edit_products .field {
@@ -2891,4 +2779,151 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	float: right;
 	margin-top: 12px;
 	margin-right: 8px;
+}
+
+
+/* Dashboard widgets
+--------------------------------------- */
+
+
+.dashboard.home .container-content.tall {
+	height: -moz-calc(100% - 140px);
+	height: -webkit-calc(100% - 140px);
+	height: calc(100% - 140px);
+}
+
+.welcome {
+	float: left;
+	width: 100%;
+	position: relative;
+	height: 140px;
+	padding-bottom: 20px;
+	margin-bottom: 23px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #CCC;
+	background: #FFF;
+}
+
+.welcome img {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+}
+
+.welcome h1 {
+	margin-top: 45px;
+	border: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.welcome h1,
+.welcome p {
+	float: left;
+	margin-left: 140px;
+	clear: both;
+	width: auto;
+}
+
+.stats {
+	float: right;
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	font-size: 14px;
+	height: 60px;
+	border-left: 1px solid #DDD;
+}
+
+.stats li {
+	list-style: none;
+	margin-bottom: 5px;
+}
+
+.stats b {
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	display: inline-block;
+	min-width: 200px;
+	margin-right: 50px;
+	text-align: right;
+}
+
+h1.amount {
+	border: none;
+	padding-bottom: 0;
+	margin-bottom: 15px;
+}
+
+.site-stats {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.site-stats ul {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+.site-stats li {
+	display: inline-block;
+	width: 19%;
+	margin-top: 30px;
+}
+
+.site-stats h2 {
+	width: 100%;
+	border: none;
+}
+
+.site-stats span {
+	float: left;
+	width: 100%;
+	font-size: 40px;
+}
+
+.site-stats .customers:before {
+	position: relative;
+	margin-right: 6px;
+	content: "\f0c0";
+	font-size: 1.15em;
+	font-family: 'FontAwesome';
+}
+
+.site-stats .visitors:before {
+	position: relative;
+	margin-right: 6px;
+	content: "\f145";
+	font-size: 1.15em;
+	font-family: 'FontAwesome';
+}
+
+.site-stats .sales:before {
+	position: relative;
+	margin-right: 6px;
+	content: "\f07a";
+	font-size: 1.15em;
+	font-family: 'FontAwesome';
+}
+
+.site-stats .income:before {
+	position: relative;
+	margin-right: 6px;
+	content: "\f080";
+	font-size: 1.15em;
+	font-family: 'FontAwesome';
+}
+
+.site-stats .orders:before {
+	position: relative;
+	margin-right: 6px;
+	content: "\f0d1";
+	font-size: 1.15em;
+	font-family: 'FontAwesome';
 }
