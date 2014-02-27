@@ -2504,10 +2504,6 @@ ol.order-details li {
 	width: 100%;
 }
 
-.voucher-details li.grand-total {
-	padding: 10px 0px 0px 0px;
-}
-
 .voucher-details span {
 	display: block;
 	float: left;
@@ -2796,6 +2792,24 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 }
 
 .welcome {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	-webkit-box-shadow: 0px 4px 0px #F1F1F1;
+	-moz-box-shadow: 0px 4px 0px #F1F1F1;
+	box-shadow: 0px 4px 0px #F1F1F1;
+	text-align: center;
+	font-size: 26px;
+	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.welcome:before {
+	margin-right: 10px;
+	content: "\f118";
+	font-family: 'FontAwesome';
+}
+
+/*.welcome {
 	float: left;
 	width: 100%;
 	position: relative;
@@ -2831,7 +2845,7 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	margin-left: 140px;
 	clear: both;
 	width: auto;
-}
+}*/
 
 .stats {
 	float: right;
