@@ -2504,6 +2504,10 @@ ol.order-details li {
 	width: 100%;
 }
 
+.voucher-details li.grand-total {
+	padding: 10px 0px 0px 0px;
+}
+
 .voucher-details span {
 	display: block;
 	float: left;
