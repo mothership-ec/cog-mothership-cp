@@ -421,6 +421,13 @@ input.button {
 	width: 100px;
 }
 
+.button:hover {
+	-webkit-box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1), 0px 1px 3px rgba(000,000,000,0.1);
+	-moz-box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1), 0px 1px 3px rgba(000,000,000,0.1);
+	box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1), 0px 1px 3px rgba(000,000,000,0.1);
+	color: inherit;
+}
+
 
 
 /* Submit, add, upload, create button styles */
