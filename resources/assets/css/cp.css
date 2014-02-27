@@ -1623,17 +1623,17 @@
 
 .repeatable-group .help .description {
 	position: absolute;
-	top: 25px;
+	top: -8px;
 	z-index: 20;
 	display: none;
 	float: left;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin-left: 2%;
+	margin-left: 1%;
 	padding: 15px;
 	min-height: 39px;
-	width: 28%;
+	width: 100%;
 	border: 1px solid #d5cb95;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
