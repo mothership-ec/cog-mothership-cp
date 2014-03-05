@@ -1019,6 +1019,9 @@ table select {
 	display: inline-block;
 	margin: 0;
 	float: none;
+	max-width: 100% !important;
+	width: 100% !important;
+	height: 37px;
 }
 
 table input[type="checkbox"],
@@ -1029,7 +1032,23 @@ table input[type="image"] {
 }
 
 table td .field {
-	margin-bottom: 0;
+	margin-bottom: 20px;
+}
+
+table td .multi-inline {
+	display: table;
+    table-layout: fixed; /* keep equal cell widths */
+    width: 100%; /* need width otherwise cells aren't equal and they self collapse */
+    border-spacing: 20px 0; /* best way to space cells but has outer padding */
+}
+
+table .multi-inline .inline {
+	position: relative;
+	display: table-cell;
+	float: none;
+	overflow: hidden;
+	width: 30%;
+	vertical-align: top;
 }
 
 

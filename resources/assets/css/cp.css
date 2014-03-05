@@ -1730,6 +1730,10 @@
 	width: 70%;
 }
 
+table td .add-on {
+	margin-bottom: 0;
+}
+
 .add-on p {
 	display: table-cell;
 	vertical-align: middle;
