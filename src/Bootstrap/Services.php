@@ -22,10 +22,10 @@ class Services implements ServicesInterface
 			return $templates;
 		});
 
-		$services['user.groups'] = $services->share($services->extend('user.groups', function($groups) {
+		$services['user.groups'] = $services->extend('user.groups', function($groups) {
 			$groups->add(new ControlPanel\UserGroup\SuperAdmin);
 
 			return $groups;
-		}));
+		});
 	}
 }
