@@ -1148,6 +1148,7 @@
 	height: -moz-calc(100% - 62px);
     height: -webkit-calc(100% - 62px);
     height: calc(100% - 62px);
+    min-width: 1010px;
 }
 
 .container-content::-webkit-scrollbar {
