@@ -945,6 +945,7 @@ table {
 	text-align: left;
 	font-size: 0.9em;
 	border-bottom: 1px solid #CCC;
+	display: table;
 }
 
 table th {
@@ -1007,10 +1008,9 @@ table a:hover {
 }
 
 table input {
-	display: inline-block;
 	float: none;
 	margin: 0;
-
+	width: 100%;
 }
 
 table select {
@@ -1032,7 +1032,25 @@ table td .field {
 	margin-bottom: 0;
 }
 
+.a-center {
+	text-align: center !important;
+}
 
+.a-left {
+	text-align: left !important;
+}
+
+.a-right {
+	text-align: right !important;
+}
+
+table .sort {
+	border-right: 1px solid #CCC;
+}
+
+table .delete {
+	float: right;
+}
 
 /* Lists
 ------------------------------------------------------------ */
