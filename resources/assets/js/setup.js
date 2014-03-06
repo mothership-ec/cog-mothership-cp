@@ -2,23 +2,37 @@
 	$('html').removeClass('no-js').addClass('js');
 
 
-$(window).resize(function(){
-	var windowWidth = $(window).width(),
-		buttonWidth = $('#save-content').outerWidth()
-		offSet = 0;
+	$(window).resize(function(){
+		var windowWidth = $(window).width(),
+			buttonWidth = $('#save-content').outerWidth()
+			offSet = 0;
 
-	$("#test").html(windowWidth);//Just to see in real time what's the window with
+		$("#test").html(windowWidth);//Just to see in real time what's the window with
 
-	if (windowWidth < 1260) {
-		offSet = 1246 - buttonWidth;
-    	$('#save-content, .save-content').css('left', offSet);
+		if (windowWidth < 1260) {
+			offSet = 1246 - buttonWidth;
+	    	$('#save-content, .save-content').css('left', offSet);
 
-    	console.log(offSet, topBar, buttonWidth);
-  	}
-	else {
-   		$('#save-content, .save-content').css('right', '14px');
-	    $('#save-content, .save-content').css('left', 'auto');
-	}
-});
+	    	console.log(offSet, topBar, buttonWidth);
+	  	}
+		else {
+	   		$('#save-content, .save-content').css('right', '14px');
+		    $('#save-content, .save-content').css('left', 'auto');
+		}
+	});
+
+
+    $('.table-filter.products').dataTable()
+		.columnFilter({
+			aoColumns: [
+				{ type: "text"  },
+				null,
+				{ type: "text" },
+				{ type: "text" },
+				{ type: "text" },
+				{ type: "text" },
+				null
+			]
+		});
 
 });

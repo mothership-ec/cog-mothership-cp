@@ -1044,13 +1044,146 @@ table td .field {
 	text-align: right !important;
 }
 
-table .sort {
-	border-right: 1px solid #CCC;
+.table-filter {
+	margin-bottom: 0;
 }
 
-table .delete {
+.table-filter tfoot {
+	display: table-row-group;
+}
+
+.table-filter tfoot tr {
+	background: #E5E5E5;
+}
+
+.table-filter tfoot th {
+	padding: 12px 15px 10px;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5);
+	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5);
+	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5);
+}
+
+.table-filter .delete {
 	float: right;
 }
+
+/* Data tables styles */
+
+.dataTables_wrapper {
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+	position: relative;
+}
+
+.dataTables_wrapper table {
+	table-layout: auto;
+}
+
+/* Entries */
+
+.dataTables_length {
+	float: left;
+	margin-bottom: 20px;
+}
+
+.dataTables_length label {
+	float: left;
+}
+
+.dataTables_length select {
+	float: none;
+	width: 100px;
+	min-width: 0;
+	margin: 0 8px;
+	height: 35px;
+}
+
+/* Search */
+
+.dataTables_filter {
+	float: right;
+	padding-left: 75px;
+	text-indent: -75px;
+	margin-bottom: 20px;
+}
+
+.dataTables_filter input {
+	float: none;
+	margin-left: 20px;
+	margin-bottom: 0;
+}
+
+.dataTables_wrapper table th {
+	width: auto !important;
+}
+
+/* Pagination */
+
+.dataTables_info {
+	text-align: center;
+	background: #000;
+	background: #E5E5E5;
+	padding: 23px 15px 20px;
+	border-bottom: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5);
+	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5);
+	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5);
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.dataTables_paginate {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 63px;
+	width: 100%;
+}
+
+.dataTables_paginate a:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.paginate_enabled_previous {
+	float: left;
+	padding: 23px 15px 20px;
+	text-decoration: none;
+}
+
+.paginate_disabled_previous {
+	display: none;
+}
+
+.paginate_enabled_previous:before {
+	content: '\f053';
+	font-family: 'FontAwesome';
+	margin-right: 10px;
+}
+
+.paginate_enabled_next {
+	float: right;
+	padding: 23px 15px 20px;
+	text-decoration: none;
+}
+
+.paginate_enabled_next:after {
+	content: '\f054';
+	font-family: 'FontAwesome';
+	margin-left: 10px;
+}
+
+.paginate_disabled_next {
+	display: none;
+}
+
 
 /* Lists
 ------------------------------------------------------------ */

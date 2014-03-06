@@ -188,6 +188,7 @@
 	height: 100%;
 	position: relative;
 	padding: 23px;
+	overflow-y: scroll;
 }
 
 .dashboard.home {
