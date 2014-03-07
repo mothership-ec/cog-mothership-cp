@@ -1074,7 +1074,6 @@ table td .field {
 .dataTables_wrapper {
 	float: left;
 	width: 100%;
-	margin-top: 20px;
 	position: relative;
 }
 
@@ -1118,6 +1117,19 @@ table td .field {
 
 .dataTables_wrapper table th {
 	width: auto !important;
+	cursor: pointer;
+}
+
+.dataTables_wrapper .sorting {
+	background: url(../images/table-filter.png) no-repeat left top;
+}
+
+.dataTables_wrapper .sorting_asc {
+	background: url(../images/table-filter.png) no-repeat left -29px;
+}
+
+.dataTables_wrapper .sorting_desc {
+	background: url(../images/table-filter.png) no-repeat left -57px;
 }
 
 /* Pagination */
@@ -1166,6 +1178,7 @@ table td .field {
 	content: '\f053';
 	font-family: 'FontAwesome';
 	margin-right: 10px;
+	font-size: 12px;
 }
 
 .paginate_enabled_next {
@@ -1178,6 +1191,7 @@ table td .field {
 	content: '\f054';
 	font-family: 'FontAwesome';
 	margin-left: 10px;
+	font-size: 12px;
 }
 
 .paginate_disabled_next {
