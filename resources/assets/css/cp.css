@@ -916,8 +916,8 @@
 	text-align: right;
 }
 
-.title .controls .button {
-	font-size: 16px;
+.title .controls .create.product {
+	margin-top: 11px;
 }
 
 .controls form {

@@ -25,7 +25,7 @@
     $('.table-filter.products').dataTable()
 		.columnFilter({
 			aoColumns: [
-				{ type: "text"  },
+				{ type: "text" },
 				null,
 				{ type: "text" },
 				{ type: "text" },
@@ -34,5 +34,40 @@
 				null
 			]
 		});
+
+	// instantiate the bloodhound suggestion engine
+	var category = new Bloodhound({
+		datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.num); },
+		queryTokenizer: Bloodhound.tokenizers.whitespace,
+		local: [
+			{ num: 'C-Line' },
+			{ num: 'M-Line' },
+			{ num: 'Gifting' },
+			{ num: 'Straps' },
+			{ num: 'Editions' }
+		]
+	});
+
+	// initialize the bloodhound suggestion engine
+	category.initialize();
+
+	$('.sorting').each(function() {
+		if ($(this).attr('data-disable')) {
+			$(this).removeClass('sorting');
+		};
+	});
+
+	// instantiate the typeahead UI
+	$('.example-category').typeahead(null, {
+		displayKey: 'num',
+		source: category.ttAdapter()
+	});
+
+
+	$(document).ready(function () {
+	  $("#e20").select2({
+	      tags:["red", "green", "blue"],
+	      tokenSeparators: [",", " "]});
+	});
 
 });
