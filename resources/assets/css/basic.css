@@ -63,11 +63,13 @@ a {
 
 a:hover {
 	text-decoration: underline;
+	color: #528cb6;
 }
 
 p {
 	font-size: 1em;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin-bottom: 20px;
 }
 
 p a {
@@ -76,6 +78,7 @@ p a {
 
 p a:hover {
 	text-decoration: underline;
+	color: #528cb6;
 }
 
 b,
@@ -123,8 +126,7 @@ h5 {
 
 form {
 	position: relative;
-	display: inline-block;
-	margin-bottom: 1px;
+	display: block;
 	width: 100%;
 }
 
@@ -136,23 +138,16 @@ textarea {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
     box-sizing: border-box;
-	margin: 0 0 10px 0;
-	margin-bottom: 15px;
-	padding: 9px 7px 6px 7px;
+	margin: 0 0 20px 0;
+	padding: 9px 7px 7px 7px;
 	max-width: 100%;
 	width: 100%;
 	border: 1px solid #CCC;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-/*	-webkit-box-shadow: 0 1px 5px rgba(000,000,000,0.1);
-	-moz-box-shadow: 0 1px 5px rgba(000,000,000,0.1);
-	box-shadow: 0 1px 5px rgba(000,000,000,0.1);*/
 	color: #333;
-	font-size: 1.0em;
-	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-weight: normal;
-	line-height: 1.0em;
+	font: normal 0.938em/0.938em 'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	-webkit-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
 	-moz-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
 	-ms-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
@@ -192,7 +187,7 @@ input[type=date] {
 }
 
 input[type=time]{
-	width: 245px;
+	width: 330px;
 	margin-right: 20px;
 	margin-bottom: 25px;
 }
@@ -218,7 +213,7 @@ input[type="image"]:hover {
 }
 
 select {
-	margin: 0 0 15px 0;
+	margin: 0 0 20px 0;
 	padding: 6px 20px 4px 10px;
 	min-width: 475px;
 	border: 1px solid #b1b1b1;
@@ -252,12 +247,13 @@ select:hover {
 
 label {
 	float: left;
-	margin: 0 0 10px 0;
+	margin: 0 0 5px 0;
 	width: 100%;
-	font-size: 1.0em;
+	font-size: 15px;
 	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+label:hover,
 label[for="setloggedin"]:hover {
 	cursor: pointer;
 }
@@ -285,6 +281,7 @@ button:hover,
 .button:hover {
 	text-decoration: none;
 	cursor: pointer;
+	color: inherit;
 }
 
 button:active,
@@ -294,7 +291,7 @@ button:active,
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-button.block-btn {
+.block-btn {
 	clear: both;
 	display: block;
 }
@@ -308,17 +305,73 @@ button.block-btn {
 	position: relative;
 }
 
+
 .container-content form:after {
-	content: '* required field';
+	content: '* Required field';
 	clear: both;
 	display: block;
-	margin: 10px 0px;
+	margin: 0 0 10px 0;
+	float: left;
+	width: 100%;
+	font-size: 0.8em;
+	font-style: italic;
 }
+
+label[for='form_balance_amount'] {
+	display: none;
+}
+
+.ui-datepicker {
+	padding: 10px;
+	background: #FFF;
+	border: 1px solid #CCC;
+	-webkit-box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+	box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+}
+
+.ui-datepicker-title {
+	text-align: center;
+}
+
+.ui-datepicker-next,
+.ui-datepicker-prev {
+	color: transparent;
+	position: absolute;
+}
+
+.ui-datepicker-next:hover,
+.ui-datepicker-prev:hover {
+	color: transparent;
+}
+
+.ui-datepicker-next {
+	right: 10px;
+}
+
+.ui-datepicker-next:before {
+	content: '\f054';
+	font-family: 'FontAwesome';
+	display: block;
+	top: 0;
+	right: -20px;
+	margin-right: 0px;
+	color: #333;
+	position: relative;
+}
+
+.ui-datepicker-prev:before {
+	content: '\f053';
+	font-family: 'FontAwesome';
+	display: block;
+	color: #333;
+	position: relative;
+}
+
 
 
 /* Button styles
 ------------------------------------------------------------ */
-
 
 
 
@@ -367,6 +420,15 @@ button.block-btn {
 input.button {
 	width: 100px;
 }
+
+.button:hover {
+	-webkit-box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1), 0px 1px 3px rgba(000,000,000,0.1);
+	-moz-box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1), 0px 1px 3px rgba(000,000,000,0.1);
+	box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1), 0px 1px 3px rgba(000,000,000,0.1);
+	color: inherit;
+}
+
+
 
 /* Submit, add, upload, create button styles */
 
@@ -443,6 +505,7 @@ input.button {
 	background-image: linear-gradient(top, #528bb6, #2a537b);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#528bb6', EndColorStr='#2a537b');
 	cursor: pointer;
+	color: #FFF !important;
 }
 
 .add:active,
@@ -500,6 +563,7 @@ input.button {
 	background-image: -ms-linear-gradient(top, #3d9f60, #125925);
 	background-image: linear-gradient(top, #3d9f60, #125925);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3d9f60', EndColorStr='#125925');
+	color: #FFF !important;
 }
 
 
@@ -531,7 +595,7 @@ input.button {
 
 .edit:before {
 	margin-right: 8px;
-	content: "\f044";
+	content: "\f040";
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
@@ -635,27 +699,30 @@ input.button {
 	background-image: -ms-linear-gradient(top, #d74738, #9b1412);
 	background-image: linear-gradient(top, #d74738, #9b1412);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#d74738', EndColorStr='#9b1412');
+	color: #FFF !important;
 }
 
-
-
-button:disabled, button:disabled:hover {
+.button:disabled,
+.button:disabled:hover {
 	background: #e9e8e8;
-	color: #7f7f7f;
+	color: #7f7f7f !important;
 	border-color: #dcdcdc;
 	text-shadow: 0px 1px 0px #FFF;
 	box-shadow: none;
 	cursor: default;
-
 }
 
-button:disabled:active {
+.button:disabled:active {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
 }
 
+
+
 /* Toggle button styles */
+
+
 
 .toggle {
 	width: 130px;
@@ -805,6 +872,7 @@ button:disabled:active {
 	-webkit-box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1);
 	-moz-box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1);
 	box-shadow: inset 0px -5px 5px rgba(152,152,152,0.1);
+	color: inherit;
 }
 
 .button.button-group a:active,
@@ -898,7 +966,7 @@ table td {
 	vertical-align: middle;
 	text-align: left;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	position: relative;
+	font-weight: normal;
 }
 
 table tr {
@@ -919,27 +987,23 @@ table tr:nth-child(even) td {
 	z-index: 0;
 }
 
-table tr:hover td {
-	background: #e8edf1;
-	-webkit-box-shadow: inset 1px 1px 0 #edf3f7;
-	-moz-box-shadow: inset 1px 1px 0 #edf3f7;
-	box-shadow: inset 1px 1px 0 #edf3f7;
-}
-
 table td a {
-/*	position: absolute;
+	/*position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	line-height: 60px;
-	padding-left: 10px;
-	width: 100%;
-	word-wrap:break-word;*/
+	padding: 12px 15px 10px;
+	word-wrap:break-word;
+	width: inherit;*/
 }
 
 table a {
 	display: block;
+}
+
+table a:hover {
+	color: #528cb6;
 }
 
 table input {
@@ -953,9 +1017,11 @@ table select {
 	margin-bottom: 0;
 	min-width: 0;
 	display: inline-block;
-	margin: 0 10px;
+	margin: 0;
 	float: none;
-	margin: 10px 0;
+	max-width: 100% !important;
+	width: 100% !important;
+	height: 37px;
 }
 
 table input[type="checkbox"],
@@ -965,12 +1031,24 @@ table input[type="image"] {
 	float: none;
 }
 
-table td .inline {
-	display: inline-block;
+table td .field {
+	margin-bottom: 20px;
 }
 
-table td .field {
-	margin-bottom: 0;
+table td .multi-inline {
+	display: table;
+    table-layout: fixed; /* keep equal cell widths */
+    width: 100%; /* need width otherwise cells aren't equal and they self collapse */
+    border-spacing: 20px 0; /* best way to space cells but has outer padding */
+}
+
+table .multi-inline .inline {
+	position: relative;
+	display: table-cell;
+	float: none;
+	overflow: hidden;
+	width: 30%;
+	vertical-align: top;
 }
 
 
@@ -1144,8 +1222,6 @@ dd {
 	background: #F1F1F1;
 }
 
-
-
 .footer {
 	position: fixed;
 	bottom: 0;
@@ -1172,15 +1248,22 @@ dd {
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.footer .website {
+.footer a.website {
 	float: right;
 	margin-top: 13px;
 	margin-right: 15px;
+	text-decoration: none;
 }
 
-.footer .website i {
-	margin-right: 10px;
-	text-decoration: none;
+.footer a.website span {
+	text-decoration: underline;
+}
+
+.footer a.website i:before {
+	content: '\f08e';
+	font-family: 'FontAwesome';
+	font-style: normal;
+	margin-right: 5px;
 }
 
 .clearfix {

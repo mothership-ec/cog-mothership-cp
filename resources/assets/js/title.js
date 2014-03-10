@@ -14,11 +14,11 @@ $(function() {
 
 
 	$(document).on('click', function(e) {
-		
+
 		// If the title is the target show the edit input
 		if ( $(e.target).is(title) ) {
-			
-			$(edit).show();
+
+			$(edit).fadeIn();
 
 		// stop clicking
 		} else if ( $(e.target).is(edit) || $(e.target).is($(edit).children()) ) {
@@ -27,7 +27,7 @@ $(function() {
 
 		} else {
 
-			$(edit).hide();
+			$(edit).fadeOut();
 
 		}
 

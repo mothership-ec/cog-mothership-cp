@@ -3,5 +3,11 @@
 {% block title %}Mothership Dashboard{% endblock %}
 
 {% block content %}
-	<p class="welcome">Hi, {{ app.user.getName() }}!</p>
+	<section class="dashboard home">
+		<section class="main">
+			<div class="container-content">
+				<p class="welcome">Hi, {{ app.user.getName() }}!</p>
+			</div>
+		</section>
+	</section>
 {% endblock %}
