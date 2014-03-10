@@ -13,10 +13,10 @@ use Message\Cog\HTTP\Session;
  */
 class ContextualHelpExtension extends AbstractExtension
 {
-    protected function loadTypeExtensions()
-    {
-        return array(
-            new Type\ContextualHelpTypeExtension,
-        );
-    }
+	protected function loadTypeExtensions()
+	{
+		return array(
+			new Type\ContextualHelpTypeExtension,
+		);
+	}
 }
