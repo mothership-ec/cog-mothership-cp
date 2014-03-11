@@ -2,7 +2,7 @@
 
 namespace Message\Mothership\ControlPanel\Controller;
 
-use Message\User\User;
+use Message\User\AnonymousUser;
 
 class Authentication extends \Message\Cog\Controller\Controller
 {
@@ -10,12 +10,15 @@ class Authentication extends \Message\Cog\Controller\Controller
 
 	public function login()
 	{
-		if ($this->get('user.current') instanceof User) {
+		if (!($this->get('user.current') instanceof AnonymousUser)) {
 			return $this->redirectToRoute($this->_redirectRoute);
 		}
 
+		$redirectUrl = ($this->get('http.request.master')->headers->get('referer')
+			?: $this->generateUrl($this->_redirectRoute));
+
 		return $this->render('::login', array(
-			'redirectRoute' => $this->_redirectRoute,
+			'redirectUrl' => $redirectUrl,
 		));
 	}
 

@@ -118,21 +118,6 @@ html, body {
 	padding: 15px 20px 10px 30px;
 }
 
-.login-form input[type="email"], .login-form input[type="text"] {
-	background-image: url(../../images/user-icon.png);
-	background-position: 10px center;
-	background-repeat: no-repeat;
-}
-
-.login-form input[type="password"] {
-	background-image: url(../../images/lock-icon.png);
-	background-position: 10px center;
-	background-repeat: no-repeat;
-}
-
-
-
-
 .login-form button {
 	position: absolute;
 	float: left;
@@ -161,44 +146,33 @@ html, body {
 	width: 39.44174757281553%;
 }
 
-.login-form label {
-	float: left;
-	margin-bottom: 30px;
-	height: 44px;
+.login-form label  {
 	color: #E1E1E1;
+}
+
+.login-form .required label {
+	height: 44px;
+	color: transparent;
 	font-size: 0.875em;
-	display: none;
-}
-
-/*.login-form label[for="login_email"],
-.login-form label[for="login_password"],
-.login-form label[for="forgotten_email"],
-.login-form label[for="reset_password"],
-.login-form label[for="reset_confirm"] {
 	position: absolute;
-	top: 15px;
-	left: 0;
-	z-index: 999;
-	margin-left: 15px;
-	color: #999;
-	font-size: 16px;
-	font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
+	z-index: 1000;
+	top: 12px;
+	left: 10px;
 }
-
-
 
 .login-form label[for="login_email"]:before {
 	margin-right: 10px;
 	content: "\f007";
 	font-family: 'FontAwesome';
+	color: #E1E1E1;
 }
 
 .login-form label[for="login_password"]:before {
 	margin-right: 10px;
 	content: "\f023";
 	font-family: 'FontAwesome';
-}*/
+	color: #E1E1E1;
+}
 
 .login-form label[for="login_remember"] {
 	position: absolute;
@@ -263,5 +237,7 @@ html, body {
 	float: left;
 	width: 100%;
 }
+
+
 
 

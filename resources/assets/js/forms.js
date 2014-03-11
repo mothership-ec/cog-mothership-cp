@@ -29,7 +29,7 @@
 	$(document).on('click', 'a[data-group-remove]', function() {
 		var self = $(this), group, adder, siblings, labelPrefix;
 
-		group       = self.parents('.group');
+		group       = self.closest('.group');
 		adder       = group.siblings('a[data-group-add]');
 		siblings    = group.siblings('.group');
 		labelPrefix = adder.attr('data-prototype-label-prefix') || 'Group #';

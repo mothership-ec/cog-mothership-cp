@@ -25,6 +25,7 @@
 		'@Message:Mothership:ControlPanel::resources/assets/js/title.js'
 		'@Message:Mothership:ControlPanel::resources/assets/js/dropdown.js'
 		'@Message:Mothership:ControlPanel::resources/assets/js/feedback.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/datePicker.js'
 
 		output='/assets/js/ms_cp.js'
 		filter='?jsmin'
@@ -32,36 +33,26 @@
 		<script src="{{ asset_url }}"></script>
 	{% endjavascripts %}
 {% endblock %}
-
-
 {% block body %}
 	<div class="container-cp">
-
 		<div class="loading-spinner">
 			<p>Loading&hellip;</p><div class="spinner"></div>
 		</div>
-
-	<nav class="navigation">
+		<header class="navigation">
 			<h1 class="vendor">
-
 				<a href="{{ url('ms.cp.dashboard') }}">
 					{{ app.cfg.app.name }}
+					<span class="version">Mothership</span>
 				</a>
 			</h1>
-
-
-			{{ render(controller('Message:Mothership:ControlPanel::Controller:Component#mainMenu')) }}
-
+			<nav>
+				{{ render(controller('Message:Mothership:ControlPanel::Controller:Component#mainMenu')) }}
+			</nav>
 			<a class="logout" href="{{ url('ms.cp.logout') }}">Log Out</a>
-		</nav>
-
-
-
+		</header>
 		<section class="clear">
-
-
 			{% block content %}{% endblock %}
 		</section>
-			{% include 'Message:Mothership:ControlPanel::includes:footer' %}
-</div>
+		{% include 'Message:Mothership:ControlPanel::includes:footer' %}
+	</div>
 {% endblock %}
