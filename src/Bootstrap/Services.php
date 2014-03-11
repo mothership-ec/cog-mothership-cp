@@ -10,6 +10,12 @@ class Services implements ServicesInterface
 {
 	public function registerServices($services)
 	{
+		$services->extend('form.factory.builder', function($factory, $c) {
+			$factory->addExtension(new ControlPanel\ContextualHelp\Extension\ContextualHelpExtension);
+
+			return $factory;
+		});
+
 		$services->extend('form.templates.twig', function($templates, $c) {
 			$templates[] = 'Message:Mothership:ControlPanel::form:twig:form_div_layout';
 
