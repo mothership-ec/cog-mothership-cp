@@ -21,7 +21,6 @@
 		}
 	});
 
-
     $('.table-filter.products').dataTable()
 		.columnFilter({
 			aoColumns: [
@@ -51,12 +50,6 @@
 	// initialize the bloodhound suggestion engine
 	category.initialize();
 
-	$('.sorting').each(function() {
-		if ($(this).attr('data-disable')) {
-			$(this).removeClass('sorting');
-		};
-	});
-
 	// instantiate the typeahead UI
 	$('.example-category').typeahead(null, {
 		displayKey: 'num',
@@ -65,8 +58,14 @@
 
 
 	$(document).ready(function () {
-	  $("#e20").select2({
-	      tags:["red", "green", "blue"],
+	  $("#colour").select2({
+	      tags:["red", "green", "blue", "yellow", "orange", "purple"],
+	      tokenSeparators: [",", " "]});
+	});
+
+	$(document).ready(function () {
+	  $("#size").select2({
+	      tags:["xx-small", "x-small", "small", "small-medium", "medium", "medium-large", "large", "x-large", "xx-large", "xxx-large"],
 	      tokenSeparators: [",", " "]});
 	});
 
