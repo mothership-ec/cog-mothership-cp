@@ -19,6 +19,12 @@ $(window).resize(function(){
    		$('#save-content, .save-content').css('right', '14px');
 	    $('#save-content, .save-content').css('left', 'auto');
 	}
+
+	$('.modules').masonry({
+		itemSelector: '.module',
+		columnWidth: 225,
+		gutter: 10
+	});
 });
 
 });
