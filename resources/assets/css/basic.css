@@ -415,6 +415,7 @@ label[for='form_balance_amount'] {
 
 .button.small {
 	padding: 7px 13px 5px;
+	font-size: 14px;
 }
 
 input.button {
@@ -1053,16 +1054,22 @@ table td .field {
 }
 
 .table-filter tfoot tr {
-	background: #E5E5E5;
+	background: #E3E3E3;
+	border-right: 1px solid #bccdda;
 }
 
 .table-filter tfoot th {
 	padding: 12px 15px 10px;
-	border-top: 1px solid #CCC;
-	border-left: 1px solid #CCC;
-	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5);
-	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5);
-	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5);
+	border-top: 1px solid #bccdda;
+	border-left: 1px solid #bccdda;
+	border-bottom: 1px solid #ccc;
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.3);
+	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.3);
+	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.3);
+}
+
+.table-filter tfoot th input {
+	border-color: #999;
 }
 
 .table-filter .delete {
@@ -1120,20 +1127,35 @@ table td .field {
 	cursor: pointer;
 }
 
-.dataTables_wrapper .sorting {
-	background: url(../images/table-filter.png) no-repeat left top;
+.dataTables_wrapper thead tr {
+	border-right: 1px solid #bccdda;
+}
+
+.dataTables_wrapper .sorting,
+.dataTables_wrapper .sorting_asc,
+.dataTables_wrapper .sorting_desc {
+	padding: 12px 15px 10px;
+	border-top: 1px solid #bccdda;
+	border-bottom: 1px solid #bccdda;
+	border-left: 1px solid #bccdda;
+	background:  #e4f0f9 url(../images/table-filter.png) no-repeat top 0 right 10px;
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.7);
+	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.7);
+	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.7);
 }
 
 .dataTables_wrapper .sorting_asc {
-	background: url(../images/table-filter.png) no-repeat left -29px;
+	background-color: #d2e4f1;
+	background-position: top -40px right 10px;
 }
 
 .dataTables_wrapper .sorting_desc {
-	background: url(../images/table-filter.png) no-repeat left -57px;
+	background-color: #d2e4f1;
+	background-position: top -80px right 10px;
 }
 
 .dataTables_wrapper .sorting.disable {
-	background: none;
+	background:  #e4f0f9 !important;
 	cursor: default;
 }
 
@@ -1141,8 +1163,7 @@ table td .field {
 
 .dataTables_info {
 	text-align: center;
-	background: #000;
-	background: #E5E5E5;
+	background: #E3E3E3;
 	padding: 23px 15px 20px;
 	border-bottom: 1px solid #CCC;
 	border-left: 1px solid #CCC;
@@ -1169,12 +1190,6 @@ table td .field {
 	cursor: pointer;
 }
 
-.paginate_enabled_previous {
-	float: left;
-	padding: 23px 15px 20px;
-	text-decoration: none;
-}
-
 .paginate_disabled_previous {
 	display: none;
 }
@@ -1186,10 +1201,48 @@ table td .field {
 	font-size: 12px;
 }
 
-.paginate_enabled_next {
-	float: right;
-	padding: 23px 15px 20px;
+.paginate_enabled_next,
+.paginate_enabled_previous {
+	display: inline-block;
+	margin: 16px 20px;
+	padding: 7px 13px 5px;
+	border: 1px solid #CCC;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background-color: #f2f2f2;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#e5e5e5));
+	background-image: -webkit-linear-gradient(top, #f2f2f2, #e5e5e5);
+	background-image: -moz-linear-gradient(top, #f2f2f2, #e5e5e5);
+	background-image: -o-linear-gradient(top, #f2f2f2, #e5e5e5);
+	background-image: -ms-linear-gradient(top, #f2f2f2, #e5e5e5);
+	background-image: linear-gradient(top, #f2f2f2, #e5e5e5);
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.25), 0px 1px 3px rgba(000,000,000,0.1);
+	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.25), 0px 1px 3px rgba(000,000,000,0.1);
+	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.25), 0px 1px 3px rgba(000,000,000,0.1);
+	color: #333;
+	vertical-align: middle;
+	text-align: center;
 	text-decoration: none;
+	text-shadow: 0px 1px 0px #FFF;
+	white-space: nowrap;
+	font-weight: 500;
+	font-size: 14px;
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.0em;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#528bb6', EndColorStr='#4473a7');
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f2f2f2', EndColorStr='#e5e5e5');
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	float: right;
+}
+
+.paginate_enabled_previous {
+	float: left;
 }
 
 .paginate_enabled_next:after {
@@ -1201,6 +1254,11 @@ table td .field {
 
 .paginate_disabled_next {
 	display: none;
+}
+
+.paginate_enabled_next:hover,
+.paginate_enabled_previous:hover {
+	color: #333;
 }
 
 .twitter-typeahead {
@@ -1659,7 +1717,7 @@ Version: 3.4.5 Timestamp: Mon Nov  4 08:22:42 PST 2013
     margin: 0;
 
     outline: 0;
-    font-family: sans-serif;
+    font: normal 0.938em/0.938em 'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1em;
 
     border: 1px solid #aaa;
@@ -1918,7 +1976,7 @@ disabled look for disabled choices in the results dropdown
     padding: 5px;
     margin: 1px 0;
 
-    font-family: sans-serif;
+    font: normal 0.938em/0.938em 'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 100%;
     color: #666;
     outline: 0;
