@@ -22,9 +22,10 @@ $(window).resize(function(){
 
 	$('.modules').masonry({
 		itemSelector: '.module',
-		columnWidth: 225,
-		gutter: 10
+		columnWidth: 330,
+		gutter: 20
 	});
+
 });
 
 });

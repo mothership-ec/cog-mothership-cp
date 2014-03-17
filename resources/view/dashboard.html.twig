@@ -21,12 +21,6 @@
 						Products
 					</h2>
 				</div>
-
-				<div class="module portrait">
-					<h2 class="title">
-						CMS
-					</h2>
-				</div>
 				<div class="module landscape">
 					<h2 class="title">
 						Discounts
@@ -36,6 +30,136 @@
 					<h2 class="title">
 						Sales
 					</h2>
+					<table
+			            title="Weekly Sales"
+			            id="sales"
+			            summary="day"
+			            data-attc-createChart="true"
+			            data-attc-colDescription="day"
+			            data-attc-colValues="amount"
+			            data-attc-location="salesArea"
+			            data-attc-hideTable="true"
+			            data-attc-type="area"
+			            data-attc-googleOptions='{"is3D":false, "chartArea.width": 480, "chartArea.height": 275, "width": 680, "height": 275, "fontSize": 16}'
+			            data-attc-controls='{"showHide":false,"create":false,"chartType":false}'
+			            >
+			            <thead>
+			                <tr>
+			                    <th id="day">Day</th>
+			                    <th id="amount">Amount</th>
+			                </tr>
+			            </thead>
+			            <tbody>
+			                <tr>
+			                	<td>M</td>
+			                	<td>£2502.00</td>
+			                </tr>
+			                <tr>
+			                	<td>T</td>
+			                	<td>£12502.00</td>
+			                </tr>
+			                <tr>
+			                	<td>W</td>
+			                	<td>£1502.00</td>
+			                </tr>
+			                <tr>
+			                	<td>T</td>
+			                	<td>£3502.00</td>
+			                </tr>
+			                <tr>
+			                	<td>F</td>
+			                	<td>£7238.00</td>
+			                </tr>
+			                <tr>
+			                	<td>S</td>
+			                	<td>£345.00</td>
+			                </tr>
+			                <tr>
+			                	<td>S</td>
+			                	<td>£3456.00</td>
+			                </tr>
+			            </tbody>
+			        </table>
+			        <div id="salesArea"></div>
+				</div>
+				<div class="module portrait">
+					<h2 class="title">
+						CMS
+					</h2>
+					<div class="wrap">
+						<h3>Recently added/edited</h3>
+						<ol>
+							<li><a href="#">Shop</a></li>
+							<li><a href="#">152 Series</a></li>
+							<li><a href="#">Profile</a></li>
+							<li><a href="#">Information</a></li>
+							<li><a href="#">Press area</a></li>
+						</ol>
+						<hr>
+						<h3>Recently deleted</h3>
+						<ol>
+							<li>100 Series (Red rubber strap)</li>
+							<li>100 Series (Red rubber strap)</li>
+						</ol>
+					</div>
+				</div>
+				<div class="module landscape">
+					<h2 class="title">
+						Orders
+					</h2>
+					<table
+			            title="Attendance Percentages"
+			            id="AttendancePercentages"
+			            summary="pieDescription"
+			            data-attc-createChart="true"
+			            data-attc-colDescription="pieDescription"
+			            data-attc-colValues="pieValues"
+			            data-attc-location="AttendancePercentagesPie"
+			            data-attc-hideTable="true"
+			            data-attc-type="pie"
+			            data-attc-googleOptions='{"is3D":false, "chartArea.width": 480, "chartArea.height": 275, "width": 680, "height": 275, "fontSize": 16}'
+			            data-attc-controls='{"showHide":false,"create":false,"chartType":false}'
+			            >
+			            <thead>
+			                <tr>
+			                    <th id="pieDescription">Day</th>
+			                    <th id="pieValues">Amount</th>
+			                </tr>
+			            </thead>
+			            <tbody>
+			                <tr>
+			                    <td>Present</td>
+			                    <td>405</td>
+			                    <td>89</td>
+			                    <td>5</td>
+			                </tr>
+			                <tr>
+			                    <td>Missing</td>
+			                    <td>1</td>
+			                    <td>0</td>
+			                    <td>4</td>
+			                </tr>
+			                <tr>
+			                    <td>Authorised Absent</td>
+			                    <td>36</td>
+			                    <td>7</td>
+			                    <td>3</td>
+			                </tr>
+			                <tr>
+			                    <td>Unauthorised Absent</td>
+			                    <td>1</td>
+			                    <td>0</td>
+			                    <td>2</td>
+			                </tr>
+			                <tr>
+			                    <td>Late</td>
+			                    <td>10</td>
+			                    <td>2</td>
+			                    <td>1</td>
+			                </tr>
+			            </tbody>
+			        </table>
+			        <div id="AttendancePercentagesPie"></div>
 				</div>
 			</div>
 		</section>

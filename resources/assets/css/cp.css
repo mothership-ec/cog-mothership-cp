@@ -234,7 +234,7 @@
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 	background: #FFF;
-	border: 1px solid #E4E4E4;
+	border: 1px solid #E9E9E9;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -251,24 +251,57 @@
 	font-size: 16px;
 }
 
+.module .wrap {
+	float: left;
+	width: 100%;
+	padding: 20px 22px 15px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.module h3 {
+	margin-bottom: 20px;
+}
+
+.module hr {
+	float: left;
+	width: 100%;
+	height: 1px;
+	border: none;
+	background: #EEE;
+	display: block;
+	margin: 40px 0;
+}
+
+.module li {
+	margin-bottom: 10px;
+	list-style: none;
+}
+
 .sq {
-	max-width: 450px;
-	max-height: 440px;
+	max-width: 330px;
+	max-height: 330px;
 }
 
 .sq.large {
-	max-width: 920px;
-	max-height: 900px;
+	max-width: 680px;
+	max-height: 680px;
 }
 
 .portrait {
-	max-width: 450px;
-	max-height: 900px;
+	max-width: 330px;
+	max-height: 680px;
 }
 
 .landscape {
-	max-width: 920px;
-	max-height: 440px;
+	max-width: 680px;
+	max-height: 330px;
+}
+
+.module text {
+	font-family: 'Proxima N W15 Smbd' !important;
+	font-weight: normal;
 }
 
 
