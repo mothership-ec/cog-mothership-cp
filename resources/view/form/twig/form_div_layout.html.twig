@@ -29,11 +29,14 @@
 			{% set identifier = id ~ '_help' %}
 			{% set contextual_help_key = (contextual_help is defined ? contextual_help : attr['data-help-key']) %}
 			{% set translated = contextual_help_key|trans %}
-			<a href="#{{ identifier }}" data-show="">{{ 'Show help'|trans }}</a>
 
-			<div class="description" id="{{ identifier }}">
-				<p>{{ translated|raw }}</p>
-			</div>
+			{% if contextual_help is defined or translated != contextual_help_key %}
+				<a href="#{{ identifier }}" data-show="">{{ 'Show help'|trans }}</a>
+
+				<div class="description" id="{{ identifier }}">
+					<p>{{ translated|raw }}</p>
+				</div>
+			{% endif %}
 		</div>
 	{% endif %}
 {% endblock help_widget %}
