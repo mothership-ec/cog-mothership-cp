@@ -26,25 +26,79 @@
 				</div>
 				<div class="module sq">
 					<h2 class="title">
-						Orders
+						Orders fulfillment time (Avg.)
 					</h2>
-				</div>
-				<div class="module sq">
-					<h2 class="title">
-						Products
-					</h2>
+					<div class="wrap center">
+						<h2 class="large-text">36<span class="small">hrs</span></h2>
+					</div>
 				</div>
 				<div class="module landscape">
 					<h2 class="title">
-						Discounts
+						Popular products (week)
 					</h2>
+					<div class="wrap">
+						<table
+				            title="Popular products"
+				            id="popularProducts"
+				            summary="Most popular products"
+				            data-attc-createChart="true"
+				            data-attc-colDescription="product"
+				            data-attc-colValues="purchased"
+				            data-attc-location="productsArea"
+				            data-attc-hideTable="true"
+				            data-attc-type="bar"
+				            data-attc-googleOptions='{"is3D":false, "width": "634", "height": 200, "fontSize": 16, "legend": "none", "chartArea.width": "100%", "colors":["#528cb6", "#26537c", "#3f759f", "#999", "#666"], "chartArea":{"top":0,"width":"500","height":"175"}}'
+				            data-attc-controls='{"showHide":false,"create":false,"chartType":false}'
+				            >
+				            <thead>
+				                <tr>
+				                    <th id="product">Product</th>
+				                    <th id="purchased">Purchased</th>
+				                </tr>
+				            </thead>
+				            <tbody>
+				                <tr>
+				                	<td>301 Series</td>
+				                	<td>450</td>
+				                </tr>
+				                <tr>
+				                	<td>Rubber Strap</td>
+				                	<td>1001</td>
+				                </tr>
+				                <tr>
+				                	<td>152 Series</td>
+				                	<td>854</td>
+				                </tr>
+				                <tr>
+				                	<td>104 Series</td>
+				                	<td>806</td>
+				                </tr>
+				            </tbody>
+				        </table>
+				        <div id="productsArea"></div>
+					</div>
+				</div>
+				<div class="module landscape">
+					<h2 class="title">
+						Orders
+					</h2>
+					<div class="wrap">
+						<div class="column center">
+							<h3 class="medium-text">In</h3>
+							<h2 class="large-text">72</h2>
+						</div>
+						<div class="column center">
+							<h3 class="medium-text">Out</h3>
+							<h2 class="large-text">64</h2>
+						</div>
+					</div>
 				</div>
 				<div class="module sq large">
 					<h2 class="title">
-						Sales
+						Total sales (week)
 					</h2>
 					<div class="wrap">
-						<h2>Total sales for this week &pound;25,412.00</h2>
+						<h2 class="medium-text">&pound;25,412.00</h2>
 						<table
 				            title="Weekly Sales"
 				            id="sales"
@@ -55,7 +109,7 @@
 				            data-attc-location="salesArea"
 				            data-attc-hideTable="true"
 				            data-attc-type="area"
-				            data-attc-googleOptions='{"is3D":false, "width": "100%", "height": 540, "fontSize": 16, "legend": "none", "chartArea.width": "100%", "colors":["#528cb6", "#26537c", "#3f759f", "#999", "#666"]}'
+				            data-attc-googleOptions='{"is3D":false, "width": "634", "height": 492, "fontSize": 16, "legend": "none", "colors":["#528cb6", "#26537c", "#3f759f", "#999", "#666"], "chartArea":{"top":30,"left":60,"width":"560","height":"431"}}'
 				            data-attc-controls='{"showHide":false,"create":false,"chartType":false}'
 				            >
 				            <thead>
@@ -66,32 +120,32 @@
 				            </thead>
 				            <tbody>
 				                <tr>
-				                	<td>M</td>
-				                	<td>£2502.00</td>
+				                	<td>Mon</td>
+				                	<td>&pound;2502.00</td>
 				                </tr>
 				                <tr>
-				                	<td>T</td>
-				                	<td>£12502.00</td>
+				                	<td>Tues</td>
+				                	<td>&pound;12502.00</td>
 				                </tr>
 				                <tr>
-				                	<td>W</td>
-				                	<td>£1502.00</td>
+				                	<td>Wed</td>
+				                	<td>&pound;1502.00</td>
 				                </tr>
 				                <tr>
-				                	<td>T</td>
-				                	<td>£3502.00</td>
+				                	<td>Thur</td>
+				                	<td>&pound;3502.00</td>
 				                </tr>
 				                <tr>
-				                	<td>F</td>
-				                	<td>£7238.00</td>
+				                	<td>Fri</td>
+				                	<td>&pound;7238.00</td>
 				                </tr>
 				                <tr>
-				                	<td>S</td>
-				                	<td>£345.00</td>
+				                	<td>Sat</td>
+				                	<td>&pound;345.00</td>
 				                </tr>
 				                <tr>
-				                	<td>S</td>
-				                	<td>£3456.00</td>
+				                	<td>Sun</td>
+				                	<td>&pound;3456.00</td>
 				                </tr>
 				            </tbody>
 				        </table>
@@ -122,61 +176,41 @@
 				</div>
 				<div class="module landscape">
 					<h2 class="title">
-						Orders
+						Discounts
 					</h2>
-					<table
-			            title="Attendance Percentages"
-			            id="AttendancePercentages"
-			            summary="pieDescription"
-			            data-attc-createChart="true"
-			            data-attc-colDescription="pieDescription"
-			            data-attc-colValues="pieValues"
-			            data-attc-location="AttendancePercentagesPie"
-			            data-attc-hideTable="true"
-			            data-attc-type="pie"
-			            data-attc-googleOptions='{"is3D":false, "chartArea.width": 580, "chartArea.height": 275, "width": 680, "height": 275, "fontSize": 16, "colors":["#528cb6", "#26537c", "#3f759f", "#999", "#666"]}'
-			            data-attc-controls='{"showHide":false,"create":false,"chartType":false}'
-			            >
-			            <thead>
-			                <tr>
-			                    <th id="pieDescription">Day</th>
-			                    <th id="pieValues">Amount</th>
-			                </tr>
-			            </thead>
-			            <tbody>
-			                <tr>
-			                    <td>Present</td>
-			                    <td>405</td>
-			                    <td>89</td>
-			                    <td>5</td>
-			                </tr>
-			                <tr>
-			                    <td>Missing</td>
-			                    <td>1</td>
-			                    <td>0</td>
-			                    <td>4</td>
-			                </tr>
-			                <tr>
-			                    <td>Authorised Absent</td>
-			                    <td>36</td>
-			                    <td>7</td>
-			                    <td>3</td>
-			                </tr>
-			                <tr>
-			                    <td>Unauthorised Absent</td>
-			                    <td>1</td>
-			                    <td>0</td>
-			                    <td>2</td>
-			                </tr>
-			                <tr>
-			                    <td>Late</td>
-			                    <td>10</td>
-			                    <td>2</td>
-			                    <td>1</td>
-			                </tr>
-			            </tbody>
-			        </table>
-			        <div id="AttendancePercentagesPie"></div>
+					<div class="wrap">
+						<table
+				            title="Discount amounts"
+				            id="discountAmounts"
+				            summary="Discount amounts and savings"
+				            data-attc-createChart="true"
+				            data-attc-colDescription="pieDescription"
+				            data-attc-colValues="pieValues"
+				            data-attc-location="AttendancePercentagesPie"
+				            data-attc-hideTable="true"
+				            data-attc-type="column"
+				            data-attc-googleOptions='{"is3D":false, "width": 638, "height": 240, "legend": "none", "fontSize": 16, "colors":["#528cb6", "#26537c", "#3f759f", "#999", "#666"], "chartArea":{"top":25,"width":"620","height":"180"}}'
+				            data-attc-controls='{"showHide":false,"create":false,"chartType":false}'
+				            >
+				            <thead>
+				                <tr>
+				                    <th id="pieDescription">Value</th>
+				                    <th id="pieValues">Amount</th>
+				                </tr>
+				            </thead>
+				            <tbody>
+				                <tr>
+				                    <td>Income from discounted orders (£4750)</td>
+				                    <td>£4750</td>
+				                </tr>
+				                <tr>
+				                    <td>Customer savings (£628)</td>
+				                    <td>£628</td>
+				                </tr>
+				            </tbody>
+				        </table>
+				        <div id="AttendancePercentagesPie"></div>
+				    </div>
 				</div>
 			</div>
 		</section>
