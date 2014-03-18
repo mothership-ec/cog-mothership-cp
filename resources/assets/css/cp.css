@@ -1482,7 +1482,7 @@
 	margin-right: 5%;
 	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	margin-bottom: 10px;
-	clear: right;
+	clear: left;
 }
 
 .content dd {
