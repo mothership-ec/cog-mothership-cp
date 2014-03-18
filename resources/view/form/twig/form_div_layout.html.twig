@@ -6,25 +6,36 @@
 		{% set currency = money_pattern|split('{{ widget }}')[0]|trim %}
 
 		{# replace {{ widget }} with the actual widget and add <p></p> around the currency-sign #}
-		{{ money_pattern|replace({ '{{ widget }}': block('form_widget_simple'), (currency): "<p>%s</p>"|format(currency) })|raw }}
+		{{ money_pattern|replace({ '{{ widget }}': '<div>' ~ block('form_widget_simple') ~ '</div>', (currency): "<p>%s</p>"|format(currency) })|raw }}
 	</div>
    {% endspaceless %}
  {% endblock money_widget %}
 
+{#  {% block percent_widget %}
+	{% spaceless %}
+		<div class="add-on">
+        	<p>%</p>
+        	<div>
+	      		{{ block('form_widget_simple') }}
+      		</div>
+    	</div>
+	{% endspaceless %}
+{% endblock percent_widget %} #}
+
 {# Custom blocks defined by Message #}
 {% block help_widget %}
-	{% if attr['data-help-key'] is defined %}
+	{% if contextual_help is defined or attr['data-help-key'] is defined %}
 		<div class="help">
-			{% set key        = attr['data-help-key'] %}
-			{% set translated = key|trans %}
-			{% set keyAppend  = '-' ~ random() %}
-			{% if key != translated %}
+			{% set identifier = id ~ '_help' %}
+			{% set contextual_help_key = (contextual_help is defined ? contextual_help : attr['data-help-key']) %}
+			{% set translated = contextual_help_key|trans %}
 
-			<a href="#{{ (key ~ keyAppend)|replace({'.': '-'}) }}" data-show="">{{ 'Show help'|trans }}</a>
+			{% if contextual_help is defined or translated != contextual_help_key %}
+				<a href="#{{ identifier }}" data-show="">{{ 'Show help'|trans }}</a>
 
-			<div class="description" id="{{ (key ~ keyAppend)|replace({'.': '-'}) }}">
-				<p>{{ translated|raw }}</p>
-			</div>
+				<div class="description" id="{{ identifier }}">
+					<p>{{ translated|raw }}</p>
+				</div>
 			{% endif %}
 		</div>
 	{% endif %}

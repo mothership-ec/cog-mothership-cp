@@ -1,29 +1,17 @@
 {% extends '::_templates/external' %}
-
 {% block title %}Log in to Mothership{% endblock %}
-
 {% block body %}
 	<div class="login">
-
 		<div class="center">
-
 			<header>
-
 				<span class="spaceship"></span>
-
 				<h1>Welcome to Mothership</h1>
-
 				<span class="shadow"></span>
-
 			</header>
-
-
 			<section class="login-form">
-
 				<h1>Log in to Mothership</h1>
-
 				{{ render(controller('Message:User::Controller:Authentication#login', {
-					redirectURL: url(redirectRoute),
+					redirectURL: redirectUrl,
 					forgottenPasswordRoute: 'ms.cp.password.request',
 					inputAttributes: {
 						'email': {
@@ -34,11 +22,8 @@
 						}
 					}
 				})) }}
-
 			</section>
-
 		</div>
-
 		{% include 'Message:Mothership:ControlPanel::includes:footer' %}
 	</div>
 {% endblock %}

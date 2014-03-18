@@ -14,6 +14,10 @@
 		return confirm($(this).attr('data-confirm'));
 	});
 
+	if (!$('#save-content').is(':visible')) {
+		$('.controls').css('margin-right', -8);
+	};
+
 	// Set up live pane
 	$('[data-live-pane]').livePane({
 		linkSelector: 'a[data-live]',
@@ -51,6 +55,10 @@
 			$('.group[data-collapse] .title').next('.content').animate({
 				height: 'toggle',
 			});
+
+			if (!$('#save-content').is(':visible')) {
+				$('.controls').css('margin-right', -15);
+			};
 
 			$('textarea').each(function(){
 				$(this).height($(this)[0].scrollHeight);

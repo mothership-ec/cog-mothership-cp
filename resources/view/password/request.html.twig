@@ -1,27 +1,15 @@
 {% extends '::_templates/external' %}
-
 {% block title %}Mothership Forgotten Password{% endblock %}
-
 {% block body %}
 	<div class="login">
-
 		<div class="center">
-
 			<header>
-
 				<span class="spaceship"></span>
-
 				<h1>Welcome to Mothership</h1>
-
 				<span class="shadow"></span>
-
 			</header>
-
-
 			<section class="login-form forgotten">
-
 				<h1>Forgotten your password?</h1>
-
 				{{ render(controller('Message:User::Controller:ForgottenPassword#request', {
 					resetRoute: 'ms.cp.password.reset',
 					email: email,
@@ -32,11 +20,8 @@
 					}
 
 				})) }}
-
 			</section>
-
 		</div>
-
 		{% include 'Message:Mothership:ControlPanel::includes:footer' %}
 	</div>
 {% endblock %}
