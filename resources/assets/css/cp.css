@@ -203,6 +203,7 @@
 	width: 100%;
 	height: inherit;
 	margin: 0;
+	min-width: 1259px;
 }
 
 .dashboard.home .container-content:after {
@@ -260,8 +261,16 @@
 	box-sizing: border-box;
 }
 
+.module .wrap h1 {
+	font-size: 3.5em;
+}
+
+.module .wrap h2 {
+	font-size: 2em;
+}
+
 .module h3 {
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 
 .module hr {
@@ -271,12 +280,61 @@
 	border: none;
 	background: #EEE;
 	display: block;
-	margin: 40px 0;
+	margin: 25px 0;
+}
+
+.module hr.vertical {
+	width: 1px;
+	height: 100%;
+	float: left;
+	border: none;
+	background: #EEE;
+	display: block;
+	min-height: 100%;
+	margin: 0 25px;
 }
 
 .module li {
 	margin-bottom: 10px;
 	list-style: none;
+	float: left;
+	width: 100%;
+}
+
+.module li time {
+	float: left;
+	width: 100%;
+	display: block;
+	font-size: 13px;
+	color: #999;
+}
+
+.module li span {
+	width: 70%;
+	display: block;
+	float: left;
+}
+
+.module a.restore {
+	text-decoration: none;
+	font-size: 14px;
+	font-family: 'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	float: right;
+}
+
+.module a.restore:before {
+	font-family: 'FontAwesome';
+	content: '\f0e2';
+	margin-right: 4px;
+}
+
+.module div[dir="ltr"] {
+	width: 100% !important;
+}
+
+.module text {
+	font-family: 'Proxima N W15 Smbd' !important;
+	font-weight: normal;
 }
 
 .sq {
@@ -287,6 +345,7 @@
 .sq.large {
 	max-width: 680px;
 	max-height: 680px;
+	overflow: hidden;
 }
 
 .portrait {
@@ -299,11 +358,27 @@
 	max-height: 330px;
 }
 
-.module text {
-	font-family: 'Proxima N W15 Smbd' !important;
-	font-weight: normal;
+/* Dashboard specific modules */
+
+.profile-image {
+	float: left;
+	width: 263px;
 }
 
+.profile-image img {
+	padding: 34px 20px 34px 34px;
+	margin-right: 44px;
+}
+
+.activity {
+	float: left;
+	width: 371px;
+}
+
+.activity a,
+.activity span {
+	width: 100% !important;
+}
 
 /* Loading spinner
 ------------------------------------------------------------ */
@@ -2876,175 +2951,4 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	float: right;
 	margin-top: 12px;
 	margin-right: 8px;
-}
-
-
-/* Dashboard widgets
---------------------------------------- */
-
-
-.dashboard.home .container-content.tall {
-	height: -moz-calc(100% - 140px);
-	height: -webkit-calc(100% - 140px);
-	height: calc(100% - 140px);
-}
-
-.welcome {
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	-webkit-box-shadow: 0px 4px 0px #F1F1F1;
-	-moz-box-shadow: 0px 4px 0px #F1F1F1;
-	box-shadow: 0px 4px 0px #F1F1F1;
-	text-align: center;
-	font-size: 26px;
-	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.welcome:before {
-	margin-right: 10px;
-	content: "\f118";
-	font-family: 'FontAwesome';
-}
-
-/*.welcome {
-	float: left;
-	width: 100%;
-	position: relative;
-	height: 140px;
-	padding-bottom: 20px;
-	margin-bottom: 23px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	border: 1px solid #CCC;
-	background: #FFF;
-}
-
-.welcome img {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	-webkit-border-radius: 50px;
-	-moz-border-radius: 50px;
-	border-radius: 50px;
-}
-
-.welcome h1 {
-	margin-top: 45px;
-	border: none;
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
-
-.welcome h1,
-.welcome p {
-	float: left;
-	margin-left: 140px;
-	clear: both;
-	width: auto;
-}*/
-
-.stats {
-	position: absolute;
-	top: 40px;
-	right: 40px;
-	float: right;
-	height: 60px;
-	border-left: 1px solid #DDD;
-	font-size: 14px;
-}
-
-.stats li {
-	margin-bottom: 5px;
-	list-style: none;
-}
-
-.stats b {
-	display: inline-block;
-	margin-right: 50px;
-	min-width: 200px;
-	text-align: right;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-h1.amount {
-	margin-bottom: 15px;
-	padding-bottom: 0;
-	border: none;
-}
-
-.site-stats {
-	float: left;
-	margin-bottom: 20px;
-	width: 100%;
-}
-
-.site-stats ul {
-    display: -webkit-box;
-    width: 100%;
-	text-align: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-pack: justify;
-    -moz-box-pack: justify;
-    box-pack: justify;
-}
-
-.site-stats li {
-	margin-top: 10px;
-	padding: 30px 0 10px;
-	list-style: none;
-}
-
-.site-stats h2 {
-	margin-top: 10px;
-	width: 100%;
-	border: none;
-	font-size: 25px;
-}
-
-.site-stats span {
-	float: left;
-	width: 100%;
-	font-size: 50px;
-}
-
-.site-stats .customers:before {
-	position: relative;
-	margin-right: 6px;
-	content: "\f0c0";
-	font-size: 1.5em;
-	font-family: 'FontAwesome';
-}
-
-.site-stats .visitors:before {
-	position: relative;
-	margin-right: 6px;
-	content: "\f145";
-	font-size: 1.5em;
-	font-family: 'FontAwesome';
-}
-
-.site-stats .sales:before {
-	position: relative;
-	margin-right: 6px;
-	content: "\f07a";
-	font-size: 1.5em;
-	font-family: 'FontAwesome';
-}
-
-.site-stats .income:before {
-	position: relative;
-	margin-right: 6px;
-	content: "\f080";
-	font-size: 1.5em;
-	font-family: 'FontAwesome';
-}
-
-.site-stats .orders:before {
-	position: relative;
-	margin-right: 6px;
-	content: "\f0d1";
-	font-size: 1.5em;
-	font-family: 'FontAwesome';
 }

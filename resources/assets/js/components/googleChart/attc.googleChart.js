@@ -125,8 +125,6 @@ google.load("visualization", "1", {packages:["corechart"]});
                                 break;
                         }
 
-
-
                         var data = google.visualization.arrayToDataTable(dataArray);
                         chart.draw(data, settings.googleOptions);
                 };
@@ -301,7 +299,7 @@ google.load("visualization", "1", {packages:["corechart"]});
 })( jQuery );
 
 $(document).ready(function(){
-    $('table[data-attc-createChart]').each(function(){
-      $(this).attc();
+    $('[data-attc-createChart]').each(function() {
+        $(this).attc();
     });
 });

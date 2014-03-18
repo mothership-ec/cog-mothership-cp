@@ -6,10 +6,23 @@
 	<section class="dashboard home">
 		<section class="main">
 			<div class="modules">
-				<div class="module landscape">
+				<div class="module landscape welcome">
 					<h2 class="title">
-						Welcome Joe
+						Welcome Richard
 					</h2>
+					<div class="wrap">
+						<div class="profile-image">
+							<img src="http://richardmccartney.co.uk/content/images/2014/Feb/me-1.png"  width="165" height="165" alt="">
+						</div>
+						<div class="activity">
+							<h3>Your recent activity</h3>
+							<ul>
+								<li><strong>Last edited page</strong><time>4 hours ago</time><span><a href="#">Shop</a></span></li>
+								<li><strong>Last edited product</strong><time>2 days ago</time><span><a href="#">203 SERIES (PVD Rose Gold / Walnut Leather)</a></span></li>
+								<li><strong>Last processed order</strong><time>1 hours ago</time><span><a href="#">Order ID 20106</a></span></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 				<div class="module sq">
 					<h2 class="title">
@@ -30,76 +43,80 @@
 					<h2 class="title">
 						Sales
 					</h2>
-					<table
-			            title="Weekly Sales"
-			            id="sales"
-			            summary="day"
-			            data-attc-createChart="true"
-			            data-attc-colDescription="day"
-			            data-attc-colValues="amount"
-			            data-attc-location="salesArea"
-			            data-attc-hideTable="true"
-			            data-attc-type="area"
-			            data-attc-googleOptions='{"is3D":false, "chartArea.width": 480, "chartArea.height": 275, "width": 680, "height": 275, "fontSize": 16}'
-			            data-attc-controls='{"showHide":false,"create":false,"chartType":false}'
-			            >
-			            <thead>
-			                <tr>
-			                    <th id="day">Day</th>
-			                    <th id="amount">Amount</th>
-			                </tr>
-			            </thead>
-			            <tbody>
-			                <tr>
-			                	<td>M</td>
-			                	<td>£2502.00</td>
-			                </tr>
-			                <tr>
-			                	<td>T</td>
-			                	<td>£12502.00</td>
-			                </tr>
-			                <tr>
-			                	<td>W</td>
-			                	<td>£1502.00</td>
-			                </tr>
-			                <tr>
-			                	<td>T</td>
-			                	<td>£3502.00</td>
-			                </tr>
-			                <tr>
-			                	<td>F</td>
-			                	<td>£7238.00</td>
-			                </tr>
-			                <tr>
-			                	<td>S</td>
-			                	<td>£345.00</td>
-			                </tr>
-			                <tr>
-			                	<td>S</td>
-			                	<td>£3456.00</td>
-			                </tr>
-			            </tbody>
-			        </table>
-			        <div id="salesArea"></div>
+					<div class="wrap">
+						<h2>Total sales for this week &pound;25,412.00</h2>
+						<table
+				            title="Weekly Sales"
+				            id="sales"
+				            summary="day"
+				            data-attc-createChart="true"
+				            data-attc-colDescription="day"
+				            data-attc-colValues="amount"
+				            data-attc-location="salesArea"
+				            data-attc-hideTable="true"
+				            data-attc-type="area"
+				            data-attc-googleOptions='{"is3D":false, "width": "100%", "height": 540, "fontSize": 16, "legend": "none", "chartArea.width": "100%", "colors":["#528cb6", "#26537c", "#3f759f", "#999", "#666"]}'
+				            data-attc-controls='{"showHide":false,"create":false,"chartType":false}'
+				            >
+				            <thead>
+				                <tr>
+				                    <th id="day">Day</th>
+				                    <th id="amount">Amount</th>
+				                </tr>
+				            </thead>
+				            <tbody>
+				                <tr>
+				                	<td>M</td>
+				                	<td>£2502.00</td>
+				                </tr>
+				                <tr>
+				                	<td>T</td>
+				                	<td>£12502.00</td>
+				                </tr>
+				                <tr>
+				                	<td>W</td>
+				                	<td>£1502.00</td>
+				                </tr>
+				                <tr>
+				                	<td>T</td>
+				                	<td>£3502.00</td>
+				                </tr>
+				                <tr>
+				                	<td>F</td>
+				                	<td>£7238.00</td>
+				                </tr>
+				                <tr>
+				                	<td>S</td>
+				                	<td>£345.00</td>
+				                </tr>
+				                <tr>
+				                	<td>S</td>
+				                	<td>£3456.00</td>
+				                </tr>
+				            </tbody>
+				        </table>
+				        <div id="salesArea"></div>
+			        </div>
 				</div>
-				<div class="module portrait">
+				<div class="module portrait recent-list">
 					<h2 class="title">
 						CMS
 					</h2>
 					<div class="wrap">
 						<h3>Recently added/edited</h3>
 						<ol>
-							<li><a href="#">Shop</a></li>
-							<li><a href="#">152 Series</a></li>
-							<li><a href="#">Profile</a></li>
-							<li><a href="#">Information</a></li>
-							<li><a href="#">Press area</a></li>
+							<li><time>4 hours ago</time><a href="#">Shop</a></li>
+							<li><time>1 days ago</time><a href="#">152 Series</a></li>
+							<li><time>2 days ago</time><a href="#">Profile</a></li>
+							<li><time>4 days ago</time><a href="#">Information</a></li>
+							<li><time>4 days ago</time><a href="#">Press area</a></li>
 						</ol>
 						<hr>
 						<h3>Recently deleted</h3>
 						<ol>
-							<li>100 Series (Red rubber strap)</li>
-							<li>100 Series (Red rubber strap)</li>
+							<li><time>1 hour ago</time><span>Gift Voucher</span><a class="restore" href="#">Restore</a></li>
+							<li><time>9 days ago</time><span>203 SERIES (PVD Rose Gold / Walnut Leather)</span><a class="restore" href="#">Restore</a></li>
+							<li><time>9 days ago</time><span>351 SERIES	 Brushed Steel / Blue NBR Rubber</span><a class="restore" href="#">Restore</a></li>
 						</ol>
 					</div>
 				</div>
@@ -117,7 +134,7 @@
 			            data-attc-location="AttendancePercentagesPie"
 			            data-attc-hideTable="true"
 			            data-attc-type="pie"
-			            data-attc-googleOptions='{"is3D":false, "chartArea.width": 480, "chartArea.height": 275, "width": 680, "height": 275, "fontSize": 16}'
+			            data-attc-googleOptions='{"is3D":false, "chartArea.width": 580, "chartArea.height": 275, "width": 680, "height": 275, "fontSize": 16, "colors":["#528cb6", "#26537c", "#3f759f", "#999", "#666"]}'
 			            data-attc-controls='{"showHide":false,"create":false,"chartType":false}'
 			            >
 			            <thead>
