@@ -8,7 +8,7 @@
 			<div class="modules">
 				<div class="module landscape welcome">
 					<h2 class="title">
-						Welcome Richard
+						Welcome {{ app.user.getName() }}
 					</h2>
 					<div class="wrap">
 						<div class="profile-image">
@@ -80,7 +80,7 @@
 				</div>
 				<div class="module landscape">
 					<h2 class="title">
-						Orders
+						Orders activity
 					</h2>
 					<div class="wrap">
 						<div class="column center">
@@ -176,7 +176,7 @@
 				</div>
 				<div class="module landscape">
 					<h2 class="title">
-						Discounts
+						Discount revenue (week)
 					</h2>
 					<div class="wrap">
 						<table

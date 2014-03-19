@@ -276,7 +276,10 @@
 
 .module .large-text {
 	font-size: 7.5em;
-	margin: 40px 0;
+	margin: 0;
+	font-family: 'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	height: 200px;
+	line-height: 230px;
 }
 
 .module .medium-text {
@@ -286,7 +289,7 @@
 
 .module .small-text {
 	font-size: 2em;
-	margin-bottom: 10px;
+	margin: 0;
 }
 
 .module .small {
