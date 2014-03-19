@@ -284,6 +284,11 @@
 	margin: 0 0 10px;
 }
 
+.module .small-text {
+	font-size: 2em;
+	margin-bottom: 10px;
+}
+
 .module .small {
 	font-size: .25em;
 }
@@ -302,22 +307,12 @@
 	margin: 25px 0;
 }
 
-.module hr.vertical {
-	width: 1px;
-	height: 100%;
-	float: left;
-	border: none;
-	background: #EEE;
-	display: block;
-	min-height: 100%;
-	margin: 0 25px;
-}
-
 .module li {
 	margin-bottom: 10px;
 	list-style: none;
 	float: left;
 	width: 100%;
+	position: relative;
 }
 
 .module li time {
@@ -329,7 +324,7 @@
 }
 
 .module li span {
-	width: 70%;
+	width: 66%;
 	display: block;
 	float: left;
 }
@@ -339,6 +334,9 @@
 	font-size: 14px;
 	font-family: 'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	float: right;
+	position: absolute;
+	top: 17px;
+	right: 0;
 }
 
 .module a.restore:before {
@@ -381,12 +379,15 @@
 
 .profile-image {
 	float: left;
-	width: 263px;
+	width: 165px;
+	height: 165px;
+	margin: 30px 40px 30px 30px;
 }
 
 .profile-image img {
-	padding: 34px 20px 34px 34px;
-	margin-right: 44px;
+	-webkit-border-radius: 82.5px;
+	-moz-border-radius: 82.5px;
+	border-radius: 82.5px;
 }
 
 .activity {
