@@ -11,7 +11,7 @@
 			<section class="login-form">
 				<h1>Log in to Mothership</h1>
 				{{ render(controller('Message:User::Controller:Authentication#login', {
-					redirectURL: url(redirectRoute),
+					redirectURL: redirectUrl,
 					forgottenPasswordRoute: 'ms.cp.password.request',
 					inputAttributes: {
 						'email': {
