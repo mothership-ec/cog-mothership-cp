@@ -2227,19 +2227,37 @@ ul.search-results {
 .sidebar.products ul {
 	float: left;
 	margin-top: 23px;
-	border-right: 1px solid #ccc;
+	display: block;
+	margin: 20px 0 0;
+	-webkit-box-shadow: 0px 2px 2px rgba(000,000,000,0.03);
+	-moz-box-shadow: 0px 2px 2px rgba(000,000,000,0.03);
+	box-shadow: 0px 2px 2px rgba(000,000,000,0.03);
+	width: 100%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #FFF;
+	border: 1px solid #E9E9E9;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
 }
 
 .sidebar.products li {
 	float: left;
 	width: 100%;
-	border-top: 1px solid #CCC;
+	border-top: 1px solid #EEE;
 	padding: 8px 0 5px;
 	background: #FFF;
+	text-indent: 15px;
 }
 
 .sidebar.products a {
 	text-decoration: none;
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	width: 100%;
 }
 
 .sidebar.products li:first-child {
@@ -2483,7 +2501,6 @@ td.partial {
 	width: 150px;
 	font-weight: normal;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
 }
 
 ol.order-details li {
