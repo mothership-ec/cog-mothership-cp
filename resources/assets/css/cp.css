@@ -2749,6 +2749,11 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	width: 100%;
 }
 
+.service-list {
+	overflow: hidden;
+	max-width: 50%;
+}
+
 .service-list dt {
 	margin-bottom: 20px;
 	margin-right: 5%;
