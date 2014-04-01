@@ -1,23 +1,19 @@
 /**
- * Data picker input
- *
- *
- * This is a *private* plugin, and should only be used by Message Digital Design.
+ * Data picker polyfill for browsers that do not natively support the HTML5
+ * "date" input type.
  *
  * @author Message Digital Design <dev@message.co.uk>
  * @author Richard McCartney <richard@message.co.uk>
  */
-
 $(function() {
+	var testDateField = document.createElement('input');
 
-	// Add jQuery UI datepicker to date fields if browser does not support them
-	var testDateField, supportsDateField;
-	testDateField = document.createElement('input');
 	testDateField.setAttribute('type', 'date');
-	supportsDateField = 'date' == testDateField.type;
 
-	if (false == supportsDateField) {
-		$('input[type="date"]').datepicker();
+	// If the browser does not support the date input type, init the polyfill
+	if ('date' !== testDateField.type) {
+		$('input[type="date"]').datepicker({
+			dateFormat: "yy-mm-dd"
+		});
 	}
-
 });
