@@ -2565,11 +2565,21 @@ ol.order-details li {
 
 .reports th a {
 	padding-right: 10px;
-	padding-bottom: 5px;
-	background: url(../images/table-filter.png) no-repeat right top;
+	background: url(../images/filter.png) no-repeat right center;
 	vertical-align: middle;
-	height: 34px;
-	width: 100%;
+	text-decoration: none;
+}
+
+.reports th a.sorting-asc {
+	background: url(../images/asc.png) no-repeat right center;
+}
+
+.reports th a.sorting-desc {
+	background: url(../images/desc.png) no-repeat right center;
+}
+
+.reports th a:hover {
+	color: inherit;
 }
 
 button.filter {
