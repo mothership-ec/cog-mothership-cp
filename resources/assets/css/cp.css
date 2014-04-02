@@ -2536,6 +2536,8 @@ ol.order-details li {
 /* Reports
 ------------------------------------------------------------ */
 
+
+
 .filter-by .field {
 	float: left;
 	padding: 20px 10px;
@@ -2549,6 +2551,26 @@ ol.order-details li {
 	height: 40px;
 }
 
+.reports table {
+	table-layout: fixed;
+}
+
+.reports th {
+	padding-top: 0;
+	padding-bottom: 0;
+	vertical-align: middle;
+	height: 34px;
+	display: table-cell;
+}
+
+.reports th a {
+	padding-right: 10px;
+	padding-bottom: 5px;
+	background: url(../images/table-filter.png) no-repeat right top;
+	vertical-align: middle;
+	height: 34px;
+	width: 100%;
+}
 
 button.filter {
 	display: block;
@@ -2558,8 +2580,6 @@ button.filter {
 	bottom: 0px;
 	right: 0px;
 }
-
-
 
 tr.total {
 	border: 1px solid #26537c;
