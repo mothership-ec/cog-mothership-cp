@@ -2565,7 +2565,7 @@ ol.order-details li {
 
 .reports th a {
 	padding-right: 10px;
-	background: url(../images/filter.png) no-repeat right center;
+	background: url(../images/sort.png) no-repeat right center;
 	vertical-align: middle;
 	text-decoration: none;
 }
