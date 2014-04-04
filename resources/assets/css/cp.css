@@ -45,6 +45,7 @@
 	-moz-box-shadow: 0px 0px 1px 3px rgba(17,48,81,0.1), inset 0px -1px 0px 0px rgba(255,255,255,0.1);
 	box-shadow: 0px 0px 1px 3px rgba(17,48,81,0.1), inset 0px -1px 0px 0px rgba(255,255,255,0.1);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#528cb6', EndColorStr='#4473a6');
+	min-width: 1261px;
 }
 
 .navigation a {
@@ -2410,6 +2411,12 @@ ul.search-results {
 	padding: 20px 0 0 20px;
 }
 
+.listing h2 {
+	width: 100%;
+	clear: both;
+	float: none;
+}
+
 
 
 /* Stock */
@@ -2728,6 +2735,8 @@ ol.order-details li {
 /* Reports
 ------------------------------------------------------------ */
 
+
+
 .filter-by .field {
 	float: left;
 	padding: 20px 10px;
@@ -2741,6 +2750,36 @@ ol.order-details li {
 	height: 40px;
 }
 
+.reports table {
+	table-layout: fixed;
+}
+
+.reports th {
+	padding-top: 0;
+	padding-bottom: 0;
+	vertical-align: middle;
+	height: 34px;
+	display: table-cell;
+}
+
+.reports th a {
+	padding-right: 10px;
+	background: url(../images/sort.png) no-repeat right center;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+.reports th a.sorting-asc {
+	background: url(../images/asc.png) no-repeat right center;
+}
+
+.reports th a.sorting-desc {
+	background: url(../images/desc.png) no-repeat right center;
+}
+
+.reports th a:hover {
+	color: inherit;
+}
 
 button.filter {
 	position: absolute;
@@ -2750,8 +2789,6 @@ button.filter {
 	clear: both;
 	margin: 10px;
 }
-
-
 
 tr.total {
 	border: 1px solid #26537c;
@@ -2939,6 +2976,11 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 .repair-total {
 	float: left;
 	width: 100%;
+}
+
+.service-list {
+	overflow: hidden;
+	max-width: 50%;
 }
 
 .service-list dt {
