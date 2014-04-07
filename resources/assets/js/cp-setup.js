@@ -94,4 +94,25 @@
 		});
 	});
 
+	var demoWidth = $('.clear.modal').outerWidth();
+
+	$('.clear.modal').css({
+		right: -demoWidth
+	});
+
+	$('.toggle-left').on('click', function() {
+		$('.clear.modal').animate({right: -demoWidth}, 500);
+	});
+
+	$('.click').on('click', function(event) {
+		$('.clear.modal').animate({right: 0}, 500);
+	});
+
+	// $('.toggle-left').mouseenter(function() {
+	// 	$('.clear.modal').animate({right: -10}, 200);
+	// 	return false;
+	// }).mouseleave(function() {
+	// 	$('.clear.modal').animate({right: 0}, 200);
+	// 	return false;
+	// });
 });

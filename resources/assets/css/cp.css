@@ -1146,9 +1146,9 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 23px;
-	height: -moz-calc(100% - 62px);
-    height: -webkit-calc(100% - 62px);
-    height: calc(100% - 62px);
+	height: -moz-calc(100% - 46px);
+    height: -webkit-calc(100% - 46px);
+    height: calc(100% - 46px);
     min-width: 1010px;
 }
 
@@ -2149,6 +2149,15 @@ ul.search-results {
     height: -webkit-calc(100% - 62px);
     height: calc(100% - 62px);
 }
+
+.clear.modal {
+	position: absolute;
+	top: 0;
+	background: #F1F1F1;
+	right: 0;
+	overflow: hidden;
+}
+
 
 .controls.products {
 	height: 28px;
