@@ -3,6 +3,7 @@
 namespace Message\Mothership\ControlPanel\Controller\Module\Dashboard;
 
 use Message\Cog\Controller\Controller;
+use Message\Mothership\ControlPanel\Event\Dashboard\UserSummaryEvent;
 
 class UserSummary extends Controller implements DashboardModuleInterface
 {
@@ -21,10 +22,11 @@ class UserSummary extends Controller implements DashboardModuleInterface
 		$user = $this->get('user.current');
 
 		if (false === $data = $this->get('cache')->fetch(self::CACHE_KEY . $user->id)) {
+			$event = new UserSummaryEvent;
+			$event->setUser($user);
+			$this->get('event.dispatcher')->dispatch('dashboard.user-summary.activities', $event);
 
-			// Latest activity
-			$activities = [];
-
+			/*
 			// page
 			$pageID = $this->get('db.query')->run("SELECT page_id FROM page WHERE updated_by = :userID?i ORDER BY updated_at DESC LIMIT 1", [
 				'userID' => $user->id
@@ -56,9 +58,10 @@ class UserSummary extends Controller implements DashboardModuleInterface
 			}
 
 			// order
+			*/
 
 			$data = [
-				'activities' => $activities,
+				'activities' => $event->getActivities(),
 			];
 
 			$this->get('cache')->store(self::CACHE_KEY . $user->id, $data, self::CACHE_TTL);

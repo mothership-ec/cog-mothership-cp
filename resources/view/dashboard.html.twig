@@ -7,6 +7,14 @@
 		<section class="main">
 			<div class="modules">
 
+				{% for reference in dashboardReferences %}
+					{{ render(controller(reference)) }}
+				{% else %}
+					<div class="container-content">
+						<p>I don't have any flashy graphs and numbers to show you :(</p>
+					</div>
+				{% endfor %}
+
 				{#{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:UserSummary#index')) }}
 
 				{{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:OrdersFulfillmentTime#index')) }}
@@ -15,11 +23,11 @@
 
 				{{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:OrdersActivity#index')) }}
 
-				{{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:TotalSales#index')) }#}
+				{{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:TotalSales#index')) }}
 
 				{{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:CMSSummary#index')) }}
 
-				{#{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:DiscountRevenue#index')) }#}
+				{{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:DiscountRevenue#index')) }#}
 			</div>
 		</section>
 	</section>
