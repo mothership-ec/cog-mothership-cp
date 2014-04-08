@@ -7,7 +7,7 @@
 		<section class="main">
 			<div class="modules">
 
-				{{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:UserSummary#index')) }}
+				{#{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:UserSummary#index')) }}
 
 				{{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:OrdersFulfillmentTime#index')) }}
 
@@ -15,32 +15,11 @@
 
 				{{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:OrdersActivity#index')) }}
 
-				{{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:TotalSales#index')) }}
+				{{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:TotalSales#index')) }#}
 
-				<div class="module portrait recent-list">
-					<h2 class="title">
-						CMS
-					</h2>
-					<div class="wrap">
-						<h3>Recently added/edited</h3>
-						<ol>
-							<li><time>4 hours ago</time><a href="#">Shop</a></li>
-							<li><time>1 days ago</time><a href="#">152 Series</a></li>
-							<li><time>2 days ago</time><a href="#">Profile</a></li>
-							<li><time>4 days ago</time><a href="#">Information</a></li>
-							<li><time>4 days ago</time><a href="#">Press area</a></li>
-						</ol>
-						<hr>
-						<h3>Recently deleted</h3>
-						<ol>
-							<li><time>1 hour ago</time><span>Gift Voucher</span><a class="restore button small" href="#">Restore</a></li>
-							<li><time>9 days ago</time><span>203 SERIES (PVD Rose Gold / Walnut Leather)</span><a class="restore button small" href="#">Restore</a></li>
-							<li><time>9 days ago</time><span>351 SERIES	 Brushed Steel / Blue NBR Rubber</span><a class="restore button small" href="#">Restore</a></li>
-						</ol>
-					</div>
-				</div>
+				{{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:CMSSummary#index')) }}
 
-				{{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:DiscountRevenue#index')) }}
+				{#{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:DiscountRevenue#index')) }#}
 			</div>
 		</section>
 	</section>
