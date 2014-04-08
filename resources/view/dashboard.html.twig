@@ -39,44 +39,8 @@
 						</ol>
 					</div>
 				</div>
-				<div class="module landscape">
-					<h2 class="title">
-						Discount revenue (week)
-					</h2>
-					<div class="wrap">
-						<table
-							title="Discount amounts"
-							id="discountAmounts"
-							summary="Discount amounts and savings"
-							data-attc-createChart="true"
-							data-attc-colDescription="pieDescription"
-							data-attc-colValues="pieValues"
-							data-attc-location="AttendancePercentagesPie"
-							data-attc-hideTable="true"
-							data-attc-type="column"
-							data-attc-googleOptions='{"is3D":false, "width": 638, "height": 240, "legend": "none", "fontSize": 16, "colors":["#528cb6", "#26537c", "#3f759f", "#999", "#666"], "chartArea":{"top":25,"width":"620","height":"180"}, "role":"annotation"}'
-							data-attc-controls='{"showHide":false,"create":false,"chartType":false}'
-							>
-							<thead>
-								<tr>
-									<th id="pieDescription">Value</th>
-									<th id="pieValues">Amount</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Income from discounted orders (£4750)</td>
-									<td>£4750</td>
-								</tr>
-								<tr>
-									<td>Customer savings (£628)</td>
-									<td>£628</td>
-								</tr>
-							</tbody>
-						</table>
-						<div id="AttendancePercentagesPie"></div>
-					</div>
-				</div>
+
+				{{ render(controller('Message:Mothership:ControlPanel::Controller:Module:Dashboard:DiscountRevenue#index')) }}
 			</div>
 		</section>
 	</section>
