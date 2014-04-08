@@ -16,8 +16,6 @@ class OrdersActivity extends Controller implements DashboardModuleInterface
 	public function index()
 	{
 		if (false === $data = $this->get('cache')->fetch(self::CACHE_KEY)) {
-			$products = [];
-
 			$since = strtotime(date('Y-m-d')) - (60 * 60 * 24 * 6);
 
 			$in = $this->get('db.query')->run("SELECT COUNT(order_id) as num FROM order_item_status WHERE created_at > {$since} AND status_code = 0");
