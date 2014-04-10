@@ -4,7 +4,7 @@ namespace Message\Mothership\ControlPanel\Event\Dashboard;
 
 use Message\Mothership\ControlPanel\Event\Event;
 
-class DashboardIndexEvent extends Event
+class DashboardEvent extends Event
 {
 	protected $_references;
 
