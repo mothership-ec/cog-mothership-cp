@@ -2,9 +2,9 @@
 
 namespace Message\Mothership\ControlPanel\Event\Dashboard;
 
-use Message\Cog\Event\Event;
+use Message\Mothership\ControlPanel\Event\Event;
 
-class UserSummaryEvent extends Event
+class ActivitySummaryEvent extends Event
 {
 	protected $_user;
 	protected $_activities;

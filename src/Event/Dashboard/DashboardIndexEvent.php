@@ -2,7 +2,7 @@
 
 namespace Message\Mothership\ControlPanel\Event\Dashboard;
 
-use Message\Cog\Event\Event;
+use Message\Mothership\ControlPanel\Event\Event;
 
 class DashboardIndexEvent extends Event
 {

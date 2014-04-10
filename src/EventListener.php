@@ -32,9 +32,6 @@ class EventListener extends BaseListener implements SubscriberInterface
 				array('sendToLogin'),
 				array('renderErrorPage'),
 			),
-			'dashboard.references' => array(
-				'dashboardReferences',
-			),
 		);
 	}
 
@@ -91,10 +88,5 @@ class EventListener extends BaseListener implements SubscriberInterface
 		$response = $event->getKernel()->handle($request, HttpKernelInterface::SUB_REQUEST, true);
 
 		$event->setResponse($response);
-	}
-
-	public function dashboardReferences($event)
-	{
-		$event->addReference('Message:Mothership:ControlPanel::Controller:Module:Dashboard:UserSummary#index');
 	}
 }

@@ -9,7 +9,7 @@ class Dashboard extends \Message\Cog\Controller\Controller
 	public function index()
 	{
 		$event = $this->get('event.dispatcher')->dispatch(
-			'dashboard.references',
+			DashboardIndexEvent::DASHBOARD_INDEX,
 			new DashboardIndexEvent
 		);
 
