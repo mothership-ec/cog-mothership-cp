@@ -8,10 +8,6 @@
 			<div class="modules">
 				{% for reference in dashboardReferences %}
 					{{ render(controller(reference)) }}
-				{% else %}
-					<div class="container-content">
-						<p>I don't have any flashy graphs and numbers to show you :(</p>
-					</div>
 				{% endfor %}
 			</div>
 		</section>
