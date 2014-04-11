@@ -1554,21 +1554,14 @@
 
 .group {
 	float: left;
-	display: block;
-	margin: 0 0 20px;
-	-webkit-box-shadow: 0px 2px 2px rgba(000,000,000,0.03);
-	-moz-box-shadow: 0px 2px 2px rgba(000,000,000,0.03);
-	box-shadow: 0px 2px 2px rgba(000,000,000,0.03);
-	width: 100%;
-	height: 100%;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	background: #FFF;
-	border: 1px solid #E9E9E9;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	margin: 0 0 20px 0;
+	padding-bottom: 0px;
+	width: 100%;
+	border: 1px solid #CCC;
+	background: #FFF;
 }
 .group.third {
 	width: 33.3%;
@@ -1592,18 +1585,16 @@
 	margin: 0;
 	padding: 20px 22px 12px;
 	width: 100%;
-	font-size: 1em;
-	margin: 0;
-	border: none;
 	border-bottom: 1px solid #CCC;
 	background: none;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
+	background-color: #f9f9f9;
+	-webkit-box-shadow: 0px 1px 3px rgba(000,000,000,0.05);
+	-moz-box-shadow: 0px 1px 3px rgba(000,000,000,0.05);
+	box-shadow: 0px 1px 3px rgba(000,000,000,0.05);
+	font-size: 1em;
 }
 
 .group .content {
-	position: relative;
 	display: inline-block;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -1611,6 +1602,7 @@
 	padding: 20px 20px 0;
 	width: 100%;
 	overflow-wrap: break-word;
+	position: relative;
 }
 
 .group h2 {
@@ -2712,6 +2704,10 @@ ol.order-details li {
 	float: left;
 	margin-bottom: 10px;
 	width: 100%;
+}
+
+.voucher-details li.grand-total {
+	padding-top: 10px;
 }
 
 .voucher-details span {
