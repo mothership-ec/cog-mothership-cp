@@ -108,11 +108,9 @@
 		$('.clear.modal').animate({right: 0}, 500);
 	});
 
-	// $('.toggle-left').mouseenter(function() {
-	// 	$('.clear.modal').animate({right: -10}, 200);
-	// 	return false;
-	// }).mouseleave(function() {
-	// 	$('.clear.modal').animate({right: 0}, 200);
-	// 	return false;
-	// });
+	$('.toggle-left').mouseenter(function() {
+		$('.clear.modal').animate({right: -10}, 200);
+	}).mouseleave(function() {
+		$('.clear.modal').animate({right: 0}, 200);
+	});
 });

@@ -1251,10 +1251,7 @@
 
 #save-content,
 .save-content {
-	position: fixed;
-	top: 77px;
-	right: 14px;
-	z-index: 12;
+	margin-bottom: 20px;
 }
 
 .short #save-content {
@@ -2156,12 +2153,15 @@ ul.search-results {
 	background: #F1F1F1;
 	right: 0;
 	overflow: hidden;
+	-webkit-box-shadow: -3px 0 3px rgba(0,0,0,0.3);
+	-moz-box-shadow: -3px 0 3px rgba(0,0,0,0.3);
+	box-shadow: -3px 0 3px rgba(0,0,0,0.3);
 }
 
 
 .controls.products {
 	height: 28px;
-	margin: 11px 134px;
+	margin: 11px 0;
 }
 
 
@@ -2192,6 +2192,54 @@ ul.search-results {
 	margin-right: 10px;
 }
 
+.variant-options {
+	float: left;
+	background: #FAFAFA;
+	width: 70%;
+	border: 1px solid #CCC;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 20px;
+	margin-bottom: 20px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.variant-options ul {
+	border-bottom: 1px solid #CCC;
+	float: left;
+	width: 100%;
+}
+
+.variant-options li {
+	float: left;
+	height: 60px;
+	width: 100%;
+	border: 1px solid #CCC;
+	border-bottom: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	background: #FFF;
+}
+
+.variant-options li label,
+.variant-options li input {
+	width: auto;
+	float: none;
+	display: inline-block;
+	position: relative;
+	right: 0;
+}
+
+.variant-options .remove {
+	float: right;
+	position: relative;
+}
+
 
 /* Sidebar */
 
@@ -2211,6 +2259,9 @@ ul.search-results {
 	border-right: 1px solid #000;
 	display: block;
 	margin-right: 20px;
+	-webkit-box-shadow: -10px 0 5px rgba(000,000,000,0.1);
+	-moz-box-shadow: -10px 0 5px rgba(000,000,000,0.1);
+	box-shadow: -10px 0 5px rgba(000,000,000,0.1);
 }
 
 .toggle-left a {
@@ -2219,7 +2270,7 @@ ul.search-results {
 	font-size: 25px;
 	text-decoration: none;
 	font-weight: normal;
-	margin: 16px 13px 13px;
+	margin: 16px 19px 13px;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.8);
 	color: #FFF;
 }
@@ -2227,7 +2278,7 @@ ul.search-results {
 .toggle-left a:before {
 	display: block;
 	font-family: 'FontAwesome';
-	content: '\f191';
+	content: '\f0d9';
 }
 
 .sidebar.products {
@@ -2246,6 +2297,7 @@ ul.search-results {
 	box-shadow: inset -3px 0 5px rgba(000,000,000,0.01);
 	overflow: visible;
 	margin-left: -20px;
+	background: #EAEAEA;
 }
 
 .sidebar.products ul {
