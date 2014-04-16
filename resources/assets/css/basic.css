@@ -1143,6 +1143,21 @@ table .multi-inline .inline {
 	margin-bottom: 0;
 }
 
+a.clear-filters {
+	text-decoration: none;
+	opacity: 0.7;
+}
+
+a.clear-filters:hover {
+	opacity: 1;
+}
+
+a.clear-filters:before {
+	content: '\f057';
+	font-family: 'FontAwesome';
+	margin-right: 5px;
+}
+
 .dataTables_wrapper table th {
 	width: auto !important;
 	cursor: pointer;

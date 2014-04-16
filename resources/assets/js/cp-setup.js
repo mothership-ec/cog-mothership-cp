@@ -18,6 +18,11 @@
 		$('.controls').css('margin-right', -8);
 	};
 
+	$(window).scroll(function(){
+	    var $win = $(window);
+	    $('.save-content').css('left', 0 -$win.scrollLeft());
+	});
+
 	// Set up live pane
 	$('[data-live-pane]').livePane({
 		linkSelector: 'a[data-live]',
@@ -109,8 +114,13 @@
 	});
 
 	$('.toggle-left').mouseenter(function() {
-		$('.clear.modal').animate({right: -10}, 200);
+		$('.clear.modal').stop().animate({right: -10}, 200);
 	}).mouseleave(function() {
-		$('.clear.modal').animate({right: 0}, 200);
+		$('.clear.modal').stop().animate({right: 0}, 200);
+	});
+
+	$('.clear-filters').on('click', function() {
+		$('.table-filter').find('input').val('');
+		$('.table-filter').find('input').keyup();
 	});
 });

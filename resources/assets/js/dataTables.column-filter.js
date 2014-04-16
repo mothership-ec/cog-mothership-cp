@@ -646,6 +646,14 @@
             }
         }
 
+        function fnResetAllFilters() {
+            var oSettings = oTable.fnSettings();
+            for(iCol = 0; iCol < oSettings.aoPreSearchCols.length; iCol++) {
+                oSettings.aoPreSearchCols[ iCol ].sSearch = '';
+            }
+            oTable.fnDraw();
+            //console.log(oSettings);
+        }
 
 
 
