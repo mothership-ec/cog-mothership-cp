@@ -120,6 +120,7 @@
 
 	$('.create-product').on('click', '.save', function() {
 		$('.create-product').remove();
+		$('.tick').addClass('bounce');
 	});
 
 });

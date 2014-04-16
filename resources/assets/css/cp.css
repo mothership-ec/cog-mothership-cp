@@ -2361,6 +2361,20 @@ ul.search-results {
 	height: calc(100% - 101px);
 	margin-top: 61px;
 	cursor: pointer;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-ms-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+}
+
+.toggle-left:hover {
+	background: rgba(0,0,0,0.4);
+	border-right: 1px solid #FFF;
+}
+
+.toggle-left:hover a {
+	margin-left: 10px;
 }
 
 .toggle-left a {
@@ -2372,6 +2386,11 @@ ul.search-results {
 	margin: 11px 17px 13px;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.8);
 	color: #FFF;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-ms-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
 }
 
 .toggle-left a:before {
