@@ -53,7 +53,7 @@ ModalHandler.prototype.launch = function(uri) {
 		success : function(data) {
 			_this._modal = $(data).hide().appendTo('body');
 
-			_this._modal.fadeIn(200);
+			_this._modal.fadeIn(100);
 		}
 	});
 };
@@ -65,7 +65,7 @@ ModalHandler.prototype.close = function() {
 		return console.warn('Cannot close modal: there is no modal open');
 	}
 
-	_this._modal.fadeOut(400, function() {
+	_this._modal.fadeOut(200, function() {
 		_this._modal.remove();
 
 		_this._modal = null;
