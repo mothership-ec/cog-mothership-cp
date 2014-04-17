@@ -101,4 +101,13 @@
 			$(this).height($(this)[0].scrollHeight);
 		});
 	});
+
+	// Stub window.console
+	if (!window.console) {
+		console = {
+			log  : function() {},
+			warn : function() {},
+			error: function() {},
+		};
+	}
 });
