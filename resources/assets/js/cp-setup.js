@@ -1,4 +1,5 @@
 ;$(function() {
+	var modalHandler = new ModalHandler;
 
 	// Check HTML5 History API is available
 	if (!History.enabled) {
@@ -93,5 +94,4 @@
 			$(this).height($(this)[0].scrollHeight);
 		});
 	});
-
 });
