@@ -48,6 +48,12 @@ input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
 }
 
+.modal {
+	position: absolute;
+	top: 70px;
+	background: white;
+}
+
 
 
 
