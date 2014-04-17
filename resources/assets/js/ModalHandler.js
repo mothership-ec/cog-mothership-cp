@@ -61,15 +61,11 @@ ModalHandler.prototype.launch = function(uri) {
 ModalHandler.prototype.close = function() {
 	var _this = this;
 
-	console.log(this._modal);
-
 	if (null === _this._modal) {
 		return console.warn('Cannot close modal: there is no modal open');
 	}
 
-	console.log('fading out');
 	_this._modal.fadeOut(400, function() {
-		console.log('faded out');
 		_this._modal.remove();
 
 		_this._modal = null;
