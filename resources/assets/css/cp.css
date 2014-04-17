@@ -2331,8 +2331,8 @@ ul.search-results {
 }
 
 .tick:before {
-	content: '\f14a';
-	font-family: 'FontAwesome';
+	font-family: 'icomoon';
+	content: "\e600";
 }
 
 /* Sidebar */
