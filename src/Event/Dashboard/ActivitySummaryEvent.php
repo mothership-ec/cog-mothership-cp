@@ -19,7 +19,7 @@ class ActivitySummaryEvent extends Event
 		return $this->_user;
 	}
 
-	public function addActivity($activity)
+	public function addActivity(Activity $activity)
 	{
 		$this->_activities[] = $activity;
 	}
