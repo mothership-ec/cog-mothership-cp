@@ -48,13 +48,6 @@ input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
 }
 
-.modal {
-	position: absolute;
-	top: 70px;
-	background: white;
-}
-
-
 
 
 /* Text and links
@@ -1276,5 +1269,95 @@ dd {
 
 .clearfix {
 	clear: both;
+}
+
+
+
+/* Modals
+------------------------------------------------------------ */
+
+
+
+.modal-wrap {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(000,000,000,0.2);
+	z-index: 1000000;
+	text-align: center;
+}
+
+.modal-wrap:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.modal {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 300px;
+	width: 100%;
+	max-width: 600px;
+	background: #FFF;
+	-webkit-box-shadow: 0px 2px 2px rgba(000,000,000,0.03);
+	-moz-box-shadow: 0px 2px 2px rgba(000,000,000,0.03);
+	box-shadow: 0px 2px 2px rgba(000,000,000,0.03);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #FFF;
+	border: 1px solid #E9E9E9;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: left;
+}
+
+.modal header {
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #CCC;
+}
+
+.modal h1 {
+	padding: 20px 22px 15px;
+	font-size: 16px;
+}
+
+.modal .close {
+	position: absolute;
+	top: 0px;
+	right: 2px;
+	color: #333;
+	text-indent: -999em;
+	width: 17px;
+	height: 17px;
+	padding: 20px;
+	cursor: pointer;
+}
+
+.modal .close:after {
+	font-family: 'FontAwesome';
+	content: '\f00d';
+	right: 20px;
+	position: absolute;
+	width: 17px;
+	color: #333;
+	text-indent: 0;
+}
+
+.modal .content {
+	padding: 22px;
+	width: 100%;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 

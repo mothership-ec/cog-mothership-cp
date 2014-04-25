@@ -809,7 +809,6 @@
 }
 
 
-
 /* Top Bar
 ------------------------------------------------------------ */
 
@@ -907,16 +906,18 @@
 
 .title .controls {
 	position: absolute;
-	top: 5px;
+	top: 0px;
 	right: 23px;
+	bottom: 0;
 	margin: 0;
 	width: auto;
-	height: 56px;
+	height: auto;
 	text-align: right;
 }
 
 .title .controls .button {
 	font-size: 16px;
+	margin-top: 10px;
 }
 
 .controls form {
