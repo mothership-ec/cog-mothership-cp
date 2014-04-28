@@ -2480,6 +2480,22 @@ ol.order-details li {
 }
 
 
+/* Modal styles */
+
+
+.refund {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+
+.refund span {
+	position: absolute;
+	left: 137px;
+	top: -1px;
+}
+
+
 
 /* Vouchers
 ------------------------------------------------------------ */
