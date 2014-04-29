@@ -924,6 +924,9 @@
 	width: auto;
 }
 
+.controls span.disabled {
+	margin-top: 12px;
+}
 
 
 
