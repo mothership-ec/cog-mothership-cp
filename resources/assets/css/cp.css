@@ -904,6 +904,10 @@
 	text-align: right;
 }
 
+.controls .button {
+	margin-top: 12px;
+}
+
 .title .controls {
 	position: absolute;
 	top: 0px;
@@ -924,10 +928,6 @@
 	width: auto;
 }
 
-.controls span.disabled {
-	margin-top: 12px;
-}
-
 
 
 /* Delete page */
@@ -937,7 +937,6 @@
 #delete-page {
 	position: relative;
 	display: inline-block;
-	margin-top: 12px;
 	margin-right: 8px;
 }
 
