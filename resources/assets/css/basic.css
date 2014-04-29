@@ -1305,9 +1305,9 @@ dd {
 	width: 100%;
 	max-width: 600px;
 	background: #FFF;
-	-webkit-box-shadow: 0px 2px 2px rgba(000,000,000,0.03);
-	-moz-box-shadow: 0px 2px 2px rgba(000,000,000,0.03);
-	box-shadow: 0px 2px 2px rgba(000,000,000,0.03);
+	-webkit-box-shadow: 0 0 20px rgba(000,000,000,0.03);
+	-moz-box-shadow: 0 0 20px rgba(000,000,000,0.03);
+	box-shadow: 0 0 20px rgba(000,000,000,0.03);
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -1317,12 +1317,14 @@ dd {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	text-align: left;
+	overflow: hidden;
 }
 
 .modal header {
 	float: left;
 	width: 100%;
 	border-bottom: 1px solid #CCC;
+	background: #FFF;
 }
 
 .modal h1 {
@@ -1376,17 +1378,31 @@ dd {
 
 
 .dangerous .modal {
-	border-color: #faebcc;
+	border-color: #555;
+	-webkit-box-shadow: 0 0 20px rgba(221,35,12,0.4);
+	-moz-box-shadow: 0 0 20px rgba(221,35,12,0.4);
+	box-shadow: 0 0 20px rgba(221,35,12,0.4);
 }
 
 .dangerous .modal header {
-	color: #8a6d3b;
-	background-color: #fcf8e3;
-	border-color: #faebcc;
+	color: #dd230c;
+	background-color: #ffcf00;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 207, 0)), to(rgb(255, 190, 0)));
+	background-image: -webkit-linear-gradient(top, rgb(255, 207, 0), rgb(255, 190, 0));
+	background-image: -moz-linear-gradient(top, rgb(255, 207, 0), rgb(255, 190, 0));
+	background-image: -o-linear-gradient(top, rgb(255, 207, 0), rgb(255, 190, 0));
+	background-image: -ms-linear-gradient(top, rgb(255, 207, 0), rgb(255, 190, 0));
+	background-image: linear-gradient(top, rgb(255, 207, 0), rgb(255, 190, 0));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffcf00', EndColorStr='#ffbe00');
+	border-color: #8a6d3b;
+	border-width: 1px;
+	-webkit-box-shadow: inset 0 1px 0 #FFF;
+	-moz-box-shadow: inset 0 1px 0 #FFF;
+	box-shadow: inset 0 1px 0 #FFF;
 }
 
 .dangerous .modal h1 {
-	color: #6e590e;
+	color: #dd230c;
 }
 
 .dangerous .modal h1:before {
