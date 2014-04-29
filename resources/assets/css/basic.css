@@ -704,7 +704,9 @@ input.button {
 }
 
 .button:disabled,
-.button:disabled:hover {
+.button.disabled,
+.button:disabled:hover,
+.button.disabled:hover {
 	background: #e9e8e8;
 	color: #7f7f7f !important;
 	border-color: #dcdcdc;
@@ -713,7 +715,8 @@ input.button {
 	cursor: default;
 }
 
-.button:disabled:active {
+.button:disabled:active,
+.button.disabled:active {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
