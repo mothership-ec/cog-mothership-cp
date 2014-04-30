@@ -1,0 +1,36 @@
+<div class="module landscape">
+	<h2 class="title">
+		{{ label }}
+	</h2>
+	<div class="wrap">
+		<table
+			title="{{ label }}"
+			id="{{ label|replace(' ', '')|replace('(', '')|replace(')', '') }}Table"
+			summary="{{ label }}"
+			data-attc-createChart="true"
+			data-attc-colDescription="{{ keys.label }}"
+			data-attc-colValues="{{ keys.value }}"
+			data-attc-location="{{ label|replace(' ', '')|replace('(', '')|replace(')', '') }}Area"
+			data-attc-hideTable="true"
+			data-attc-type="{% block graphType %}{% endblock %}"
+			data-attc-googleOptions='{% block graphOptions %}{% endblock %}'
+			data-attc-controls='{% block graphControls %}{"showHide":false,"create":false,"chartType":false}{% endblock %}'
+		>
+			<thead>
+				<tr>
+					<th id="{{ keys.label }}">{{ keys.label }}</th>
+					<th id="{{ keys.value }}">{{ keys.value }}</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for row in rows %}
+					<tr>
+						<td>{{ row.label }}</td>
+						<td>{{ row.value }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<div id="{{ label|replace(' ', '')|replace('(', '')|replace(')', '') }}Area"></div>
+	</div>
+</div>
