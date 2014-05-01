@@ -31,6 +31,11 @@ abstract class Dataset
 		return $this;
 	}
 
+	public function rebuild()
+	{
+
+	}
+
 	public function getRange($startTime, $endTime = null)
 	{
 		$endTime = ($endTime) ?: time();

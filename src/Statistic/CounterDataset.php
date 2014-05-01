@@ -71,7 +71,7 @@ class CounterDataset extends Dataset
 				`dataset`,
 				`key`,
 				`value`,
-				`createdAt`
+				`created_at`
 			)
 			VALUES (
 				:dataset?s,

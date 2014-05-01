@@ -3,7 +3,16 @@
 		{{ label }}
 	</h2>
 	<div class="wrap">
-		{% if not rows.length %}
+		{% for number in numbers %}
+			<h2 class="medium-text">
+				{% if number.label %}
+					{{ number.label }}
+				{% endif %}
+				{{ number.value }}
+			</h2>
+		{% endfor %}
+
+		{% if not rows|length %}
 			<p>No data available.</p>
 		{% else %}
 			<table

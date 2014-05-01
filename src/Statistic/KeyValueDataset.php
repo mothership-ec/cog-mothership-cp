@@ -13,7 +13,7 @@ class KeyValueDataset extends Dataset
 				`dataset`,
 				`key`,
 				`value`,
-				`createdAt`
+				`created_at`
 			)
 			VALUES (
 				:dataset?s,
@@ -21,6 +21,9 @@ class KeyValueDataset extends Dataset
 				:value?f,
 				:createdAt?d
 			)
+			ON DUPLICATE KEY UPDATE
+				`value` = (`value` + VALUES(`value`)),
+				`created_at` = VALUES(`created_at`)
 		", [
 			'dataset'   => $this->_name,
 			'key'       => $key,

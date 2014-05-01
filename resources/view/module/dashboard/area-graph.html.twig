@@ -1,22 +1,18 @@
 {% extends '::module:dashboard:graph' %}
 
-{% block graphType %}
-	area
-{% endblock %}
+{% block graphType %}area{% endblock %}
 
-{% block graphOptions %}
-	{
-		"is3D":false,
-		"width": "634",
-		"height": 492,
-		"fontSize": 16,
-		"legend": "none",
-		"colors": ["#528cb6", "#26537c", "#3f759f", "#999", "#666"],
-		"chartArea": {
-			"top": 30,
-			"left": 60,
-			"width": "560",
-			"height": "431"
-		}
+{% block graphOptions %}{
+	"is3D":false,
+	"width": "634",
+	"height": 492,
+	"fontSize": 16,
+	"legend": "none",
+	"colors": ["#528cb6", "#26537c", "#3f759f", "#999", "#666"],
+	"chartArea": {
+		"top": 30,
+		"left": 60,
+		"width": "560",
+		"height": "431"
 	}
-{% endblock %}
+}{% endblock %}
