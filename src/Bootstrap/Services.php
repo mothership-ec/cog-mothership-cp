@@ -33,5 +33,13 @@ class Services implements ServicesInterface
 
 			return $groups;
 		});
+
+		$services['statistics'] = function($c) {
+			return new ControlPanel\Statistic\Collection;
+		};
+
+		$services['statistics.dataset.factory'] = function($c) {
+			return new ControlPanel\Statistic\Factory($c['db.query']);
+		};
 	}
 }
