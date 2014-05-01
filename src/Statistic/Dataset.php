@@ -84,7 +84,11 @@ abstract class Dataset
 	{
 		$range = $this->getRange($startTime, $endTime);
 
-		$average = array_sum($range) / count($range);
+		$average = 0;
+
+		if (count($range)) {
+			$average = array_sum($range) / count($range);
+		}
 
 		return $average;
 	}
