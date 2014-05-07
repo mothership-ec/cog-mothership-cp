@@ -7,9 +7,11 @@ use Message\Cog\ValueObject\DateTimeImmutable;
 
 abstract class Dataset
 {
-	const HOUR = 'hour';
-	const DAY  = 'day';
-	const WEEK = 'week';
+	const TABLE = null;
+
+	const HOUR_AGO = 'hour';
+	const DAY_AGO  = 'day';
+	const WEEK_AGO = 'week';
 
 	protected $_query;
 	protected $_name;
@@ -36,7 +38,7 @@ abstract class Dataset
 
 	}
 
-	public function getRange($startTime, $endTime = null)
+	protected function _getTimeRange($startTime, $endTime = null)
 	{
 		$endTime = ($endTime) ?: time();
 
@@ -46,13 +48,13 @@ abstract class Dataset
 		] as $var => $time) {
 			if (is_string($time)) {
 				switch ($time) {
-					case static::HOUR:
+					case static::HOUR_AGO:
 						$time = $endTime - 60 * 60;
 						break;
-					case static::DAY:
+					case static::DAY_AGO:
 						$time = $endTime - 60 * 60 * 24;
 						break;
-					case static::WEEK:
+					case static::WEEK_AGO:
 						$time = $endTime - 60 * 60 * 24 * 7;
 						break;
 				}
@@ -61,49 +63,6 @@ abstract class Dataset
 			$$var = $time;
 		}
 
-		$result = $this->_query->run("
-			SELECT
-				`key`,
-				`value`
-			FROM
-				statistics
-			WHERE
-				`dataset`    = :dataset?s
-			AND	`created_at` >= :startDate?d
-			AND	`created_at` <= :endDate?d
-		", [
-			'dataset'   => $this->_name,
-			'startDate' => new DateTimeImmutable('@'.$startTime),
-			'endDate'   => new DateTimeImmutable('@'.$endTime)
-		]);
-
-		$range = [];
-		foreach ($result as $r) {
-			$range[$r->key] = $r->value;
-		}
-
-		return $range;
-	}
-
-	public function getAverage($startTime, $endTime = null)
-	{
-		$range = $this->getRange($startTime, $endTime);
-
-		$average = 0;
-
-		if (count($range)) {
-			$average = array_sum($range) / count($range);
-		}
-
-		return $average;
-	}
-
-	public function getTotal($startTime, $endTime = null)
-	{
-		$range = $this->getRange($startTime, $endTime);
-
-		$total = array_sum($range);
-
-		return $total;
+		return [$startTime, $endTime];
 	}
 }

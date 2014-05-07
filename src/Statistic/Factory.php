@@ -6,8 +6,9 @@ use Message\Cog\DB\QueryableInterface;
 
 class Factory
 {
-	const COUNTER   = "CounterDataset";
-	const KEY_VALUE = "KeyValueDataset";
+	const COUNTER     = "CounterDataset";
+	const KEY_VALUE   = "KeyValueDataset";
+	const KEY_COUNTER = "KeyCounterDataset";
 
 	const HOURLY = 3600;   // 60 * 60
 	const DAILY  = 86400;  // 60 * 60 * 24

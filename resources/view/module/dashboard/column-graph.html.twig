@@ -1,0 +1,23 @@
+{% extends '::module:dashboard:graph' %}
+
+{% block graphType %}column{% endblock %}
+
+{% block graphOptions %}{
+	"is3D":false,
+	"width": "600",
+	"height": 250,
+	"fontSize": 16,
+	"legend": "none",
+	"chartArea.width": "100%",
+	"colors": ["#528cb6", "#26537c", "#3f759f", "#999", "#666"],
+	"chartArea": {
+		"left": 110,
+		"top": 15,
+		"width": "500",
+		"height" :"175"
+	},
+	"animation": {
+		"duration": 1000,
+		"easing":"out"
+	}
+}{% endblock %}
