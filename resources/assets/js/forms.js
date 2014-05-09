@@ -52,7 +52,7 @@
 			});
 
 			// Decrement adder index
-			adder.attr('data-group-index', parseInt(adder.attr('data-group-index'), 10) - 1);
+//			adder.attr('data-group-index', parseInt(adder.attr('data-group-index'), 10) + 1);
 		});
 
 		return false;
