@@ -1,5 +1,4 @@
 <ol id="main-menu">
-<a href="#" class="menu-collapse">Close</a>
 	{% for item in items %}
 	<li class="{{ item.classes|join(' ') }}"><a href="{{ url(item.target) }}">{{ item.label }}</a></li>
 	{% endfor %}
