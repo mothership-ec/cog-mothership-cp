@@ -12,7 +12,7 @@
 		index         = self.attr('data-group-index') || 0;
 		prototype     = self.attr('data-prototype');
 		prototypeName = self.attr('data-prototype-name') || '__name__';
-		prototype     = prototype.replace(new RegExp(prototypeName, 'g'), parseInt(index, 10) + 1);
+		prototype     = prototype.replace(new RegExp(prototypeName, 'g'), parseInt(index, 10));
 		labelPrefix   = self.attr('data-prototype-label-prefix') || 'Group #';
 
 		el = $(prototype);
@@ -52,7 +52,7 @@
 			});
 
 			// Decrement adder index
-			adder.attr('data-group-index', parseInt(adder.attr('data-group-index'), 10) - 1);
+//			adder.attr('data-group-index', parseInt(adder.attr('data-group-index'), 10) + 1);
 		});
 
 		return false;
