@@ -536,10 +536,10 @@
 .sidebar .menu .badge {
 	position: absolute;
 	top: 7px;
-	right: 17px;
+	right: 12px;
 	display: block;
 	padding: 5px;
-	width: 16px;
+	/*width: 16px;*/
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -1735,10 +1735,9 @@ table td .add-on {
 }
 
 .add-on p {
-	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
-	padding: 0 10px;
+	padding: 9px;
 	-webkit-box-shadow: inset 0 0 0 1px #CCC;
 	-moz-box-shadow: inset 0 0 0 1px #CCC;
 	box-shadow: inset 0 0 0 1px #CCC;
@@ -1757,26 +1756,25 @@ table td .add-on {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	min-width: 20px;
+	float: left;
+
 }
 
 .add-on div {
-	display: table-cell;
+	float: left;
 	margin-bottom: 0;
-	width: 100%;
+	width: 50%;
 }
 
 .add-on input {
 	display: inline-block;
-	max-width: none;
-	width: 40%;
 	-webkit-border-radius: 0px 5px 5px 0px;
 	-moz-border-radius: 0px 5px 5px 0px;
 	border-radius: 0px 5px 5px 0px;
 	border-left: none;
 	margin: 0;
 	height: 37px;
-	width: 100%;
+	max-width: 100%;
 }
 
 /*.inline .add-on {
@@ -2723,78 +2721,6 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 
 .e-505 p {
 	text-align: left;
-}
-
-
-
-/* Repairs
---------------------------------------- */
-
-.apply-discount,
-.apply-misc {
-	float: left;
-	width: 100%;
-	margin-bottom: 20px;
-}
-
-.apply-discount .add-on,
-.apply-misc .add-on {
-	float: left;
-	width: 65%;
-}
-
-.apply-discount label,
-.apply-misc label {
-	font-size: 1.08em;
-	float: left;
-	width: 30%;
-	margin-right: 5%;
-}
-
-.apply-discount .add-on p,
-.apply-misc .add-on p {
-	margin-bottom: 0;
-}
-
-.apply-discount .add-on input,
-.apply-misc .add-on input {
-	width: 100px;
-	margin-bottom: 0;
-}
-
-.option-price {
-	position: relative;
-	top: -20px;
-	left: 25px;
-	clear: both;
-	margin-bottom: 0;
-}
-
-.menu-collapse, .sidebar-collapse {
-	display: none;
-}
-
-.repair-total {
-	float: left;
-	width: 100%;
-}
-
-.service-list {
-	overflow: hidden;
-	max-width: 50%;
-}
-
-.service-list dt {
-	margin-bottom: 20px;
-	margin-right: 5%;
-	width: 30%;
-	float: left;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.service-list dd {
-	width: 65%;
-	float: left;
 }
 
 
