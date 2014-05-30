@@ -7,8 +7,6 @@ use Message\Cog\ValueObject\DateTimeImmutable;
 
 class CounterDataset extends Dataset
 {
-	const TABLE = "statistic_counter";
-
 	protected $_dirty;
 	protected $_counter;
 	protected $_period;
@@ -22,6 +20,11 @@ class CounterDataset extends Dataset
 		$this->_period  = 60 * 60;
 	}
 
+	public function getTable()
+	{
+		return "statistic_counter";
+	}
+
 	public function getPeriod()
 	{
 		return $this->_period;
@@ -29,7 +32,7 @@ class CounterDataset extends Dataset
 
 	public function getCurrentPeriod()
 	{
-		return time() - (time() % $this->_period);
+		return time() - (time() % $this->getPeriod());
 	}
 
 	public function setPeriod($period)
@@ -46,13 +49,13 @@ class CounterDataset extends Dataset
 				SELECT
 					value
 				FROM
-					" . static::TABLE . "
+					" . $this->getTable() . "
 				WHERE
 					`dataset` = :dataset?s
-				AND	`period`  = :period?s
+				AND	`period` >= :period?d
 			", [
-				'dataset' => $this->_name,
-				'period' => new DateTimeImmutable('@'.$this->getCurrentPeriod()),
+				'dataset' => $this->getName(),
+				'period'  => new DateTimeImmutable(date('c', $this->getCurrentPeriod())),
 			]);
 
 			$this->_counter = 0;
@@ -69,7 +72,7 @@ class CounterDataset extends Dataset
 	public function setCounter($counter)
 	{
 		$this->_query->run("
-			REPLACE INTO " . static::TABLE . " (
+			REPLACE INTO " . $this->getTable() . " (
 				`dataset`,
 				`period`,
 				`value`,
@@ -82,8 +85,8 @@ class CounterDataset extends Dataset
 				:createdAt?d
 			)
 		", [
-			'dataset'   => $this->_name,
-			'period'    => new DateTimeImmutable('@'.$this->getCurrentPeriod()),
+			'dataset'   => $this->getName(),
+			'period'    => new DateTimeImmutable(date('c', $this->getCurrentPeriod())),
 			'counter'   => $counter,
 			'createdAt' => new DateTimeImmutable
 		]);
@@ -103,24 +106,24 @@ class CounterDataset extends Dataset
 		return $this->setCounter($this->getCounter() - $amount);
 	}
 
-	public function getRange($startTime, $endTime = null)
+	public function getRange($from, $to = null)
 	{
-		list($startTime, $endTime) = $this->_getTimeRange($startTime, $endTime);
+		list($from, $to) = $this->_getTimeRange($from, $to);
 
 		$result = $this->_query->run("
 			SELECT
 				`period`,
 				`value`
 			FROM
-				" . static::TABLE . "
+				" . $this->getTable() . "
 			WHERE
 				`dataset`  = :dataset?s
 			AND	`period`  >= :startDate?d
 			AND	`period`  <= :endDate?d
 		", [
-			'dataset'   => $this->_name,
-			'startDate' => new DateTimeImmutable('@'.$startTime),
-			'endDate'   => new DateTimeImmutable('@'.$endTime)
+			'dataset'   => $this->getName(),
+			'startDate' => new DateTimeImmutable(date('c', $from)),
+			'endDate'   => new DateTimeImmutable(date('c', $to))
 		]);
 
 		$range = [];
@@ -131,9 +134,9 @@ class CounterDataset extends Dataset
 		return $range;
 	}
 
-	public function getAverage($startTime, $endTime = null)
+	public function getAverage($from, $to = null)
 	{
-		$range = $this->getRange($startTime, $endTime);
+		$range = $this->getRange($from, $to);
 
 		$average = 0;
 
@@ -144,9 +147,9 @@ class CounterDataset extends Dataset
 		return $average;
 	}
 
-	public function getTotal($startTime, $endTime = null)
+	public function getTotal($from, $to = null)
 	{
-		$range = $this->getRange($startTime, $endTime);
+		$range = $this->getRange($from, $to);
 
 		$total = array_sum($range);
 

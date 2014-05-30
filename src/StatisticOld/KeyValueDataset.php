@@ -6,12 +6,15 @@ use Message\Cog\ValueObject\DateTimeImmutable;
 
 class KeyValueDataset extends Dataset
 {
-	const TABLE = "statistic_key_value";
+	public function getTable()
+	{
+		return "statistic_key_value";
+	}
 
 	public function add($key, $value)
 	{
 		$this->_query->run("
-			INSERT INTO " . static::TABLE . " (
+			INSERT INTO " . $this->getTable() . " (
 				`dataset`,
 				`key`,
 				`value`,
@@ -24,7 +27,7 @@ class KeyValueDataset extends Dataset
 				:createdAt?d
 			)
 		", [
-			'dataset'   => $this->_name,
+			'dataset'   => $this->getName(),
 			'key'       => $key,
 			'value'     => $value,
 			'createdAt' => new DateTimeImmutable
@@ -39,13 +42,13 @@ class KeyValueDataset extends Dataset
 			SELECT
 				AVG(`value`) as average
 			FROM
-				" . static::TABLE . "
+				" . $this->getTable() . "
 			WHERE
 				`dataset`     = :dataset?s
 			AND	`created_at` >= :startDate?d
 			AND	`created_at` <= :endDate?d
 		", [
-			'dataset'   => $this->_name,
+			'dataset'   => $this->getName(),
 			'startDate' => new DateTimeImmutable('@'.$startTime),
 			'endDate'   => new DateTimeImmutable('@'.$endTime),
 		]);
@@ -61,13 +64,13 @@ class KeyValueDataset extends Dataset
 			SELECT
 				SUM(value) as total
 			FROM
-				" . static::TABLE . "
+				" . $this->getTable() . "
 			WHERE
 				dataset       = :dataset?s
 			AND	`created_at` >= :startDate?d
 			AND	`created_at` <= :endDate?d
 		", [
-			'dataset'   => $this->_name,
+			'dataset'   => $this->getName(),
 			'startDate' => new DateTimeImmutable('@'.$startTime),
 			'endDate'   => new DateTimeImmutable('@'.$endTime),
 		]);

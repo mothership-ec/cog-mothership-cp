@@ -7,10 +7,13 @@ use Message\Cog\ValueObject\DateTimeImmutable;
 
 class KeyCounterDataset extends CounterDataset
 {
-	const TABLE = "statistic_key_counter";
-
 	protected $_key = [];
 	protected $_counter = [];
+
+	public function getTable()
+	{
+		return "statistic_key_counter";
+	}
 
 	public function getKeyCounter($key)
 	{
@@ -21,13 +24,13 @@ class KeyCounterDataset extends CounterDataset
 				SELECT
 					value
 				FROM
-					" . static::TABLE . "
+					" . $this->getTable() . "
 				WHERE
 					`dataset` = :dataset?s
 				AND	`key`     = :key?s
 				AND	`period`  = :period?d
 			", [
-				'dataset' => $this->_name,
+				'dataset' => $this->getName(),
 				'key'     => $key,
 				'period'  => new DateTimeImmutable('@'.$this->getCurrentPeriod()),
 			]);
@@ -46,7 +49,7 @@ class KeyCounterDataset extends CounterDataset
 	public function setKeyCounter($key, $counter)
 	{
 		$this->_query->run("
-			REPLACE INTO " . static::TABLE . " (
+			REPLACE INTO " . $this->getTable() . " (
 				`dataset`,
 				`key`,
 				`period`,
@@ -61,7 +64,7 @@ class KeyCounterDataset extends CounterDataset
 				:createdAt?d
 			)
 		", [
-			'dataset'   => $this->_name,
+			'dataset'   => $this->getName(),
 			'key'       => $key,
 			'period'    => new DateTimeImmutable('@'.$this->getCurrentPeriod()),
 			'counter'   => $counter,
@@ -92,13 +95,13 @@ class KeyCounterDataset extends CounterDataset
 				`key`,
 				`value`
 			FROM
-				" . static::TABLE . "
+				" . $this->getTable() . "
 			WHERE
 				`dataset`  = :dataset?s
 			AND	`period`  >= :startDate?d
 			AND	`period`  <= :endDate?d
 		", [
-			'dataset'   => $this->_name,
+			'dataset'   => $this->getName(),
 			'startDate' => new DateTimeImmutable('@'.$startTime),
 			'endDate'   => new DateTimeImmutable('@'.$endTime)
 		]);
