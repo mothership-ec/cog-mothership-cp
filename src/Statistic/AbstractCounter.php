@@ -11,6 +11,8 @@ abstract class AbstractCounter implements CounterInterface, TransactionalInterfa
 	protected $_query;
 	protected $_transOverriden = false;
 
+	protected $_periodLength;
+
 	public function __construct(QueryableInterface $query)
 	{
 		$this->_query = $query;
@@ -60,7 +62,7 @@ abstract class AbstractCounter implements CounterInterface, TransactionalInterfa
 		return $period;
 	}
 
-	public function set($key, $value)
+	public function set($key, $value, $period = null)
 	{
 		$key = trim($this->getDatasetName() . '.' . $key, '.');
 
@@ -82,15 +84,15 @@ abstract class AbstractCounter implements CounterInterface, TransactionalInterfa
 		", [
 			'dataset'   => $this->getDatasetName(),
 			'key'       => $key,
-			'period'    => new DateTimeImmutable(date('c', $this->getPeriod())),
+			'period'    => ($period) ?: new DateTimeImmutable(date('c', $this->getPeriod())),
 			'value'     => $value,
 			'createdAt' => new DateTimeImmutable
 		]);
 	}
 
-	public function push($value)
+	public function push($value, $period = null)
 	{
-		return $this->set('', $value);
+		return $this->set('', $value, $period);
 	}
 
 	public function get($key = null)
