@@ -4,6 +4,11 @@ namespace Message\Mothership\ControlPanel\Statistic\Task;
 
 use Message\Cog\Console\Task\Task;
 
+/**
+ * Rebuild the statistics.
+ *
+ * @author Laurence Roberts <laurence@message.co.uk>
+ */
 class Rebuild extends Task
 {
 	public function process()

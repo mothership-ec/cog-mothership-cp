@@ -6,6 +6,11 @@ use Message\Cog\DB\Transaction;
 use Message\Cog\DB\QueryableInterface;
 use Message\Cog\DB\TransactionalInterface;
 
+/**
+ * Abstract dataset for defining and configuring a statistics dataset.
+ *
+ * @author Laurence Roberts <laurence@message.co.uk>
+ */
 abstract class AbstractDataset implements TransactionalInterface
 {
 	const HOURLY  = 3600; // 60 * 60;
@@ -20,6 +25,13 @@ abstract class AbstractDataset implements TransactionalInterface
 	protected $_query;
 	protected $_transOverriden;
 
+	/**
+	 * Constructor.
+	 *
+	 * @param QueryableInterface $query
+	 * @param CounterInterface   $counter
+	 * @param RangeInterface     $range
+	 */
 	public function __construct(QueryableInterface $query, CounterInterface $counter, RangeInterface $range)
 	{
 		$this->_query = $query;
@@ -33,6 +45,11 @@ abstract class AbstractDataset implements TransactionalInterface
 		$this->range   = $range;
 	}
 
+	/**
+	 * {@inheritDoc}
+	 *
+	 * Passes the transaction into the counter and range objects.
+	 */
 	public function setTransaction(Transaction $trans)
 	{
 		$this->counter->setTransaction($trans);
@@ -42,7 +59,23 @@ abstract class AbstractDataset implements TransactionalInterface
 		$this->_transOverriden = true;
 	}
 
+	/**
+	 * Get the name of this dataset.
+	 *
+	 * @return string
+	 */
 	abstract public function getName();
+
+	/**
+	 * Get the length of the period for this dataset in seconds.
+	 *
+	 * @return int
+	 */
 	abstract public function getPeriodLength();
+
+	/**
+	 * Rebuild the dataset from scratch by clearing existing data and inserting
+	 * new records for all available data in the system.
+	 */
 	abstract public function rebuild();
 }
