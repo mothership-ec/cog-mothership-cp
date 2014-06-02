@@ -2,6 +2,8 @@
 
 namespace Message\Mothership\ControlPanel\Event\Dashboard;
 
+use DateTime;
+
 class Activity
 {
 	public $label;
@@ -9,7 +11,7 @@ class Activity
 	public $name;
 	public $url;
 
-	public function __construct($label, $date, $name, $url)
+	public function __construct($label, DateTime $date, $name, $url)
 	{
 		$this->label = $label;
 		$this->date  = $date;
