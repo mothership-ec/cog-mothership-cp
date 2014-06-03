@@ -1483,6 +1483,7 @@
 	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	margin-bottom: 10px;
 	clear: left;
+	min-height: 20px;
 }
 
 .content dd {
