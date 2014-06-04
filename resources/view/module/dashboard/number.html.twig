@@ -9,10 +9,9 @@
 
 		<h2 class="large-text">
 			{{ number.value }}
-
-			{% if number.units %}
-				<span class="small">{{ number.units }}</span>
-			{% endif %}
 		</h2>
+		{% if number.units %}
+			<span>{{ number.units }}</span>
+		{% endif %}
 	</div>
 </div>
