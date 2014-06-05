@@ -1319,7 +1319,8 @@ dd {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	text-align: left;
-	overflow: hidden;
+	overflow-y: scroll;
+	max-height: 95%;
 }
 
 .modal header {
@@ -1369,6 +1370,16 @@ dd {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
+.modal #save-content {
+	position: static;
+}
+
+
+.modal::-webkit-scrollbar-thumb {
+	  border-radius: 20px;
+	  background-color: rgba(0, 0, 0, 0.1);
+} /* this will style the thumb, ignoring the track */
 
 
 /* Dangerous styles */
