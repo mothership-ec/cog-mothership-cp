@@ -97,6 +97,40 @@ class DateRange implements RangeInterface, TransactionalInterface
 		return $values;
 	}
 
+	public function getKeyValues($from, $to = null)
+	{
+		$to = ($to) ?: time();
+
+		if ($from > $to) {
+			throw new InvalidArgumentException(sprintf("Invalid 'from' time, can
+				not be more recent than 'to' time: %d, %d", $from, $to));
+		}
+
+		$result = $this->_query->run("
+			SELECT
+				value,
+				REPLACE(`key`, CONCAT(`dataset`, '.'), '') as `key`
+			FROM
+				statistic
+			WHERE
+				`dataset`  = :dataset?s
+			AND	`period`  >= :from?d
+			AND	`period`  <= :to?d
+		", [
+			'dataset' => $this->getDatasetName(),
+			'from'    => new DateTimeImmutable(date('c', $from)),
+			'to'      => new DateTimeImmutable(date('c', $to)),
+		]);
+
+		$values = [];
+
+		foreach ($result as $row) {
+			$values[$row->key] = (float) $row->value;
+		}
+
+		return $values;
+	}
+
 	/**
 	 * {@inheritDoc}
 	 */

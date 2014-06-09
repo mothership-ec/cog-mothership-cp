@@ -21,7 +21,7 @@ class KeyCounter extends AbstractCounter
 	{
 		$value = $this->get($key) + $step;
 
-		return $this->push($value);
+		return $this->set($key, $value);
 	}
 
 	/**
@@ -35,6 +35,6 @@ class KeyCounter extends AbstractCounter
 	{
 		$value = $this->get($key) - $step;
 
-		return $this->push($value);
+		return $this->set($key, $value);
 	}
 }

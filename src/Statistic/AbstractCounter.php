@@ -5,6 +5,7 @@ namespace Message\Mothership\ControlPanel\Statistic;
 use Message\Cog\DB\Transaction;
 use Message\Cog\DB\QueryableInterface;
 use Message\Cog\DB\TransactionalInterface;
+use Message\Cog\ValueObject\DateTimeImmutable;
 
 /**
  * Abstract counter that implements the counter interface methods with default
@@ -113,8 +114,8 @@ abstract class AbstractCounter implements CounterInterface, TransactionalInterfa
 			)
 			VALUES (
 				:dataset?s,
-				:key?s
-				:period?d
+				:key?s,
+				:period?d,
 				:value?f,
 				:createdAt?d
 			)
@@ -152,9 +153,9 @@ abstract class AbstractCounter implements CounterInterface, TransactionalInterfa
 			AND	`key`     = :key?s
 			AND	`period` >= :period?d
 		", [
-			'dataset' => $this->getName(),
+			'dataset' => $this->getDatasetName(),
 			'key'     => $key,
-			'period'  => new DateTimeImmutable(date('c', $this->getCurrentPeriod())),
+			'period'  => new DateTimeImmutable(date('c', $this->getPeriod())),
 		]);
 
 		if (0 == count($result)) {
