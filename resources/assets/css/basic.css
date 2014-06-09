@@ -1387,6 +1387,7 @@ dd {
 
 .dangerous .modal {
 	border-color: #555;
+	overflow: hidden;
 }
 
 .dangerous .modal header {
