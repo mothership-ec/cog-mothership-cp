@@ -8,7 +8,11 @@
 				{% if number.label %}
 					{{ number.label }}
 				{% endif %}
-				{{ number.value }}
+				{% if number.filterPrice %}
+					{{ number.value|price }}
+				{% else %}
+					{{ number.value }}
+				{% endif %}
 			</h2>
 		{% endfor %}
 
