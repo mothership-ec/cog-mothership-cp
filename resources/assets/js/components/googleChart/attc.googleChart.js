@@ -1,3 +1,10 @@
+/**
+ * IMPORTANT: This library was changed in the commit 472aeef to allow prices
+ * and other formatted numbers to be displayed. Do not overwrite this library
+ * with a newer version without merging these changes unless the updated
+ * version provides the same functionality.
+ */
+
 google.load("visualization", "1", {packages:["corechart"]});
 
 (function( $ ){
