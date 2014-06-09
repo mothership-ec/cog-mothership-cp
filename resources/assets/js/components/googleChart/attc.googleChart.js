@@ -93,9 +93,10 @@ google.load("visualization", "1", {packages:["corechart"]});
                                         for(x=0;x<headerValuesArray.length;x++){
                                                 colIndexValues=headerIndexArray[x];
                                                 value=tableEl.find('tbody tr:nth-child('+i+') td:nth-child('+colIndexValues+')').text();
+                                                originalValue=value;
                                                 value=parseFloat(value.replace(numPattern,''));
                                                 //console.log(colIndexDesc+ ':'+description);
-                                                rowArray.push(value);
+                                                rowArray.push({v: value, f: originalValue});
                                         }
                                         dataArray[i]=rowArray;
 

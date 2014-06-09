@@ -8,7 +8,7 @@
 				{% if number.label %}
 					{{ number.label }}
 				{% endif %}
-				{% if number.filterPrice %}
+				{% if filterPrice %}
 					{{ number.value|price }}
 				{% else %}
 					{{ number.value }}
@@ -42,7 +42,11 @@
 					{% for row in rows %}
 						<tr>
 							<td>{{ row.label }}</td>
-							<td>{{ row.value }}</td>
+							{% if filterPrice %}
+								<td>{{ row.value|price }}</td>
+							{% else %}
+								<td>{{ row.value }}</td>
+							{% endif %}
 						</tr>
 					{% endfor %}
 				</tbody>
