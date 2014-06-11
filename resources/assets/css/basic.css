@@ -1002,6 +1002,8 @@ table td a {
 
 table a {
 	display: block;
+	overflow: hidden;
+
 }
 
 table a:hover {
