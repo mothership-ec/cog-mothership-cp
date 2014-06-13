@@ -472,11 +472,6 @@
 	white-space: nowrap;
 	font-size: 0.875em;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	text-transform: lowercase;
-}
-
-.sidebar .menu a:first-letter {
-	text-transform: uppercase;
 }
 
 .sidebar .menu ol {
