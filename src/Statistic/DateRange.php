@@ -108,14 +108,16 @@ class DateRange implements RangeInterface, TransactionalInterface
 
 		$result = $this->_query->run("
 			SELECT
-				value,
-				REPLACE(`key`, CONCAT(`dataset`, '.'), '') as `key`
+				SUM(`value`) as `value`,
+				REPLACE(`key`, CONCAT(:dataset?s, '.'), '') as `key`
 			FROM
 				statistic
 			WHERE
 				`dataset`  = :dataset?s
 			AND	`period`  >= :from?d
 			AND	`period`  <= :to?d
+			GROUP BY
+				`key`
 		", [
 			'dataset' => $this->getDatasetName(),
 			'from'    => new DateTimeImmutable(date('c', $from)),
