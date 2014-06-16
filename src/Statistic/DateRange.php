@@ -138,6 +138,10 @@ class DateRange implements RangeInterface, TransactionalInterface
 	{
 		$values = $this->getValues($from, $to);
 
+		if (0 == count($values)) {
+			return 0;
+		}
+
 		return array_sum($values) / count($values);
 	}
 
