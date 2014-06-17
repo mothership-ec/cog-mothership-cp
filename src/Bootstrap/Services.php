@@ -43,6 +43,7 @@ class Services implements ServicesInterface
 	{
 		$services['statistics'] = function($c) {
 			return (new Collection)
+				->setType('\Message\Mothership\ControlPanel\Statistic\AbstractDataset')
 				->setKey(function($item) {
 					return $item->getName();
 				});
