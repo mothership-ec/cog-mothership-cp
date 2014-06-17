@@ -2,6 +2,7 @@
 
 namespace Message\Mothership\ControlPanel\Statistic;
 
+use InvalidArgumentException;
 use Message\Cog\DB\Transaction;
 use Message\Cog\DB\QueryableInterface;
 use Message\Cog\DB\TransactionalInterface;
@@ -19,6 +20,7 @@ abstract class AbstractCounter implements CounterInterface, TransactionalInterfa
 	protected $_query;
 	protected $_transOverriden = false;
 
+	protected $_datasetName;
 	protected $_periodLength;
 
 	/**
@@ -91,7 +93,7 @@ abstract class AbstractCounter implements CounterInterface, TransactionalInterfa
 
 		if ($periodLength = $this->getPeriodLength()) {
 			$currentPeriod = time() - (time() % $periodLength);
-			$period = $currentPeriod - ($periodLength * $ago);
+			$period = $currentPeriod + ($periodLength * $ago);
 		}
 
 		return $period;
@@ -126,6 +128,8 @@ abstract class AbstractCounter implements CounterInterface, TransactionalInterfa
 			'value'     => $value,
 			'createdAt' => new DateTimeImmutable
 		]);
+
+		return $value;
 	}
 
 	/**
