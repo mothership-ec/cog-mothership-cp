@@ -1338,14 +1338,15 @@ dd {
 .modal .close {
 	position: absolute;
 	top: 0px;
-	right: 2px;
+	right: 10px;
 	color: #333;
 	text-indent: -999em;
-	width: 17px;
-	height: 17px;
-	padding: 20px;
+	width: 40px;
+	height: 40px;
+	padding: 5px;
 	cursor: pointer;
 	opacity: .2;
+	display: block;
 }
 
 .modal .close:hover {
@@ -1355,7 +1356,8 @@ dd {
 .modal .close:after {
 	font-family: 'FontAwesome';
 	content: '\f00d';
-	right: 20px;
+	right: 10px;
+	top: 20px;
 	position: absolute;
 	width: 17px;
 	color: #333;
@@ -1377,9 +1379,38 @@ dd {
 
 
 .modal::-webkit-scrollbar-thumb {
-	  border-radius: 20px;
-	  background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.1);
 } /* this will style the thumb, ignoring the track */
+
+.modal .help  {
+	float: none;
+	clear: both;
+	margin: 0px;
+	width: 100%;
+	cursor: text;
+}
+
+.modal .help a {
+	display: none;
+}
+
+.modal .help .description {
+	display: block;
+	position: static;
+	background: none;
+	border: none;
+	padding: 0px;
+	margin: 0px 0px 15px 0px;
+}
+
+.modal .help .description:before {
+	display: none;
+}
+
+.modal .help .description p {
+	color: #333;
+}
 
 
 /* Dangerous styles */
