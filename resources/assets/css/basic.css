@@ -1387,6 +1387,8 @@ dd {
 	float: none;
 	clear: both;
 	margin: 0px;
+	position: relative;
+	top: -10px;
 	width: 100%;
 	cursor: text;
 }
