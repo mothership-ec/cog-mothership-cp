@@ -1,0 +1,17 @@
+<div class="module sq">
+	<h2 class="title">
+		{{ label }}
+	</h2>
+	<div class="wrap center">
+		{% if number.label %}
+			<h3 class="small-text">{{ number.label }}</h3>
+		{% endif %}
+
+		<h2 class="large-text">
+			{{ number.value }}
+		</h2>
+		{% if number.units %}
+			<span>{{ number.units }}</span>
+		{% endif %}
+	</div>
+</div>
