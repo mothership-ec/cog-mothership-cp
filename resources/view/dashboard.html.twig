@@ -5,8 +5,10 @@
 {% block content %}
 	<section class="dashboard home">
 		<section class="main">
-			<div class="container-content">
-				<p class="welcome">Hi, {{ app.user.getName() }}!</p>
+			<div class="modules">
+				{% for reference in dashboardReferences %}
+					{{ render(controller(reference)) }}
+				{% endfor %}
 			</div>
 		</section>
 	</section>
