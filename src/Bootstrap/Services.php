@@ -6,10 +6,14 @@ use Message\Mothership\ControlPanel;
 
 use Message\Cog\Bootstrap\ServicesInterface;
 
+use Message\Cog\ValueObject\Collection;
+
 class Services implements ServicesInterface
 {
 	public function registerServices($services)
 	{
+		$this->registerStatistics($services);
+
 		$services->extend('form.factory.builder', function($factory, $c) {
 			$factory->addExtension(new ControlPanel\ContextualHelp\Extension\ContextualHelpExtension);
 
@@ -32,6 +36,29 @@ class Services implements ServicesInterface
 			$groups->add(new ControlPanel\UserGroup\SuperAdmin);
 
 			return $groups;
+		});
+	}
+
+	public function registerStatistics($services)
+	{
+		$services['statistics'] = function($c) {
+			return (new Collection)
+				->setType('Message\\Mothership\\ControlPanel\\Statistic\\AbstractDataset')
+				->setKey(function($item) {
+					return $item->getName();
+				});
+		};
+
+		$services['statistics.counter'] = $services->factory(function($c) {
+			return new ControlPanel\Statistic\Counter($c['db.query']);
+		});
+
+		$services['statistics.counter.key'] = $services->factory(function($c) {
+			return new ControlPanel\Statistic\KeyCounter($c['db.query']);
+		});
+
+		$services['statistics.range.date'] = $services->factory(function($c) {
+			return new ControlPanel\Statistic\DateRange($c['db.query']);
 		});
 	}
 }

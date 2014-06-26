@@ -27,9 +27,13 @@
 		'@Message:Mothership:ControlPanel::resources/assets/js/dropdown.js'
 		'@Message:Mothership:ControlPanel::resources/assets/js/feedback.js'
 		'@Message:Mothership:ControlPanel::resources/assets/js/datePicker.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/components/masonry/masonry.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/components/googleChart/jsapi.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/components/googleChart/attc.googleChart.js'
 
 		output='/assets/js/ms_cp.js'
 		filter='?jsmin'
+
 	%}
 		<script src="{{ asset_url }}"></script>
 	{% endjavascripts %}

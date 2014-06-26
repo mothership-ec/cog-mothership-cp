@@ -1,0 +1,22 @@
+<div class="module landscape">
+	<h2 class="title">
+		{{ label }}
+	</h2>
+	<div class="wrap">
+		{% for number in numbers %}
+			<div class="column center">
+				{% if number.label %}
+					<h3 class="small-text">{{ number.label }}</h3>
+				{% endif %}
+
+				<h2 class="large-text">
+					{{ number.value }}
+
+					{% if number.units %}
+						<span class="small">{{ number.units }}</span>
+					{% endif %}
+				</h2>
+			</div>
+		{% endfor %}
+	</div>
+</div>
