@@ -1347,6 +1347,7 @@ dd {
 	cursor: pointer;
 	opacity: .2;
 	display: block;
+	z-index: 10000;
 }
 
 .modal .close:hover {
