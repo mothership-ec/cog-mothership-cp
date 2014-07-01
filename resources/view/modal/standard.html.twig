@@ -1,0 +1,16 @@
+<section class="modal-wrap {% block classes '' %}">
+	<div class="modal">
+		{% if block('title') is not empty %}
+			<header>
+				<h1>{% block title '' %}</h1>
+				{% if block('subtitle') is not empty %}
+				<h2>{% block subtitle '' %}</h2>
+				{% endif %}
+			</header>
+		{% endif %}
+		<span class="close" data-modal-close>Close</span>
+		<div class="content">
+			{% block content '' %}
+		</div>
+	</div>
+</section>

@@ -50,7 +50,6 @@ input[type="search"]::-webkit-search-cancel-button {
 
 
 
-
 /* Text and links
 ------------------------------------------------------------ */
 
@@ -705,7 +704,9 @@ input.button {
 }
 
 .button:disabled,
-.button:disabled:hover {
+.button.disabled,
+.button:disabled:hover,
+.button.disabled:hover {
 	background: #e9e8e8;
 	color: #7f7f7f !important;
 	border-color: #dcdcdc;
@@ -714,7 +715,8 @@ input.button {
 	cursor: default;
 }
 
-.button:disabled:active {
+.button:disabled:active,
+.button.disabled:active {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
@@ -1274,3 +1276,177 @@ dd {
 	clear: both;
 }
 
+
+
+/* Modals
+------------------------------------------------------------ */
+
+
+
+.modal-wrap {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(000,000,000,0.2);
+	z-index: 1000000;
+	text-align: center;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.modal {
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 100%;
+	max-width: 600px;
+	background: #FFF;
+	-webkit-box-shadow: 0 0 20px rgba(000,000,000,0.4);
+	-moz-box-shadow: 0 0 20px rgba(000,000,000,0.4);
+	box-shadow: 0 0 20px rgba(000,000,000,0.4);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #FFF;
+	border: 1px solid #E9E9E9;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: left;
+	overflow-y: scroll;
+	max-height: 95%;
+}
+
+.modal header {
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #CCC;
+	background: #FFF;
+}
+
+.modal h1 {
+	padding: 20px 22px 15px;
+	font-size: 16px;
+}
+
+.modal .close {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	color: #333;
+	text-indent: -999em;
+	width: 40px;
+	height: 40px;
+	padding: 5px;
+	cursor: pointer;
+	opacity: .2;
+	display: block;
+	z-index: 10000;
+}
+
+.modal .close:hover {
+	opacity: 1;
+}
+
+.modal .close:after {
+	font-family: 'FontAwesome';
+	content: '\f00d';
+	right: 10px;
+	top: 20px;
+	position: absolute;
+	width: 17px;
+	color: #333;
+	text-indent: 0;
+}
+
+.modal .content {
+	padding: 22px;
+	width: 100%;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.modal #save-content {
+	position: static;
+}
+
+
+.modal::-webkit-scrollbar-thumb {
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.1);
+} /* this will style the thumb, ignoring the track */
+
+.modal .help  {
+	float: none;
+	clear: both;
+	margin: 0px;
+	position: relative;
+	top: -10px;
+	width: 100%;
+	cursor: text;
+}
+
+.modal .help a {
+	display: none;
+}
+
+.modal .help .description {
+	display: block;
+	position: static;
+	background: none;
+	border: none;
+	padding: 0px;
+	margin: 0px 0px 15px 0px;
+}
+
+.modal .help .description:before {
+	display: none;
+}
+
+.modal .help .description p {
+	color: #333;
+}
+
+
+/* Dangerous styles */
+
+
+.dangerous .modal {
+	border-color: #555;
+	overflow: hidden;
+}
+
+.dangerous .modal header {
+	border: none;
+	background-color: #d84939;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#d84939), to(#bc1b1a));
+	background-image: -webkit-linear-gradient(top, #d84939, #bc1b1a);
+	background-image: -moz-linear-gradient(top, #d84939, #bc1b1a);
+	background-image: -o-linear-gradient(top, #d84939, #bc1b1a);
+	background-image: -ms-linear-gradient(top, #d84939, #bc1b1a);
+	background-image: linear-gradient(top, #d84939, #bc1b1a);
+	color: #FFF;
+	text-shadow: 0px 1px 0px #b62619;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#d84939', EndColorStr='#bc1b1a');
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.3);
+	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.3);
+	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.3);
+}
+
+.dangerous .modal h1 {
+	color: #FFF;
+}
+
+.dangerous .modal h1:before {
+	content: '\f071';
+	font-family: 'FontAwesome';
+	margin-right: 8px;
+}
