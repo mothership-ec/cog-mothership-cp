@@ -1,9 +1,17 @@
 ;$(function() {
+	var modalHandler = new ModalHandler;
 
 	// Check HTML5 History API is available
 	if (!History.enabled) {
 		$.error('Your browser does not support the HTML5 History API, so the control panel may not function correctly.');
 	}
+
+	// Hide/show loading indicator whenever Ajax is happening
+	$(document).ajaxSend(function() {
+		$('html').addClass('loading');
+	}).ajaxComplete(function() {
+		$('html').removeClass('loading');
+	});
 
 	// Set up elements with the data-confirm attribute set
 	$(document).on('submit', 'form[data-confirm]', function() {
@@ -94,4 +102,12 @@
 		});
 	});
 
+	// Stub window.console
+	if (!window.console) {
+		console = {
+			log  : function() {},
+			warn : function() {},
+			error: function() {},
+		};
+	}
 });
