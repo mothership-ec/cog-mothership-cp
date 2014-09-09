@@ -31,38 +31,20 @@
 			'<option value="200">200</option>'+
 			'<option value="-1">All</option>'+
 			'</select> products',
-		"sInfo": "Showing (_START_ to _END_) of _TOTAL_ Products"
-	    }
+		"sInfo": "Showing (_START_ to _END_) of _TOTAL_ Products"}
     }).columnFilter({
-			aoColumns: [
-				{ type: "text" },
-				null,
-				{ type: "text" },
-				{ type: "text" },
-				{ type: "text" },
-				{ type: "text" },
-				null
-			]
-		});
-
-	// instantiate the bloodhound suggestion engine
-	var category = new Bloodhound({
-		datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.num); },
-		queryTokenizer: Bloodhound.tokenizers.whitespace,
-		local: [
-			{ num: 'C-Line' },
-			{ num: 'M-Line' },
-			{ num: 'Gifting' },
-			{ num: 'Straps' },
-			{ num: 'Editions' }
+		aoColumns: [
+			{ type: "text" },
+			null,
+			{ type: "text" },
+			{ type: "text" },
+			null
 		]
 	});
 
 	$(document).ready( function() {
-  $('#example').dataTable( {
-
-  });
-} );
+		$('.table-filter.products').dataTable();
+	});
 
 	// initialize the bloodhound suggestion engine
 	category.initialize();
