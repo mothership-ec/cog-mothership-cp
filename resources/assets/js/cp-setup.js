@@ -99,20 +99,6 @@
 		});
 	});
 
-	var demoWidth = $('.modal').outerWidth();
-
-	$('.modal').css({
-		right: -demoWidth
-	});
-
-	$('.toggle-left').on('click', function() {
-		$('.modal').stop().animate({right: -demoWidth}, 500);
-	});
-
-	$('.click').on('click', function(event) {
-		$('.modal').stop().animate({right: 0}, 500);
-	});
-
 	$('.clear-filters').on('click', function() {
 		$('.table-filter').find('input').val('');
 		$('.table-filter').find('input').keyup();

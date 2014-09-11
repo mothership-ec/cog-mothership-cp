@@ -1,4 +1,4 @@
-;$(function() {
+$(function() {
 	$('html').removeClass('no-js').addClass('js');
 
 
@@ -7,22 +7,17 @@
 			buttonWidth = $('#save-content').outerWidth()
 			offSet = 0;
 
-		$("#test").html(windowWidth);//Just to see in real time what's the window with
-
 		if (windowWidth < 1260) {
 			offSet = 1246 - buttonWidth;
-	    	$('#save-content, .save-content').css('left', offSet);
-
-	    	console.log(offSet, topBar, buttonWidth);
-	  	}
-		else {
-	   		$('#save-content, .save-content').css('right', '14px');
-		    $('#save-content, .save-content').css('left', 'auto');
+			$('#save-content, .save-content').css('left', offSet);
+		} else {
+			$('#save-content, .save-content').css('right', '14px');
+			$('#save-content, .save-content').css('left', 'auto');
 		}
 	});
 
     $('.table-filter.products').dataTable({
-    	iDisplayLength: 25,
+		iDisplayLength: 25,
 		"oLanguage": {
 			"sLengthMenu": 'Display <select>'+
 			'<option value="25">25</option>'+
@@ -46,26 +41,29 @@
 		$('.table-filter.products').dataTable();
 	});
 
-	// initialize the bloodhound suggestion engine
-	category.initialize();
-
-	// instantiate the typeahead UI
-	$('.example-category').typeahead(null, {
-		displayKey: 'num',
-		source: category.ttAdapter()
-	});
-
-
 	$(document).ready(function () {
-	  $("#colour").select2({
-	      tags:["red", "green", "blue", "yellow", "orange", "purple"],
-	      tokenSeparators: [",", " "]});
+		$("#colour").select2({
+			tags:[""],
+			tokenSeparators: [",", " "]
+		});
 	});
 
 	$(document).ready(function () {
-	  $("#size").select2({
-	      tags:["xx-small", "x-small", "small", "small-medium", "medium", "medium-large", "large", "x-large", "xx-large", "xxx-large"],
-	      tokenSeparators: [",", " "]});
+		$("#size").select2({
+			tags:[""],
+			tokenSeparators: [",", " "]
+		});
 	});
+
+	// var variantCount = 0,
+	// 	variant      = $('.select2-offscreen'),
+	// 	variantArray = [];
+
+	// // Creating the variants
+	// variant.change(function() {
+
+	// 	// Get the first input and match
+
+	// });
 
 });
