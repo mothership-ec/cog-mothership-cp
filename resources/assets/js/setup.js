@@ -55,15 +55,17 @@ $(function() {
 		});
 	});
 
-	// var variantCount = 0,
-	// 	variant      = $('.select2-offscreen'),
-	// 	variantArray = [];
+	var variantCount = 0,
+		variant      = $('.select2-offscreen'),
+		variantArray = [];
 
-	// // Creating the variants
-	// variant.change(function() {
 
-	// 	// Get the first input and match
 
-	// });
+	// Creating the variants
+	variant.change(function() {
+
+		// Get the first input and match
+
+	});
 
 });
