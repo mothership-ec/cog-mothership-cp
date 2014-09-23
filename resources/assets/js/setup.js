@@ -28,7 +28,7 @@
 	});
 
 	$(document).ready( function() {
-		$('.table-filter.page').dataTable();
+		$('.table-filter').dataTable();
 	});
 
 
