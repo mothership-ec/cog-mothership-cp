@@ -2379,6 +2379,134 @@ ul.search-results {
 	margin-right: 10px;
 }
 
+.variants .field {
+	width: 40%;
+	clear: left;
+}
+
+.variants .options {
+	float: left;
+	background: #FAFAFA;
+	width: 60%;
+	border: 1px solid #CCC;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 20px;
+	margin-bottom: 20px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin-top: -80px;
+}
+
+.variants .options ul {
+	border-bottom: 1px solid #CCC;
+	float: left;
+	width: 100%;
+}
+
+.variants .options li {
+	float: left;
+	height: 60px;
+	width: 100%;
+	border: 1px solid #CCC;
+	border-bottom: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	background: #FFF;
+	position: relative;
+	line-height: 40px;
+}
+
+.variants .options li label,
+.variants .options li input {
+	width: auto;
+	float: none;
+	display: inline-block;
+	position: relative;
+	right: 0;
+}
+
+.variants .options li input {
+	width: 100px;
+}
+
+.variants .options fieldset {
+	border: none;
+	float: right;
+	margin-right: 40px;
+}
+
+.variants .options .remove {
+	position: absolute;
+	right: 8px;
+	text-decoration: none;
+	background: none;
+	text-shadow: none;
+	color: #900;
+	font-size: 26px;
+}
+
+.variants .options .remove:before {
+	content: '\f00d';
+}
+
+.variants .options .remove:hover {
+	color: #900 !important;
+	opacity: 0.3;
+}
+
+.complete {
+	display: table;
+}
+
+.complete .wrap {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.complete h1 {
+	text-align: center;
+	border: none;
+	font-size: 40px;
+}
+
+.complete .button {
+	clear: both;
+	display: block;
+	margin-bottom: 10px;
+	max-width: 200px;
+	margin: 0 auto 10px;
+}
+
+.tick {
+	display: block;
+	clear: both;
+	font-size: 72px;
+	background-color: #3fa262;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#3fa262), to(#196d2e));
+	background-image: -webkit-linear-gradient(top, #3fa262, #196d2e);
+	background-image: -moz-linear-gradient(top, #3fa262, #196d2e);
+	background-image: -o-linear-gradient(top, #3fa262, #196d2e);
+	background-image: -ms-linear-gradient(top, #3fa262, #196d2e);
+	background-image: linear-gradient(top, #3fa262, #196d2e);
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	text-fill-color: transparent;
+}
+
+.tick:before {
+	font-family: 'icomoon';
+	content: "\e600";
+}
+
 
 /* Sidebar */
 
