@@ -427,7 +427,13 @@ input.button {
 	color: inherit;
 }
 
+.button.icon {
+	padding: 5px 8px;
+}
 
+.button.icon:before {
+	margin-right: 0px;
+}
 
 /* Submit, add, upload, create button styles */
 
