@@ -112,7 +112,7 @@
                 search_init = '';
             }
 
-            var input = $('<input type="text" class="' + search_init + sCSSClass + '" value="' + inputvalue + '" rel="' + i + '"/>');
+            var input = $('<input type="text" class="' + search_init + sCSSClass + '" placeholder="' + inputvalue + '" rel="' + i + '"/>');
             if (iMaxLenght != undefined && iMaxLenght != -1) {
                 input.attr('maxlength', iMaxLenght);
             }
@@ -518,7 +518,7 @@
                 }
 
                 //check button
-                r += '<input class="search_init checkbox_filter" type="checkbox" id= "' + uniqueId + '_cb_' + sValue + '" name= "' + localLabel + '" value="' + sValue + '" >' + sLabel + '<br/>';
+                r += '<input class="search_init checkbox_filter" type="checkbox" id= "' + uniqueId + '_cb_' + sValue + '" name= "' + localLabel + '" plceholder="' + sValue + '" >' + sLabel + '<br/>';
 
                 var checkbox = $(r);
                 th.html(checkbox);
