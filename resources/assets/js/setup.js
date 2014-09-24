@@ -25,21 +25,6 @@ $(window).resize(function(){
 		columnWidth: 330,
 		gutter: 20
 	});
-
-	$(document).ready(function () {
-		$("#colour").select2({
-			tags:[""],
-			tokenSeparators: [",", " "]
-		});
-	});
-
-	$(document).ready(function () {
-		$("#size").select2({
-			tags:[""],
-			tokenSeparators: [",", " "]
-		});
-	});
-
 });
 
 });
