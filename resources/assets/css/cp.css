@@ -2598,6 +2598,10 @@ td.partial {
 	text-align: left;
 }
 
+.order-listing-overview .center {
+	text-align: center;
+}
+
 .order-details {
 	float: left;
 	margin: 0 0 20px 0;
