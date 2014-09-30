@@ -92,9 +92,9 @@
 }
 
 .navigation .vendor span {
-	float: left;
 	color: #A4B6C6;
 	font-size: 13px;
+	display: block;
 }
 
 .navigation nav {
