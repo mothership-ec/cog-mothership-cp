@@ -1098,6 +1098,10 @@ dd {
 ------------------------------------------------------------ */
 
 
+.feedback-container {
+	float: left;
+	width: 100%;
+}
 
 .feedback {
 	position: relative;
@@ -1116,6 +1120,24 @@ dd {
 	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	float: left;
 	width: 100%;
+}
+
+.feedback .close {
+	position: absolute;
+	top: 12px;
+	right: 20px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	color: #333;
+	text-align: center;
+	cursor: pointer;
+}
+
+.feedback .close:before {
+	content: '\f00d';
+	font-family: 'FontAwesome';
+	line-height: 20px;
 }
 
 .feedback li {

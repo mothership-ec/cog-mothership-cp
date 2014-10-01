@@ -16,12 +16,9 @@ $(function() {
 		feedback        = '.feedback',
 		saveButton 	    = '#save-content',
 		deleteButton    = '#delete',
-		max   			= 4,
 		height   		= 0,
-		fbTrueHeight    = 0,
 		fbHeight        = 0,
 		offSet 			= 0,
-		containerOffset = 0,
 		visible			= false,
 		open            = false,
 		buttonTop    	= parseInt($(saveButton).css('top'), 10);
@@ -31,21 +28,8 @@ $(function() {
 	 */
 	function calcHeight() {
 
-		if (open == true) {
-
-			offSet = buttonTop + fbTrueHeight;
-			height = $(container).height();
-
-			containerOffset = fbTrueHeight + 101;
-
-		} else if (open == false) {
-
-			offSet = buttonTop + fbHeight;
-			height = $(container).height();
-
-			containerOffset = fbHeight + 101;
-
-		}
+		offSet = buttonTop + fbHeight;
+		height = $(container).outerHeight();
 
 		// Set savebutton top position
 		$(saveButton).css('top', offSet + 'px');
@@ -58,81 +42,91 @@ $(function() {
 		 * feedback is visible
 		 */
 		$('.clear').css({
-			height : height - containerOffset
+			height : height - (fbHeight + 101)
 		});
+
 	}
 
-	/**
-	 * Checking the page if there is feedback, this sets the feedback height variable
-	 * and if there is a save button on the page changes its CSS top element to not loose its positioning.
+	/*
+	 * Function for each feedback block to hide and show extra error messages.
 	 */
-	if ( $(feedback).is(':visible')) {
+	$(feedback).each(function() {
 
-		// Set visible to true and get the outer height of feedback
-		visible      = true;
-		fbTrueHeight = $(feedback).outerHeight();
+		// Count how many 'li' children feedback has
+		var self   = $(this),
+			max    = 4,
+			length = self.find('ul').children().length;
 
-		// Variables to hide list elements in the feedback
-		var length = $('.feedback li').length;
-
-		/**
-		 * This if statement will hide errors if there are more than 5, it also contains the function
-		 * to hide and show more errors
+		/*
+		 * If feedback has so many 'li' children that exceed the max value of 4
+		 * we hide the extra and place a toggle to show/hide them.
 		 */
 		if (length > max) {
 
-			// Hide feedback li's
-			$('.feedback li:gt('+max+')').hide().end();
+			var fbChildren = self.find('li'),
+				open     = false;
 
-			// Add in show button
-			$('.feedback').append('<span class="show-more">Show more messages</span><span class="less">Hide messages</span>');
+			// Hide extra 'li'
+			fbChildren.slice(max, length).hide().end();
 
-			// Set new feedback height
-			fbHeight = $(feedback).outerHeight();
+			// Add toggle hide/show link
+			self.append('<span class="show-more">Show more messages</span><span class="less">Hide messages</span>');
 
-			/**
-			 * On click function when a user clicks the show more span in the feedback
-			 */
-			$('.feedback span').on('click', function() {
+			// Click function to show/hide children elements
+			self.on('click', 'span', function() {
 
-				/**
-				 * Show hidden LI errors
-				 */
-				if (open == false) {
+				if (open === false) {
 
 					open = true;
 
-					$('.feedback li:gt('+max+')').show();
+					// show hidden 'li'
+					fbChildren.slice(max, length).show();
 
-					// Set new outer height
-					fbTrueHeight = $(feedback).outerHeight();
-
-					// Hide and show button
-					$(this).hide();
-					$('.less').show();
-
-				} else if (open == true) {
+					// open/hide span
+					self.find('.show-more').hide().next().show();
+				} else {
 
 					open = false;
 
-					$('.feedback li:gt('+max+')').hide().end();
+					// hide extra 'li'
+					fbChildren.slice(max, length).hide();
 
-					// Hide and show button
-					$(this).hide();
-					$('.show-more').show();
+					// open/hide span
+					self.find('.less').hide().prev().show();
 				}
+
+				// Calculate feedback height
+				fbHeight = $('.feedback-container').outerHeight();
 
 				// Run calc height function
 				calcHeight();
 
 			});
-
-		} else {
-			// Set new outer height
-			fbHeight = $(feedback).outerHeight();
 		}
 
-	};
+		// Calc feedback height
+		fbHeight = $('.feedback-container').outerHeight();
+
+	});
+
+ 	/*
+ 	 * Abaility to remove any feedback block from Mothership. Will also
+ 	 * calculate the height to fix the container
+ 	 */
+	$(feedback).on('click', '.close', function() {
+
+		var self = $(this).parent();
+
+		// remove feedback
+		self.remove();
+
+		// recalulate the overall feedback container
+		fbHeight = $('.feedback-container').outerHeight();
+
+		// Run calc height function
+		calcHeight();
+
+	});
 
 	/**
 	 * This window resize function keeps the container at the correct height, this can basically effect
@@ -142,11 +136,6 @@ $(function() {
 
 		calcHeight();
 
-	});
-
-	/**
-	 * Window resize trigger here
-	 */
-	$(window).trigger('resize');
+	}).trigger('resize');
 
 });
