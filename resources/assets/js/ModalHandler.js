@@ -19,6 +19,7 @@ ModalHandler.prototype.init = function() {
 		if (typeof uri === 'undefined') {
 			return console.error('Cannot launch modal: Modal URI could not be determined');
 		}
+		console.log(uri)
 
 		_this.launch(uri);
 
@@ -58,8 +59,8 @@ ModalHandler.prototype.launch = function(uri) {
 			}
 		});
 	} else {
-		_this.modal = $(uri).hide();
-		_this.modal.fadeIn(100);
+		_this._modal = $(uri).hide();
+		_this._modal.fadeIn(100);
 	}
 };
 
@@ -78,11 +79,11 @@ ModalHandler.prototype.close = function() {
 };
 
 ModalHandler.prototype.isIdRef = function(uri) {
-	if (typeof uri === 'string') {
+	if (typeof uri !== 'string') {
 		return console.warn('Uri is not a string');
 	}
 
-	return uri.charAt(0) !== '#';
+	return uri.charAt(0) === '#';
 };
 
 // TODO: overwrite window.console for production

@@ -1,4 +1,4 @@
-<section class="modal-wrap {% block classes '' %} id="{% block id '' %}">
+<section class="modal-wrap {% block classes '' %}" {% spaceless %}id="{% block id '' %}"{% endspaceless %}>
 	<div class="modal">
 		{% if block('title') is not empty %}
 			<header>
