@@ -19,7 +19,6 @@ ModalHandler.prototype.init = function() {
 		if (typeof uri === 'undefined') {
 			return console.error('Cannot launch modal: Modal URI could not be determined');
 		}
-		console.log(uri)
 
 		_this.launch(uri);
 
@@ -54,14 +53,14 @@ ModalHandler.prototype.launch = function(uri) {
 			},
 			success : function(data) {
 				_this._modal = $(data).hide().appendTo('body');
-
 				_this._modal.fadeIn(100);
 			}
 		});
 	} else {
-		_this._modal = $(uri).hide();
+		_this._modal = $(uri);
 		_this._modal.fadeIn(100);
 	}
+
 };
 
 ModalHandler.prototype.close = function() {
@@ -72,10 +71,17 @@ ModalHandler.prototype.close = function() {
 	}
 
 	_this._modal.fadeOut(200, function() {
-		_this._modal.remove();
+
+		if (_this._ajax !== null) {
+			_this._modal.remove();
+		} else {
+			_this._modal.hide();
+		}
 
 		_this._modal = null;
 	});
+
+	return true;
 };
 
 ModalHandler.prototype.isIdRef = function(uri) {
