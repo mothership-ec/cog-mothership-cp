@@ -2436,6 +2436,10 @@ ul.search-results {
 
 }
 
+.variants .options .field-wrap {
+	position: relative;
+}
+
 .variants .options .field {
 	width: 30%;
 }
@@ -2482,12 +2486,15 @@ ul.search-results {
 
 .variants .options .remove {
 	position: absolute;
+	top: 40px;
 	right: 8px;
 	text-decoration: none;
 	background: none;
 	text-shadow: none;
 	color: #900;
 	font-size: 26px;
+	border: none;
+	box-shadow: none;
 }
 
 .variants .options .remove:before {
