@@ -3050,3 +3050,62 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	margin-top: 12px;
 	margin-right: 8px;
 }
+
+
+/* CSV Upload
+--------------------------------------- */
+
+.csv-upload .field {
+	float: left;
+	width: 70%;
+}
+
+.csv-upload .field input {
+	margin-bottom: 5px;
+	width: 95%;
+	max-width: 95%;
+}
+
+.csv-upload .upload {
+	margin-top: 30px;
+	padding: 8px 10px;
+}
+
+.csv-upload .download {
+	margin: 50px auto;
+}
+
+.csv-preview table tr.odd td {
+	background: #FAFAFA;
+	z-index: 0;
+}
+
+.csv-preview table tr.even td {
+	background: #FFF;
+	z-index: 0;
+}
+
+.csv-preview table {
+	width: 100%;
+	height: 500px;
+	display: block;
+	overflow: scroll;
+	font-size: 11px;
+	border: 1px solid #ccc;
+}
+
+.csv-preview .field-wrap {
+	overflow: hidden;
+	float: left;
+	margin-right: 20px;
+}
+
+.csv-preview .csv-show {
+	float: right;
+	margin-bottom: 20px;
+}
+
+.csv-preview table.valid .hide,
+.csv-preview table.invalid .hide {
+	display: none;
+}
