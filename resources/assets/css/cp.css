@@ -2379,12 +2379,49 @@ ul.search-results {
 	margin-right: 10px;
 }
 
-.variants .field {
-	width: 30%;
+.variants  {
+	position: relative;
+	clear: both;
+}
+
+.variant-field {
+	position: relative;
+	float: left;
+	clear: left;
+	margin-right: 30px;
+}
+
+.variant-field input {
+	width: 80%;
+	max-width: 80%;
+}
+
+.variant-field .button-cancel {
+	position: absolute;
+	top: 0px;
+	right: 0;
+	padding: 10px;
+}
+
+.variant-field .button-cancel:before {
+	margin-right: 0px;
+}
+
+.variant-options {
+	overflow: hidden;
+	width: 30%; 
+	float: left;
+	position: relative;
+	padding-bottom: 50px;
+}
+
+.add-variant {
+	position: absolute; 
+	bottom: 0;
 }
 
 .variants .options {
-	float: left;
+	float: right;
 	background: #FAFAFA;
 	width: 60%;
 	border: 1px solid #CCC;
@@ -2396,7 +2433,15 @@ ul.search-results {
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
-	margin-top: -80px;
+
+}
+
+.variants .options .field-wrap {
+	position: relative;
+}
+
+.variants .options .field {
+	width: 30%;
 }
 
 .variants .options ul {
@@ -2441,12 +2486,15 @@ ul.search-results {
 
 .variants .options .remove {
 	position: absolute;
+	top: 40px;
 	right: 8px;
 	text-decoration: none;
 	background: none;
 	text-shadow: none;
 	color: #900;
 	font-size: 26px;
+	border: none;
+	box-shadow: none;
 }
 
 .variants .options .remove:before {
@@ -2457,6 +2505,7 @@ ul.search-results {
 	color: #900 !important;
 	opacity: 0.3;
 }
+
 
 .complete {
 	display: table;
