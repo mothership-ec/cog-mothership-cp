@@ -2408,17 +2408,19 @@ ul.search-results {
 }
 
 .variant-options {
-	overflow: hidden;
 	width: 30%; 
 	float: left;
 	position: relative;
+	overflow: hidden;
 	padding-bottom: 50px;
 }
 
 .add-variant {
-	position: absolute; 
+	position: absolute;
 	bottom: 0;
+	left: 0;
 }
+
 
 .variants .options {
 	float: right;
