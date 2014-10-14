@@ -2508,6 +2508,7 @@ ul.search-results {
 
 
 .complete {
+	position:absolute;
 	display: table;
 }
 
@@ -2529,6 +2530,10 @@ ul.search-results {
 	margin-bottom: 10px;
 	max-width: 200px;
 	margin: 0 auto 10px;
+}
+
+.hidden {
+	display: none;
 }
 
 .tick {
