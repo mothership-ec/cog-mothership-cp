@@ -2408,17 +2408,19 @@ ul.search-results {
 }
 
 .variant-options {
-	overflow: hidden;
 	width: 30%; 
 	float: left;
 	position: relative;
+	overflow: hidden;
 	padding-bottom: 50px;
 }
 
 .add-variant {
-	position: absolute; 
+	position: absolute;
 	bottom: 0;
+	left: 0;
 }
+
 
 .variants .options {
 	float: right;
@@ -2495,6 +2497,7 @@ ul.search-results {
 	font-size: 26px;
 	border: none;
 	box-shadow: none;
+	opacity: .6;
 }
 
 .variants .options .remove:before {
@@ -2503,7 +2506,7 @@ ul.search-results {
 
 .variants .options .remove:hover {
 	color: #900 !important;
-	opacity: 0.3;
+	opacity: 1;
 }
 
 
