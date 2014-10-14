@@ -2559,8 +2559,8 @@ ul.search-results {
 }
 
 .tick:before {
-	font-family: 'icomoon';
-	content: "\e600";
+	font-family: 'FontAwesome';
+	content: "\f00c";
 }
 
 
