@@ -2497,6 +2497,7 @@ ul.search-results {
 	font-size: 26px;
 	border: none;
 	box-shadow: none;
+	opacity: .6;
 }
 
 .variants .options .remove:before {
@@ -2505,7 +2506,7 @@ ul.search-results {
 
 .variants .options .remove:hover {
 	color: #900 !important;
-	opacity: 0.3;
+	opacity: 1;
 }
 
 
