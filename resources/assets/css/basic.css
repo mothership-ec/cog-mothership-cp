@@ -1491,3 +1491,8 @@ dd {
 	font-family: 'FontAwesome';
 	margin-right: 8px;
 }
+
+.dangerous .modal .button {
+	clear: none;
+	margin-right: 20px;
+}
