@@ -1,6 +1,7 @@
-<div data-flashes>
+<div class="feedback-container" data-flashes>
 	{% for key,types in app.session.getFlashBag.all %}
 	<div class="feedback {{ key }}">
+		<span class="close"></span>
 		<ul>
 		{% for message in types %}
 		<li>{{ message|raw }}</li>

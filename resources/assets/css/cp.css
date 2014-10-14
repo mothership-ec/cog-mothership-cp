@@ -92,9 +92,9 @@
 }
 
 .navigation .vendor span {
-	float: left;
 	color: #A4B6C6;
 	font-size: 13px;
+	display: block;
 }
 
 .navigation nav {
@@ -2780,6 +2780,10 @@ td.partial {
 
 .order-listing-overview .left {
 	text-align: left;
+}
+
+.order-listing-overview .center {
+	text-align: center;
 }
 
 .order-details {
