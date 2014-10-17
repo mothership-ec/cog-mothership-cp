@@ -56,6 +56,20 @@ ModalHandler.prototype.launch = function(uri) {
 				_this._modal.fadeIn(100);
 			}
 		});
+	} else if(_this.isForm(uri)) {
+		var form = $(uri);
+		this._ajax = $.ajax({
+			url     : form.attr('action'),
+			method  : form.attr('mehod'),
+			data    : form.serialize(),
+			complete: function() {
+				_this._ajax = null;
+			},
+			success : function(data) {
+				_this._modal = $(data).hide().appendTo('body');
+				_this._modal.fadeIn(100);
+			}
+		});
 	} else {
 		_this._modal = $(uri);
 		_this._modal.fadeIn(100);
@@ -91,6 +105,10 @@ ModalHandler.prototype.isIdRef = function(uri) {
 
 	return uri.charAt(0) === '#';
 };
+
+ModalHandler.prototype.isForm = function(id) {
+	return $(id).is(form);
+}
 
 // TODO: overwrite window.console for production
 // TODO: loading indicator not shown
