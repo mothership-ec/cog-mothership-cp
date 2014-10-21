@@ -3072,3 +3072,16 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	margin-top: 12px;
 	margin-right: 8px;
 }
+
+/* Slide Icon
+--------------------------------------- */
+
+.slide-hide {
+	position: absolute;
+	top: 18px;
+	left: -20px;
+}
+
+#main-slide {
+	overflow: visible;
+}
