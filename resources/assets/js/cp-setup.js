@@ -27,7 +27,7 @@
 	};
 
 	// Set up live pane
-	$('[data-live-pane]').livePane({
+	$('[data-live-pane],[data-live-slide]').livePane({
 		linkSelector: 'a[data-live]',
 		beforeSend: function(pane) {
 			$('html').addClass('loading');
@@ -76,6 +76,48 @@
 			pane.trigger('ms.cp.livePane.change');
 		}
 	});
+
+	function LiveSlide() {
+		var loaded = false, _this = this;
+
+		$('[data-live-slide]').on('ms.cp.livePane.change', function() {
+			_this.loaded = true;
+			_this.slide = $(this);
+			_this.show();
+		});
+
+		$('body').on('click.live-slide', '[data-live-slide]', function() {
+			_this.show();
+		});
+
+		$('body').on('click.live-slide-hide', '[data-live-slide-hide]', function() {
+			_this.hide();
+		});
+	}
+
+	LiveSlide.prototype.show = function() {
+		if(this.loaded){
+			this.slide.animate({right: 0}, 350);
+			this.slide.trigger('ms-cp-livePane-show');
+		}
+	}
+
+	LiveSlide.prototype.hide = function() {
+		if(this.slide){
+			this.slide.animate({right: 30-this.slide.width()})
+			this.slide.trigger('ms-cp-livePane-hide');
+		}
+	}
+
+	LiveSlide.prototype.close = function() {
+		if(this.loaded){
+			this.slide.animate({right: -this.slide.width()});
+			this.loaded = false;
+			this.slide.trigger('ms-cp-livePane-close');
+		}
+	}
+
+	var LiveSlide = new LiveSlide;
 
 	// Set sidebar ordered lists to a nested accordian
 	$('section.sidebar > ol').nestedAccordian();

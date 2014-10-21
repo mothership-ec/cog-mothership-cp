@@ -855,6 +855,28 @@
 	height: inherit;
 }
 
+.main-full {
+    position: fixed;
+	display: inline-block;
+    overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width:100%;
+	height: inherit;
+}
+
+.content-slide {
+	position: absolute;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 80%;
+	height: 100%;
+	border-left: 1px solid black;
+	right: -100%;
+	box-shadow: 0 0 10px #000;
+}
 
 /* Page title
 ------------------------------------------------------------ */
