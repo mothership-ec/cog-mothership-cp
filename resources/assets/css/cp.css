@@ -3050,3 +3050,47 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	margin-top: 12px;
 	margin-right: 8px;
 }
+
+
+/* Multiple Currencies
+--------------------------------------- */
+
+.currency-group .module {
+	display: inline-block;
+	background: #fff;
+	padding: 10px;
+	width: auto;
+	height: auto;
+}
+
+.currency-group .module h2 {
+	margin-bottom: 15px;
+}
+
+.currency-group .module .add-on,
+.currency-group .module .field,
+.currency-units .add-on,
+.currency-units .field {
+	width: auto;
+	float: none;
+}
+
+.currency-group .module .add-on,
+.currency-units .add-on {
+	display: inherit;
+	float: none;
+}
+
+.currency-group .module .add-on div,
+.currency-units .add-on div  {
+	width: 65%;
+}
+
+.currency-group .module .help,
+.currency-units .help {
+	margin: 11px 0px;
+}
+
+.currency-units {
+	display: inline-block;
+}
