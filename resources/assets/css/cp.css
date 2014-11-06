@@ -2385,7 +2385,7 @@ ul.search-results {
 
 
 .create.product {
-	margin-top: 20px;
+	margin-top: 0px;
 }
 
 
@@ -3107,5 +3107,14 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 
 .csv-preview table.valid .hide,
 .csv-preview table.invalid .hide {
+	display: none;
+}
+
+.csv-preview .module {
+	clear: both;
+	overflow: hidden;
+}
+
+.csv-preview .field-wrap {
 	display: none;
 }
