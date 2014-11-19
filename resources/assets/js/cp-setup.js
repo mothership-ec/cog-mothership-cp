@@ -1,4 +1,11 @@
 ;$(function() {
+	/**
+	 * ----------------------------------------------------------------------
+	 * 
+	 * Setup for the ModalHandler
+	 *
+	 * ----------------------------------------------------------------------
+	 */
 	var modalHandler = new ModalHandler;
 
 	// Check HTML5 History API is available
@@ -6,6 +13,13 @@
 		$.error('Your browser does not support the HTML5 History API, so the control panel may not function correctly.');
 	}
 
+	/**
+	 * ----------------------------------------------------------------------
+	 *
+	 * The AAX spinner
+	 * 
+	 * ----------------------------------------------------------------------
+	 */
 	// Hide/show loading indicator whenever Ajax is happening
 	$(document).ajaxSend(function() {
 		$('html').addClass('loading');
@@ -26,6 +40,13 @@
 		$('.controls').css('margin-right', -8);
 	};
 
+	/**
+	 * ----------------------------------------------------------------------
+	 * 
+	 * Live Panes for AJAX loading
+	 *
+	 * ----------------------------------------------------------------------
+	 */
 	// Set up live pane
 	$('[data-live-pane],[data-live-slide]').livePane({
 		linkSelector: 'a[data-live]',
@@ -77,16 +98,30 @@
 		}
 	});
 
+	/**
+	 * ----------------------------------------------------------------------
+	 * 
+	 * The LiveSlide component
+	 *
+	 * This component allows the swooshy thing to operate.
+	 *
+	 * ----------------------------------------------------------------------
+	 */
 	function LiveSlide() {
 		_this = this;
 		this.loaded = false;
 		this.hidden = true;
 
+		$('[data-live-slide][data-slide-loaded]').each(function() {
+			var slide = this;
+			$(document).on('ready', function() {
+
+			_this.init(slide, 0);
+			});
+		});
+
 		$('[data-live-slide]').on('ms.cp.livePane.change', function() {
-			_this.loaded = true;
-			_this.slide = $(this);
-			_this.slide.append('<span class="button icon caret-right slide-hide" data-live-slide-toggle></span>');
-			_this.show();
+			_this.init(this);
 		});
 
 		$('body').on('click.live-slide-toggle', '[data-live-slide-toggle]', function(e) {
@@ -110,35 +145,59 @@
 		});
 	}
 
-	LiveSlide.prototype.show = function() {
+	LiveSlide.prototype.init = function(slide, speed) {
+		var _this = this;
+
+		this.loaded = true;
+		this.slide = $(slide);
+		this.slide.append('<span class="button icon caret-right slide-hide" data-live-slide-toggle></span>');
+		this.show(speed);
+
+		$(window).unbind('resize.cp-livePane-slide');
+		$(window).on('resize.cp-livePane-slide', function() {
+			if(_this.hidden) {
+				_this.hide(0);
+			}
+		});
+	}
+	
+	LiveSlide.prototype.show = function(speed) {
 		if(this.loaded){
 			this.hidden = false;
-			this.slide.animate({right: 0}, 350);
-			this.slide.trigger('ms-cp-livePane-show');
+			this.slide.animate({right: 0}, speed);
+			this.slide.trigger('show.cp-livePane-slide');
 			$('.slide-hide', this.slide).removeClass('caret-left').addClass('caret-right');
 		}
 	}
 
-	LiveSlide.prototype.hide = function() {
+	LiveSlide.prototype.hide = function(speed) {
 		if(this.slide){
 			this.hidden = true;
-			this.slide.animate({right: 30-this.slide.width()})
-			this.slide.trigger('ms-cp-livePane-hide');
+			this.slide.animate({right: 30-this.slide.width()}, speed)
+			this.slide.trigger('hide.cp-livePane-slide');
 			$('.slide-hide', this.slide).removeClass('caret-right').addClass('caret-left');
 		}
 	}
 
-	LiveSlide.prototype.close = function() {
+	LiveSlide.prototype.close = function(speed) {
 		if(this.loaded){
 			this.hidden = true;
-			this.slide.animate({right: -this.slide.width()});
+			this.slide.animate({right: -this.slide.width()}, speed);
 			this.loaded = false;
-			this.slide.trigger('ms-cp-livePane-close');
+			this.slide.trigger('close.cp-livePane-slide');
+			$(window).unbind('resize.cp-livePane-slide');
 		}
 	}
 
 	var LiveSlide = new LiveSlide;
 
+	/**	
+	 * ----------------------------------------------------------------------
+	 *
+	 * Nested accordian setup for the sidebar
+	 * 
+	 * ----------------------------------------------------------------------
+	 */
 	// Set sidebar ordered lists to a nested accordian
 	$('section.sidebar > ol').nestedAccordian();
 

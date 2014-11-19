@@ -1378,6 +1378,7 @@
 }
 
 .container-content.short {
+	padding-bottom: 100px;
 	height: -moz-calc(100% - 135px);
     height: -webkit-calc(100% - 135px);
     height: calc(100% - 135px);
@@ -2356,15 +2357,8 @@ ul.search-results {
 
 
 .container-content.products {
-	position: relative;
 	float: left;
-	overflow: visible;
-	overflow-y: scroll;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 23px 0 23px 23px;
-	width: inherit;
+	padding-right: 0;
 	width: 100%;
 	height: -moz-calc(100% - 120px);
     height: -webkit-calc(100% - 120px);
