@@ -873,9 +873,8 @@
 	-moz-box-sizing: border-box;
 	width: 80%;
 	height: 100%;
-	border-left: 1px solid black;
 	right: -100%;
-	box-shadow: 0 0 10px #000;
+	box-shadow: 0 2px 50px rgba(0,0,0,0.3);
 }
 
 /* Page title
@@ -3080,6 +3079,7 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	position: absolute;
 	top: 18px;
 	left: -20px;
+	box-shadow: 0 2px 50px rgba(0,0,0,0.3);
 }
 
 #main-slide {
