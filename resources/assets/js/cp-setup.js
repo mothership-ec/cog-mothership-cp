@@ -135,8 +135,10 @@
 		});
 
 		$('body').on('click.live-slide', '[data-live-slide]', function(e) {
-			_this.show();
-			e.stopPropagation();
+			if (_this.hidden) {
+				_this.show();
+				// e.stopPropagation();
+			}
 		});
 
 		$('body').on('click.live-slide-hide', '[data-live-slide-hide]', function(e) {
