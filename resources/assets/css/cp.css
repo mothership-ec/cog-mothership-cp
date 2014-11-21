@@ -2399,6 +2399,10 @@ ul.search-results {
 	margin-right: 10px;
 }
 
+table.products form:after {
+	content: '';
+}
+
 
 /* Sidebar */
 
