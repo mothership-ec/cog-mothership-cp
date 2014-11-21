@@ -3056,29 +3056,32 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 --------------------------------------- */
 
 .currency-group .module {
-	display: inline-block;
 	background: #fff;
 	padding: 10px;
 	width: auto;
 	height: auto;
+	overflow: hidden;
 }
 
 .currency-group .module h2 {
-	margin-bottom: 15px;
+	width: auto;
+	float: left;
+	margin-right: 20px;
+	border-bottom: 0;
 }
 
-.currency-group .module .add-on,
+
 .currency-group .module .field,
-.currency-units .add-on,
 .currency-units .field {
 	width: auto;
-	float: none;
+	float: left;
+	max-width: 220px;
 }
+
 
 .currency-group .module .add-on,
 .currency-units .add-on {
-	display: inherit;
-	float: none;
+	margin-bottom: 0;
 }
 
 .currency-group .module .add-on div,
