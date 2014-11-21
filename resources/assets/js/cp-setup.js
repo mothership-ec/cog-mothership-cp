@@ -26,6 +26,10 @@
 		$('.controls').css('margin-right', -8);
 	};
 
+	$('[data-flashes]').livePane({
+		linkSelector: 'a[data-live]',
+	});
+
 	// Set up live pane
 	$('[data-live-pane]').livePane({
 		linkSelector: 'a[data-live]',
