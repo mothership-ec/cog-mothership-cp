@@ -137,13 +137,21 @@
 		$('body').on('click.live-slide', '[data-live-slide]', function(e) {
 			if (_this.hidden) {
 				_this.show();
-				// e.stopPropagation();
 			}
 		});
 
 		$('body').on('click.live-slide-hide', '[data-live-slide-hide]', function(e) {
 			_this.hide();
 			e.stopPropagation();
+		});
+
+		$(document).on('click.livePane', '[data-live]', function(e) {
+			if ($(this).data('live-current') === true) {
+				_this.show();
+			} else {
+				$('[data-live]').data('live-current', false);
+				$(this).data('live-current', true);
+			}
 		});
 	}
 
