@@ -1235,6 +1235,7 @@ a.clear-filters:before {
 
 .dataTables_info {
 	text-align: center;
+	font-size: 11px;
 	background: #E3E3E3;
 	padding: 23px 15px 20px;
 	border-bottom: 1px solid #CCC;
@@ -1269,15 +1270,15 @@ a.clear-filters:before {
 .paginate_enabled_previous:before {
 	content: '\f053';
 	font-family: 'FontAwesome';
-	margin-right: 10px;
-	font-size: 12px;
+	margin-right: 5px;
+	font-size: 10px;
 }
 
 .paginate_enabled_next,
 .paginate_enabled_previous {
 	display: inline-block;
-	margin: 16px 20px;
-	padding: 7px 13px 5px;
+	margin: 20px;
+	padding: 7px 7px 5px;
 	border: 1px solid #CCC;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -1299,7 +1300,7 @@ a.clear-filters:before {
 	text-shadow: 0px 1px 0px #FFF;
 	white-space: nowrap;
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 11px;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.0em;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#528bb6', EndColorStr='#4473a7');
@@ -1320,8 +1321,8 @@ a.clear-filters:before {
 .paginate_enabled_next:after {
 	content: '\f054';
 	font-family: 'FontAwesome';
-	margin-left: 10px;
-	font-size: 12px;
+	margin-left: 5px;
+	font-size: 10px;
 }
 
 .paginate_disabled_next {
