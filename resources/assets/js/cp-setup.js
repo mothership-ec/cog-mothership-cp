@@ -146,11 +146,9 @@
 		});
 
 		$(document).on('click.livePane', '[data-live]', function(e) {
-			if ($(this).data('live-current') === true) {
+			var state = History.getState();
+			if (state.url === $(this).attr('href') || state.hash === $(this).attr('href')) {
 				_this.show();
-			} else {
-				$('[data-live]').data('live-current', false);
-				$(this).data('live-current', true);
 			}
 		});
 	}
