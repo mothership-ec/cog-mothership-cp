@@ -145,6 +145,7 @@
 			e.stopPropagation();
 		});
 
+		// show the pane if already loaded
 		$(document).on('click.livePane', '[data-live]', function(e) {
 			var state = History.getState();
 			if (state.url === $(this).attr('href') || state.hash === $(this).attr('href')) {
