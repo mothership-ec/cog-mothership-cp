@@ -1734,3 +1734,15 @@ dd {
 	font-family: 'FontAwesome';
 	margin-right: 8px;
 }
+
+.dangerous .modal button.left {
+	float: left;
+	clear: none;
+	margin-bottom: 0;
+}
+
+.dangerous .modal button.right {
+	float: right;
+	clear: none;
+	margin-bottom: 0;
+}
