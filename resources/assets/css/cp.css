@@ -2761,59 +2761,45 @@ ol.order-details li {
 /* Reports
 ------------------------------------------------------------ */
 
-
-
-.filter-by .field {
-	float: left;
-	padding: 20px 10px;
-	width: 340px;
-}
-
-.filter-by input, .filter-by select {
-	margin-bottom: 0px;
-	min-width: 340px;
-	width: 340px;
-	height: 40px;
-}
-
-.reports table {
-	table-layout: fixed;
-}
-
-.reports th {
-	padding-top: 0;
-	padding-bottom: 0;
-	vertical-align: middle;
-	height: 34px;
-	display: table-cell;
-}
-
-.reports th a {
-	padding-right: 10px;
-	background: url(../images/sort.png) no-repeat right center;
-	vertical-align: middle;
-	text-decoration: none;
-}
-
-.reports th a.sorting-asc {
-	background: url(../images/asc.png) no-repeat right center;
-}
-
-.reports th a.sorting-desc {
-	background: url(../images/desc.png) no-repeat right center;
-}
-
-.reports th a:hover {
-	color: inherit;
-}
-
-button.filter {
-	position: absolute;
-	right: 0px;
-	bottom: 0px;
-	display: block;
+#table_div {
 	clear: both;
-	margin: 10px;
+}
+
+.reports .google-visualization-table-table {
+	background: none;
+	width: auto;
+}
+
+.reports .google-visualization-table-tr-head,
+.reports .google-visualization-table-tr-head .gradient {
+	background: none;
+	border: none;
+	text-align: left;
+	box-shadow: none;
+}
+
+.reports .google-visualization-table-td-number {
+	font-family: "Inconsolata";
+}
+
+.reports .google-visualization-table-td {
+	border: 1px solid #ccc;
+	padding: 5px;
+	box-shadow: none;
+}
+
+.reports button.add {
+	float: right;
+}
+
+.reports tr {
+	border-right: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+}
+
+.reports .field {
+	width: 50%;
+	
 }
 
 tr.total {
@@ -3050,3 +3036,4 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	margin-top: 12px;
 	margin-right: 8px;
 }
+
