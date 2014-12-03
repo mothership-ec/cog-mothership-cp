@@ -1344,7 +1344,6 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 23px;
-    min-width: 1010px;
 	height: -moz-calc(100% - 62px);
     height: -webkit-calc(100% - 62px);
     height: calc(100% - 62px);
@@ -1872,8 +1871,6 @@
 .field input,
 .field textarea,
 .field select {
-	min-width: inherit;
-	max-width: 70%;
 	width: 70%;
 }
 
@@ -1966,7 +1963,7 @@ table td .add-on {
 .add-on div {
 	float: left;
 	margin-bottom: 0;
-	width: 50%;
+	width: 70%;
 }
 
 .add-on input {
@@ -2761,8 +2758,24 @@ ol.order-details li {
 /* Reports
 ------------------------------------------------------------ */
 
+.reports .tools {
+	overflow: hidden;
+	background: #fefefe;
+	padding: 10px;
+	max-width: 1000px;
+	margin-bottom: 10px;
+}
+
+.reports form {
+	overflow: hidden;
+	float: left;
+	width: auto;
+}
+
 #table_div {
 	clear: both;
+	width: 100%;
+	max-width: 1000px;
 }
 
 .reports .google-visualization-table-table {
@@ -2799,7 +2812,11 @@ ol.order-details li {
 
 .reports .field {
 	width: 50%;
-	
+}
+
+.reports .field input {
+	width: 100%;
+	padding: 5px;
 }
 
 tr.total {
