@@ -191,19 +191,6 @@ input[type=time]{
 	margin-bottom: 25px;
 }
 
- input[type=date]:before {
- 		content: 'Day / Month / Year';
- 		margin-right: 20px;
- 		font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
- 		float: left;
- }
-
- input[type=time]:before {
- 		content: 'Hours : Minutes';
- 		margin-right: 20px;
- 		font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
- 		float: left;
- }
 
 input[type="checkbox"]:hover,
 input[type="radio"]:hover,

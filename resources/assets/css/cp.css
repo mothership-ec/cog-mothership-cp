@@ -2801,7 +2801,7 @@ ol.order-details li {
 	box-shadow: none;
 }
 
-.reports button.add {
+hgroup button.add {
 	float: right;
 }
 
@@ -2815,7 +2815,6 @@ ol.order-details li {
 }
 
 .reports .field input {
-	width: 100%;
 	padding: 5px;
 }
 
