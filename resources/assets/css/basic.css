@@ -1748,7 +1748,19 @@ dd {
 	margin-right: 8px;
 }
 
-.dangerous .modal .button {
-	clear: none;
-	margin-right: 20px;
-}
+ .dangerous .modal .button {
+	 clear: none;
+	 margin-right: 20px;
+ }
+
+ .dangerous .modal button.left {
+	 float: left;
+	 clear: none;
+	 margin-bottom: 0;
+ }
+
+ .dangerous .modal button.right {
+	 float: right;
+	 clear: none;
+	 margin-bottom: 0;
+ }
