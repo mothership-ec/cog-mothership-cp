@@ -44,18 +44,23 @@ ModalHandler.prototype.launch = function(uri) {
 		_this.close();
 	}
 
-	this._ajax = $.ajax({
-		url     : uri,
-		dataType: 'html',
-		complete: function() {
-			_this._ajax = null;
-		},
-		success : function(data) {
-			_this._modal = $(data).hide().appendTo('body');
+	if (!_this.isIdRef(uri)) {
+		this._ajax = $.ajax({
+			url     : uri,
+			dataType: 'html',
+			complete: function() {
+				_this._ajax = null;
+			},
+			success : function(data) {
+				_this._modal = $(data).hide().appendTo('body');
+				_this._modal.fadeIn(100);
+			}
+		});
+	} else {
+		_this._modal = $(uri);
+		_this._modal.fadeIn(100);
+	}
 
-			_this._modal.fadeIn(100);
-		}
-	});
 };
 
 ModalHandler.prototype.close = function() {
@@ -66,10 +71,25 @@ ModalHandler.prototype.close = function() {
 	}
 
 	_this._modal.fadeOut(200, function() {
-		_this._modal.remove();
+
+		if (_this._ajax !== null) {
+			_this._modal.remove();
+		} else {
+			_this._modal.hide();
+		}
 
 		_this._modal = null;
 	});
+
+	return true;
+};
+
+ModalHandler.prototype.isIdRef = function(uri) {
+	if (typeof uri !== 'string') {
+		return console.warn('Uri is not a string');
+	}
+
+	return uri.charAt(0) === '#';
 };
 
 // TODO: overwrite window.console for production
