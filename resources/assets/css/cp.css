@@ -855,6 +855,32 @@
 	height: inherit;
 }
 
+.main-full {
+    position: fixed;
+	display: inline-block;
+    overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width:100%;
+	height: inherit;
+}
+
+.content-slide {
+	position: absolute;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 80%;
+	height: 100%;
+	right: -100%;
+	box-shadow: 0 2px 50px rgba(0,0,0,0.3);
+}
+
+.content-slide button.create {
+	position: absolute;
+	right: 18px;
+}
 
 /* Page title
 ------------------------------------------------------------ */
@@ -1113,7 +1139,7 @@
 
 .title .controls .button {
 	font-size: 16px;
-	margin-top: 10px;
+	margin-top: 15px;
 }
 
 .controls form {
@@ -1356,6 +1382,7 @@
 }
 
 .container-content.short {
+	padding-bottom: 100px;
 	height: -moz-calc(100% - 135px);
     height: -webkit-calc(100% - 135px);
     height: calc(100% - 135px);
@@ -2332,15 +2359,8 @@ ul.search-results {
 
 
 .container-content.products {
-	position: relative;
 	float: left;
-	overflow: visible;
-	overflow-y: scroll;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 23px 0 23px 23px;
-	width: inherit;
+	padding-right: 0;
 	width: 100%;
 	height: -moz-calc(100% - 120px);
     height: -webkit-calc(100% - 120px);
@@ -2374,6 +2394,10 @@ ul.search-results {
 
 .unit-count {
 	margin-right: 10px;
+}
+
+table.products form:after {
+	content: '';
 }
 
 
@@ -3072,3 +3096,21 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	margin-right: 8px;
 }
 
+
+/* Slide Icon
+--------------------------------------- */
+
+.slide-hide {
+	position: absolute;
+	top: 18px;
+	left: -20px;
+	box-shadow: 0 2px 50px rgba(0,0,0,0.3);
+}
+
+.slide-hide:hover {
+	box-shadow: 0 2px 50px rgba(0,0,0,0.3);
+}
+
+#main-slide {
+	overflow: visible;
+}
