@@ -240,4 +240,21 @@
 			error: function() {},
 		};
 	}
+
+	// Reports Filtering Panel
+
+	$('.slide-hide').on('click', function() {
+		if ($('.slide-hide').hasClass('caret-left')) {
+			$('.reports-filtering').css('right','0');
+			$('.slide-hide').removeClass('caret-left').addClass('caret-right');
+		} else {
+			$('.reports-filtering').css('right','-250px');
+			$('.slide-hide').removeClass('caret-right').addClass('caret-left');
+		}
+	});
+
+	if ($('.reports-filtering').is(':visible')) {
+		$('hgroup button.add').css('marginRight','65px')
+	}	
+
 });
