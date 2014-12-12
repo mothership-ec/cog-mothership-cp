@@ -2785,11 +2785,30 @@ ol.order-details li {
 
 .reports .google-visualization-table-tr-head,
 .reports .google-visualization-table-tr-head .gradient {
-	background: none;
+	position: relative;
 	border: none;
 	text-align: left;
 	box-shadow: none;
+	padding: 12px 30px 10px 15px;
+	border-top: 1px solid #bccdda;
+	border-bottom: 1px solid #bccdda;
+	border-left: 1px solid #bccdda;
+	background:  #e4f0f9;
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.7);
+	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.7);
+	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.7);
 }
+
+.reports .google-visualization-table-sortind {
+	color: #333;
+	position: absolute; 
+	top: 12px;
+	right: 7px;
+}
+
+.reports .google-visualization-table-tr-head {
+	border-right: 1px solid #bccdda;
+}	
 
 .reports .google-visualization-table-td-number {
 	font-family: "Inconsolata";
