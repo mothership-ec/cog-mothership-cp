@@ -2798,6 +2798,20 @@ ol.order-details li {
 	transition: all 0.2s ease;
 }
 
+hgroup button.download {
+	float: right;
+	margin-right: 65px;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+hgroup button.download:hover {
+	color: #fff;
+}
+
 .reports .tools {
 	overflow: hidden;
 	background: #fefefe;
@@ -2858,10 +2872,6 @@ ol.order-details li {
 	border: 1px solid #ccc;
 	padding: 5px;
 	box-shadow: none;
-}
-
-hgroup button.add {
-	float: right;
 }
 
 .reports tr {

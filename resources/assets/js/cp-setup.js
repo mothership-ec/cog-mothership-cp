@@ -243,18 +243,22 @@
 
 	// Reports Filtering Panel
 
+	if ($('.reports-filtering').is(':visible')) {
+		$('hgroup button.download').css('marginRight','65px')
+	}
+
 	$('.slide-hide').on('click', function() {
 		if ($('.slide-hide').hasClass('caret-left')) {
 			$('.reports-filtering').css('right','0');
 			$('.slide-hide').removeClass('caret-left').addClass('caret-right');
+			$('hgroup button.download').css('marginRight','315px')
 		} else {
 			$('.reports-filtering').css('right','-250px');
 			$('.slide-hide').removeClass('caret-right').addClass('caret-left');
+			$('hgroup button.download').css('marginRight','65px')
 		}
 	});
 
-	if ($('.reports-filtering').is(':visible')) {
-		$('hgroup button.add').css('marginRight','65px')
-	}	
+
 
 });
