@@ -2798,6 +2798,14 @@ ol.order-details li {
 	transition: all 0.2s ease;
 }
 
+.reports-filtering select {
+	min-width: 100%;
+}
+
+.reports-filtering button {
+	margin-bottom: 10px;
+}
+
 hgroup button.download {
 	float: right;
 	margin-right: 65px;
