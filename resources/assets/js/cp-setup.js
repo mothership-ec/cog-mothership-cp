@@ -1,7 +1,7 @@
 ;$(function() {
 	/**
 	 * ----------------------------------------------------------------------
-	 * 
+	 *
 	 * Setup for the ModalHandler
 	 *
 	 * ----------------------------------------------------------------------
@@ -17,7 +17,7 @@
 	 * ----------------------------------------------------------------------
 	 *
 	 * The AAX spinner
-	 * 
+	 *
 	 * ----------------------------------------------------------------------
 	 */
 	// Hide/show loading indicator whenever Ajax is happening
@@ -42,7 +42,7 @@
 
 	/**
 	 * ----------------------------------------------------------------------
-	 * 
+	 *
 	 * Live Panes for AJAX loading
 	 *
 	 * ----------------------------------------------------------------------
@@ -100,7 +100,7 @@
 
 	/**
 	 * ----------------------------------------------------------------------
-	 * 
+	 *
 	 * The LiveSlide component
 	 *
 	 * This component allows the swooshy thing to operate.
@@ -169,7 +169,7 @@
 			}
 		});
 	}
-	
+
 	LiveSlide.prototype.show = function(speed) {
 		if(this.loaded){
 			this.hidden = false;
@@ -200,11 +200,11 @@
 
 	var LiveSlide = new LiveSlide;
 
-	/**	
+	/**
 	 * ----------------------------------------------------------------------
 	 *
 	 * Nested accordian setup for the sidebar
-	 * 
+	 *
 	 * ----------------------------------------------------------------------
 	 */
 	// Set sidebar ordered lists to a nested accordian
@@ -259,6 +259,23 @@
 		}
 	});
 
+	/**
+	 * ----------------------------------------------------------------------
+	 *
+	 * Form data submission buttons
+	 *
+	 * ----------------------------------------------------------------------
+	 */
+	 $(document).on('click', '[data-external-form]', function(e) {
+	 	var form = $($(this).data('external-form')),
+	 		initialAction = form.attr('action');
+	 	if($(this).data('method')) {
+	 		form.attr('action', $(this).data('method'));
+	 	}
+	 	form.submit();
+ 		form.attr('action', initialAction);
 
+	 	e.preventDefault();
+	 });
 
 });
