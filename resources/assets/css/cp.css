@@ -2787,7 +2787,7 @@ ol.order-details li {
 	overflow: visible;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	width: 200px;
+	width: 220px;
 	height: 100%;
 	right: 0px;
 	box-shadow: 0 2px 50px rgba(0,0,0,0.3);
@@ -2808,7 +2808,7 @@ ol.order-details li {
 
 hgroup .button.download {
 	float: right;
-	margin-right: 215px;
+	margin-right: 245px;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-ms-transition: all 0.2s ease;
