@@ -2787,9 +2787,9 @@ ol.order-details li {
 	overflow: visible;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	width: 300px;
+	width: 200px;
 	height: 100%;
-	right: -250px;
+	right: 0px;
 	box-shadow: 0 2px 50px rgba(0,0,0,0.3);
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
@@ -2802,13 +2802,13 @@ ol.order-details li {
 	min-width: 100%;
 }
 
-.reports-filtering button {
+.reports-filtering .button {
 	margin-bottom: 10px;
 }
 
-hgroup button.download {
+hgroup .button.download {
 	float: right;
-	margin-right: 65px;
+	margin-right: 215px;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-ms-transition: all 0.2s ease;
@@ -2816,22 +2816,16 @@ hgroup button.download {
 	transition: all 0.2s ease;
 }
 
-hgroup button.download:hover {
+hgroup .button.download:hover {
 	color: #fff;
 }
 
-.reports .tools {
-	overflow: hidden;
-	background: #fefefe;
-	padding: 10px;
-	max-width: 1000px;
-	margin-bottom: 10px;
+.reports {
+	padding-right: 220px;
 }
 
-.reports form {
-	overflow: hidden;
-	float: left;
-	width: auto;
+.reports .description {
+	font-size: 0.85em;
 }
 
 #table_div {
