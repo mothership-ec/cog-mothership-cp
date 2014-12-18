@@ -266,16 +266,20 @@
 	 *
 	 * ----------------------------------------------------------------------
 	 */
-	 $(document).on('click', '[data-external-form]', function(e) {
-	 	var form = $($(this).data('external-form')),
-	 		initialAction = form.attr('action');
-	 	if($(this).data('method')) {
-	 		form.attr('action', $(this).data('method'));
-	 	}
-	 	form.submit();
- 		form.attr('action', initialAction);
+	$(document).on('click', '[data-external-form]', function(e) {
+		var form = $($(this).data('external-form')),
+			initialAction = form.attr('action');
 
-	 	e.preventDefault();
-	 });
+		// if form found then submit instead of going to link
+		if(form.length) {
+			if($(this).data('method')) {
+				form.attr('action', $(this).data('method'));
+			}
+
+			form.submit();
+			form.attr('action', initialAction);
+			e.preventDefault();
+		}
+});
 
 });
