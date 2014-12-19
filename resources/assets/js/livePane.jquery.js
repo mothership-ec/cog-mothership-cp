@@ -56,7 +56,7 @@
 					$(document).on('click.livePane', self.data('livePane').settings.linkSelector, function(e) {
 						History.pushState(null, null, $(this).attr('href'));
 
-						return false;
+						e.preventDefault();
 					});
 				}
 			});
