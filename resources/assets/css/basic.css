@@ -955,6 +955,7 @@ table {
 	text-align: left;
 	font-size: 0.9em;
 	border-bottom: 1px solid #CCC;
+	table-layout: fixed;
 }
 
 table th {
@@ -977,6 +978,8 @@ table td {
 	text-align: left;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: normal;
+	word-wrap: break-word;
+
 }
 
 table tr {
