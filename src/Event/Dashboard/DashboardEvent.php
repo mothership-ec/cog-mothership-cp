@@ -8,9 +8,12 @@ class DashboardEvent extends Event
 {
 	protected $_references;
 
-	public function addReference($reference)
+	public function addReference($reference, $params = [])
 	{
-		$this->_references[] = $reference;
+		$this->_references[] = [
+			'reference' => $reference,
+			'params'    => $params,
+		];
 	}
 
 	public function getReferences()
