@@ -988,6 +988,7 @@ table {
 	text-align: left;
 	font-size: 0.9em;
 	border-bottom: 1px solid #CCC;
+	table-layout: fixed;
 }
 
 table th {
@@ -1010,6 +1011,8 @@ table td {
 	text-align: left;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: normal;
+	word-wrap: break-word;
+
 }
 
 table tr {
@@ -1767,4 +1770,16 @@ dd {
 	content: '\f071';
 	font-family: 'FontAwesome';
 	margin-right: 8px;
+}
+
+.dangerous .modal button.left {
+	float: left;
+	clear: none;
+	margin-bottom: 0;
+}
+
+.dangerous .modal button.right {
+	float: right;
+	clear: none;
+	margin-bottom: 0;
 }
