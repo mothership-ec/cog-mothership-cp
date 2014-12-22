@@ -3130,25 +3130,15 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 
 .pagination .newer {
 	float: left;
-	width: 60px;
-	height: 30px;
-	background: url(../images/pagination-arrows.gif) left no-repeat;
-	text-indent: -999em;
 	opacity: .8;
 	position: absolute;
-	top: 0px;
 	left: 0px;
 }
 
 .pagination .older {
 	float: right;
-	width: 60px;
-	height: 30px;
-	background: url(../images/pagination-arrows.gif) right no-repeat;
-	text-indent: -999em;
 	opacity: .8;
 	position: absolute;
-	top: 0px;
 	right: 0px;
 }
 
@@ -3176,17 +3166,18 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	text-decoration: none;
 	display: block;
 	padding: 5px;
+	padding-bottom: 0;
 	border: 1px solid #121212;
 	color: #121212;
 }
 
 .pagination li.active a {
-	color: #be8e2d;
-	border: 1px solid #be8e2d;
+	color: #3f759f;
+	border: 1px solid #3f759f;
 }
 
 .pagination li a:hover {
-	color: #be8e2d;
+	color: #3f759f;
 }
 
 .pagination .out-of-range {
