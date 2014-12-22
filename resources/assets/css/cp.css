@@ -3100,3 +3100,120 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 .currency-units {
 	display: inline-block;
 }
+
+/* Pagination
+--------------------------------------- */
+.pagination {
+	margin: 30px 0px;
+	width: 100%;
+	padding: 10px 0px;
+	text-align: center;
+	font-size: 0.857em;
+	overflow: hidden;
+	position: relative;
+	clear: both;
+}
+
+.pagination ol {
+	float: left;
+	text-align: center;
+	width: 90%;
+	margin: 0px 60px;
+}
+
+.pagination li {
+	display: inline-block;
+	list-style: none;
+	width: 40px;
+	margin: 0px 0px 10px 0px;
+}
+
+.pagination .newer {
+	float: left;
+	width: 60px;
+	height: 30px;
+	background: url(../images/pagination-arrows.gif) left no-repeat;
+	text-indent: -999em;
+	opacity: .8;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.pagination .older {
+	float: right;
+	width: 60px;
+	height: 30px;
+	background: url(../images/pagination-arrows.gif) right no-repeat;
+	text-indent: -999em;
+	opacity: .8;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.pagination .newer:hover,
+.pagination .older:hover {
+	opacity: 1;
+}
+
+.pagination .disabled {
+	opacity: 0.2;
+	padding: 5px 0px 0px 0px;
+}
+
+.pagination .disabled:hover {
+	opacity: 0.2;
+}
+
+.pagination a {
+	display: block;
+	padding: 4px 0 1px;
+}
+
+.pagination li a {
+	margin: 0 5px;
+	text-decoration: none;
+	display: block;
+	padding: 5px;
+	border: 1px solid #121212;
+	color: #121212;
+}
+
+.pagination li.active a {
+	color: #be8e2d;
+	border: 1px solid #be8e2d;
+}
+
+.pagination li a:hover {
+	color: #be8e2d;
+}
+
+.pagination .out-of-range {
+	display: none;
+}
+
+.pagination .end {
+	margin: 0px 15px;
+	position: relative;
+}
+
+.pagination .end:first-of-type:after {
+	width: 20px;
+	height: 15px;
+	display: block;
+	content: '...';
+	position: absolute;
+	bottom: 0px;
+	left: 40px;
+}
+
+.pagination .end:last-of-type:before {
+	width: 20px;
+	height: 15px;
+	display: block;
+	content: '...';
+	position: absolute;
+	bottom: 0px;
+	right: 40px;
+}
