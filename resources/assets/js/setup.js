@@ -12,8 +12,6 @@
 		if (windowWidth < 1260) {
 			offSet = 1246 - buttonWidth;
 	    	$('#save-content, .save-content').css('left', offSet);
-
-	    	console.log(offSet, topBar, buttonWidth);
 	  	}
 		else {
 	   		$('#save-content, .save-content').css('right', '14px');
@@ -35,6 +33,7 @@
 		$('.table-filter').find('input').val('');
 		$('.table-filter').find('input').keyup();
 	});
+
 
 
 });

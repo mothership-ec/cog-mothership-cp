@@ -1,0 +1,11 @@
+{% extends '::_templates/cp' %}
+
+{% block content %}
+	<section class="main-full">
+		{% block main %}{% endblock %}
+	</section>
+
+	<section class="content-slide" id="main-slide" data-live-slide {% block slideAttr '' %}>
+		{% block slide %}{% endblock %}
+	</section>
+{% endblock %}
