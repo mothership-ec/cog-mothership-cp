@@ -2837,9 +2837,11 @@ hgroup .button.download:hover {
 	max-width: 1000px;
 }
 
+
 .reports .google-visualization-table-table {
 	background: none;
 	width: auto;
+	table-layout: auto;
 }
 
 .reports .google-visualization-table-tr-head,
