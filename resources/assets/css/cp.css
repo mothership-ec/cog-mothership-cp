@@ -3184,10 +3184,6 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	display: none;
 }
 
-.pagination li:last-of-type {
-	display: inline-block;
-}
-
 .pagination .end {
 	margin: 0px 15px;
 	position: relative;
