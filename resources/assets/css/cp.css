@@ -877,6 +877,10 @@
 	box-shadow: 0 2px 50px rgba(0,0,0,0.3);
 }
 
+.content-slide[data-slide-loaded] {
+	right: 0;
+}
+
 .content-slide button.create {
 	position: absolute;
 	right: 18px;
