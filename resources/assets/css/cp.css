@@ -855,6 +855,36 @@
 	height: inherit;
 }
 
+.main-full {
+    position: fixed;
+	display: inline-block;
+    overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width:100%;
+	height: inherit;
+}
+
+.content-slide {
+	position: absolute;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 80%;
+	height: 100%;
+	right: -100%;
+	box-shadow: 0 2px 50px rgba(0,0,0,0.3);
+}
+
+.content-slide[data-slide-loaded] {
+	right: 0;
+}
+
+.content-slide button.create {
+	position: absolute;
+	right: 18px;
+}
 
 /* Page title
 ------------------------------------------------------------ */
@@ -1113,7 +1143,7 @@
 
 .title .controls .button {
 	font-size: 16px;
-	margin-top: 10px;
+	margin-top: 15px;
 }
 
 .controls form {
@@ -1357,6 +1387,7 @@
 }
 
 .container-content.short {
+	padding-bottom: 100px;
 	height: -moz-calc(100% - 135px);
     height: -webkit-calc(100% - 135px);
     height: calc(100% - 135px);
@@ -1675,22 +1706,25 @@
 }
 
 .content dt {
-	float: left;
-	margin-right: 5%;
-	margin-bottom: 10px;
 	width: 30%;
+	float: left;
 	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	clear: left;
 	min-height: 20px;
 }
 
 .content dd {
-	float: right;
-	clear: right;
 	margin-bottom: 10px;
 	min-height: 20px;
 	width: 65%;
+	float: left;
+	text-align: right;
 }
+
+.content dd p {
+	margin: 0;
+}
+
+
 
 .grand-total {
 	border-top: 1px solid #ddd;
@@ -2335,15 +2369,8 @@ ul.search-results {
 
 
 .container-content.products {
-	position: relative;
 	float: left;
-	overflow: visible;
-	overflow-y: scroll;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 23px 0 23px 23px;
-	width: inherit;
+	padding-right: 0;
 	width: 100%;
 	height: -moz-calc(100% - 120px);
     height: -webkit-calc(100% - 120px);
@@ -2561,6 +2588,10 @@ ul.search-results {
 .tick:before {
 	font-family: 'FontAwesome';
 	content: "\f00c";
+}
+
+table.products form:after {
+	content: '';
 }
 
 
@@ -3233,4 +3264,68 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	float: right;
 	margin-top: 12px;
 	margin-right: 8px;
+}
+
+/* Slide Icon
+--------------------------------------- */
+
+.slide-hide {
+	position: absolute;
+	top: 18px;
+	left: -20px;
+	box-shadow: 0 2px 50px rgba(0,0,0,0.3);
+}
+
+.slide-hide:hover {
+	box-shadow: 0 2px 50px rgba(0,0,0,0.3);
+}
+
+#main-slide {
+	overflow: visible;
+}
+
+/* Multiple Currencies
+--------------------------------------- */
+
+.currency-group .module {
+	background: #fff;
+	padding: 10px;
+	width: auto;
+	height: auto;
+	overflow: hidden;
+}
+
+.currency-group .module h2 {
+	width: auto;
+	float: left;
+	margin-right: 20px;
+	border-bottom: 0;
+}
+
+
+.currency-group .module .field,
+.currency-units .field {
+	width: auto;
+	float: left;
+	max-width: 220px;
+}
+
+
+.currency-group .module .add-on,
+.currency-units .add-on {
+	margin-bottom: 0;
+}
+
+.currency-group .module .add-on div,
+.currency-units .add-on div  {
+	width: 65%;
+}
+
+.currency-group .module .help,
+.currency-units .help {
+	margin: 11px 0px;
+}
+
+.currency-units {
+	display: inline-block;
 }
