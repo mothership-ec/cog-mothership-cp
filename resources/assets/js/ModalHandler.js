@@ -14,6 +14,8 @@ ModalHandler.prototype.init = function() {
 
 		if (typeof ref === 'undefined' && 'a' === self.prop('tagName').toLowerCase()) {
 			ref = self.attr('href');
+		} else if (typeof ref === 'undefined' && self.attr('form') && self.attr('type') === 'submit') {
+			ref = $('#' + self.attr('form'));
 		} else if (typeof ref === 'undefined' && self.attr('type') === 'submit') {
 			ref = self.closest('form');
 		}
@@ -52,14 +54,15 @@ ModalHandler.prototype.launch = function(ref) {
 
 
 	if (!_this.isIdRef(uri) || form !== null) {
-
 		this._ajax = $.ajax({
 			url     : uri,
 			dataType: 'html',
 			method  : (form === null ? 'get' : form.attr('method')),
 			data    : (form === null ? null  : form.serialize()),
-			complete: function() {
+			complete: function(data) {
 				_this._ajax = null;
+				console.log($('[data-flashes]', $(data.responseText)).html());
+				$('[data-flashes]').html($('[data-flashes]', $(data.responseText)).html());
 			},
 			success : function(data) {
 				_this._modal = $(data).hide().appendTo('body');

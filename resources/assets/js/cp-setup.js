@@ -40,9 +40,9 @@
 		$('.controls').css('margin-right', -8);
 	};
 
-	// $('[data-flashes]').livePane({
-	// 	linkSelector: 'a[data-live]',
-	// });
+	$('[data-flashes]').livePane({
+		linkSelector: 'a[data-live]',
+	});
 
 	/**
 	 * ----------------------------------------------------------------------

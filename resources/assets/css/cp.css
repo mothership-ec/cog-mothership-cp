@@ -2538,7 +2538,8 @@ ul.search-results {
 
 
 .complete {
-	position:absolute;
+	position: absolute;
+	z-index: 150;
 	display: table;
 }
 
