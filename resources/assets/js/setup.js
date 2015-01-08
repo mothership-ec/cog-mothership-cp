@@ -32,5 +32,4 @@
 		$('.table-filter').find('input').val('');
 		$('.table-filter').find('input').keyup();
 	});
-
 });

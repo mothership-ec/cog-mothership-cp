@@ -191,24 +191,17 @@ input[type=time]{
 	margin-bottom: 25px;
 }
 
- input[type=date]:before {
- 		content: 'Day / Month / Year';
- 		margin-right: 20px;
- 		font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
- 		float: left;
- }
-
- input[type=time]:before {
- 		content: 'Hours : Minutes';
- 		margin-right: 20px;
- 		font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
- 		float: left;
- }
 
 input[type="checkbox"]:hover,
 input[type="radio"]:hover,
 input[type="image"]:hover {
 	cursor: pointer;
+}
+
+input[type=time]:before {
+	content: 'hh : mm';
+	margin-right: 20px;
+	float: left;
 }
 
 select {
@@ -444,7 +437,8 @@ input.button {
 .upload,
 .add,
 .filter,
-.toggle {
+.toggle,
+.download {
 	border-color: #0b4174;
 	background-color: #528cb6;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#528cb6), to(#4473a6));
@@ -474,6 +468,19 @@ input.button {
 .upload:before {
 	margin-right: 8px;
 	content: "\f093";
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	font-weight: 500;
+	font-size: 0.8em;
+	font-family: 'FontAwesome';
+	line-height: 0.2em;
+}
+
+.download:before {
+	margin-right: 8px;
+	content: "\f019";
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
@@ -981,6 +988,7 @@ table {
 	text-align: left;
 	font-size: 0.9em;
 	border-bottom: 1px solid #CCC;
+	table-layout: fixed;
 }
 
 table th {
@@ -1003,6 +1011,8 @@ table td {
 	text-align: left;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: normal;
+	word-wrap: break-word;
+
 }
 
 table tr {

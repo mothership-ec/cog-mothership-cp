@@ -1,7 +1,7 @@
 ;$(function() {
 	/**
 	 * ----------------------------------------------------------------------
-	 * 
+	 *
 	 * Setup for the ModalHandler
 	 *
 	 * ----------------------------------------------------------------------
@@ -17,7 +17,7 @@
 	 * ----------------------------------------------------------------------
 	 *
 	 * The AAX spinner
-	 * 
+	 *
 	 * ----------------------------------------------------------------------
 	 */
 	// Hide/show loading indicator whenever Ajax is happening
@@ -42,7 +42,7 @@
 
 	/**
 	 * ----------------------------------------------------------------------
-	 * 
+	 *
 	 * Live Panes for AJAX loading
 	 *
 	 * ----------------------------------------------------------------------
@@ -102,7 +102,7 @@
 
 	/**
 	 * ----------------------------------------------------------------------
-	 * 
+	 *
 	 * The LiveSlide component
 	 *
 	 * This component allows the swooshy thing to operate.
@@ -170,7 +170,7 @@
 			}
 		});
 	}
-	
+
 	LiveSlide.prototype.show = function(speed) {
 		if(this.loaded){
 			this.hidden = false;
@@ -201,11 +201,11 @@
 
 	var LiveSlide = new LiveSlide;
 
-	/**	
+	/**
 	 * ----------------------------------------------------------------------
 	 *
 	 * Nested accordian setup for the sidebar
-	 * 
+	 *
 	 * ----------------------------------------------------------------------
 	 */
 	// Set sidebar ordered lists to a nested accordian
@@ -241,4 +241,46 @@
 			error: function() {},
 		};
 	}
+
+	// Reports Filtering Panel
+
+	if ($('.reports-filtering').is(':visible')) {
+		$('hgroup .button.download').css('marginRight','245px')
+	}
+
+	$('.slide-hide').on('click', function() {
+		if ($('.slide-hide').hasClass('caret-right')) {
+			$('.reports-filtering').css('right','-150px');
+			$('.slide-hide').removeClass('caret-right').addClass('caret-left');
+			$('hgroup .button.download').css('marginRight','90px')
+		} else {
+			$('.reports-filtering').css('right','0px');
+			$('.slide-hide').removeClass('caret-left').addClass('caret-right');
+			$('hgroup .button.download').css('marginRight','245px')
+		}
+	});
+
+	/**
+	 * ----------------------------------------------------------------------
+	 *
+	 * Form data submission buttons
+	 *
+	 * ----------------------------------------------------------------------
+	 */
+	$(document).on('click', '[data-external-form]', function(e) {
+		var form = $($(this).data('external-form')),
+			initialAction = form.attr('action');
+
+		// if form found then submit instead of going to link
+		if(form.length) {
+			if($(this).data('method')) {
+				form.attr('action', $(this).data('method'));
+			}
+
+			form.submit();
+			form.attr('action', initialAction);
+			e.preventDefault();
+		}
+});
+
 });
