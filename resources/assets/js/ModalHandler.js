@@ -52,7 +52,6 @@ ModalHandler.prototype.launch = function(ref) {
 		_this.close();
 	}
 
-
 	if (!_this.isIdRef(uri) || form !== null) {
 		this._ajax = $.ajax({
 			url     : uri,
@@ -61,12 +60,12 @@ ModalHandler.prototype.launch = function(ref) {
 			data    : (form === null ? null  : form.serialize()),
 			complete: function(data) {
 				_this._ajax = null;
-				console.log($('[data-flashes]', $(data.responseText)).html());
-				$('[data-flashes]').html($('[data-flashes]', $(data.responseText)).html());
+				$('[data-flashes]').html($(data.responseText).filter('[data-flashes]').html());
 			},
 			success : function(data) {
-				_this._modal = $(data).hide().appendTo('body');
-				_this._modal.fadeIn(100);
+				_this._modal = $(data).hide(function() {
+					$(this).appendTo('body').fadeIn(100);
+				});
 			}
 		});
 	} else {

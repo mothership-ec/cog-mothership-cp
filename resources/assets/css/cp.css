@@ -2536,11 +2536,13 @@ ul.search-results {
 	opacity: 1;
 }
 
-
 .complete {
 	position: absolute;
 	z-index: 150;
 	display: table;
+	height: 100%;
+	width: 100%;
+	background: #F1F1F1;
 }
 
 .complete .wrap {
