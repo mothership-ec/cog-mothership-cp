@@ -28,22 +28,22 @@ $(function() {
 	 */
 	function calcHeight() {
 
-		offSet = buttonTop + fbHeight;
-		height = $(container).outerHeight();
+		// offSet = buttonTop + fbHeight;
+		// height = $(container).outerHeight();
 
 		// Set savebutton top position
-		$(saveButton).css('top', offSet + 'px');
+		// $(saveButton).css('top', offSet + 'px');
 
 		// Set deletebutton top position
-		$(deleteButton).css('top', offSet + 'px');
+		// $(deleteButton).css('top', offSet + 'px');
 
 		/**
 		 * Minus container offset off the current height value, this resolves content being hidden when
 		 * feedback is visible
 		 */
-		$('.clear').css({
-			height : height - (fbHeight + 101)
-		});
+		// $('.clear').css({
+		// 	height : height - (fbHeight + 101)
+		// });
 
 	}
 

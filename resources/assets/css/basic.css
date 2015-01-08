@@ -1392,8 +1392,10 @@ dd {
 
 
 .feedback-container {
-	float: left;
-	width: 100%;
+	position: absolute;
+	top: 20%;
+	right: 10px;
+	width: 20%;
 }
 
 .feedback {
@@ -1404,21 +1406,21 @@ dd {
 	box-sizing: border-box;
 	padding: 15px 15px 0 15px;
 	background: #c9e5c9;
-	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5), 0px 1px 3px rgba(000,000,000,0.5);
-	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5), 0px 1px 3px rgba(000,000,000,0.5);
-	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5), 0px 1px 3px rgba(000,000,000,0.5);
 	color: #10460a;
+	border-radius: 2px;
 	text-shadow: 0px 1px 0 rgba(255,255,255,0.5);
 	font-size: 0.875em;
 	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	float: left;
 	width: 100%;
+	max-height: 400px;
+	overflow: scroll;
 }
 
 .feedback .close {
 	position: absolute;
-	top: 12px;
-	right: 20px;
+	top: 5px;
+	right: 5px;
 	display: block;
 	width: 20px;
 	height: 20px;
@@ -1437,6 +1439,10 @@ dd {
 	padding-bottom: 15px;
 	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	list-style: none;
+}
+
+.feedback li:first-child {
+	padding-right: 7px;
 }
 
 .feedback li:before {
