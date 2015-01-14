@@ -988,7 +988,7 @@ table {
 	text-align: left;
 	font-size: 0.9em;
 	border-bottom: 1px solid #CCC;
-	table-layout: fixed;
+	clear: both;
 }
 
 table th {
