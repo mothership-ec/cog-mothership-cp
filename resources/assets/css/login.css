@@ -152,6 +152,8 @@ html, body {
 
 .login-form .required label {
 	height: 44px;
+	width: 10px;
+	overflow: hidden;
 	color: transparent;
 	font-size: 0.875em;
 	position: absolute;
@@ -161,14 +163,12 @@ html, body {
 }
 
 .login-form label[for="login_email"]:before {
-	margin-right: 10px;
 	content: "\f007";
 	font-family: 'FontAwesome';
 	color: #E1E1E1;
 }
 
 .login-form label[for="login_password"]:before {
-	margin-right: 10px;
 	content: "\f023";
 	font-family: 'FontAwesome';
 	color: #E1E1E1;
