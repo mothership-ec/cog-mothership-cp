@@ -886,6 +886,7 @@
 	right: 18px;
 }
 
+
 /* Page title
 ------------------------------------------------------------ */
 
@@ -2405,6 +2406,7 @@ ul.search-results {
 
 .variants  {
 	position: relative;
+	overflow: hidden;
 	clear: both;
 }
 
