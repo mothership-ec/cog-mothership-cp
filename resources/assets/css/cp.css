@@ -2533,7 +2533,7 @@ ul.search-results {
 	opacity: 1;
 }
 
-.complete {
+.complete-product {
 	position: absolute;
 	z-index: 150;
 	display: table;
@@ -2542,19 +2542,19 @@ ul.search-results {
 	background: #F1F1F1;
 }
 
-.complete .wrap {
+.complete-product .wrap {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
 }
 
-.complete h1 {
+.complete-product h1 {
 	text-align: center;
 	border: none;
 	font-size: 40px;
 }
 
-.complete .button {
+.complete-product .button {
 	clear: both;
 	display: block;
 	margin-bottom: 10px;
