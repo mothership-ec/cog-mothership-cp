@@ -881,7 +881,7 @@
 	right: 0;
 }
 
-.content-slide button.create {
+.content-slide .create {
 	position: absolute;
 	right: 18px;
 }
