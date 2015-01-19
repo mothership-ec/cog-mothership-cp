@@ -120,3 +120,10 @@
 		url("../fonts/ae4e34c0-3129-4b94-b874-fd8352ab1d8c.ttf") format("truetype"),
 		url("../fonts/837512b9-1b3b-4886-81cc-7bdaacefb837.svg#837512b9-1b3b-4886-81cc-7bdaacefb837") format("svg");
 }
+
+@font-face {
+	font-family: 'Inconsolata';
+	src: url('../fonts/Inconsolata-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

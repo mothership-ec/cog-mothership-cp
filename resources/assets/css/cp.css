@@ -855,6 +855,32 @@
 	height: inherit;
 }
 
+.main-full {
+    position: fixed;
+	display: inline-block;
+    overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width:100%;
+	height: inherit;
+}
+
+.content-slide {
+	position: absolute;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 80%;
+	height: 100%;
+	right: -100%;
+	box-shadow: 0 2px 50px rgba(0,0,0,0.3);
+}
+
+.content-slide button.create {
+	position: absolute;
+	right: 18px;
+}
 
 /* Page title
 ------------------------------------------------------------ */
@@ -1113,7 +1139,7 @@
 
 .title .controls .button {
 	font-size: 16px;
-	margin-top: 10px;
+	margin-top: 15px;
 }
 
 .controls form {
@@ -1344,7 +1370,6 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 23px;
-    min-width: 1010px;
 	height: -moz-calc(100% - 62px);
     height: -webkit-calc(100% - 62px);
     height: calc(100% - 62px);
@@ -1357,6 +1382,7 @@
 }
 
 .container-content.short {
+	padding-bottom: 100px;
 	height: -moz-calc(100% - 135px);
     height: -webkit-calc(100% - 135px);
     height: calc(100% - 135px);
@@ -1675,22 +1701,25 @@
 }
 
 .content dt {
-	float: left;
-	margin-right: 5%;
-	margin-bottom: 10px;
 	width: 30%;
+	float: left;
 	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	clear: left;
 	min-height: 20px;
 }
 
 .content dd {
-	float: right;
-	clear: right;
 	margin-bottom: 10px;
 	min-height: 20px;
 	width: 65%;
+	float: left;
+	text-align: right;
 }
+
+.content dd p {
+	margin: 0;
+}
+
+
 
 .grand-total {
 	border-top: 1px solid #ddd;
@@ -1872,8 +1901,6 @@
 .field input,
 .field textarea,
 .field select {
-	min-width: inherit;
-	max-width: 70%;
 	width: 70%;
 }
 
@@ -1966,7 +1993,7 @@ table td .add-on {
 .add-on div {
 	float: left;
 	margin-bottom: 0;
-	width: 50%;
+	width: 70%;
 }
 
 .add-on input {
@@ -2335,15 +2362,8 @@ ul.search-results {
 
 
 .container-content.products {
-	position: relative;
 	float: left;
-	overflow: visible;
-	overflow-y: scroll;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 23px 0 23px 23px;
-	width: inherit;
+	padding-right: 0;
 	width: 100%;
 	height: -moz-calc(100% - 120px);
     height: -webkit-calc(100% - 120px);
@@ -2377,6 +2397,10 @@ ul.search-results {
 
 .unit-count {
 	margin-right: 10px;
+}
+
+table.products form:after {
+	content: '';
 }
 
 
@@ -2761,59 +2785,113 @@ ol.order-details li {
 /* Reports
 ------------------------------------------------------------ */
 
-
-
-.filter-by .field {
-	float: left;
-	padding: 20px 10px;
-	width: 340px;
-}
-
-.filter-by input, .filter-by select {
-	margin-bottom: 0px;
-	min-width: 340px;
-	width: 340px;
-	height: 40px;
-}
-
-.reports table {
-	table-layout: fixed;
-}
-
-.reports th {
-	padding-top: 0;
-	padding-bottom: 0;
-	vertical-align: middle;
-	height: 34px;
-	display: table-cell;
-}
-
-.reports th a {
-	padding-right: 10px;
-	background: url(../images/sort.png) no-repeat right center;
-	vertical-align: middle;
-	text-decoration: none;
-}
-
-.reports th a.sorting-asc {
-	background: url(../images/asc.png) no-repeat right center;
-}
-
-.reports th a.sorting-desc {
-	background: url(../images/desc.png) no-repeat right center;
-}
-
-.reports th a:hover {
-	color: inherit;
-}
-
-button.filter {
+.reports-filtering {
 	position: absolute;
+	overflow: visible;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 220px;
+	height: 100%;
 	right: 0px;
-	bottom: 0px;
-	display: block;
+	box-shadow: 0 2px 50px rgba(0,0,0,0.3);
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+.reports-filtering select {
+	min-width: 100%;
+}
+
+.reports-filtering .button {
+	margin-bottom: 10px;
+}
+
+hgroup .button.download {
+	float: right;
+	margin-right: 245px;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+hgroup .button.download:hover {
+	color: #fff;
+}
+
+.reports {
+	padding-right: 220px;
+}
+
+.reports .description {
+	font-size: 0.85em;
+}
+
+#table_div {
 	clear: both;
-	margin: 10px;
+	width: 100%;
+	max-width: 1000px;
+}
+
+
+.reports .google-visualization-table-table {
+	background: none;
+	width: auto;
+	table-layout: auto;
+}
+
+.reports .google-visualization-table-tr-head,
+.reports .google-visualization-table-tr-head .gradient {
+	position: relative;
+	border: none;
+	text-align: left;
+	box-shadow: none;
+	padding: 12px 30px 10px 15px;
+	border-top: 1px solid #bccdda;
+	border-bottom: 1px solid #bccdda;
+	border-left: 1px solid #bccdda;
+	background:  #e4f0f9;
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.7);
+	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.7);
+	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.7);
+}
+
+.reports .google-visualization-table-sortind {
+	color: #333;
+	position: absolute;
+	top: 12px;
+	right: 7px;
+}
+
+.reports .google-visualization-table-tr-head {
+	border-right: 1px solid #bccdda;
+}
+
+.reports .google-visualization-table-td-number {
+	font-family: "Inconsolata";
+}
+
+.reports .google-visualization-table-td {
+	border: 1px solid #ccc;
+	padding: 5px;
+	box-shadow: none;
+}
+
+.reports tr {
+	border-right: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+}
+
+.reports .field {
+	width: 50%;
+}
+
+.reports .field input {
+	padding: 5px;
 }
 
 tr.total {
@@ -3051,8 +3129,6 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	margin-right: 8px;
 }
 
-
-<<<<<<< HEAD
 /* CSV Upload
 --------------------------------------- */
 
@@ -3120,8 +3196,27 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	display: none;
 }
 /* Multiple Currencies
+=======
+/* Slide Icon
 --------------------------------------- */
 
+.slide-hide {
+	position: absolute;
+	top: 18px;
+	left: -20px;
+	box-shadow: 0 2px 50px rgba(0,0,0,0.3);
+}
+
+.slide-hide:hover {
+	box-shadow: 0 2px 50px rgba(0,0,0,0.3);
+}
+
+#main-slide {
+	overflow: visible;
+}
+
+/* Multiple Currencies
+--------------------------------------- */
 .currency-group .module {
 	background: #fff;
 	padding: 10px;
@@ -3163,4 +3258,112 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 
 .currency-units {
 	display: inline-block;
+}
+
+/* Pagination
+--------------------------------------- */
+.pagination {
+	margin: 30px 0px;
+	width: 100%;
+	padding: 10px 0px;
+	text-align: center;
+	font-size: 0.857em;
+	overflow: hidden;
+	position: relative;
+	clear: both;
+}
+
+.pagination ol {
+	float: left;
+	text-align: center;
+	width: 90%;
+	margin: 0px 60px;
+}
+
+.pagination li {
+	display: inline-block;
+	list-style: none;
+	width: 40px;
+	margin: 0px 0px 10px 0px;
+}
+
+.pagination .newer {
+	float: left;
+	opacity: .8;
+	position: absolute;
+	left: 0px;
+}
+
+.pagination .older {
+	float: right;
+	opacity: .8;
+	position: absolute;
+	right: 0px;
+}
+
+.pagination .newer:hover,
+.pagination .older:hover {
+	opacity: 1;
+}
+
+.pagination .disabled {
+	opacity: 0.2;
+	padding: 5px 0px 0px 0px;
+}
+
+.pagination .disabled:hover {
+	opacity: 0.2;
+}
+
+.pagination a {
+	display: block;
+	padding: 4px 0 1px;
+}
+
+.pagination li a {
+	margin: 0 5px;
+	text-decoration: none;
+	display: block;
+	padding: 5px;
+	padding-bottom: 0;
+	border: 1px solid #121212;
+	color: #121212;
+}
+
+.pagination li.active a {
+	color: #3f759f;
+	border: 1px solid #3f759f;
+}
+
+.pagination li a:hover {
+	color: #3f759f;
+}
+
+.pagination .out-of-range {
+	display: none;
+}
+
+.pagination .end {
+	margin: 0px 15px;
+	position: relative;
+}
+
+.pagination .end:first-of-type:after {
+	width: 20px;
+	height: 15px;
+	display: block;
+	content: '...';
+	position: absolute;
+	bottom: 0px;
+	left: 40px;
+}
+
+.pagination .end:last-of-type:before {
+	width: 20px;
+	height: 15px;
+	display: block;
+	content: '...';
+	position: absolute;
+	bottom: 0px;
+	right: 40px;
 }
