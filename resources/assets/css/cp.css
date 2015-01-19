@@ -2414,7 +2414,10 @@ ul.search-results {
 	position: relative;
 	float: left;
 	clear: left;
-	margin-right: 30px;
+	background: #fff;
+	border-radius: 2px;
+	padding: 10px;
+	margin: 0 0 20px 0;
 }
 
 .variant-field input {
@@ -2422,11 +2425,19 @@ ul.search-results {
 	max-width: 80%;
 }
 
+.variant-field div {
+	margin: 0;
+}
+
 .variant-field .button-cancel {
 	position: absolute;
-	top: 0px;
-	right: 0;
+	top: 10px;
+	right: 10px;
 	padding: 10px;
+}
+
+.variant-field.field {
+	width: auto;
 }
 
 .variant-field .button-cancel:before {
@@ -2434,7 +2445,7 @@ ul.search-results {
 }
 
 .variant-options {
-	width: 30%;
+	width: 35%;
 	float: left;
 	position: relative;
 	overflow: hidden;
