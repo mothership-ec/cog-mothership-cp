@@ -2421,7 +2421,7 @@ ul.search-results {
 	clear: left;
 	background: #fff;
 	border-radius: 2px;
-	padding: 10px;
+	padding: 10px 30px 10px 10px;
 	margin: 0 0 20px 0;
 }
 
@@ -2438,7 +2438,7 @@ ul.search-results {
 	position: absolute;
 	top: 10px;
 	right: 10px;
-	padding: 10px;
+	padding: 5px;
 }
 
 .variant-field.field {
@@ -2453,9 +2453,24 @@ ul.search-results {
 	width: 35%;
 	float: left;
 	position: relative;
-	overflow: hidden;
 	padding-bottom: 50px;
 }
+
+.variant-options .select2-container,
+.variant-options input {
+	float: left;
+}
+
+.variant-options .help {
+	width: 10px;
+	margin: 10px;
+	z-index: 999;
+}
+
+.variant-options .help .description {
+	min-width: 400px;
+}
+
 
 .add-variant {
 	position: absolute;
