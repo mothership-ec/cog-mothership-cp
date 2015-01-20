@@ -2809,7 +2809,8 @@ ol.order-details li {
 	margin-bottom: 10px;
 }
 
-hgroup .button.download {
+hgroup .button.download,
+hgroup .button.upload {
 	float: right;
 	margin-right: 245px;
 	-webkit-transition: all 0.2s ease;
@@ -2817,6 +2818,10 @@ hgroup .button.download {
 	-ms-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
+}
+
+hgroup .button.download {
+	margin-right: 0;
 }
 
 hgroup .button.download:hover {
@@ -3150,6 +3155,10 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 
 .csv-upload .download {
 	margin: 50px auto;
+}
+
+.csv-upload .download:hover {
+
 }
 
 .csv-preview table tr.odd td {
