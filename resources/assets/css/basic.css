@@ -546,6 +546,7 @@ input.button {
 .submit:hover,
 .create:hover,
 .upload:hover,
+.download:hover,
 .filter:hover,
 .toggle:hover {
 	background-color: #528bb6;
