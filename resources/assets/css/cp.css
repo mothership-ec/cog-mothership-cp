@@ -2388,6 +2388,11 @@ ul.search-results {
 	z-index: 11;
 }
 
+.create-product .currency-units {
+	display: block;
+	margin-top: 20px;
+}
+
 .positive {
 	color: #3fa262;
 }
