@@ -2450,7 +2450,7 @@ ul.search-results {
 }
 
 .variant-options {
-	width: 35%;
+	width: 45%;
 	float: left;
 	position: relative;
 	padding-bottom: 50px;
@@ -2482,7 +2482,7 @@ ul.search-results {
 .variants .options {
 	float: right;
 	background: #FAFAFA;
-	width: 60%;
+	width: 50%;
 	border: 1px solid #CCC;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -2500,7 +2500,7 @@ ul.search-results {
 }
 
 .variants .options .field {
-	width: 30%;
+	width: 45%;
 }
 
 .variants .options ul {
