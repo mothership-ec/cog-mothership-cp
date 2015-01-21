@@ -2405,6 +2405,7 @@ ul.search-results {
 
 table.products form:after {
 	content: '';
+	margin: 0;
 }
 
 
