@@ -240,6 +240,18 @@
 		};
 	}
 
+	// Swooshy Thing Controls Swoosh
+	$('#main-slide').on('show.cp-livePane-slide', function(e, data) {
+		// Position Add Product button when slide is opened
+		$('.controls.product').animate({ marginRight: '82%'});
+		$('.controls.product').addClass('mini');
+	});	
+
+	$('#main-slide').on('hide.cp-livePane-slide', function(e, data) {
+		$('.controls.product').animate({ marginRight: '50px'});
+		$('.controls.product').removeClass('mini');
+	});	
+
 	// Reports Filtering Panel
 
 	if ($('.reports-filtering').is(':visible')) {
