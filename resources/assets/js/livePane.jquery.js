@@ -93,6 +93,10 @@
 						// Replace the HTML in the pane
 						self.html($(state.selector, html).html());
 
+						if (typeof state.settings.flashSelector !== 'undefined') {
+							$(state.settings.flashSelector).html($(state.settings.flashSelector, html));
+						}
+
 						// If set, fire the afterSend event
 						if (typeof state.settings.afterReplace === 'function') {
 							state.settings.afterReplace(self, $(html));
