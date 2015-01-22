@@ -24,19 +24,5 @@
 
 {# Custom blocks defined by Message #}
 {% block help_widget %}
-	{% if contextual_help is defined or attr['data-help-key'] is defined %}
-		<div class="help">
-			{% set identifier = id ~ '_help' %}
-			{% set contextual_help_key = (contextual_help is defined ? contextual_help : attr['data-help-key']) %}
-			{% set translated = contextual_help_key|trans %}
-
-			{% if contextual_help is defined or translated != contextual_help_key %}
-				<a href="#{{ identifier }}" data-show="">{{ 'Show help'|trans }}</a>
-
-				<div class="description" id="{{ identifier }}">
-					<p>{{ translated|raw }}</p>
-				</div>
-			{% endif %}
-		</div>
-	{% endif %}
+	{% include 'Message:Mothership:ControlPanel::module:component:help' %}
 {% endblock help_widget %}

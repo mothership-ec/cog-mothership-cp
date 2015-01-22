@@ -1,7 +1,6 @@
 ;$(function() {
 	$('html').removeClass('no-js').addClass('js');
 
-
 	$(window).resize(function(){
 		var windowWidth = $(window).width(),
 			buttonWidth = $('#save-content').outerWidth()
@@ -33,7 +32,4 @@
 		$('.table-filter').find('input').val('');
 		$('.table-filter').find('input').keyup();
 	});
-
-
-
 });

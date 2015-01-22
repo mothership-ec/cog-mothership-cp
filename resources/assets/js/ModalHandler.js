@@ -10,17 +10,21 @@ ModalHandler.prototype.init = function() {
 
 	$('body').on('click.modal', '[data-modal-open]', function() {
 		var self = $(this);
-		var uri  = self.attr('data-modal');
+		var ref  = self.attr('data-modal');
 
-		if (typeof uri === 'undefined' && 'a' === self.prop('tagName').toLowerCase()) {
-			uri = self.attr('href');
+		if (typeof ref === 'undefined' && 'a' === self.prop('tagName').toLowerCase()) {
+			ref = self.attr('href');
+		} else if (typeof ref === 'undefined' && self.attr('form') && self.attr('type') === 'submit') {
+			ref = $('#' + self.attr('form'));
+		} else if (typeof ref === 'undefined' && self.attr('type') === 'submit') {
+			ref = self.closest('form');
 		}
 
-		if (typeof uri === 'undefined') {
+		if (typeof ref === 'undefined') {
 			return console.error('Cannot launch modal: Modal URI could not be determined');
 		}
 
-		_this.launch(uri);
+		_this.launch(ref);
 
 		return false;
 	});
@@ -30,8 +34,12 @@ ModalHandler.prototype.init = function() {
 	});
 };
 
-ModalHandler.prototype.launch = function(uri) {
-	var _this = this;
+ModalHandler.prototype.launch = function(ref) {
+	var _this = this, 
+		data = null, 
+		form = _this.getForm(ref),
+		uri  = (form === null ? ref : ref.attr('action'));
+	;
 
 	// Cancel any running Ajax requests for modals
 	if (null !== _this._ajax) {
@@ -44,20 +52,24 @@ ModalHandler.prototype.launch = function(uri) {
 		_this.close();
 	}
 
-	if (!_this.isIdRef(uri)) {
+	if (!_this.isIdRef(uri) || form !== null) {
 		this._ajax = $.ajax({
 			url     : uri,
 			dataType: 'html',
-			complete: function() {
+			method  : (form === null ? 'get' : form.attr('method')),
+			data    : (form === null ? null  : form.serialize()),
+			complete: function(data) {
 				_this._ajax = null;
+				$('[data-flashes]').html($(data.responseText).filter('[data-flashes]').html());
 			},
 			success : function(data) {
-				_this._modal = $(data).hide().appendTo('body');
-				_this._modal.fadeIn(100);
+				_this._modal = $(data).hide(function() {
+					$(this).appendTo('body').fadeIn(100);
+				});
 			}
 		});
 	} else {
-		_this._modal = $(uri);
+		_this._modal = $(ref);
 		_this._modal.fadeIn(100);
 	}
 
@@ -84,12 +96,21 @@ ModalHandler.prototype.close = function() {
 	return true;
 };
 
-ModalHandler.prototype.isIdRef = function(uri) {
-	if (typeof uri !== 'string') {
+ModalHandler.prototype.getForm = function(ref) {
+	try {
+		ref = $(ref);
+		return ref.is('form') ? ref : null;
+	} catch(err) {
+		return null;
+	}
+}
+
+ModalHandler.prototype.isIdRef = function(ref) {
+	if (typeof ref !== 'string') {
 		return console.warn('Uri is not a string');
 	}
 
-	return uri.charAt(0) === '#';
+	return ref.charAt(0) === '#';
 };
 
 // TODO: overwrite window.console for production
