@@ -1141,6 +1141,18 @@
 	margin: 0 15px 0 3px;
 }
 
+.controls.product .button.download,
+.controls.product .button.upload {
+	float: right;
+	margin-right: 0;
+	margin-left: 15px;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
 .title .controls {
 	position: absolute;
 	top: 0px;
