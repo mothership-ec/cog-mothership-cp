@@ -13,7 +13,7 @@ $(function() {
 
 	// Elements
 	var container       = '.container-cp',
-		feedback        = '.feedback',
+		feedback        = '[data-flashes]',
 		saveButton 	    = '#save-content',
 		deleteButton    = '#delete',
 		height   		= 0,
@@ -70,7 +70,7 @@ $(function() {
 			fbChildren.slice(max, length).hide().end();
 
 			// Add toggle hide/show link
-			self.append('<span class="show-more">Show more messages</span><span class="less">Hide messages</span>');
+			self.children('.feedback').append('<span class="show-more">Show more messages</span><span class="less">Hide messages</span>');
 
 			// Click function to show/hide children elements
 			self.on('click', 'span', function() {
