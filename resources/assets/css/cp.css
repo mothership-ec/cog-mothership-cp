@@ -3189,6 +3189,10 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 
 }
 
+.csv-preview {
+	padding-bottom: 80px;
+}
+
 .csv-preview table tr.odd td {
 	background: #FAFAFA;
 	z-index: 0;
