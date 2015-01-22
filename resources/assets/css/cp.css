@@ -1130,6 +1130,17 @@
 	margin-top: 12px;
 }
 
+.controls.mini .button {
+	overflow: hidden;
+	width: 16px;
+	height: 16px;
+	padding: 5px 8px;
+}
+
+.controls.mini .button:before {
+	margin: 0 15px 0 3px;
+}
+
 .title .controls {
 	position: absolute;
 	top: 0px;
