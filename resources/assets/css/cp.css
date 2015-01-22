@@ -2464,7 +2464,6 @@ ul.search-results {
 .variant-options .help {
 	width: 10px;
 	margin: 10px;
-	z-index: 999;
 }
 
 .variant-options .help .description {
