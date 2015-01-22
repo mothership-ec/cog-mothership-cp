@@ -659,16 +659,11 @@
 	max-height: 40px;
 	color: #FFF;
 	text-decoration: none;
-	text-transform: lowercase;
 	text-overflow: ellipsis;
 	text-shadow: 0px 1px 1px rgba(000,000,000,0.25);
 	white-space: nowrap;
 	font-size: 0.875em;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.sidebar .menu a:first-letter {
-	text-transform: uppercase;
 }
 
 .sidebar .menu ol {
