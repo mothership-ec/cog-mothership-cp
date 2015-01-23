@@ -47,9 +47,11 @@
 	 *
 	 * ----------------------------------------------------------------------
 	 */
+
 	// Set up live pane
 	$('[data-live-pane],[data-live-slide]').livePane({
 		linkSelector: 'a[data-live]',
+		flashSelector: '[data-flashes]',
 		beforeSend: function(pane) {
 			$('html').addClass('loading');
 
