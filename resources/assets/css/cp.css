@@ -3194,6 +3194,7 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 
 ::-webkit-scrollbar {
 	  width: 10px;
+	  height: 10px;
 } /* this targets the default scrollbar (compulsory) */
 
 ::-webkit-scrollbar-track {
@@ -3201,7 +3202,7 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 } /* the new scrollbar will have a flat appearance with the set background color */
 
 ::-webkit-scrollbar-thumb:horizontal {
-	background-color: rgba(0,0,0,0);
+	background-color: rgba(0,0,0,0.5);
 }
 
 ::-webkit-scrollbar-thumb {
