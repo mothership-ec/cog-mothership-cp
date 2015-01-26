@@ -1785,6 +1785,13 @@ dd {
 	margin-right: 8px;
 }
 
+.dangerous .modal button,
+.dangerous .modal .button {
+	float: left;
+	clear: none;
+	margin-right: 20px;
+}
+
 /*
 Version: 3.4.5 Timestamp: Mon Nov  4 08:22:42 PST 2013
 */
