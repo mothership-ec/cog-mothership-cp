@@ -31,5 +31,6 @@
 	$('.clear-filters').on('click', function() {
 		$('.table-filter').find('input').val('');
 		$('.table-filter').find('input').keyup();
+
 	});
 });
