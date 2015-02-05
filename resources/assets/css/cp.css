@@ -33,17 +33,14 @@
 	width: 100%;
 	height: 61px;
 	border: 1px solid #26537c;
-	background-color: #528cb6;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#528cb6), to(#4473a6));
-	background-image: -webkit-linear-gradient(top, #528cb6, #4473a6);
-	background-image: -moz-linear-gradient(top, #528cb6, #4473a6);
-	background-image: -o-linear-gradient(top, #528cb6, #4473a6);
-	background-image: -ms-linear-gradient(top, #528cb6, #4473a6);
-	background-image: linear-gradient(top, #528cb6, #4473a6);
-	-webkit-box-shadow: 0px 0px 1px 3px rgba(17,48,81,0.1), inset 0px -1px 0px 0px rgba(255,255,255,0.1);
-	-moz-box-shadow: 0px 0px 1px 3px rgba(17,48,81,0.1), inset 0px -1px 0px 0px rgba(255,255,255,0.1);
-	box-shadow: 0px 0px 1px 3px rgba(17,48,81,0.1), inset 0px -1px 0px 0px rgba(255,255,255,0.1);
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#528cb6', EndColorStr='#4473a6');
+	background-color: #285171;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#2f5f84), to(#285171));
+	background-image: -webkit-linear-gradient(top, #2f5f84, #285171);
+	background-image: -moz-linear-gradient(top, #2f5f84, #285171);
+	background-image: -o-linear-gradient(top, #2f5f84, #285171);
+	background-image: -ms-linear-gradient(top, #2f5f84, #285171);
+	background-image: linear-gradient(top, #2f5f84, #285171);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2f5f84', EndColorStr='#285171');
 	min-width: 1261px;
 }
 
@@ -65,18 +62,15 @@
 	width: 248px;
 	height: 59px;
 	border-right: 1px solid #26537c;
-	background-color: #3f759f;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#3f759f), to(#34608c));
-	background-image: -webkit-linear-gradient(top, #3f759f, #34608c);
-	background-image: -moz-linear-gradient(top, #3f759f, #34608c);
-	background-image: -o-linear-gradient(top, #3f759f, #34608c);
-	background-image: -ms-linear-gradient(top, #3f759f, #34608c);
-	background-image: linear-gradient(top, #3f759f, #34608c);
-	-webkit-box-shadow: inset 0px -1px 0px rgba(255,255,255,0.1);
-	-moz-box-shadow: inset 0px -1px 0px rgba(255,255,255,0.1);
-	box-shadow: inset 0px -1px 0px rgba(255,255,255,0.1);
+	background-color: #285171;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#2f5f84), to(#285171));
+	background-image: -webkit-linear-gradient(top, #2f5f84, #285171);
+	background-image: -moz-linear-gradient(top, #2f5f84, #285171);
+	background-image: -o-linear-gradient(top, #2f5f84, #285171);
+	background-image: -ms-linear-gradient(top, #2f5f84, #285171);
+	background-image: linear-gradient(top, #2f5f84, #285171);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2f5f84', EndColorStr='#285171');
 	text-indent: 58px;
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3f759f', EndColorStr='#34608c');
 }
 
 .navigation .vendor a {
@@ -112,7 +106,7 @@
 	position: relative;
 	float: left;
 	height: 59px;
-	border-right: 1px solid #26537c;
+	border-right: 1px solid #234763;
 	line-height: 64px;
 }
 
@@ -123,7 +117,7 @@
 }
 
 .navigation li:hover {
-	background: #19517d;
+	background: #234763;
 }
 
 .navigation li.current {
@@ -149,10 +143,7 @@
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
-	background: #19517d;
-	-webkit-box-shadow: 1px 1px 0px #5584b4;
-	-moz-box-shadow: 1px 1px 0px #5584b4;
-	box-shadow: 1px 1px 0px #5584b4;
+	background: #234763;
 	text-align: center;
 	text-shadow: none;
 	font-size: 0.875em;
@@ -180,46 +171,12 @@
 ------------------------------------------------------------ */
 
 
-.dashboard {
-	position: relative;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 23px;
-	width: 100%;
-	height: 100%;
-}
-
-.dashboard.home {
-	padding: 0;
-}
-
-.dashboard.home .main {
-	position: relative;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 0;
-	width: 100%;
-	height: inherit;
-	margin: 0;
-	min-width: 1259px;
-}
-
-.dashboard.home .container-content:after {
-	content: '';
-}
 
 .modules {
 	position: relative;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	padding: 0;
 	width: 100%;
-	height: inherit !important;
 	margin: 0;
-	overflow-y: scroll;
 	padding: 20px 0 0 20px;
 }
 
@@ -236,9 +193,7 @@
 	border-radius: 5px;
 	background: #FFF;
 	border: 1px solid #E9E9E9;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	overflow: hidden
 }
 
 .module .title {
@@ -491,7 +446,6 @@
 
 
 .sidebar {
-	position: fixed;
 	z-index: 0;
 	float: left;
 	overflow-x: hidden;
@@ -499,6 +453,7 @@
 	height: inherit;
 	background: #333;
 	color: #FFF;
+	display: none;
 }
 
 .sidebar .search {
@@ -835,29 +790,11 @@
     height: calc(100% - 101px);
 }
 
-.main {
-    position: fixed;
-	display: inline-block;
-    overflow: hidden;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	margin: 0 0 40px 250px;
-	width: -moz-calc(100% - 250px);
-    width: -webkit-calc(100% - 250px);
-    width: calc(100% - 250px);
-	height: inherit;
-}
 
-.main-full {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	width:100%;
-}
 
 .content-slide {
 	position: absolute;
+	top: 61px;
 	overflow: hidden;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -885,9 +822,7 @@
 .title {
 	position: relative;
 	z-index: 10;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	clear: both;
 	padding: 20px 22px 15px;
 	width: 100%;
 	border-bottom: 1px solid #c4c4c4;
@@ -1384,9 +1319,6 @@
 .container-content {
 	position: relative;
 	overflow: hidden;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	padding: 23px;
 
 }
@@ -1411,9 +1343,6 @@
 
 .dual-column {
 	overflow: hidden;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	margin-bottom: 20px;
 	width: 100%;
 	border: 1px solid #CCC;
@@ -3152,32 +3081,6 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	-moz-box-shadow: inset 1px 1px 0 #5992ba;
 	box-shadow: inset 1px 1px 0 #5992ba;
 }
-
-
-
-/* Scrollbars
--------------------------------------------- */
-
-
-
-::-webkit-scrollbar {
-	  width: 10px;
-	  height: 10px;
-} /* this targets the default scrollbar (compulsory) */
-
-::-webkit-scrollbar-track {
-	  background-color: rgba(0,0,0,0);
-} /* the new scrollbar will have a flat appearance with the set background color */
-
-::-webkit-scrollbar-thumb:horizontal {
-	background-color: rgba(0,0,0,0.5);
-}
-
-::-webkit-scrollbar-thumb {
-	  border-radius: 20px;
-	  background-color: rgba(0, 0, 0, 0.5);
-} /* this will style the thumb, ignoring the track */
-
 
 
 /* Discounts

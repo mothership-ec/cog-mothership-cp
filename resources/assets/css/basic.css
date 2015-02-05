@@ -39,6 +39,7 @@ html {
 body {
 	position: relative;
 	color: #333;
+	background: #F9F9F9;
 	font-size: 100%;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -1553,15 +1554,14 @@ dd {
 	height: 40px;
 	background: #111;
 	color: #b1b3b4;
+	clear: both;
 }
 
 .footer .copy {
 	float: left;
 	margin-top: 13px;
 	margin-left: 15px;
-	padding-left: 30px;
 	height: 18px;
-	background: url(../images/message-logo-footer.png) no-repeat left;
 	font-size: 0.813em !important;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
