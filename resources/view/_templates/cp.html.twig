@@ -58,9 +58,7 @@
 			</nav>
 			<a class="logout" href="{{ url('ms.cp.logout') }}">Log Out</a>
 		</header>
-		<section class="clear">
 			{% block content %}{% endblock %}
-		</section>
 		{% include 'Message:Mothership:ControlPanel::includes:footer' %}
 	</div>
 {% endblock %}

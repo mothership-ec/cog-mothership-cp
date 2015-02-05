@@ -25,7 +25,6 @@
 
 
 .navigation {
-	position: fixed;
 	z-index: 999; /* No other z-index should be higher than this decloration */
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -851,14 +850,10 @@
 }
 
 .main-full {
-    position: fixed;
-	display: inline-block;
-    overflow: hidden;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	width:100%;
-	height: inherit;
 }
 
 .content-slide {
@@ -1388,41 +1383,14 @@
 
 .container-content {
 	position: relative;
-	overflow: visible;
-	overflow-y: scroll;
+	overflow: hidden;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 23px;
-	height: -moz-calc(100% - 62px);
-    height: -webkit-calc(100% - 62px);
-    height: calc(100% - 62px);
+
 }
 
-.container-content::-webkit-scrollbar {
-	padding: 0 2px;
-	border-left: 1px solid #CCC;
-	background: #DDD;
-}
-
-.container-content.short {
-	padding-bottom: 100px;
-	height: -moz-calc(100% - 135px);
-    height: -webkit-calc(100% - 135px);
-    height: calc(100% - 135px);
-}
-
-.container-content.medium {
-	height: -moz-calc(100% - 117px);
-    height: -webkit-calc(100% - 117px);
-    height: calc(100% - 117px);
-}
-
-.container-content.tall {
-	height: -moz-calc(100% - 80px);
-    height: -webkit-calc(100% - 80px);
-    height: calc(100% - 80px);
-}
 
 .container-content h1,
 .container-content h2,
@@ -2392,9 +2360,6 @@ ul.search-results {
 	float: left;
 	padding-right: 0;
 	width: 100%;
-	height: -moz-calc(100% - 120px);
-    height: -webkit-calc(100% - 120px);
-    height: calc(100% - 120px);
 }
 
 

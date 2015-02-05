@@ -25,20 +25,19 @@
 	font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased;
 	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-	height: 100%;
     font-size: 1em;
 	-webkit-text-size-adjust: 1em;
 	-ms-text-size-adjust: 1em;
-	overflow: hidden;
 }
 
 body {
 	position: relative;
-	overflow-y: hidden;
-	height: 100%;
 	color: #333;
 	font-size: 100%;
 	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -134,9 +133,6 @@ input,
 textarea {
 	position: relative;
 	z-index: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-    box-sizing: border-box;
 	margin: 0 0 20px 0;
 	padding: 9px 7px 7px 7px;
 	max-width: 100%;
@@ -1552,19 +1548,7 @@ dd {
 /* General styles
 ------------------------------------------------------------ */
 
-
-
-[class^="container-"] {
-	position: relative;
-	float: left;
-	width: 100%;
-	height: 100%;
-	background: #F1F1F1;
-}
-
 .footer {
-	position: fixed;
-	bottom: 0;
 	width: 100%;
 	height: 40px;
 	background: #111;
@@ -2440,7 +2424,6 @@ disabled look for disabled choices in the results dropdown
 	clear: none;
 	margin-bottom: 0;
 }
->>>>>>> develop
 
  .dangerous .modal button.left {
 	 float: left;
