@@ -16,12 +16,14 @@ jQuery(document).ready(function($) {
 		open      = false,
 		mobile    = false;
 
+	if (window.innerWidth <= 768) {
+		mobile = true;
+	}
+
 	// Open off canvas
 	function openCanvas() {
 
 		open = true;
-
-		icon.removeClass('fa-bars').addClass('fa-close');
 
 		var body = $('body');
 
@@ -39,9 +41,6 @@ jQuery(document).ready(function($) {
 	function closeCanvas() {
 
 		open = false;
-
-		icon.removeClass('fa-close').addClass('fa-bars');
-
 
 		if (mobile === true) {
 			container.finish(); navigation.finish();
@@ -61,11 +60,14 @@ jQuery(document).ready(function($) {
 
 		if (open === false) {
 			openCanvas(canvasTarget, canvasDir);
+			icon.removeClass('fa-bars').addClass('fa-close');
 		} else {
 			closeCanvas();
+			icon.removeClass('fa-close').addClass('fa-bars');
 		}
 
 	});
+
 
 	// close canvas
 	close.on('click', function(event) {
@@ -78,12 +80,15 @@ jQuery(document).ready(function($) {
 	var checkMobile = function() {
 
 		// Check if the site is below 768px width
-		if (window.innerWidth <= 768) {
+		if (window.innerWidth <= 1140) {
 			mobile = true;
 			navigation.animate({'marginLeft': offSet}, 0);
 		} else {
 			mobile = false;
+			open = false;
 			navigation.css('margin-left', 'auto');
+			container.css('left', '0');
+			icon.removeClass('fa-close').addClass('fa-bars');
 		}
 	}
 

@@ -15,10 +15,10 @@
 /*
 /* ======================================================= */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1140px) {
 
 	.container {
-		max-width: 768px;
+		max-width: 1140px;
 	}
 
 	.inner-container {
@@ -73,6 +73,12 @@
 		height: auto;
 		border: 0;
 		border-bottom: 1px solid #234763;
+	}
+
+	.navigation li.current {
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
 	}
 
 }
