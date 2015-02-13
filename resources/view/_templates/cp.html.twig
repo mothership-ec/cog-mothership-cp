@@ -4,6 +4,7 @@
 	{{ parent() }}
 	{% stylesheets
 		'@Message:Mothership:ControlPanel::resources/assets/css/cp.css'
+		'@Message:Mothership:ControlPanel::resources/assets/css/mobile.css'
 
 		output='/assets/css/ms_cp.css'
 		filter='csscogulerewrite,?cssmin'
@@ -33,32 +34,40 @@
 		'@Message:Mothership:ControlPanel::resources/assets/js/select2.min.js'
 		'@Message:Mothership:ControlPanel::resources/assets/js/jquery.dataTables.min.js'
 		'@Message:Mothership:ControlPanel::resources/assets/js/dataTables.column-filter.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/jquery.offcanvas.js'
 
 		output='/assets/js/ms_cp.js'
-		filter='?jsmin'
 
 	%}
+		{# filter='?jsmin' #}
 		<script src="{{ asset_url }}"></script>
 	{% endjavascripts %}
 {% endblock %}
 {% block body %}
-	<div class="container-cp">
-		<div class="loading-spinner">
-			<p>Loading&hellip;</p><div class="spinner"></div>
+<div id="container" class="container">
+	<div class="inner-container">
+		<div class="container-cp">
+			<div class="loading-spinner">
+				<p>Loading&hellip;</p><div class="spinner"></div>
+			</div>
+			<header class="header">
+				<span class="nav-open">
+					<i class="fa fa-bars" data-direction="right"></i>
+				</span>
+				<h1 class="vendor">
+					<a href="{{ url('ms.cp.dashboard') }}">
+						{{ app.cfg.app.name }}
+						<span class="version">Mothership</span>
+					</a>
+				</h1>
+				<nav class="nav-offcanvas navigation">
+					{{ render(controller('Message:Mothership:ControlPanel::Controller:Component#mainMenu')) }}
+				</nav>
+				<a class="logout" href="{{ url('ms.cp.logout') }}">Log Out</a>
+			</header>
+				{% block content %}{% endblock %}
+			{% include 'Message:Mothership:ControlPanel::includes:footer' %}
 		</div>
-		<header class="navigation">
-			<h1 class="vendor">
-				<a href="{{ url('ms.cp.dashboard') }}">
-					{{ app.cfg.app.name }}
-					<span class="version">Mothership</span>
-				</a>
-			</h1>
-			<nav>
-				{{ render(controller('Message:Mothership:ControlPanel::Controller:Component#mainMenu')) }}
-			</nav>
-			<a class="logout" href="{{ url('ms.cp.logout') }}">Log Out</a>
-		</header>
-			{% block content %}{% endblock %}
-		{% include 'Message:Mothership:ControlPanel::includes:footer' %}
 	</div>
+</div>
 {% endblock %}

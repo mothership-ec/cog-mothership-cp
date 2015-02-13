@@ -48,6 +48,44 @@ input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
 }
 
+/* New CSS */
+
+.container {
+    position: relative;
+
+    width: 100%;
+    padding: 0px;
+    height: 100%;
+    margin: 0 auto;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.inner-container {
+	/*
+	 * Container used for off canvas elements; Mobile navigation &
+	 * shopping basket. Basket functionality will be present from
+	 * desktop to mobile devices.
+	 *
+	 * Transition animations are used to slide the container element
+	 * on opening / closing off canvas functionality.
+	 */
+    position: relative;
+
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    background: #fff;
+
+
+}
+
+.nav-open {
+	display: none;
+}
+
 
 
 /* Text and links

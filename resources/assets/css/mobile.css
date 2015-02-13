@@ -1,0 +1,78 @@
+/* ======================================================= */
+/*                                                         */
+/*                                                         */
+/*    Mothership         					               */
+/*                                                         */
+/*                                                         */
+/* ======================================================= */
+/*
+/*
+/*    Development by Message
+/*    http://www.message.co.uk
+/*
+/*    Control Panel Style Sheet Mobile v1.0
+/*
+/*
+/* ======================================================= */
+
+@media screen and (max-width: 768px) {
+
+	.container {
+		max-width: 768px;
+	}
+
+	.inner-container {
+		background: #FFF;
+	}
+
+	.vendor {
+		width: 100%;
+		display: block;
+	}
+
+	.vendor a {
+		width: auto;
+		position: relative;
+		margin-left: 40px;
+		display: block;
+	}
+
+	.nav-open {
+		display: block;
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		z-index: 9999;
+		color: #FFF;
+		font-size: 1.5em;
+		text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+	}
+
+	.nav-offcanvas {
+		margin-left: -300px;
+	}
+
+	.navigation {
+		position: absolute;
+		left: -300px;
+		width: 100%;
+		height: 100%;
+		z-index: 999;
+		max-width: 300px;
+		min-width: 0;
+	}
+
+	.navigation ol {
+		height: auto;
+	}
+
+	.navigation li {
+		position: relative;
+		float: none;
+		display: block;
+		height: auto;
+		border: 0;
+		border-bottom: 1px solid #234763;
+	}
+
+}

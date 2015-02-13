@@ -10,8 +10,7 @@
 /*    Development by Message
 /*    http://www.message.co.uk
 /*
-/*    Control Panel Style Sheet v1.0
-/*    Created by Richard McCartney
+/*    Control Panel Style Sheet v2.0
 /*
 /*
 /* ======================================================= */
@@ -25,7 +24,7 @@
 
 
 .navigation {
-	z-index: 999; /* No other z-index should be higher than this decloration */
+	z-index: 999;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -55,7 +54,7 @@
 	font-size: 0.6em;
 }
 
-.navigation .vendor {
+.vendor {
 	position: relative;
 	z-index: 1000;
 	float: left;
@@ -73,18 +72,23 @@
 	text-indent: 58px;
 }
 
-.navigation .vendor a {
+.vendor a {
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
+	color: #FFF;
+	text-decoration: none;
+	text-shadow: 0px 1px 1px rgba(000,000,000,0.25);
+	font-size: 0.6em;
+	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	padding: 14px 0 0 0;
 	background: url(../images/mothership-logo.png) 20px center no-repeat;
 	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.navigation .vendor span {
+.vendor span {
 	color: #A4B6C6;
 	font-size: 13px;
 	display: block;
@@ -137,6 +141,7 @@
 	position: absolute;
 	top: 14px;
 	right: 14px;
+	z-index: 999;
 	display: block;
 	width: 101px;
 	height: 31px;
