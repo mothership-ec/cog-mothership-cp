@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
 		link      = $('.nav-open'),
 		icon      = $('.nav-open i'),
 		close     = $('.close'),
-		offSet    = -300,
+		offSet    = -200,
 		open      = false,
 		mobile    = false;
 
@@ -93,6 +93,8 @@ jQuery(document).ready(function($) {
 	}
 
 	// $(window).on('resize-end', checkMobile);
-	$(window).on('resize', checkMobile);
+	if (mobile === false) {
+		$(window).on('resize', checkMobile);
+	}
 
 });

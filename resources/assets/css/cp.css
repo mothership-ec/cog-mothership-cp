@@ -789,18 +789,6 @@
 /* Main
 ------------------------------------------------------------ */
 
-
-
-.clear /* clear space for the navigation */ {
-	margin: 61px 0 40px 0;
-	width: 100%;
-	height: -moz-calc(100% - 101px);
-    height: -webkit-calc(100% - 101px);
-    height: calc(100% - 101px);
-}
-
-
-
 .content-slide {
 	position: absolute;
 	top: 61px;
