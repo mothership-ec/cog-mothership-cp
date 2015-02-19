@@ -1044,7 +1044,7 @@
 }
 
 .controls {
-	margin: 0 150px 0 0;
+	margin: 0;
 	width: auto;
 	height: 56px;
 	text-align: right;
@@ -1317,7 +1317,10 @@
 	position: relative;
 	overflow: hidden;
 	padding: 23px;
-
+	min-height: 100%;
+	min-height: -webkit-calc(100% - 100px);
+	min-height: -moz-calc(100% - 100px);
+	min-height: calc(100% - 100px);
 }
 
 
@@ -1389,14 +1392,6 @@
 	position: relative;
 	display: table-cell;
 	padding: 20px;
-}
-
-#save-content,
-.save-content {
-	position: fixed;
-	top: 77px;
-	right: 14px;
-	z-index: 12;
 }
 
 .short #save-content {
@@ -1822,7 +1817,7 @@
 .field input,
 .field textarea,
 .field select {
-	width: 70%;
+
 }
 
 .field label {
@@ -2198,19 +2193,6 @@ table .add-on p {
 
 
 
-.search.files .field {
-	margin-bottom: 0;
-}
-
-.file-upload {
-	float: left;
-}
-
-.file-upload input[type=file] {
-	margin-top: 0;
-	padding-top: 12px;
-	padding-left: 10px;
-}
 
 .sidebar .back {
 	display: block;
@@ -2951,21 +2933,6 @@ ol.order-details li {
 
 .reports-filtering .button {
 	margin-bottom: 10px;
-}
-
-hgroup .button.download,
-hgroup .button.upload {
-	float: right;
-	margin-right: 245px;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
-}
-
-hgroup .button.download {
-	margin-right: 0;
 }
 
 hgroup .button.download:hover {

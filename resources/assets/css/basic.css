@@ -55,7 +55,6 @@ input[type="search"]::-webkit-search-cancel-button {
 
     width: 100%;
     padding: 0px;
-    height: 100%;
     min-height: 100%;
     margin: 0 auto;
 
@@ -76,6 +75,7 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 0px;
     width: 100%;
     height: 100%;
+
     margin: 0 auto;
 
     background: #f4f4f6;
@@ -87,18 +87,44 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .search {
 	float: left;
+	margin: 14px;
 }
 
 .search label {
 	display: none;
 }
 
+.search input,
+.search button {
+	float: left;
+}
+
+.search button {
+	border: none;
+	background: none;
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 18px;
+	height: 18px;
+	color: transparent;
+}
+
 .search button:before {
 	color: #999;
 	content: "\f002";
-	font-size: 12px;
+	font-size: 18px;
 	font-family: 'FontAwesome';
 	line-height: 12px;
+}
+
+.file-upload {
+	float: left;
+}
+
+.file-upload input[type=file],
+.file-upload button {
+	float: left;
 }
 
 
@@ -187,7 +213,7 @@ textarea {
 	position: relative;
 	z-index: 0;
 	margin: 0 0 20px 0;
-	padding: 9px 7px 7px 7px;
+	padding: 9px 7px 3px 7px;
 	max-width: 100%;
 	width: 100%;
 	border: 1px solid #CCC;
@@ -256,7 +282,6 @@ input[type=time]:before {
 select {
 	margin: 0 0 20px 0;
 	padding: 6px 20px 4px 10px;
-	min-width: 475px;
 	border: 1px solid #b1b1b1;
 	background-repeat: no-repeat;
 	background-position: right center;
@@ -351,7 +376,7 @@ button:active,
 	content: '* Required field';
 	clear: both;
 	display: block;
-	margin: 0 0 10px 0;
+	margin: 20px 0;
 	float: left;
 	width: 100%;
 	font-size: 0.8em;
