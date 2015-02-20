@@ -7,8 +7,7 @@
 /* ======================================================= */
 /*
 /*
-/*    Development by Message
-/*    http://www.message.co.uk
+/*    http://mothership.ec
 /*
 /*    Control Panel Style Sheet v2.0
 /*
@@ -50,6 +49,7 @@
 	font-size: 0.875em;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
 .navigation h1 a {
 	font-size: 0.6em;
 }
@@ -178,8 +178,6 @@
 
 /* Dashboard / Welcome
 ------------------------------------------------------------ */
-
-
 
 .modules {
 	position: relative;
@@ -1674,39 +1672,6 @@ ul.search-results {
 	text-decoration: underline;
 }
 
-/* File Details */
-
-
-
-.file {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	overflow: auto;
-	margin: auto;
-	padding: 0;
-	max-width: 500px;
-	width: auto;
-	height: auto;
-	border: 1px solid #CCC;
-	-webkit-box-shadow: 0 1px 6px rgba(000,000,000,0.1);
-	-moz-box-shadow: 0 1px 6px rgba(000,000,000,0.1);
-	box-shadow: 0 1px 6px rgba(000,000,000,0.1);
-}
-
-.file-manager .button.delete {
-	position: fixed;
-	top: 87px;
-	right: 151px;
-	z-index: 12;
-	display: inline-block;
-	margin-right: 25px;
-}
-
-
-
 
 /* Products
 ------------------------------------------------------------ */
@@ -2524,41 +2489,6 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	top: -23px;
 	left: 170px;
 }
-
-
-/* Errors
--------------------------------------- */
-
-
-
-.container-error {
-	top: 35%;
-	left: 25%;
-	width: 50%;
-	height: auto;
-	text-align: center;
-}
-
-.container-error p,
-.container-error dd {
-	margin: 20px 0px;
-}
-
-.container-error dl {
-	padding-left: 150px;
-	text-align: left;
-}
-
-.container-error dt {
-	float: left;
-	margin-left: -150px;
-	font-weight: bold;
-}
-
-.e-505 p {
-	text-align: left;
-}
-
 
 /* Users
 --------------------------------------- */
