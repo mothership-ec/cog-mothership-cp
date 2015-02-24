@@ -1,18 +1,18 @@
 {
-	"name": "message/cog-mothership-cp",
+	"name": "mothership-ec/cog-mothership-cp",
 	"description": "Cog module for the Mothership Control Panel",
 	"keywords": ["mothership", "cp", "admin", "control panel", "cog"],
-	"homepage": "http://message.co.uk",
+	"homepage": "http://mothership.ec",
 	"license": "proprietary",
 	"authors": [
 		{
-			"name" : "The Message Development Team",
-			"email": "dev@message.co.uk"
+			"name" : "The Mothership Development Team",
+			"email": "dev@mothership.ec"
 		}
 	],
 	"support": {
-		"wiki"  : "http://server.local/wiki/projects/cog",
-		"issues": "http://github.com/messagedigital/cog-mothership-cp/issues"
+		"wiki"  : "http://wiki.mothership.ec/Control_Panel_module",
+		"issues": "http://github.com/mothership-ec/cog-mothership-cp/issues"
 	},
 	"autoload": {
 		"psr-4": {
@@ -20,17 +20,11 @@
 			"Message\\Mothership\\ControlPanel\\Test\\": "tests"
 		}
 	},
-	"repositories": [
-		{
-			"type": "composer",
-			"url" : "http://packages.message.co.uk"
-		}
-	],
 	"require": {
 		"php"        : ">=5.4.0",
 
-		"message/cog"     : "~3.6",
-		"message/cog-user": "~1.0"
+		"mothership-ec/cog"     : "~4.0",
+		"mothership-ec/cog-user": "~2.0"
 	},
 	"require-dev": {
 		"mockery/mockery": "dev-master"
