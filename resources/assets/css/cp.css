@@ -877,7 +877,8 @@
 	right: 0;
 }
 
-.content-slide button.create {
+.content-slide button.create,
+.content-slide button.save {
 	position: absolute;
 	right: 18px;
 }
@@ -1139,7 +1140,8 @@
 }
 
 .controls.product .button.download,
-.controls.product .button.upload {
+.controls.product .button.upload,
+.controls.refer-a-friend .button {
 	float: right;
 	margin-right: 0;
 	margin-left: 15px;
