@@ -881,6 +881,7 @@
 .content-slide button.save {
 	position: absolute;
 	right: 18px;
+	z-index: 9999;
 }
 
 
