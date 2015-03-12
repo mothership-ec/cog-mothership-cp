@@ -878,7 +878,7 @@
 }
 
 .content-slide button.create,
-.content-slide button.save {
+.content-slide button.ts {
 	position: absolute;
 	right: 18px;
 	z-index: 9999;
@@ -3639,4 +3639,8 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	position: absolute;
 	bottom: 0px;
 	right: 40px;
+}
+
+#options-form p {
+	clear: both;
 }
