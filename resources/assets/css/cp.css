@@ -877,9 +877,11 @@
 	right: 0;
 }
 
-.content-slide button.create {
+.content-slide button.create,
+.content-slide button.ts {
 	position: absolute;
 	right: 18px;
+	z-index: 9999;
 }
 
 
@@ -1139,7 +1141,8 @@
 }
 
 .controls.product .button.download,
-.controls.product .button.upload {
+.controls.product .button.upload,
+.controls.refer-a-friend .button {
 	float: right;
 	margin-right: 0;
 	margin-left: 15px;
@@ -3636,4 +3639,8 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	position: absolute;
 	bottom: 0px;
 	right: 40px;
+}
+
+#options-form p {
+	clear: both;
 }
