@@ -2699,6 +2699,18 @@ table.products form:after {
 	content: '';
 }
 
+.product-image .file-overlay {
+	height: 10px;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+
+.product-image:hover .file-overlay {
+	height: 50%;
+}
+
 .options .group {
 	padding: 20px 0 0 20px;
 }
@@ -2708,6 +2720,7 @@ table.products form:after {
 	clear: both;
 	float: none;
 }
+
 
 
 
