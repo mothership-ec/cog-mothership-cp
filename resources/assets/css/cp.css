@@ -2689,6 +2689,16 @@ table.products form:after {
 	margin-bottom: 10px;
 }
 
+.product-image .close form {
+	position: absolute;
+	right: 0;
+	width: auto;
+}
+
+.product-image .close form:after {
+	content: '';
+}
+
 .options .group {
 	padding: 20px 0 0 20px;
 }
