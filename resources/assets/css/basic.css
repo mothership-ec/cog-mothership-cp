@@ -421,11 +421,16 @@ input.button {
 }
 
 .button.icon {
-	padding: 5px 8px;
+	padding: 5px 9px;
+	width: 30px;
 }
 
 .button.icon:before {
-	margin-right: 0px;
+	margin-right: 9999em;
+}
+
+.order-listing-overview .button.icon {
+	width: 10px;
 }
 
 /* Submit, add, upload, create button styles */
