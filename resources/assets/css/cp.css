@@ -339,7 +339,7 @@
 	font-family: 'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	float: right;
 	position: absolute;
-	top: 7px;
+	top: 17px;
 	right: 0;
 }
 
@@ -402,19 +402,6 @@
 .activity a,
 .activity span {
 	width: 100% !important;
-}
-
-.module .button {
-	text-decoration: none;
-	font-size: 14px;
-	font-family: 'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	margin-top: 10px;
-}
-
-.button.comments:before {
-	font-family: 'FontAwesome';
-	content: '\f0e6';
-	margin-right: 4px;
 }
 
 /* Loading spinner
