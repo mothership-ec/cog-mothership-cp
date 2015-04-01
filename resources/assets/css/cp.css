@@ -2671,6 +2671,12 @@ table.products form:after {
 
 /* Product images */
 
+.product-image .button.icon {
+	z-index: 9999;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
 
 
 .product-image dl {
@@ -2705,6 +2711,7 @@ table.products form:after {
 	-moz-transition: all .5s;
 	-o-transition: all .5s;
 	transition: all .5s;
+	z-index: 0;
 }
 
 .product-image:hover .file-overlay {
