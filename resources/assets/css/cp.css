@@ -2676,7 +2676,7 @@ table.products form:after {
 .product-image dl {
 	display: block;
 	clear: both;
-	font-size: 14px;
+	font-size: 12px;
 	margin-top: 20px;
 }
 
@@ -2708,7 +2708,7 @@ table.products form:after {
 }
 
 .product-image:hover .file-overlay {
-	height: 60%;
+	height: 90%;
 }
 
 .options .group {
