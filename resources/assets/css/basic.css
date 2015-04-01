@@ -118,15 +118,6 @@ input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
 }
 
-.file-upload {
-	float: left;
-}
-
-.file-upload input[type=file],
-.file-upload button {
-	float: left;
-}
-
 
 /* Text and links
 ------------------------------------------------------------ */
