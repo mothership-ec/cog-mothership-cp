@@ -1069,12 +1069,17 @@ table {
 }
 
 table th {
-	padding: 5px 5px 5px 15px;
-	border: none;
-	background: none;
 	font-weight: normal;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	position: relative;
+	padding: 12px 15px 10px;
+	border-top: 1px solid #bccdda;
+	border-bottom: 1px solid #bccdda;
+	border-left: 1px solid #bccdda;
+	background: #e4f0f9 url(../../cogules/Message:Mothership:ControlPanel/images/table-filter.png) no-repeat top 0 right 10px;
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.7);
+	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.7);
+	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.7);
 }
 
 table td {
