@@ -262,6 +262,11 @@
 	box-sizing: border-box;
 }
 
+.module .wrap.scroll {
+	height: 90%;
+  	overflow-y: scroll;
+}
+
 .module .wrap .column {
 	float: left;
 	width: 50%;
