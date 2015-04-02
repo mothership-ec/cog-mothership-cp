@@ -11,7 +11,6 @@
 /*    http://www.message.co.uk
 /*
 /*    Control Panel Style Sheet v1.0
-/*    Created by Richard McCartney
 /*
 /*
 /* ======================================================= */
@@ -2672,12 +2671,19 @@ table.products form:after {
 
 /* Product images */
 
+.product-image .button.icon {
+	z-index: 9999;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
 
 
 .product-image dl {
 	display: block;
 	clear: both;
-	font-size: 14px;
+	font-size: 12px;
+	margin-top: 20px;
 }
 
 .product-image dt {
@@ -2689,6 +2695,29 @@ table.products form:after {
 	margin-bottom: 10px;
 }
 
+.product-image .close form {
+	position: absolute;
+	right: 0;
+	width: auto;
+}
+
+.product-image .close form:after {
+	content: '';
+}
+
+.product-image .file-overlay {
+	height: 15px;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+	z-index: 0;
+}
+
+.product-image:hover .file-overlay {
+	height: 90%;
+}
+
 .options .group {
 	padding: 20px 0 0 20px;
 }
@@ -2698,6 +2727,7 @@ table.products form:after {
 	clear: both;
 	float: none;
 }
+
 
 
 
