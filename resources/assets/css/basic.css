@@ -1640,16 +1640,15 @@ dd {
 
 .footer {
 	width: 100%;
-	height: 40px;
 	background: #111;
+	overflow: hidden;
 	color: #b1b3b4;
 	clear: both;
+	padding: 10px 15px;
 }
 
 .footer .copy {
 	float: left;
-	margin-top: 13px;
-	margin-left: 15px;
 	height: 18px;
 	font-size: 0.813em !important;
 	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -1663,8 +1662,6 @@ dd {
 
 .footer a.website {
 	float: right;
-	margin-top: 13px;
-	margin-right: 15px;
 	text-decoration: none;
 }
 
