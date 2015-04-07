@@ -261,6 +261,11 @@
 	box-sizing: border-box;
 }
 
+.module .wrap.scroll {
+	height: 90%;
+  	overflow-y: scroll;
+}
+
 .module .wrap .column {
 	float: left;
 	width: 50%;
@@ -338,7 +343,7 @@
 	font-family: 'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	float: right;
 	position: absolute;
-	top: 17px;
+	top: 7px;
 	right: 0;
 }
 
@@ -401,6 +406,19 @@
 .activity a,
 .activity span {
 	width: 100% !important;
+}
+
+.module .button {
+	text-decoration: none;
+	font-size: 14px;
+	font-family: 'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin-top: 10px;
+}
+
+.button.comments:before {
+	font-family: 'FontAwesome';
+	content: '\f0e6';
+	margin-right: 4px;
 }
 
 /* Loading spinner

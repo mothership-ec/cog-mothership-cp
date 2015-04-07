@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.3.0
+
+- Scrollable dashboard
+- Comments icon
+
 ## 3.2.0
 
 - Styling for product image deletion and option display
