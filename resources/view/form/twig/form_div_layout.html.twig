@@ -1,3 +1,5 @@
+{% extends 'Message:Cog::form:twig:form_div_layout' %}
+
 {# Widgets modified by Message #}
 {% block money_widget %}
    {% spaceless %}
@@ -26,3 +28,22 @@
 {% block help_widget %}
 	{% include 'Message:Mothership:ControlPanel::module:component:help' %}
 {% endblock help_widget %}
+
+{% block wysiwyg_widget %}
+	{% spaceless %}
+		{{ textarea_widget }}
+		<pre id="{{ preview_prefix ~ '_' ~ id }}"></pre>
+		<script>
+			(function() {
+				var markdown = document.querySelector('#{{ preview_prefix ~ '_' ~ id }}');
+				new MediumEditor('#{{ id }}', {
+					extensions: {
+						markdown: new MeMarkdown(function (md) {
+							markdown.innerText = md
+						})
+					}
+				});
+			})();
+		</script>
+	{% endspaceless %}
+{% endblock %}

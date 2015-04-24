@@ -37,6 +37,22 @@ class Services implements ServicesInterface
 
 			return $groups;
 		});
+
+		$services->extend('form.extensions', function($extensions, $c) {
+			$extensions[] = $c['form.cp_extension'];
+
+			return $extensions;
+		});
+
+		$services['form.cp_extension'] = function($c) {
+			return new ControlPanel\Form\ControlPanelExtension;
+		};
+
+		$services->extend('field.collection', function ($fields, $c) {
+			$fields->add(new ControlPanel\FieldType\Richtext($c['markdown.parser']));
+
+			return $fields;
+		});
 	}
 
 	public function registerStatistics($services)
