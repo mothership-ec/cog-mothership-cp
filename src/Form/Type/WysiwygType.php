@@ -9,12 +9,7 @@ class WysiwygType extends Form\AbstractType
 {
 	public function getName()
 	{
-		return 'wysiwyg';
-	}
-
-	public function getParent()
-	{
-		return 'textarea';
+		return 'cp_wysiwyg';
 	}
 
 	public function setDefaultOptions(OptionsResolver\OptionsResolverInterface $resolver)

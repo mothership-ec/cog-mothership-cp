@@ -22,6 +22,7 @@ class Services implements ServicesInterface
 
 		$services->extend('form.templates.twig', function($templates, $c) {
 			$templates[] = 'Message:Mothership:ControlPanel::form:twig:form_div_layout';
+			$templates[] = 'Message:Mothership:ControlPanel::form:twig:cp_ext_div_layout';
 
 			return $templates;
 		});

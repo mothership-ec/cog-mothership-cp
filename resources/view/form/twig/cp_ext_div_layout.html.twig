@@ -1,0 +1,20 @@
+{% extends 'Message:Cog::form:twig:form_div_layout' %}
+
+{% block cp_wysiwyg_widget %}
+	{% spaceless %}
+		{{ block('textarea_widget') }}
+		<pre id="{{ preview_prefix ~ '_' ~ id }}"></pre>
+		<script>
+			(function() {
+				var markdown = document.querySelector('#{{ preview_prefix ~ '_' ~ id }}');
+				new MediumEditor('#{{ id }}', {
+					extensions: {
+						markdown: new MeMarkdown(function (md) {
+							markdown.innerText = md
+						})
+					}
+				});
+			})();
+		</script>
+	{% endspaceless %}
+{% endblock %}
