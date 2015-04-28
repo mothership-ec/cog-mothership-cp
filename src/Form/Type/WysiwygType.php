@@ -12,10 +12,8 @@ class WysiwygType extends Form\AbstractType
 		return 'cp_wysiwyg';
 	}
 
-	public function setDefaultOptions(OptionsResolver\OptionsResolverInterface $resolver)
+	public function getParent()
 	{
-		$resolver->setDefaults([
-			'preview_prefix' => 'md_preview'
-		]);
+		return 'textarea';
 	}
 }

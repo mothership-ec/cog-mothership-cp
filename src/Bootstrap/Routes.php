@@ -12,6 +12,9 @@ class Routes implements RoutesInterface
 		$router['ms.cp.external']->setPrefix('/admin');
 
 		$router['ms.cp']->add('ms.cp.dashboard', '/', 'Message:Mothership:ControlPanel::Controller:Dashboard#index');
+		$router['ms.cp']->add('ms.cp.markdown.convert', '/markdown/convert', 'Message:Mothership:ControlPanel::Controller:Markdown#convert')
+			->setMethod('POST')
+		;
 
 		$router['ms.cp.external']->add('ms.cp.login', '/login', 'Message:Mothership:ControlPanel::Controller:Authentication#login');
 		$router['ms.cp.external']->add('ms.cp.logout', '/logout', 'Message:Mothership:ControlPanel::Controller:Authentication#logout');
@@ -19,5 +22,6 @@ class Routes implements RoutesInterface
 		$router['ms.cp.external']->add('ms.cp.password.request', '/password/request', 'Message:Mothership:ControlPanel::Controller:ForgottenPassword#request');
 		$router['ms.cp.external']->add('ms.cp.password.request.email_prefill', '/password/request/{email}', 'Message:Mothership:ControlPanel::Controller:ForgottenPassword#request');
 		$router['ms.cp.external']->add('ms.cp.password.reset', '/password/reset/{email}/{hash}', 'Message:Mothership:ControlPanel::Controller:ForgottenPassword#reset');
+
 	}
 }

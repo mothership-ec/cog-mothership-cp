@@ -2,19 +2,41 @@
 
 {% block cp_wysiwyg_widget %}
 	{% spaceless %}
-		{{ block('textarea_widget') }}
-		<pre id="{{ preview_prefix ~ '_' ~ id }}"></pre>
+		{% set editable_id = 'editable_' ~ id %}
+		<ul>
+			<li id="preview-link">Preview editor</li>
+			<li id="markdown-link">Markdown editor</li>
+		</ul>
+		<div id="preview-box">
+			<div id="{{ editable_id }}">{{ app.md_parser.transform(value) | raw }}</div>
+		</div>
+		<div class="markdown-box">
+			{{ block('textarea_widget') }}
+		</div>
 		<script>
-			(function() {
-				var markdown = document.querySelector('#{{ preview_prefix ~ '_' ~ id }}');
-				new MediumEditor('#{{ id }}', {
+			(function () {
+				var md_content = $('#{{ id }}');
+				new MediumEditor($('#{{ editable_id }}'), {
 					extensions: {
 						markdown: new MeMarkdown(function (md) {
-							markdown.innerText = md
-						})
+									md_content.val(md);
+								}
+						)
 					}
 				});
 			})();
+
+			$('#preview-link').click(function() {
+				$.ajax({
+					url: '/admin/markdown/convert',
+					type: 'post',
+					dataType: 'json',
+					data: {'md': $('#{{ id }}').val()},
+					success: function(result) {
+						$('#{{ editable_id }}').innerHTML = result;
+					}
+				});
+			});
 		</script>
 	{% endspaceless %}
 {% endblock %}

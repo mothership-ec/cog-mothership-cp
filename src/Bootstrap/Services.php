@@ -54,6 +54,14 @@ class Services implements ServicesInterface
 
 			return $fields;
 		});
+
+		$services->extend('templating.globals', function ($globals, $c) {
+			$globals->set('md_parser', function($c) {
+				return $c['markdown.parser'];
+			});
+
+			return $globals;
+		});
 	}
 
 	public function registerStatistics($services)
