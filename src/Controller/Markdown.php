@@ -11,7 +11,7 @@ class Markdown extends Controller
 		$md = $this->get('request')->get('md');
 		$md = $md ? $this->get('markdown.parser')->transform($md) : '';
 
-		return $this->render('Message:Mothership:ControlPanel::markdown:render', [
+		return $this->render('Message:Mothership:ControlPanel::markdown:convert', [
 			'md' => $md,
 		]);
 	}

@@ -13,7 +13,7 @@ class Routes implements RoutesInterface
 
 		$router['ms.cp']->add('ms.cp.dashboard', '/', 'Message:Mothership:ControlPanel::Controller:Dashboard#index');
 		$router['ms.cp']->add('ms.cp.markdown.convert', '/markdown/convert', 'Message:Mothership:ControlPanel::Controller:Markdown#convert')
-			->setMethod('POST')
+			->setMethod('GET')
 		;
 
 		$router['ms.cp.external']->add('ms.cp.login', '/login', 'Message:Mothership:ControlPanel::Controller:Authentication#login');

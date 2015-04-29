@@ -4,36 +4,74 @@
 	{% spaceless %}
 		{% set editable_id = 'editable_' ~ id %}
 		<ul>
-			<li id="preview-link">Preview editor</li>
-			<li id="markdown-link">Markdown editor</li>
+			<li id="preview_link_{{ id }}" data-disabled="1">Preview editor</li>
+			<li id="markdown_link_{{ id }}" data-disabled="0">Markdown editor</li>
 		</ul>
-		<div id="preview-box">
+		<div id="preview-box" style="background-color: white">
 			<div id="{{ editable_id }}">{{ app.md_parser.transform(value) | raw }}</div>
 		</div>
 		<div class="markdown-box">
 			{{ block('textarea_widget') }}
 		</div>
 		<script>
-			(function () {
-				var md_content = $('#{{ id }}');
-				new MediumEditor($('#{{ editable_id }}'), {
-					extensions: {
-						markdown: new MeMarkdown(function (md) {
-									md_content.val(md);
-								}
-						)
-					}
-				});
-			})();
+			$(document).ready(function() {
+				var markdown = $('#{{ id }}'),
+						wysiwyg = $('#{{ editable_id }}'),
+						previewLink = $('#preview_link_{{ id }}'),
+						markdownLink = $('#markdown_link_{{ id }}'),
+						markdownText = markdown.val()
+						;
 
-			$('#preview-link').click(function() {
-				$.ajax({
-					url: '/admin/markdown/convert',
-					type: 'post',
-					dataType: 'json',
-					data: {'md': $('#{{ id }}').val()},
-					success: function(result) {
-						$('#{{ editable_id }}').innerHTML = result;
+				function showWysiwyg() {
+					markdown.hide();
+					wysiwyg.show();
+					previewLink.attr('data-disabled', 1);
+					markdownLink.attr('data-disabled', 0);
+				}
+
+				(function () {
+					new MediumEditor(wysiwyg, {
+						extensions: {
+							markdown: new MeMarkdown(function (md) {
+										markdown.val(md);
+									}
+							)
+						},
+						disablePlaceholders: true,
+						firstHeader: 'h2',
+						secondHeader: 'h3'
+					});
+				})();
+
+				markdown.hide();
+
+				previewLink.click(function () {
+					if (previewLink.data('disabled') == '0') {
+
+							if (markdown.val() !== markdownText) {
+								$.ajax({
+									url: '/admin/markdown/convert',
+									type: 'get',
+									data: {'md': markdown.val()},
+									success: function (result) {
+										wysiwyg.html(result);
+										showWysiwyg();
+										markdownText = markdown.val();
+									}
+								});
+							} else {
+								showWysiwyg();
+							}
+					}
+
+				});
+
+				markdownLink.click(function () {
+					if (markdownLink.data('disabled') == '0') {
+						wysiwyg.hide();
+						markdown.show();
+						markdownLink.attr('data-disabled', 1);
+						previewLink.attr('data-disabled', 0);
 					}
 				});
 			});
