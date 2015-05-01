@@ -3699,6 +3699,12 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 
 .text-editor {
 	clear: both;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	min-width: 350px;
+	max-width: 1050px;
+	margin: 10px 0;
 }
 
 .text-view-change {
@@ -3707,9 +3713,7 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: -1px 0 0;
 	padding: 0 23px 0 0;
-	min-width: 1005px;
 	width: 100%;
 	height: 56px;
 	border: 1px solid #C8C8C8;
@@ -3741,6 +3745,77 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 
 .text-view-change li:hover {
 	cursor: pointer;
+}
+
+.ui-resizable {
+	position: relative;
+}
+.ui-resizable-handle {
+	position: absolute;
+	font-size: 0.1px;
+	display: block;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+	display: none;
+}
+.ui-resizable-n {
+	cursor: n-resize;
+	height: 7px;
+	width: 100%;
+	top: -5px;
+	left: 0;
+}
+.ui-resizable-s {
+	cursor: s-resize;
+	height: 7px;
+	width: 100%;
+	bottom: -5px;
+	left: 0;
+}
+.ui-resizable-e {
+	cursor: e-resize;
+	width: 7px;
+	right: -5px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-w {
+	cursor: w-resize;
+	width: 7px;
+	left: -5px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-se {
+	cursor: se-resize;
+	width: 12px;
+	height: 12px;
+	right: 1px;
+	bottom: 1px;
+}
+.ui-resizable-sw {
+	cursor: sw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	bottom: -5px;
+}
+.ui-resizable-nw {
+	cursor: nw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	top: -5px;
+}
+.ui-resizable-ne {
+	cursor: ne-resize;
+	width: 9px;
+	height: 9px;
+	right: -5px;
+	top: -5px;
 }
 
 .text-view-change li[data-disabled="1"]:after {
@@ -3783,6 +3858,7 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	padding: 20px;
 	max-width: 100%;
 	width: 100%;
+	min-height: 500px;
 	background: #FFF;
 	border: 1px solid #CCC;
 	-webkit-border-radius: 0;
@@ -3796,6 +3872,9 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	transition: border .15s linear, color .15s linear, box-shadow .15s linear;
 	float: none;
 	overflow: auto;
-  	height: 150px;
   	line-height: 1.5em;
+  	resize: none;
 }
+
+
+	
