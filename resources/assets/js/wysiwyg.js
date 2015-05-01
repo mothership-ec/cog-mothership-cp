@@ -1,3 +1,18 @@
+/* 
+/*
+/* Text Editor JavaScript 
+/*
+/* ------------------------------------------ */
+
+/* JQuery UI elements for resizing https://jqueryui.com/resizable */ 
+
+$(function() {
+    $( ".textarea" ).resizable();
+
+ });
+
+/* Jquery to correspond with Medium Text Editor https://github.com/daviferreira/medium-editor */
+
 function wysiwyg(id, value) {
 	var markdown = $('#' + id),
 		wysiwyg = $('#editable_' + id),
@@ -60,3 +75,5 @@ function wysiwyg(id, value) {
 		}
 	});
 }
+
+
