@@ -3774,9 +3774,9 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	border-bottom: 8px solid #C8C8C8;
 	border-left: 8px solid transparent;
 	content: '';
- } 
+ }
 
-#preview-box .textarea,
+.preview-box .textarea,
 .markdown-box textarea {
 	position: relative;
 	z-index: 0;
@@ -3803,6 +3803,12 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	overflow: auto;
   	line-height: 1.5em;
   	resize: none;
+}
+
+.preview-box,
+.markdown-box {
+	width:100%;
+	height:100%;
 }
 
 .ui-resizable {
