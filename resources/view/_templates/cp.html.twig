@@ -3,8 +3,8 @@
 {% block stylesheets %}
 	{{ parent() }}
 	{% stylesheets
-		'@Message:Mothership:ControlPanel::resources/assets/css/cp.css'
 		'@Message:Mothership:ControlPanel::resources/assets/css/components/medium-editor/medium-editor.css'
+		'@Message:Mothership:ControlPanel::resources/assets/css/cp.css'
 
 		output='/assets/css/ms_cp.css'
 		filter='csscogulerewrite,?cssmin'

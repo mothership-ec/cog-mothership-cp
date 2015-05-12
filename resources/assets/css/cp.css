@@ -3827,6 +3827,17 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	height:100%;
 }
 
+/* Medium Overrides */
+.medium-editor-anchor-preview a {
+	color: #444;
+}
+
+.medium-editor-toolbar-form .medium-editor-toolbar-input,
+.medium-editor-toolbar-form .medium-editor-toolbar-input:focus {
+	border: solid #CCC 1px;
+}
+
+
 .ui-resizable {
 	position: relative;
 }
