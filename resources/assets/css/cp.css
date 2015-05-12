@@ -3784,7 +3784,6 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: 0 0 20px 0;
 	padding: 20px;
 	max-width: 100%;
 	width: 100%;
@@ -3843,49 +3842,49 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	display: none;
 }
 .ui-resizable-n {
-	cursor: n-resize;
+	cursor: ns-resize;
 	height: 7px;
 	width: 100%;
 	top: -5px;
 	left: 0;
 }
 .ui-resizable-s {
-	cursor: s-resize;
+	cursor: ns-resize;
 	height: 7px;
 	width: 100%;
 	bottom: -5px;
 	left: 0;
 }
 .ui-resizable-e {
-	cursor: e-resize;
+	cursor: ew-resize;
 	width: 7px;
 	right: -5px;
 	top: 0;
 	height: 100%;
 }
 .ui-resizable-w {
-	cursor: w-resize;
+	cursor: ew-resize;
 	width: 7px;
 	left: -5px;
 	top: 0;
 	height: 100%;
 }
 .ui-resizable-se {
-	cursor: se-resize;
+	cursor: nwse-resize;
 	width: 12px;
 	height: 12px;
 	right: 1px;
 	bottom: 1px;
 }
 .ui-resizable-sw {
-	cursor: sw-resize;
+	cursor: nesw-resize;
 	width: 9px;
 	height: 9px;
 	left: -5px;
 	bottom: -5px;
 }
 .ui-resizable-nw {
-	cursor: nw-resize;
+	cursor: nwse-resize;
 	width: 9px;
 	height: 9px;
 	left: -5px;
