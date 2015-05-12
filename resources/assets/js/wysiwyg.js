@@ -9,7 +9,7 @@
 
 function wysiwyg(id, value, sectionClass) {
 	var markdown = $('#' + id),
-		wysiwyg = $('#editable_' + id),
+		preview = $('#editable_' + id),
 		previewLink = $('#preview_link_' + id),
 		markdownLink = $('#markdown_link_' + id),
 		markdownText = value,
@@ -22,14 +22,14 @@ function wysiwyg(id, value, sectionClass) {
 	function showWysiwyg() {
 		markdown.hide();
 		markdownBox.hide();
-		wysiwyg.show();
+		preview.show();
 		previewBox.show();
 		previewLink.attr('data-disabled', 1);
 		markdownLink.attr('data-disabled', 0);
 	}
 
 	(function () {
-		new MediumEditor(wysiwyg, {
+		new MediumEditor(preview, {
 			extensions: {
 				markdown: new MeMarkdown(function (md) {
 						markdown.val(md);
@@ -54,7 +54,7 @@ function wysiwyg(id, value, sectionClass) {
 					type: 'get',
 					data: {'md': markdown.val()},
 					success: function (result) {
-						wysiwyg.html(result);
+						preview.html(result);
 						showWysiwyg();
 						markdownText = markdown.val();
 					}
@@ -68,7 +68,7 @@ function wysiwyg(id, value, sectionClass) {
 
 	markdownLink.click(function () {
 		if (markdownLink.data('disabled') == '0') {
-			wysiwyg.hide();
+			preview.hide();
 			previewBox.hide();
 			markdown.show();
 			markdownBox.show();
@@ -79,14 +79,15 @@ function wysiwyg(id, value, sectionClass) {
 
 	section.resizable({
 		resize: function(event, ui) {
-			var height = section.height() - menu.height(),
+			var height = section.innerHeight() - menu.outerHeight(),
 				width = section.width();
 
-			wysiwyg.height(height).width(width);
-			previewBox.height(height).width(width);
-			markdown.height(height).width(width);
-			markdownBox.height(height).width(width);
-			section.height(height + menu.height()).width(width);
+			previewBox.height(section.innerHeight() - menu.outerHeight()).width(section.width());
+			preview.outerHeight(previewBox.innerHeight()).width(previewBox.width());
+			markdownBox.height(previewBox.height()).width(previewBox.width());
+			markdown.outerHeight(markdownBox.innerHeight()).width(width);
+			section.innerHeight(height + menu.outerHeight()).width(width);
 		}
 	});
+
 }
