@@ -77,20 +77,19 @@ function wysiwyg(id, value, sectionClass) {
 		}
 	});
 
+	console.log(section.height());
 
 	section.resizable({
 		resize: function(event, ui) {
 			var height = section.height() - menu.height();
-			var width = section.width();
+				width = section.width();
 
-			wysiwyg.height(height);
-			wysiwyg.width(width);
-			previewBox.height(height);
-			previewBox.width(width);
-			markdown.height(height);
-			markdown.width(width);
-			markdownBox.height(height);
-			markdownBox.width(width);
+			wysiwyg.height(height).width(width);
+			previewBox.height(height).width(width);
+			markdown.height(height).width(width);
+			markdownBox.height(height).width(width);
+
+			console.log(section.height());
 		}
 	});
 }

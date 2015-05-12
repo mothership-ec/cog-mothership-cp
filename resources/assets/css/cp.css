@@ -3704,6 +3704,7 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	height: 100%;
 	min-width: 350px;
 	max-width: 1050px;
+/*	max-height: 1000px;*/
 	margin: 10px 0;
 }
 
@@ -3750,7 +3751,7 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 .text-view-change li[data-disabled="1"]:after {
 	position: absolute;
 	left: 50%;
-	bottom: -5px;
+	bottom: -4px;
 	margin: 0 0 0 -10px;
   	z-index: 9999;
 	display: block;
@@ -3803,6 +3804,22 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	overflow: auto;
   	line-height: 1.5em;
   	resize: none;
+}
+
+.preview-box .textarea ul li,
+.preview-box .textarea ol li,
+.markdown-box textarea ul li,
+.markdown-box textarea ol li {
+	margin: 0 10px 10px 25px;
+}
+
+.preview-box .textarea h1,
+.preview-box .textarea h2,
+.preview-box .textarea h3,
+.preview-box .textarea h4,
+.preview-box .textarea h5 {
+	border: 0;
+	margin-bottom: 5px;
 }
 
 .preview-box,
