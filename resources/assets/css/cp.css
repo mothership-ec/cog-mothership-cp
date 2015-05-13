@@ -3828,8 +3828,27 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 }
 
 /* Medium Overrides */
+
+.medium-editor-anchor-preview {
+	padding: 5px;
+}
+
 .medium-editor-anchor-preview a {
 	color: #444;
+}
+
+.medium-editor-toolbar-form,
+.medium-editor-anchor-preview {
+	padding: 10px;
+	border: 1px solid #ccc;
+	background-color: #f9f9f9;
+ 	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#f1f1f1));
+  	background-image: -webkit-linear-gradient(top, #f9f9f9, #f1f1f1);
+  	background-image: -moz-linear-gradient(top, #f9f9f9, #f1f1f1);
+  	background-image: -o-linear-gradient(top, #f9f9f9, #f1f1f1);
+  	background-image: -ms-linear-gradient(top, #f9f9f9, #f1f1f1);
+  	background-image: linear-gradient(top, #f9f9f9, #f1f1f1);
+  	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f1f1f1');
 }
 
 .medium-editor-toolbar-form .medium-editor-toolbar-input,
@@ -3840,7 +3859,21 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 
 .ui-resizable {
 	position: relative;
+	min-height: 100px;
 }
+
+.ui-resizable:after {
+	content: "\f065";
+	padding: 5px;
+	font-family: 'FontAwesome';
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	color: #666;
+	background: #efefef;
+	border: 1px solid #ccc;
+}
+
 .ui-resizable-handle {
 	position: absolute;
 	font-size: 0.1px;
