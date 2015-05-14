@@ -68,6 +68,15 @@ function wysiwyg(id, value, sectionClass) {
 
 	markdownLink.click(function () {
 		if (markdownLink.data('disabled') == '0') {
+			var height = section.innerHeight() - menu.outerHeight(),
+				width = section.width();
+
+			previewBox.height(section.innerHeight() - menu.outerHeight()).width(section.width());
+			preview.outerHeight(previewBox.innerHeight()).width(previewBox.width());
+			markdownBox.height(previewBox.height()).width(previewBox.width());
+			markdown.outerHeight(markdownBox.innerHeight()).width(width);
+			section.innerHeight(height + menu.outerHeight()).width(width);
+
 			preview.hide();
 			previewBox.hide();
 			markdown.show();
