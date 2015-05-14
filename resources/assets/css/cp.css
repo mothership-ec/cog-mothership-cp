@@ -3863,15 +3863,15 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 }
 
 .ui-resizable:after {
-	content: "\f065";
-	padding: 5px;
-	font-family: 'FontAwesome';
+	content: "";
 	position: absolute;
 	bottom: 0px;
 	right: 0px;
-	color: #666;
-	background: #efefef;
-	border: 1px solid #ccc;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 15px 15px;
+	border-color: transparent transparent #cccccc transparent;
 }
 
 .ui-resizable-handle {
