@@ -7,7 +7,7 @@
 
 /* Jquery to correspond with Medium Text Editor https://github.com/daviferreira/medium-editor */
 
-function wysiwyg(id, value, sectionClass) {
+function wysiwyg(id, value) {
 	var markdown = $('#' + id),
 		preview = $('#editable_' + id),
 		previewLink = $('#preview_link_' + id),
