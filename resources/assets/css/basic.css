@@ -116,6 +116,13 @@ h5 {
 	font-size: 1.000em;
 }
 
+blockquote {
+	border-left: 3px solid #EFEFEF;
+	margin: 10px 10px 20px 10px;
+	padding: 5px 20px;
+	font-style: italic;
+	color: #666;
+}
 
 
 /* Form elements
