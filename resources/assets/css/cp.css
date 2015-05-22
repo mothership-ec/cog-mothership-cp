@@ -3700,12 +3700,12 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 .text-editor {
 	clear: both;
 	overflow: hidden;
-	width: 100%;
+	width: 70%;
 	height: 100%;
 	min-width: 350px;
 	max-width: 1050px;
-/*	max-height: 1000px;*/
-	margin: 10px 0;
+	margin: 10px 0 30px 0;
+	float: left;
 }
 
 .text-view-change {
