@@ -3,6 +3,7 @@
 {% block stylesheets %}
 	{{ parent() }}
 	{% stylesheets
+		'@Message:Mothership:ControlPanel::resources/assets/css/components/medium-editor/medium-editor.css'
 		'@Message:Mothership:ControlPanel::resources/assets/css/cp.css'
 
 		output='/assets/css/ms_cp.css'
@@ -33,6 +34,9 @@
 		'@Message:Mothership:ControlPanel::resources/assets/js/select2.min.js'
 		'@Message:Mothership:ControlPanel::resources/assets/js/jquery.dataTables.min.js'
 		'@Message:Mothership:ControlPanel::resources/assets/js/dataTables.column-filter.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/components/medium-editor/medium-editor.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/components/medium-editor/me-markdown.standalone.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/wysiwyg.js'
 
 		output='/assets/js/ms_cp.js'
 		filter='?jsmin'
