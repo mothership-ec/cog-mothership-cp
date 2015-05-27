@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.4.1
+
+- Upgraded Medium editor markdown plugin to version 1.2.0, resolves issue where backticks would break the preview
+
 ## 3.4.0
 
 - Installed the <a href="https://github.com/daviferreira/medium-editor">Medium</a> WYSIWYG editor with the <a href="https://github.com/IonicaBizau/medium-editor-markdown">the markdown plugin</a>
