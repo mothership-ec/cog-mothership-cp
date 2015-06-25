@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.4.2
+
+- Amended text when an error is thrown in the admin panel while in `live` mode, replaced 'Message' with 'the developer'
+
 ## 3.4.1
 
 - Upgraded Medium editor markdown plugin to version 1.2.0, resolves issue where backticks would break the preview
