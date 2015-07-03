@@ -376,7 +376,7 @@ label[for='form_balance_amount'] {
 .button {
 	display: inline-block;
 	margin-bottom: 0;
-	padding: 12px 15px;
+	padding: 10px 15px;
 	border: 1px solid #CCC;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -412,7 +412,7 @@ label[for='form_balance_amount'] {
 }
 
 .button.small {
-	padding: 7px 13px 5px;
+	padding: 7px 13px;
 }
 
 input.button {

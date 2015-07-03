@@ -176,7 +176,7 @@ html, body {
 
 .login-form label[for="login_remember"] {
 	position: absolute;
-	top: 79px;
+	top: 75px;
 	left: 25px;
 	display: block !important;
 }
