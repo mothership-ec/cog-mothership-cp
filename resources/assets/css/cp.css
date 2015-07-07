@@ -6,9 +6,7 @@
 /*                                                         */
 /* ======================================================= */
 /*
-/*
-/*    Development by Message
-/*    http://www.message.co.uk
+/*    http://www.mothership.ec
 /*
 /*    Control Panel Style Sheet v1.0
 /*
@@ -87,6 +85,7 @@
 	left: 0;
 	padding: 14px 0 0 0;
 	background: url(../images/mothership-logo.png) 20px center no-repeat;
+	background-size: 32px;
 	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
