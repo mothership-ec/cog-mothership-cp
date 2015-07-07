@@ -919,7 +919,7 @@ input.button {
 }
 
 .button.button-group.small span {
-	padding: 7px 13px 5px;
+	padding: 7px 13px;
 }
 
 .button.button-group span:before {
@@ -1590,9 +1590,7 @@ dd {
 	float: left;
 	margin-top: 13px;
 	margin-left: 15px;
-	padding-left: 30px;
 	height: 18px;
-	background: url(../images/message-logo-footer.png) no-repeat left;
 	font-size: 0.813em !important;
 	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 }

@@ -1660,7 +1660,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0;
-	padding: 20px 22px 12px;
+	padding: 12px 22px;
 	width: 100%;
 	border-bottom: 1px solid #CCC;
 	background: none;
@@ -1843,8 +1843,8 @@
 
 .repeatable-group .group .title {
 	margin-bottom: 0;
-	padding: 20px 22px 12px;
-	min-height: 52px;
+	padding: 12px 22px;
+	min-height: 24px;
 	border: none;
 	background-color: #f9f9f9;
 	background-image: url(../images/select-arrow-light.png);
