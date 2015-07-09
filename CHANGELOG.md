@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.4.3
+
+- Replaced Proxima Nova font with Lato
+- Replaced 'Message' copyright with 'Mothership'
+- Removed Message logo from footer
+- Replaced Mothership logo with higher resolution version for retina displays
+
 ## 3.4.2
 
 - Amended text when an error is thrown in the admin panel while in `live` mode, replaced 'Message' with 'the developer'
