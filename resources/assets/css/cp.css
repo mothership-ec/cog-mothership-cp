@@ -6,9 +6,7 @@
 /*                                                         */
 /* ======================================================= */
 /*
-/*
-/*    Development by Message
-/*    http://www.message.co.uk
+/*    http://www.mothership.ec
 /*
 /*    Control Panel Style Sheet v1.0
 /*
@@ -52,7 +50,7 @@
 	text-decoration: none;
 	text-shadow: 0px 1px 1px rgba(000,000,000,0.25);
 	font-size: 0.875em;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 .navigation h1 a {
 	font-size: 0.6em;
@@ -87,7 +85,8 @@
 	left: 0;
 	padding: 14px 0 0 0;
 	background: url(../images/mothership-logo.png) 20px center no-repeat;
-	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background-size: 32px;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 .navigation .vendor span {
@@ -119,7 +118,7 @@
 .navigation li a {
 	display: block;
 	padding: 0 1em;
-	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 .navigation li:hover {
@@ -156,7 +155,7 @@
 	text-align: center;
 	text-shadow: none;
 	font-size: 0.875em;
-	font-family: 'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
 	line-height: 28px;
 }
 
@@ -239,6 +238,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	font-family:'Lato', Helvetica, Arial, sans-serif !important;
 }
 
 .module .title {
@@ -282,7 +282,7 @@
 .module .large-text {
 	font-size: 7.5em;
 	margin: 0;
-	font-family: 'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Lato-Black', Helvetica, Arial, sans-serif;
 	height: 200px;
 	line-height: 230px;
 }
@@ -340,8 +340,7 @@
 .module a.restore {
 	text-decoration: none;
 	font-size: 14px;
-	font-family: 'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	float: right;
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
 	position: absolute;
 	top: 7px;
 	right: 0;
@@ -357,10 +356,11 @@
 	width: 100% !important;
 }
 
-.module text {
-	font-family: 'Proxima N W15 Smbd' !important;
-	font-weight: normal;
+.module .text {
+	font-family:'Lato', Helvetica, Arial, sans-serif !important;
+
 }
+
 
 .sq {
 	max-width: 330px;
@@ -411,7 +411,7 @@
 .module .button {
 	text-decoration: none;
 	font-size: 14px;
-	font-family: 'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
 	margin-top: 10px;
 }
 
@@ -447,7 +447,7 @@
 	left: 20px;
 	color: #FFF;
 	font-size: 1.5em;
-	font-family: 'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 .spinner {
@@ -554,7 +554,7 @@
 	text-align: left;
 	text-indent: 0px;
 	font-size: 0.875em;
-	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 	-webkit-appearance: none;
 }
 
@@ -586,7 +586,7 @@
 	box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1), 0px 1px 3px rgba(000,000,000,0.3);
 	color: #b2b2b2;
 	text-shadow: 0px -1px 0 #111;
-	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#343434', EndColorStr='#272727');
 }
 
@@ -680,8 +680,8 @@
 	text-shadow: 0px 1px 1px rgba(000,000,000,0.25);
 	white-space: nowrap;
 	font-size: 0.875em;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
+}	
 
 .sidebar .menu ol {
 	float: left;
@@ -750,8 +750,7 @@
 	background: #111;
 	text-align: center;
 	text-indent: 0 !important;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	line-height: 16px;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 
@@ -941,7 +940,7 @@
 	display: block;
 	color: #807f7f;
 	font-size: 0.7em;
-	font-family: 'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato', Helvetica, Arial, sans-serif;
 }
 
 .title h2  {
@@ -1028,7 +1027,7 @@
 	vertical-align: top;
 	text-align: center;
 	text-shadow: none;
-	font: 0.6em normal 'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+	font: 0.6em normal 'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 .flag.active {
@@ -1086,8 +1085,8 @@
 	border-right: 1px solid #C8C8C8;
 	text-decoration: 0px 1px 0px rgba(255,255,255,1.0);
 	font-size: 0.938em;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+	font-family:'Lato', Helvetica, Arial, sans-serif;
+}	
 
 .topbar .tabs li:hover {
 	height: 54px;
@@ -1218,7 +1217,7 @@
 	color: #333 !important;
 	text-shadow: 0px 1px 0px #FFF !important;
 	font-size: 1.0em;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 .delete-page:before {
@@ -1609,8 +1608,8 @@
 
 .option-block p strong {
 	font-weight: normal;
-	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
+}	
 
 .option-block .type {
 	margin-left: 55px;
@@ -1660,7 +1659,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0;
-	padding: 20px 22px 12px;
+	padding: 12px 22px;
 	width: 100%;
 	border-bottom: 1px solid #CCC;
 	background: none;
@@ -1747,7 +1746,7 @@
 .content dt {
 	width: 30%;
 	float: left;
-	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
 	min-height: 20px;
 	white-space: nowrap;
 	overflow: hidden;
@@ -1843,8 +1842,8 @@
 
 .repeatable-group .group .title {
 	margin-bottom: 0;
-	padding: 20px 22px 12px;
-	min-height: 52px;
+	padding: 12px 22px;
+	min-height: 24px;
 	border: none;
 	background-color: #f9f9f9;
 	background-image: url(../images/select-arrow-light.png);
@@ -1965,7 +1964,7 @@
 .column h5 {
 	margin: 20px 0px;
 	font-size: 15px;
-	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 
@@ -2029,7 +2028,7 @@ table td .add-on {
 	box-shadow: inset 0 0 0 1px #CCC;
 	vertical-align: middle;
 	text-align: center;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#e6e6e6');
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -2104,7 +2103,7 @@ table .add-on p {
 	margin: 0 0 10px 0;
 	width: 30%;
 	white-space: nowrap;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 .details dd {
@@ -2191,7 +2190,7 @@ table .add-on p {
 .help a {
 	visibility: hidden;
 	text-decoration: none;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 .help a:before {
@@ -2344,7 +2343,7 @@ table .add-on p {
 	color: #FFF;
 	text-align: left;
 	text-decoration: none;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 .sidebar .back:before {
@@ -2801,7 +2800,7 @@ table.products form:after {
 	width: 100%;
 	color: #AAA;
 	white-space: nowrap;
-	font-family:'Proxima N W15 Reg It', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-style: italic;
 }
 
 
@@ -2954,7 +2953,7 @@ td.partial {
 	margin-left: -150px;
 	width: 150px;
 	font-weight: normal;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
 
 }
 
@@ -3004,7 +3003,7 @@ ol.order-details li {
 	text-align: right;
 	text-align: right;
 	font-weight: normal;
-	font-family: 'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato', Helvetica, Arial, sans-serif;
 }
 
 .total-summary td {
@@ -3074,7 +3073,7 @@ ol.order-details li {
 	overflow: hidden;
 	width: 150px;
 	font-weight: normal;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 .voucher-details.col {
@@ -3402,7 +3401,7 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	margin-right: 5%;
 	margin-bottom: 20px;
 	width: 30%;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 .service-list dd {
@@ -3738,7 +3737,7 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	border-right: 1px solid #C8C8C8;
 	text-decoration: 0px 1px 0px rgba(255,255,255,1.0);
 	font-size: 0.938em;
-	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
 	padding: 0 1em;
 	text-shadow: 0px 1px 0px rgba(255,255,255,1.0);
 	line-height: 61px;
@@ -3794,7 +3793,7 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	-moz-border-radius: 0;
 	border-radius: 0;
 	color: #333;
-	font: normal 0.938em/0.938em 'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font: normal 0.938em/0.938em 'Lato', Helvetica, Arial, sans-serif;
 	-webkit-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
 	-moz-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
 	-ms-transition: border .15s linear, color .15s linear, box-shadow .15s linear;

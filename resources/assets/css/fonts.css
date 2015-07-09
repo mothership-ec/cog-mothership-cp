@@ -7,11 +7,9 @@
 /* ======================================================= */
 /*
 /*
-/*    Development by Richard McCartney @ Message
-/*    http://www.message.co.uk
+/*    http://www.mothership.ec
 /*
 /*    Font Style Sheet v1.0
-/*    Created by Richard McCartney
 /*
 /*
 /* ======================================================= */
@@ -32,98 +30,31 @@
 	font-style: normal;
 }
 
-@font-face{
-	font-family:"Proxima N W15 Light";
-	src:url("../fonts/53f72e41-ffd4-47d4-b8bf-b1ab3cada2e5.eot?#iefix");
-	src:url("../fonts/53f72e41-ffd4-47d4-b8bf-b1ab3cada2e5.eot?#iefix") format("eot"),
-		url("../fonts/fb5639f2-f57b-487d-9610-3dc50820ab27.woff") format("woff"),
-		url("../fonts/2eafe9b7-5a21-49c0-84ca-54c54f899019.ttf") format("truetype"),
-		url("../fonts/0a2fe21c-cfdd-4f40-9dca-782e95c1fa90.svg#0a2fe21c-cfdd-4f40-9dca-782e95c1fa90") format("svg");
-}
+@font-face {
+    font-family: 'Lato';
+    font-weight: normal;
+    font-style: normal;
 
-@font-face{
-	font-family:"Proxima N W15 Light It";
-	src:url("../fonts/8fec2708-71b6-4d6c-858f-47fcb99e7601.eot?#iefix");
-	src:url("../fonts/8fec2708-71b6-4d6c-858f-47fcb99e7601.eot?#iefix") format("eot"),
-		url("../fonts/5dcab973-758a-4f4b-beee-965124bc39b6.woff") format("woff"),
-		url("../fonts/c729f755-cac7-421c-b045-a161883bdf71.ttf") format("truetype"),
-		url("../fonts/e816cdad-3ffd-45b5-bc39-eb89e337c7e2.svg#e816cdad-3ffd-45b5-bc39-eb89e337c7e2") format("svg");
-}
+    src: url('../fonts/Lato-Regular.ttf');
+}  
 
-@font-face{
-	font-family:"Proxima N W15 Reg";
-	src:url("../fonts/ccd538c8-85a6-4215-9f3f-643c415bbb19.eot?#iefix");
-	src:url("../fonts/ccd538c8-85a6-4215-9f3f-643c415bbb19.eot?#iefix") format("eot"),
-		url("../fonts/e8e438df-9715-40ed-b1ae-58760b01a3c0.woff") format("woff"),
-		url("../fonts/baf65064-a8a8-459d-96ad-d315581d5181.ttf") format("truetype"),
-		url("../fonts/76bd19c9-c46a-4c27-b80e-f8bd0ecd6057.svg#76bd19c9-c46a-4c27-b80e-f8bd0ecd6057") format("svg");
-}
+@font-face {
+    font-family: 'Lato-Bold';
+    font-weight: normal;
+    font-style: normal;
 
-@font-face{
-	font-family:"Proxima N W15 Reg It";
-	src:url("../fonts/39b8a8a4-edc9-4785-af87-d2bcad9cc963.eot?#iefix");
-	src:url("../fonts/39b8a8a4-edc9-4785-af87-d2bcad9cc963.eot?#iefix") format("eot"),
-		url("../fonts/ddfa5815-0439-455c-ab0a-704be1e727e3.woff") format("woff"),
-		url("../fonts/561cb800-4365-4d2a-8971-7fb5524aa7bd.ttf") format("truetype"),
-		url("../fonts/32e22620-f3c6-4eda-992b-c5875390b55d.svg#32e22620-f3c6-4eda-992b-c5875390b55d") format("svg");
-}
-
-@font-face{
-	font-family:"Proxima N W15 Smbd";
-	src:url("../fonts/f0900b9e-436e-4bb2-ba92-174617a6b4bc.eot?#iefix");
-	src:url("../fonts/f0900b9e-436e-4bb2-ba92-174617a6b4bc.eot?#iefix") format("eot"),
-		url("../fonts/91b14d48-ff2a-4a42-87df-b04c76cfb67f.woff") format("woff"),
-		url("../fonts/65e3a762-7125-4d24-9247-fc73d4786cd0.ttf") format("truetype"),
-		url("../fonts/4b8633b5-6a28-45ea-afc0-1784363b823a.svg#4b8633b5-6a28-45ea-afc0-1784363b823a") format("svg");
-}
-
-@font-face{
-	font-family:"Proxima N W15 Smbd It";
-	src:url("../fonts/da821cac-572d-47e0-8320-82a02dec3a33.eot?#iefix");
-	src:url("../fonts/da821cac-572d-47e0-8320-82a02dec3a33.eot?#iefix") format("eot"),
-		url("../fonts/da1887f8-f4f1-4bf8-ba4a-800c75895f58.woff") format("woff"),
-		url("../fonts/8a90f222-9a43-42ad-8100-cefe67360d60.ttf") format("truetype"),
-		url("../fonts/dbf6f7e6-69b1-43d3-b96b-43f053128b74.svg#dbf6f7e6-69b1-43d3-b96b-43f053128b74") format("svg");
-}
-
-@font-face{
-	font-family:"Proxima N W15 Bold";
-	src:url("../fonts/9682bb7d-efd6-4254-8771-e146c89a72d4.eot?#iefix");
-	src:url("../fonts/9682bb7d-efd6-4254-8771-e146c89a72d4.eot?#iefix") format("eot"),
-		url("../fonts/a3a867b8-141c-4865-9f8d-6dc5766a6bc5.woff") format("woff"),
-		url("../fonts/b9d6d5ca-ba9b-4fa1-a81e-366891676e4a.ttf") format("truetype"),
-		url("../fonts/844c48e5-7a2b-488b-9e47-ff8dda98e5e2.svg#844c48e5-7a2b-488b-9e47-ff8dda98e5e2") format("svg");
-}
-
-@font-face{
-	font-family:"Proxima N W15 Bold It";
-	src:url("../fonts/715a0342-db92-4c36-b812-04212361621b.eot?#iefix");
-	src:url("../fonts/715a0342-db92-4c36-b812-04212361621b.eot?#iefix") format("eot"),
-		url("../fonts/f015d7cb-8f83-497f-b23e-157a01bfbeb1.woff") format("woff"),
-		url("../fonts/2c5a2cf6-d798-4ecb-9116-dcbd92a8b3e5.ttf") format("truetype"),
-		url("../fonts/ba8566d1-fe90-4f7a-94a8-6c854619fb3b.svg#ba8566d1-fe90-4f7a-94a8-6c854619fb3b") format("svg");
-}
-
-@font-face{
-	font-family:"Proxima N W15 Black";
-	src:url("../fonts/40b18343-f287-42bc-a93d-3d2ce419f8e4.eot?#iefix");
-	src:url("../fonts/40b18343-f287-42bc-a93d-3d2ce419f8e4.eot?#iefix") format("eot"),
-		url("../fonts/e33f2c3e-1652-4366-a060-49534a5c9cc7.woff") format("woff"),
-		url("../fonts/a61b629e-6ed5-4647-8f5b-7479d1ae9ddb.ttf") format("truetype"),
-		url("../fonts/43852b29-fe22-4990-89f2-9a0040038171.svg#43852b29-fe22-4990-89f2-9a0040038171") format("svg");
-}
-@font-face{
-	font-family:"Proxima N W15 Black It";
-	src:url("../fonts/becc8b7e-940a-4a39-b6a2-3bc1731e2793.eot?#iefix");
-	src:url("../fonts/becc8b7e-940a-4a39-b6a2-3bc1731e2793.eot?#iefix") format("eot"),
-		url("../fonts/0ccc60dc-3f29-47b2-9304-75151acf5087.woff") format("woff"),
-		url("../fonts/ae4e34c0-3129-4b94-b874-fd8352ab1d8c.ttf") format("truetype"),
-		url("../fonts/837512b9-1b3b-4886-81cc-7bdaacefb837.svg#837512b9-1b3b-4886-81cc-7bdaacefb837") format("svg");
+    src: url('../fonts/Lato-Bold.ttf');
+  
 }
 
 @font-face {
-	font-family: 'Inconsolata';
-	src: url('../fonts/Inconsolata-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Lato-Black';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/Lato-Black.ttf');
+  
 }
+
+
+
