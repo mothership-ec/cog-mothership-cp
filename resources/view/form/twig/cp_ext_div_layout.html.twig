@@ -1,0 +1,20 @@
+{% block cp_wysiwyg_widget %}
+	{% spaceless %}
+		{% set editable_id = 'editable_' ~ id %}
+		{% set section_id = 'section_' ~ id %}
+		{% set menu_id = 'menu_' ~ id %}
+		<section class="text-editor" id="{{ section_id }}">
+			<ul class="text-view-change" id="{{ menu_id }}">
+				<li id="preview_link_{{ id }}" data-disabled="1">Preview editor</li>
+				<li id="markdown_link_{{ id }}" data-disabled="0">Markdown editor</li>
+			</ul>
+			<div class="preview-box" id="preview-box_{{ id }}">
+				<div id="{{ editable_id }}" class="textarea">{{ app.md_parser.transform(value) | raw }}</div>
+			</div>
+			<div class="markdown-box" id="markdown-box_{{ id }}">
+				{{ block('textarea_widget') }}
+			</div>
+		</section>
+		{% include 'Message:Mothership:ControlPanel::form:twig:wysiwyg_javascript' with {'id': id, 'value': value} %}
+	{% endspaceless %}
+{% endblock %}

@@ -29,7 +29,8 @@
 }
 
 html {
-    font-size: 1em;
+	height: 100%;
+    font-size: 16px;
 	-webkit-text-size-adjust: 1em;
 	-ms-text-size-adjust: 1em;
 	height: 100%;
@@ -40,7 +41,7 @@ body {
 	color: #333;
 	background: #e6e6e7;
 	font-size: 100%;
-	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato', Helvetica, Arial, sans-serif;
 	height: 100%;
 }
 
@@ -107,6 +108,7 @@ body {
 	font-size: 18px;
 	font-family: 'FontAwesome';
 	line-height: 12px;
+	font-family:'Lato', Helvetica, Arial, sans-serif;
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -131,7 +133,6 @@ a:hover {
 
 p {
 	font-size: 1em;
-	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	margin-bottom: 20px;
 }
 
@@ -146,7 +147,7 @@ p a:hover {
 
 b,
 strong {
-	font-family:'Proxima N W15 Bold';
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
 	font-weight: normal;
 }
 
@@ -157,8 +158,8 @@ h4,
 h5 {
 	color: #333;
 	font-weight: normal;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif; 
+}	
 
 h1 {
 	font-size: 1.500em;
@@ -180,6 +181,13 @@ h5 {
 	font-size: 1.000em;
 }
 
+blockquote {
+	border-left: 3px solid #EFEFEF;
+	margin: 10px 10px 20px 10px;
+	padding: 5px 20px;
+	font-style: italic;
+	color: #666;
+}
 
 
 /* Form elements
@@ -207,7 +215,7 @@ textarea {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	color: #333;
-	font: normal 0.938em/0.938em 'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font: normal 0.938em/0.938em 'Lato', Helvetica, Arial, sans-serif;
 	-webkit-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
 	-moz-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
 	-ms-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
@@ -279,7 +287,7 @@ select {
 	background-image:  url(../images/select-arrow-light.png), -ms-linear-gradient(top, #ffffff, #e6e6e6);
 	background-image:  url(../images/select-arrow-light.png), linear-gradient(top, #ffffff, #e6e6e6);
 	font-size: 0.875em;
-	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato', Helvetica, Arial, sans-serif;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#e6e6e6');
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -301,9 +309,9 @@ label {
 	float: left;
 	margin: 0 0 5px 0;
 	width: 100%;
-	font-size: 15px;
-	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+	font-weight: normal;
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
+}	
 
 label:hover,
 label[for="setloggedin"]:hover {
@@ -429,7 +437,7 @@ label[for='form_balance_amount'] {
 .button {
 	display: inline-block;
 	margin-bottom: 0;
-	padding: 12px 15px;
+	padding: 10px 15px;
 	border: 1px solid #CCC;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -450,9 +458,9 @@ label[for='form_balance_amount'] {
 	text-decoration: none;
 	text-shadow: 0px 1px 0px #FFF;
 	white-space: nowrap;
-	font-weight: 500;
+	font-weight: normal;
 	font-size: 1.0em;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 	line-height: 1.0em;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#528bb6', EndColorStr='#4473a7');
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f2f2f2', EndColorStr='#e5e5e5');
@@ -465,7 +473,7 @@ label[for='form_balance_amount'] {
 }
 
 .button.small {
-	padding: 7px 13px 5px;
+	padding: 7px 13px;
 }
 
 input.button {
@@ -480,11 +488,16 @@ input.button {
 }
 
 .button.icon {
-	padding: 5px 8px;
+	padding: 5px 9px;
+	width: 30px;
 }
 
 .button.icon:before {
-	margin-right: 0px;
+	margin-right: 9999em;
+}
+
+.order-listing-overview .button.icon {
+	width: 10px;
 }
 
 /* Submit, add, upload, create button styles */
@@ -945,7 +958,7 @@ input.button {
 }
 
 .button.button-group.small a {
-	padding: 7px 13px 5px;
+	padding: 7px 13px;
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
@@ -953,7 +966,7 @@ input.button {
 	white-space: nowrap;
 	font-weight: 500;
 	font-size: 1.0em;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
 	line-height: 1.0em;
 }
 
@@ -967,7 +980,7 @@ input.button {
 }
 
 .button.button-group.small span {
-	padding: 7px 13px 5px;
+	padding: 7px 13px;
 }
 
 .button.button-group span:before {
@@ -1065,7 +1078,7 @@ table {
 
 table th {
 	font-weight: normal;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 	position: relative;
 	padding: 12px 15px 10px;
 	border-top: 1px solid #bccdda;
@@ -1086,7 +1099,6 @@ table td {
 	box-shadow: inset 1px 1px 0 #FFF;
 	vertical-align: middle;
 	text-align: left;
-	font-family:'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	word-wrap: break-word;
 
@@ -1243,15 +1255,20 @@ table .multi-inline .inline {
 
 .dataTables_filter {
 	float: right;
+	padding: 10px 0;
 	padding-left: 75px;
 	text-indent: -75px;
 	margin-bottom: 20px;
 }
 
+.dataTables_filter label {
+}
+
 .dataTables_filter input {
-	float: none;
+	float: right;
 	margin-left: 20px;
 	margin-bottom: 0;
+	margin-top: -10px;
 }
 
 a.clear-filters {
@@ -1376,7 +1393,7 @@ a.clear-filters:before {
 	white-space: nowrap;
 	font-weight: 500;
 	font-size: 11px;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 	line-height: 1.0em;
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#528bb6', EndColorStr='#4473a7');
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f2f2f2', EndColorStr='#e5e5e5');
@@ -1475,7 +1492,7 @@ dd {
 	color: #10460a;
 	text-shadow: 0px 1px 0 rgba(255,255,255,0.5);
 	font-size: 0.875em;
-	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 	float: left;
 	width: 100%;
 }
@@ -1500,7 +1517,7 @@ dd {
 
 .feedback li {
 	padding-bottom: 15px;
-	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 	list-style: none;
 }
 
@@ -1644,15 +1661,20 @@ dd {
 
 .footer .copy {
 	float: left;
+<<<<<<< HEAD
+=======
+	margin-top: 13px;
+	margin-left: 15px;
+>>>>>>> develop
 	height: 18px;
 	font-size: 0.813em !important;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 .footer a {
 	color: #b1b3b4;
 	font-size: 13px;
-	font-family:'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 .footer a.website {
@@ -2104,7 +2126,7 @@ Version: 3.4.5 Timestamp: Mon Nov  4 08:22:42 PST 2013
     margin: 0;
 
     outline: 0;
-    font: normal 0.938em/0.938em 'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font: normal 0.938em/0.938em 'Lato', Helvetica, Arial, sans-serif;
     font-size: 1em;
 
     border: 1px solid #aaa;
@@ -2318,7 +2340,7 @@ disabled look for disabled choices in the results dropdown
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	color: #333;
-	font: normal 0.938em/0.938em 'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font: normal 0.938em/0.938em 'Lato', Helvetica, Arial, sans-serif;
 	-webkit-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
 	-moz-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
 	-ms-transition: border .15s linear, color .15s linear, box-shadow .15s linear;
@@ -2362,7 +2384,7 @@ disabled look for disabled choices in the results dropdown
     padding: 5px;
     margin: 1px 0;
 
-    font: normal 0.938em/0.938em 'Proxima N W15 Reg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font: normal 0.938em/0.938em 'Lato', Helvetica, Arial, sans-serif;
     font-size: 100%;
     color: #666;
     outline: 0;

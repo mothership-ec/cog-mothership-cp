@@ -22,6 +22,7 @@ class Services implements ServicesInterface
 
 		$services->extend('form.templates.twig', function($templates, $c) {
 			$templates[] = 'Message:Mothership:ControlPanel::form:twig:form_div_layout';
+			$templates[] = 'Message:Mothership:ControlPanel::form:twig:cp_ext_div_layout';
 
 			return $templates;
 		});
@@ -36,6 +37,30 @@ class Services implements ServicesInterface
 			$groups->add(new ControlPanel\UserGroup\SuperAdmin);
 
 			return $groups;
+		});
+
+		$services->extend('form.extensions', function($extensions, $c) {
+			$extensions[] = $c['form.cp_extension'];
+
+			return $extensions;
+		});
+
+		$services['form.cp_extension'] = function($c) {
+			return new ControlPanel\Form\ControlPanelExtension;
+		};
+
+		$services->extend('field.collection', function ($fields, $c) {
+			$fields->add(new ControlPanel\FieldType\Richtext($c['markdown.parser']));
+
+			return $fields;
+		});
+
+		$services->extend('templating.globals', function ($globals, $c) {
+			$globals->set('md_parser', function($c) {
+				return $c['markdown.parser'];
+			});
+
+			return $globals;
 		});
 	}
 

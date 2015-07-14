@@ -6,12 +6,9 @@
 /*                                                         */
 /* ======================================================= */
 /*
-/*
-/*    Development by Message
-/*    http://www.message.co.uk
+/*    http://www.mothership.ec
 /*
 /*    Login Style Style Sheet v1.0
-/*    Created by Richard McCartney
 /*
 /*
 /* ======================================================= */
@@ -44,7 +41,7 @@ html, body {
 	text-align: center;
 	text-shadow: 0px 1px 2px rgba(000,000,000,0.75);
 	font-size: 3.250em;
-	font-family:'Proxima N W15 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 .spaceship {
@@ -176,7 +173,7 @@ html, body {
 
 .login-form label[for="login_remember"] {
 	position: absolute;
-	top: 79px;
+	top: 75px;
 	left: 25px;
 	display: block !important;
 }
@@ -194,7 +191,7 @@ html, body {
 	width: auto;
 	color: #E1E1E1;
 	font-size: 0.875em;
-	font-family: 'Proxima N W15 Smbd', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Lato-Bold', Helvetica, Arial, sans-serif;
 }
 
 .login footer {
