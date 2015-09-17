@@ -1,0 +1,31 @@
+{% block include_js %}
+	{% javascripts
+		'@Message:Mothership:ControlPanel::resources/assets/js/components/history.js/scripts/bundled/html5/jquery.history.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/ModalHandler.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/cp-setup.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/livePane.jquery.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/nestedAccordian.jquery.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/selectAllToggle.jquery.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/forms.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/help.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/title.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/dropdown.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/feedback.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/datePicker.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/components/masonry/masonry.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/components/googleChart/jsapi.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/components/googleChart/attc.googleChart.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/select2.min.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/jquery.dataTables.min.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/dataTables.column-filter.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/components/medium-editor/medium-editor.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/components/medium-editor/me-markdown.standalone.js'
+		'@Message:Mothership:ControlPanel::resources/assets/js/wysiwyg.js'
+
+		output='/assets/js/ms_cp.js'
+		filter='?jsmin'
+
+	%}
+	<script src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+{% endblock %}
