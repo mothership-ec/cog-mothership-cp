@@ -1,0 +1,12 @@
+{# Override this view to add javascript files for admin panel customisation #}
+{% extends 'Message:Mothership:ControlPanel::_templates:assets:javascripts' %}
+
+{% block include_js %}
+	{{ parent() }}
+	{% javascripts
+		output='/assets/js/ms_ext_cp.js'
+		filter='?jsmin'
+	%}
+	<script src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% block include_css %}
+	{% stylesheets
+		'@Message:Mothership:ControlPanel::resources/assets/css/components/medium-editor/medium-editor.css'
+		'@Message:Mothership:ControlPanel::resources/assets/css/cp.css'
+
+		output='/assets/css/ms_cp.css'
+		filter='csscogulerewrite,?cssmin'
+	%}
+	<link rel="stylesheet" href="{{ asset_url }}">
+	{% endstylesheets %}
+{% endblock %}
