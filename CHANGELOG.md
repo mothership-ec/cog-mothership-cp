@@ -1,5 +1,17 @@
 # Changelog
 
+## 3.5.0
+
+- Allow for CSS and JS in admin panel to be overridden on a site-by-site basis
+- Added `resources/view/_templates/assets/javascripts.html.twig` file for loading in all JavaScript for the admin panel
+- Added `resources/view/_templates/assets/stylesheets.html.twig` file for loading in all CSS for the admin panel
+- Added `resources/view/extensions/javascripts.html.twig` file which extends `resources/view/_templates/assets/javascripts.html.twig` for adding additional JavaScript files
+- Added `resources/view/extensions/stylesheets.html.twig` file which extends `resources/view/_templates/assets/stylesheets.html.twig` for adding additional CSS files
+- Abstracted JavaScript from `resouerces/view/_templates/cp.html.twig`, load from `resources/view/extensions/javascripts.html.twig` instead
+- Abstracted CSS from `resouerces/view/_templates/cp.html.twig`, load from `resources/view/extensions/stylesheets.html.twig` instead
+- To add custom JavaScript, create a view override for `resources/view/extensions/javascripts.html.twig` and load in the appropriate JavaScript files there
+- To add custom CSS, create a view override for `resources/view/extensions/stylesheets.html.twig` and load in the appropriate CSS files there
+
 ## 3.4.3
 
 - Replaced Proxima Nova font with Lato
