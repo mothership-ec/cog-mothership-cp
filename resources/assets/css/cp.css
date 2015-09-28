@@ -3133,6 +3133,7 @@ hgroup .button.download:hover {
 
 .reports {
 	padding-right: 220px;
+	width: 100%;
 }
 
 .reports .description {
@@ -3142,18 +3143,16 @@ hgroup .button.download:hover {
 #table_div {
 	clear: both;
 	width: 100%;
-	max-width: 1000px;
 }
 
 
 .reports .google-visualization-table-table {
 	background: none;
-	width: auto;
-	table-layout: auto;
+	table-layout: fixed;
 }
 
 .reports .google-visualization-table-tr-head,
-.reports .google-visualization-table-tr-head .gradient {
+.reports .google-visualization-table-tr-head .gradient { 
 	position: relative;
 	border: none;
 	text-align: left;
@@ -3166,6 +3165,7 @@ hgroup .button.download:hover {
 	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.7);
 	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.7);
 	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.7);
+	white-space: normal;
 }
 
 .reports .google-visualization-table-sortind {
@@ -3181,6 +3181,8 @@ hgroup .button.download:hover {
 
 .reports .google-visualization-table-td-number {
 	font-family: "Inconsolata";
+	white-space: normal;
+
 }
 
 .reports .google-visualization-table-td {

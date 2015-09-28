@@ -2450,13 +2450,6 @@ disabled look for disabled choices in the results dropdown
 	clear: none;
 	margin-bottom: 0;
 }
->>>>>>> develop
-
- .dangerous .modal button.left {
-	 float: left;
-	 clear: none;
-	 margin-bottom: 0;
- }
 
  .dangerous .modal button.right {
 	 float: right;
