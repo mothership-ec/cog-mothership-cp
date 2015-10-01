@@ -83,4 +83,42 @@
 		value = self.find(':input[name*="[' + field + ']"]').val();
 		self.find('[data-group-label]').html(value);
 	});
+
+	// Set up add links for repeatable groups
+	$(document).on('click', 'a[data-group-ctrl-up]', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		var group = $(this).closest('.group'),
+			swap = group.prev('.group'),
+			grpSequence = group.find('input[id$=_sequence]'),
+			swpSequence = swap.find('input[id$=_sequence]')
+		;
+
+		if (!group.size() || !swap.size()) return false;
+
+		if (grpSequence.size()) grpSequence.val(parseInt(grpSequence.val()) - 1);
+		if (swpSequence.size()) swpSequence.val(parseInt(grpSequence.val()) + 1);
+
+		group.insertBefore(swap);
+	});
+
+	// Set up add links for repeatable groups
+	$(document).on('click', 'a[data-group-ctrl-down]', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		var group = $(this).closest('.group'),
+			swap = group.next('.group'),
+			grpSequence = group.find('input[id$=_sequence]'),
+			swpSequence = swap.find('input[id$=_sequence]')
+		;
+
+		if (!group.size() || !swap.size()) return false;
+
+		if (grpSequence.size()) grpSequence.val(parseInt(grpSequence.val()) + 1);
+		if (swpSequence.size()) swpSequence.val(parseInt(grpSequence.val()) - 1);
+
+		swap.insertBefore(group);
+	});
 });
