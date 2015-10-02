@@ -100,6 +100,8 @@
 		if (grpSequence.size()) grpSequence.val(parseInt(grpSequence.val()) - 1);
 		if (swpSequence.size()) swpSequence.val(parseInt(grpSequence.val()) + 1);
 
+		group.fadeIn(300).fadeOut(300).fadeIn(300);
+
 		group.insertBefore(swap);
 	});
 
@@ -118,6 +120,8 @@
 
 		if (grpSequence.size()) grpSequence.val(parseInt(grpSequence.val()) + 1);
 		if (swpSequence.size()) swpSequence.val(parseInt(grpSequence.val()) - 1);
+
+		group.fadeIn(300).fadeOut(300).fadeIn(300);
 
 		swap.insertBefore(group);
 	});

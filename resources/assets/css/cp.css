@@ -1920,6 +1920,23 @@
 	margin-bottom: 10px;
 }
 
+.repeatable-group .group:first-of-type [data-group-ctrl-up] {
+	display: none;
+}
+
+.repeatable-group .group:first-of-type h1.title a:last-of-type {
+	margin-left: 15px;
+}
+
+.repeatable-group .group:last-of-type [data-group-ctrl-down] {
+	display: none;
+}
+
+.repeatable-group .group:last-of-type h1.title a:first-of-type {
+	margin-right: 20px;
+}
+
+
 .repeatable-group .group h1.title a {
 	width: 12px;
 	height: 20px;
