@@ -20,6 +20,8 @@
 
 		self.before(el.hide().fadeIn(200));
 
+		el.find('input[id$=_sequence]').val(parseInt(index, 10));
+
 		self.attr('data-group-index', (parseInt(index, 10) + 1));
 
 		return false;
@@ -43,12 +45,14 @@
 				field = self.attr('data-identifier-field');
 				label = self.find('[data-group-label]');
 				value = self.find(':input[name*="[' + field + ']"]').val();
+
 				if (value && value.length) {
 					label.html(value);
-				}
-				else {
+				} else {
 					label.html(labelPrefix + (i + 1));
 				}
+
+				self.find('input[id$=_sequence]').val(parseInt(i, 10));
 			});
 
 			// Decrement adder index
