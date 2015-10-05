@@ -3106,6 +3106,7 @@ ol.order-details li {
 
 .reports-filtering select {
 	min-width: 100%;
+	overflow: auto;
 }
 
 .reports-filtering .button {
