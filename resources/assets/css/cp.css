@@ -3107,6 +3107,16 @@ ol.order-details li {
 .reports-filtering select {
 	min-width: 100%;
 	overflow: auto;
+	padding: 0;
+}
+
+.reports-filtering option {
+	white-space: normal;
+	padding: 5px;
+}
+
+.reports-filtering option:nth-child(odd) {
+	background: #eee;
 }
 
 .reports-filtering .button {
