@@ -3113,6 +3113,10 @@ ol.order-details li {
 	margin-bottom: 10px;
 }
 
+.reports-filtering input[type=date] {
+	width: 100%;
+}
+
 hgroup .button.download,
 hgroup .button.upload {
 	float: right;
