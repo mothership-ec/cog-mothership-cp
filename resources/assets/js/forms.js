@@ -5,7 +5,7 @@
  */
 ;$(function() {
 
-	$('.repeatable-group').sortable({
+	$('.repeatable-group .sortable').sortable({
 		stop: function() {
 			var seq = 0;
 
@@ -28,7 +28,7 @@
 		el = $(prototype);
 		el.find('[data-group-label]').html(labelPrefix + (parseInt(index, 10) + 1));
 
-		self.before(el.hide().fadeIn(200));
+		self.prev().append(el.hide().fadeIn());//before(el.hide().fadeIn(200));
 
 		el.find('input[id$=_sequence]').val(parseInt(index, 10));
 
