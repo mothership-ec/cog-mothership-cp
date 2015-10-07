@@ -1920,22 +1920,13 @@
 	margin-bottom: 10px;
 }
 
-.repeatable-group .group:first-of-type [data-group-ctrl-up] {
-	display: none;
+.repeatable-group .group h1.title:before {
+	content: '\f07d';
+	font-family: "FontAwesome";
+	font-size: 14px;
+	margin-right: 5px;
+	font-weight: bold;
 }
-
-.repeatable-group .group:first-of-type h1.title a:last-of-type {
-	margin-left: 20px;
-}
-
-.repeatable-group .group:last-of-type [data-group-ctrl-down] {
-	display: none;
-}
-
-.repeatable-group .group:last-of-type h1.title a:first-of-type {
-	margin-right: 25px;
-}
-
 
 .repeatable-group .group h1.title a {
 	width: 12px;
@@ -1958,20 +1949,6 @@
 .repeatable-group .group h1.title a:last-of-type {
 	margin-right: 10px;
 }
-
-[data-group-ctrl-up]:before {
-	content: '\f062';
-	font-family: "FontAwesome";
-	font-size: 14px;
-}
-
-[data-group-ctrl-down]:before {
-	content: '\f063';
-	font-family: "FontAwesome";
-	font-size: 14px;
-}
-
-
 
 /* Fields */
 
