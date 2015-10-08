@@ -4,7 +4,7 @@
 
 - Make report columns full width to prevent reports from overflowing behind the filters
 - Multi-select options in report filters break lines and are highlighted
-- Reintroduced `Inconsolata-Regular` font for reports
+- Reintroduced `Inconsolata` font for reports
 
 ## 3.5.0
 
