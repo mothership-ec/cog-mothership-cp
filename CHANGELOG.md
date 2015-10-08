@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.5.1
+
+- Make report columns full width to prevent reports from overflowing behind the filters
+- Multi-select options in report filters break lines and are highlighted
+- Reintroduced `Inconsolata` font for reports
+
 ## 3.5.0
 
 - Allow for CSS and JS in admin panel to be overridden on a site-by-site basis
