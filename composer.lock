@@ -518,16 +518,16 @@
         },
         {
             "name": "mothership-ec/cog",
-            "version": "4.12.0",
+            "version": "4.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog.git",
-                "reference": "46c1473effe92997d8459ad137a3304d1b7e50da"
+                "reference": "d569d3401103454dca8615d75c0fea68694a759f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog/zipball/46c1473effe92997d8459ad137a3304d1b7e50da",
-                "reference": "46c1473effe92997d8459ad137a3304d1b7e50da",
+                "url": "https://api.github.com/repos/mothership-ec/cog/zipball/d569d3401103454dca8615d75c0fea68694a759f",
+                "reference": "d569d3401103454dca8615d75c0fea68694a759f",
                 "shasum": ""
             },
             "require": {
@@ -609,7 +609,7 @@
                 "cog",
                 "framework"
             ],
-            "time": "2015-10-02 16:40:49"
+            "time": "2015-10-09 16:31:08"
         },
         {
             "name": "mothership-ec/cog-user",
@@ -2253,12 +2253,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "bb19cd92e91aee51c344d8bd1a453dc85de47c21"
+                "reference": "ee88cd05073533b10678772fe954d042748393c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/bb19cd92e91aee51c344d8bd1a453dc85de47c21",
-                "reference": "bb19cd92e91aee51c344d8bd1a453dc85de47c21",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/ee88cd05073533b10678772fe954d042748393c3",
+                "reference": "ee88cd05073533b10678772fe954d042748393c3",
                 "shasum": ""
             },
             "require": {
@@ -2310,7 +2310,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2015-10-02 20:03:43"
+            "time": "2015-10-12 06:21:09"
         }
     ],
     "aliases": [],
