@@ -3575,6 +3575,7 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 	width: auto;
 	float: left;
 	max-width: 250px;
+	padding-right: 10px;
 }
 
 .currency-units .field input {
