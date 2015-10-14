@@ -3574,18 +3574,27 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 .currency-units .field {
 	width: auto;
 	float: left;
-	max-width: 220px;
+	max-width: 250px;
+	padding-right: 10px;
 }
 
+.currency-units .field input {
+	width: 100%;
+}
 
 .currency-group .module .add-on,
 .currency-units .add-on {
 	margin-bottom: 0;
+	width: 100%;
+	max-width: 100%;
 }
 
 .currency-group .module .add-on div,
 .currency-units .add-on div  {
 	width: 65%;
+	width: -webkit-calc(100% - 28px);
+	width: -moz-calc(100% - 28px);
+	width: calc(100% - 28px);
 }
 
 .currency-group .module .help,
@@ -3595,6 +3604,10 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 
 .currency-units {
 	display: inline-block;
+}
+
+.group .currency-units .field {
+	padding-right: 10px;
 }
 
 /* Pagination

@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.5.2
+
+- Made product unit screen more flexible
+- Increased width of currency fields on product unit screen
+- Added padding to right currency fields on product unit screen
+
 ## 3.5.1
 
 - Make report columns full width to prevent reports from overflowing behind the filters
