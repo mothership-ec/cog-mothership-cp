@@ -3574,18 +3574,26 @@ table tr.grandtotal:nth-child(even) td, table tr.grandtotal:nth-child(odd) td  {
 .currency-units .field {
 	width: auto;
 	float: left;
-	max-width: 220px;
+	max-width: 320px;
 }
 
+.currency-units .field input {
+	width: 100%;
+}
 
 .currency-group .module .add-on,
 .currency-units .add-on {
 	margin-bottom: 0;
+	width: 100%;
+	max-width: 100%;
 }
 
 .currency-group .module .add-on div,
 .currency-units .add-on div  {
 	width: 65%;
+	width: -webkit-calc(100% - 27px);
+	width: -moz-calc(100% - 27px);
+	width: calc(100% - 27px);
 }
 
 .currency-group .module .help,
