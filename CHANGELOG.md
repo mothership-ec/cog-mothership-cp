@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.5.3
+
+- Added JavaScript to allow for reordering of repeatable groups
+
 ## 3.5.2
 
 - Made product unit screen more flexible
