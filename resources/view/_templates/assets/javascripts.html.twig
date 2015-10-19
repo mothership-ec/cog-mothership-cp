@@ -23,9 +23,9 @@
 		'@Message:Mothership:ControlPanel::resources/assets/js/wysiwyg.js'
 
 		output='/assets/js/ms_cp.js'
-		filter='?jsmin'
 
 	%}
+		{# filter='?jsmin' #}
 	<script src="{{ asset_url }}"></script>
 	{% endjavascripts %}
 {% endblock %}
