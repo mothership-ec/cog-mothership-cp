@@ -1920,12 +1920,16 @@
 	margin-bottom: 10px;
 }
 
-.repeatable-group .group h1.title:before {
-	content: '\f07d';
+.repeatable-group .group h1.title:after {
+	content: '\f047';
 	font-family: "FontAwesome";
 	font-size: 14px;
 	margin-right: 5px;
 	font-weight: bold;
+	position: absolute;
+	right: 30px;
+	top: 15px;
+	color: #777;
 }
 
 .repeatable-group .group h1.title a {
