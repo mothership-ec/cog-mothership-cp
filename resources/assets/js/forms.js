@@ -5,6 +5,16 @@
  */
 ;$(function() {
 
+	$('.repeatable-group .sortable').sortable({
+		stop: function() {
+			var seq = 0;
+
+			$(this).children('.group').each(function() {
+				$(this).find('input[id$=_sequence]').val(seq++);
+			});
+		}
+	});
+
 	// Set up add links for repeatable groups
 	$(document).on('click', 'a[data-group-add]', function() {
 		var self = $(this), index, prototype, prototypeName, el, labelPrefix, label;
@@ -18,7 +28,9 @@
 		el = $(prototype);
 		el.find('[data-group-label]').html(labelPrefix + (parseInt(index, 10) + 1));
 
-		self.before(el.hide().fadeIn(200));
+		self.prev().append(el.hide().fadeIn());//before(el.hide().fadeIn(200));
+
+		el.find('input[id$=_sequence]').val(parseInt(index, 10));
 
 		self.attr('data-group-index', (parseInt(index, 10) + 1));
 
@@ -43,12 +55,14 @@
 				field = self.attr('data-identifier-field');
 				label = self.find('[data-group-label]');
 				value = self.find(':input[name*="[' + field + ']"]').val();
+
 				if (value && value.length) {
 					label.html(value);
-				}
-				else {
+				} else {
 					label.html(labelPrefix + (i + 1));
 				}
+
+				self.find('input[id$=_sequence]').val(parseInt(i, 10));
 			});
 
 			// Decrement adder index
@@ -82,5 +96,5 @@
 		field = self.attr('data-identifier-field');
 		value = self.find(':input[name*="[' + field + ']"]').val();
 		self.find('[data-group-label]').html(value);
-	});
+	});	
 });
