@@ -5,7 +5,7 @@
  */
 ;$(function() {
 
-	var sortFunction = function() {
+	var setupSort = function() {
 		$('.repeatable-group .sortable').sortable({
 			stop: function() {
 				var seq = 0;
@@ -18,7 +18,7 @@
 	};
 
 
-	$(window).on('load ajaxComplete', sortFunction);
+	$(window).on('load ajaxComplete', setupSort);
 
 	// Set up add links for repeatable groups
 	$(document).on('click', 'a[data-group-add]', function() {
