@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "d675a13c3717930aeeb57121f2128397",
+    "content-hash": "6822dff187271e8fb6add3882154ce54",
     "packages": [
         {
             "name": "dflydev/markdown",

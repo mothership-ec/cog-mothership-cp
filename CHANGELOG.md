@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.5.4
+
+- Resolve issue where non-reorderable repeatable groups would not expand
+- Resolve issue where reordering repeatable groups would not work after AJAX requests
+
 ## 3.5.3
 
 - Added JavaScript to allow for reordering of repeatable groups
