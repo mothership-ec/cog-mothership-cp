@@ -5,15 +5,20 @@
  */
 ;$(function() {
 
-	$('.repeatable-group .sortable').sortable({
-		stop: function() {
-			var seq = 0;
+	var sortFunction = function() {
+		$('.repeatable-group .sortable').sortable({
+			stop: function() {
+				var seq = 0;
 
-			$(this).children('.group').each(function() {
-				$(this).find('input[id$=_sequence]').val(seq++);
-			});
-		}
-	});
+				$(this).children('.group').each(function() {
+					$(this).find('input[id$=_sequence]').val(seq++);
+				});
+			}
+		});
+	};
+
+
+	$(window).on('load ajaxComplete', sortFunction);
 
 	// Set up add links for repeatable groups
 	$(document).on('click', 'a[data-group-add]', function() {
@@ -28,7 +33,10 @@
 		el = $(prototype);
 		el.find('[data-group-label]').html(labelPrefix + (parseInt(index, 10) + 1));
 
-		self.prev().append(el.hide().fadeIn());//before(el.hide().fadeIn(200));
+		if (self.prev().size() === 0) {
+			self.before('<div>');
+		} 
+		self.prev().append(el.hide().fadeIn());
 
 		el.find('input[id$=_sequence]').val(parseInt(index, 10));
 
@@ -64,9 +72,6 @@
 
 				self.find('input[id$=_sequence]').val(parseInt(i, 10));
 			});
-
-			// Decrement adder index
-//			adder.attr('data-group-index', parseInt(adder.attr('data-group-index'), 10) + 1);
 		});
 
 		return false;
