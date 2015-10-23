@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.5.5
+
+- Resolve issue where reordering repeatable groups would break the WYSIWYG
+- Can now only reorder repeatable groups by dragging the title rather than the whole content block
+
 ## 3.5.4
 
 - Resolve issue where non-reorderable repeatable groups would not expand
