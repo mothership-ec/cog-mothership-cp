@@ -7,6 +7,8 @@
 
 	var setupSort = function() {
 		$('.repeatable-group .sortable').sortable({
+			connectWith: '.repeatable-group .sortable',
+			handle: '.title',
 			stop: function() {
 				var seq = 0;
 
