@@ -2839,6 +2839,9 @@ table.products form:after {
 
 /* Fulfillment */
 
+.fulfillment .pickup #save-content {
+	position: static;
+}
 
 
 .fulfillment ul {
