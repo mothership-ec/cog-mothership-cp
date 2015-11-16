@@ -6,10 +6,9 @@
 /*                                                         */
 /* ======================================================= */
 /*
+/*    http://www.mothership.ec
 /*
-/*    http://mothership.ec
-/*
-/*    Control Panel Style Sheet v2.0
+/*    Control Panel Style Sheet v1.0
 /*
 /*
 /* ======================================================= */
@@ -468,6 +467,7 @@
 
 
 
+
 /* Main
 ------------------------------------------------------------ */
 
@@ -489,7 +489,6 @@
 }
 
 .content-slide button.create,
-.content-slide button.save,
 .content-slide button.ts {
 	position: absolute;
 	right: 18px;
@@ -1103,14 +1102,15 @@ ul.search-results {
 	box-shadow: 0 1px 0 #CCC;
 }
 
+
 .repeatable-group .field .field {
 	padding: 0;
 }
 
 .repeatable-group .group .title {
 	margin-bottom: 0;
-	padding: 20px 22px 12px;
-	min-height: 52px;
+	padding: 12px 22px 12px 15px;
+	min-height: 24px;
 	border: none;
 	background-color: #f9f9f9;
 	background-image: url(../images/select-arrow-light.png);
@@ -1181,6 +1181,7 @@ ul.search-results {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	background: #fcf8e3;
+
 }
 
 .group-desc {
@@ -1262,6 +1263,7 @@ ul.search-results {
 #main-slide {
 	overflow: visible;
 }
+
 
 /* Pagination
 --------------------------------------- */

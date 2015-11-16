@@ -47,6 +47,7 @@
   
 }
 
+
 @font-face {
     font-family: 'Lato-Black';
     font-weight: normal;
@@ -2248,4 +2249,23 @@
 {
     content: '\f20c';
 }
+
+
+@font-face {
+    font-family: 'Inconsolata';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/Inconsolata-Regular.ttf');
+}  
+
+@font-face {
+    font-family: 'Inconsolata-Bold';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/Inconsolata-Bold.ttf');
+  
+}
+
 

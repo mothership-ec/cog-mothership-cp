@@ -6,8 +6,7 @@
 /*                                                         */
 /* ======================================================= */
 /*
-/*
-/*    http://mothership.ec
+/*    http://www.mothership.ec
 /*
 /*    Basic Style Style Sheet v1.0
 /*
@@ -42,6 +41,7 @@ body {
 	background: #e6e6e7;
 	font-size: 100%;
 	font-family:'Lato', Helvetica, Arial, sans-serif;
+<<<<<<< HEAD
 	height: 100%;
 }
 
@@ -1661,11 +1661,8 @@ dd {
 
 .footer .copy {
 	float: left;
-<<<<<<< HEAD
-=======
 	margin-top: 13px;
 	margin-left: 15px;
->>>>>>> develop
 	height: 18px;
 	font-size: 0.813em !important;
 	font-family:'Lato-Bold', Helvetica, Arial, sans-serif;
@@ -2539,5 +2536,15 @@ disabled look for disabled choices in the results dropdown
       background-position: 100% -21px !important;
   }
 }
+.dangerous .modal button.left {
+	float: left;
+	clear: none;
+	margin-bottom: 0;
+}
 
+ .dangerous .modal button.right {
+	 float: right;
+	 clear: none;
+	 margin-bottom: 0;
+ }
 

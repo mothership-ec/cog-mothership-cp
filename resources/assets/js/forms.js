@@ -5,6 +5,23 @@
  */
 ;$(function() {
 
+	var setupSort = function() {
+		$('.repeatable-group .sortable').sortable({
+			connectWith: '.repeatable-group .sortable',
+			handle: '.title',
+			stop: function() {
+				var seq = 0;
+
+				$(this).children('.group').each(function() {
+					$(this).find('input[id$=_sequence]').val(seq++);
+				});
+			}
+		});
+	};
+
+
+	$(window).on('load ajaxComplete', setupSort);
+
 	// Set up add links for repeatable groups
 	$(document).on('click', 'a[data-group-add]', function() {
 		var self = $(this), index, prototype, prototypeName, el, labelPrefix, label;
@@ -18,7 +35,12 @@
 		el = $(prototype);
 		el.find('[data-group-label]').html(labelPrefix + (parseInt(index, 10) + 1));
 
-		self.before(el.hide().fadeIn(200));
+		if (self.prev().size() === 0) {
+			self.before('<div>');
+		} 
+		self.prev().append(el.hide().fadeIn());
+
+		el.find('input[id$=_sequence]').val(parseInt(index, 10));
 
 		self.attr('data-group-index', (parseInt(index, 10) + 1));
 
@@ -43,16 +65,15 @@
 				field = self.attr('data-identifier-field');
 				label = self.find('[data-group-label]');
 				value = self.find(':input[name*="[' + field + ']"]').val();
+
 				if (value && value.length) {
 					label.html(value);
-				}
-				else {
+				} else {
 					label.html(labelPrefix + (i + 1));
 				}
-			});
 
-			// Decrement adder index
-//			adder.attr('data-group-index', parseInt(adder.attr('data-group-index'), 10) + 1);
+				self.find('input[id$=_sequence]').val(parseInt(i, 10));
+			});
 		});
 
 		return false;
@@ -82,5 +103,5 @@
 		field = self.attr('data-identifier-field');
 		value = self.find(':input[name*="[' + field + ']"]').val();
 		self.find('[data-group-label]').html(value);
-	});
+	});	
 });

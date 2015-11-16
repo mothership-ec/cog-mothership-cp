@@ -1,0 +1,12 @@
+{# Override this view to add CSS files for admin panel customisation #}
+{% extends 'Message:Mothership:ControlPanel::_templates:assets:stylesheets' %}
+
+{% block include_css %}
+	{{ parent() }}
+	{% stylesheets
+		output='/assets/css/ms_ext_cp.css'
+		filter='csscogulerewrite,?cssmin'
+	%}
+	<link rel="stylesheet" href="{{ asset_url }}">
+	{% endstylesheets %}
+{% endblock %}

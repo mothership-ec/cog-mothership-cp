@@ -1,5 +1,46 @@
 # Changelog
 
+<<<<<<< HEAD
+=======
+## 3.5.5
+
+- Resolve issue where reordering repeatable groups would break the WYSIWYG
+- Can now only reorder repeatable groups by dragging the title rather than the whole content block
+
+## 3.5.4
+
+- Resolve issue where non-reorderable repeatable groups would not expand
+- Resolve issue where reordering repeatable groups would not work after AJAX requests
+
+## 3.5.3
+
+- Added JavaScript to allow for reordering of repeatable groups
+
+## 3.5.2
+
+- Made product unit screen more flexible
+- Increased width of currency fields on product unit screen
+- Added padding to right currency fields on product unit screen
+
+## 3.5.1
+
+- Make report columns full width to prevent reports from overflowing behind the filters
+- Multi-select options in report filters break lines and are highlighted
+- Reintroduced `Inconsolata` font for reports
+
+## 3.5.0
+
+- Allow for CSS and JS in admin panel to be overridden on a site-by-site basis
+- Added `resources/view/_templates/assets/javascripts.html.twig` file for loading in all JavaScript for the admin panel
+- Added `resources/view/_templates/assets/stylesheets.html.twig` file for loading in all CSS for the admin panel
+- Added `resources/view/extensions/javascripts.html.twig` file which extends `resources/view/_templates/assets/javascripts.html.twig` for adding additional JavaScript files
+- Added `resources/view/extensions/stylesheets.html.twig` file which extends `resources/view/_templates/assets/stylesheets.html.twig` for adding additional CSS files
+- Abstracted JavaScript from `resouerces/view/_templates/cp.html.twig`, load from `resources/view/extensions/javascripts.html.twig` instead
+- Abstracted CSS from `resouerces/view/_templates/cp.html.twig`, load from `resources/view/extensions/stylesheets.html.twig` instead
+- To add custom JavaScript, create a view override for `resources/view/extensions/javascripts.html.twig` and load in the appropriate JavaScript files there
+- To add custom CSS, create a view override for `resources/view/extensions/stylesheets.html.twig` and load in the appropriate CSS files there
+
+>>>>>>> develop
 ## 3.4.3
 
 - Replaced Proxima Nova font with Lato
