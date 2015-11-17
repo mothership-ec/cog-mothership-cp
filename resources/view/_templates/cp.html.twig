@@ -10,25 +10,30 @@
 	{% include 'Message:Mothership:ControlPanel::extensions:javascripts' %}
 {% endblock %}
 {% block body %}
-	<div class="container-cp">
-		<div class="loading-spinner">
-			<p>Loading&hellip;</p><div class="spinner"></div>
-		</div>
-		<header class="navigation">
-			<h1 class="vendor">
-				<a href="{{ url('ms.cp.dashboard') }}">
-					{{ app.cfg.app.name }}
-					<span class="version">Mothership</span>
-				</a>
-			</h1>
-			<nav>
-				{{ render(controller('Message:Mothership:ControlPanel::Controller:Component#mainMenu')) }}
-			</nav>
-			<a class="logout" href="{{ url('ms.cp.logout') }}">Log Out</a>
-		</header>
-		<section class="clear">
-			{% block content %}{% endblock %}
-		</section>
-		{% include 'Message:Mothership:ControlPanel::includes:footer' %}
+<div id="container" class="container">
+	<div class="inner-container">
+			<div class="loading-spinner">
+				<p>Loading&hellip;</p><div class="spinner"></div>
+			</div>
+			<header class="header">
+				<span class="nav-open">
+					<i class="fa fa-bars" data-direction="right"></i>
+				</span>
+				<h1 class="vendor">
+					<a href="{{ url('ms.cp.dashboard') }}">
+						{{ app.cfg.app.name }}
+						<span class="version">Mothership</span>
+					</a>
+				</h1>
+				<nav class="nav-offcanvas navigation">
+					{{ render(controller('Message:Mothership:ControlPanel::Controller:Component#mainMenu')) }}
+				</nav>
+				<a class="logout" href="{{ url('ms.cp.logout') }}">Log Out</a>
+			</header>
+				{% block content %}
+					{% block main %}{% endblock %}
+				{% endblock %}
+			{% include 'Message:Mothership:ControlPanel::includes:footer' %}
 	</div>
+</div>
 {% endblock %}

@@ -1,4 +1,5 @@
 <footer class="footer" role="contentinfo">
-	<small class="copy">&copy; <a href="http://mothership.ec">Mothership</a> {{ "now"|date('Y') }}</small>
+	<small class="copy">&copy; {{ "now"|date('Y') }} <a href="http://mothership.ec">Mothership</a></small>
+
 	<a href="//{{ app.cfg.app.baseUrl|trim('//') }}" target="_blank" class="website"><i class="icon-external-link"></i><span>{{ app.cfg.app.baseUrl }}</span></a>
 </footer>

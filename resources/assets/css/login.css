@@ -30,9 +30,10 @@ html, body {
 }
 
 .center {
-	position: absolute;
-	top: 20%;
+	position: relative;
+	padding-top: 10%;
 	width: 100%;
+	padding: 0 10px;
 }
 
 .login h1 {
@@ -89,6 +90,7 @@ html, body {
 
 .login-form form {
 	display: block;
+	overflow: hidden;
 }
 
 .login-form .field {
@@ -186,8 +188,8 @@ html, body {
 
 .login-form .forgotten-password {
 	position: absolute;
-	top: 79px;
-	right: 295px;
+	bottom: 0;
+	right: 100px;
 	width: auto;
 	color: #E1E1E1;
 	font-size: 0.875em;
@@ -195,7 +197,7 @@ html, body {
 }
 
 .login footer {
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 	color: #b1b3b4;
 }
@@ -213,9 +215,10 @@ html, body {
 .field {
 	position: relative;
 	float: left;
-	margin: 0 0 30px 0;
+	margin: 0 auto;
 	max-width: 1400px;
 	width: 100%;
+	overflow: hidden;
 }
 
 .field h2 {
@@ -235,6 +238,45 @@ html, body {
 	width: 100%;
 }
 
+@media screen and (max-width: 1024px) {
 
+	.center {
+		padding-top: 50px;
+	}
+
+	.field {
+		float: none;
+	}
+
+	.login-form .field {
+		max-width: none;
+	}
+
+	.login-form input[type="email"], 
+	.login-form input[type="password"], 
+	.login-form input[type="text"]{
+		max-width: none;
+	}
+
+	.login-form .forgotten-password {
+		right: 0;
+		left: 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	.login-form button {
+	    position: relative;
+	    float: none;
+	    clear: right;
+	    margin-bottom: 30px;
+	    padding: 16px 22px 12px;
+	    -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    border-radius: 5px;
+	    width: 100%;
+	}
+
+}	
 
 

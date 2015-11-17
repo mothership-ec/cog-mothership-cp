@@ -2,14 +2,14 @@
 <html lang="en" class="no-js">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height"/>
 
 		<title>{% block title %}Mothership Control Panel{% endblock %}</title>
 
 		<link rel="shortcut icon" type="image/png" href="/cogules/Message:Mothership:ControlPanel/images/favicon.png" />
 
-		{# CSSMin is intentionally not used here, for some reason it stops the fonts from loading.
+		{# CSSMin is intentionally not used here, for some reason it stops the fonts from loading. #}
 
-		See issue: https://github.com/messagedigital/cog/issues/258 #}
 		{% block stylesheets %}
 			{% stylesheets
 				'@Message:Mothership:ControlPanel::resources/assets/css/fonts.css'
