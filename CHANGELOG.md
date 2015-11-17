@@ -1,7 +1,5 @@
 # Changelog
 
-<<<<<<< HEAD
-=======
 ## 3.5.5
 
 - Resolve issue where reordering repeatable groups would break the WYSIWYG
@@ -40,7 +38,6 @@
 - To add custom JavaScript, create a view override for `resources/view/extensions/javascripts.html.twig` and load in the appropriate JavaScript files there
 - To add custom CSS, create a view override for `resources/view/extensions/stylesheets.html.twig` and load in the appropriate CSS files there
 
->>>>>>> develop
 ## 3.4.3
 
 - Replaced Proxima Nova font with Lato
